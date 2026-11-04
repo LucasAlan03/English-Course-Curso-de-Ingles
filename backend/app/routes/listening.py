@@ -22,7 +22,7 @@ def session_listening(session_id: int, deps: AppDeps = Depends(get_deps)):
         raise AppError("invalid_session_kind", 400, "Só aulas e revisões têm listening.")
     if not list_items(deps.conn, session_id):
         count = 5 if session["kind"] == "lesson" else 3
-        generate_listening(deps, session_id, session["module_id"], count)
+        generate_listening(deps, session_id, session["module_id"], count, from_bank=session["kind"] == "lesson")
     return list_items(deps.conn, session_id)
 
 

@@ -57,6 +57,11 @@ CREATE TABLE IF NOT EXISTS listening_items (
     user_answer TEXT,
     correct INTEGER
 );
+CREATE TABLE IF NOT EXISTS lesson_bank (
+    module_id TEXT PRIMARY KEY,
+    items TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS media_logs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     date TEXT NOT NULL,

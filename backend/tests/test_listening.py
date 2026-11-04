@@ -70,11 +70,11 @@ def test_gap_answer_ignores_case_and_punctuation(app_client, deps, providers):
     assert app_client.post(f"/listening/{gap['id']}/answer", json={"answer": "  Went. "}).json()["correct"] is True
 
 
-def test_recent_mistakes_included_in_prompt(app_client, deps, providers):
+def test_recent_mistakes_included_in_a_review_prompt(app_client, deps, providers):
     old = make_session(deps)
     insert(deps.conn, "mistakes", session_id=old, module_id="b1_past_simple_continuous",
            said="I goed to school", corrected="I went to school", explanation="irregular", created_at="x")
-    get_items(app_client, deps, providers)
+    get_items(app_client, deps, providers, kind="review", n=3)
     assert "I goed to school" in providers.report.calls[0][0]
 
 
