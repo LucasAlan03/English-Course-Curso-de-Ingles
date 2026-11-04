@@ -18,6 +18,7 @@ export default function TabsLayout() {
     >
       <Tabs.Screen name="index" options={{ title: 'Início' }} />
       <Tabs.Screen name="tracks" options={{ title: 'Trilhas' }} />
+      <Tabs.Screen name="media" options={{ title: 'Consumo' }} />
     </Tabs>
   );
 }
