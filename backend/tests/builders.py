@@ -44,3 +44,14 @@ def make_session(deps, kind="lesson", module_id="b1_past_simple_continuous", **c
 def add_user_message(deps, session_id, text="I went to the park yesterday."):
     insert(deps.conn, "messages", session_id=session_id, role="user", text=text,
            created_at=datetime.now(timezone.utc).isoformat())
+
+
+def writing_json(score=75, mistakes=None):
+    return json.dumps({
+        "corrected_text": "Last weekend I went to the beach.",
+        "improved_text": "Last weekend I spent a lovely day at the beach.",
+        "mistakes": mistakes if mistakes is not None else [
+            {"said": "I goed to the beach", "corrected": "I went to the beach",
+             "explanation": "Passado irregular.", "module_id": "b1_past_simple_continuous"}],
+        "score": score,
+    })

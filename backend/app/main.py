@@ -15,6 +15,7 @@ from app.routes import media as media_routes
 from app.routes import modules as modules_routes
 from app.routes import sessions as sessions_routes
 from app.routes import usage as usage_routes
+from app.routes import writing as writing_routes
 from app.usage import UsageTracker
 
 
@@ -41,6 +42,7 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
     app.include_router(sessions_routes.router)
     app.include_router(modules_routes.router)
     app.include_router(media_routes.router)
+    app.include_router(writing_routes.router)
 
     @app.middleware("http")
     async def require_token(request: Request, call_next):
