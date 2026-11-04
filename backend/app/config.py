@@ -1,0 +1,26 @@
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+
+    api_token: str = "change-me"
+    provider_profile: str = "free"  # free | paid
+    tz: str = "America/Sao_Paulo"
+
+    monthly_warn_brl: float = 45.0
+    monthly_cap_brl: float = 50.0
+
+    data_dir: str = "data"
+    content_dir: str = "content/modules"
+    prompts_dir: str = "prompts"
+
+    gemini_api_key: str = ""
+    anthropic_api_key: str = ""
+    openai_api_key: str = ""
+
+    # Per-component overrides; empty means "use the profile default".
+    chat_provider: str = ""
+    report_provider: str = ""
+    stt_provider: str = ""
+    tts_provider: str = ""
