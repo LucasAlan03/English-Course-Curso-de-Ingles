@@ -1,29 +1,48 @@
 import { useColorScheme } from 'react-native';
 
+/**
+ * Palette: a misty-forest trail. Pale sage ground, deep pine for ink and hero surfaces,
+ * low-sun amber for "you are here", lake blue for secondary accents, coral for mistakes.
+ */
 const light = {
-  background: '#f6f7f9',
+  background: '#ecf2ec',
   card: '#ffffff',
-  text: '#16181d',
-  muted: '#6a7280',
-  primary: '#2f6df6',
+  text: '#12312a',
+  muted: '#5b766b',
+  primary: '#1b4d3e',
   onPrimary: '#ffffff',
-  border: '#e2e5ea',
-  good: '#1f9d55',
-  warn: '#d98a00',
-  bad: '#d64545',
+  border: '#d3e0d6',
+  good: '#2a9468',
+  warn: '#c98a10',
+  bad: '#d9523f',
+  // trail + hero
+  pine: '#14382e',
+  onPine: '#f2f7f1',
+  pineSoft: '#2a5a4a',
+  sun: '#f4b63f',
+  onSun: '#2b1d00',
+  lake: '#2f7fa3',
+  tint: '#e0ece3',
 };
 
 const dark: typeof light = {
-  background: '#0f1115',
-  card: '#1a1d24',
-  text: '#f1f3f6',
-  muted: '#9aa3b2',
-  primary: '#6c9bff',
-  onPrimary: '#0f1115',
-  border: '#2a2f39',
+  background: '#0d1914',
+  card: '#15261f',
+  text: '#e8f2ea',
+  muted: '#93ada1',
+  primary: '#f4b63f',
+  onPrimary: '#2b1d00',
+  border: '#24392f',
   good: '#4cc38a',
   warn: '#f0b429',
-  bad: '#ff7a7a',
+  bad: '#ff8a76',
+  pine: '#14382e',
+  onPine: '#f2f7f1',
+  pineSoft: '#2a5a4a',
+  sun: '#f4b63f',
+  onSun: '#2b1d00',
+  lake: '#6cb4d6',
+  tint: '#1b3027',
 };
 
 export type Theme = typeof light;
@@ -31,3 +50,11 @@ export type Theme = typeof light;
 export function useTheme(): Theme {
   return useColorScheme() === 'dark' ? dark : light;
 }
+
+export const fonts = {
+  400: 'BricolageGrotesque_400Regular',
+  500: 'BricolageGrotesque_500Medium',
+  600: 'BricolageGrotesque_600SemiBold',
+  700: 'BricolageGrotesque_700Bold',
+  800: 'BricolageGrotesque_800ExtraBold',
+} as const;

@@ -1,6 +1,7 @@
 import { describeError } from '@/errors';
 import { useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, Text, TextInput } from 'react-native';
+import { ScrollView, StyleSheet, TextInput } from 'react-native';
+import { Text } from '@/components/ui';
 
 import { api } from '@/api';
 import { Button, Card, ErrorText, Muted, SectionTitle } from '@/components/ui';

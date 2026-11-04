@@ -1,12 +1,13 @@
 import { describeError } from '@/errors';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 
 import { api, audioUrl } from '@/api';
 import { playUrl } from '@/audio';
+import LessonBar from '@/components/LessonBar';
 import ListeningStep from '@/components/ListeningStep';
-import { ErrorText, Muted, SectionTitle } from '@/components/ui';
+import { ErrorText, Muted, Screen } from '@/components/ui';
 import { AnswerResult, ListeningItem } from '@/types';
 
 export default function ReviewScreen() {
@@ -31,8 +32,9 @@ export default function ReviewScreen() {
   }, [id]);
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <SectionTitle>Revisão</SectionTitle>
+    <View style={{ flex: 1 }}>
+      <LessonBar stage="listening" title="Revisão" />
+      <Screen>
       {error ? <ErrorText>{error}</ErrorText> : null}
       {!sessionId && !error ? <Muted>Preparando a revisão…</Muted> : null}
       {sessionId !== null ? (
@@ -47,8 +49,7 @@ export default function ReviewScreen() {
           onFinish={() => router.replace(`/chat/${sessionId}`)}
         />
       ) : null}
-    </ScrollView>
+      </Screen>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({ container: { padding: 16, gap: 12 } });

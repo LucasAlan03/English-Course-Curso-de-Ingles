@@ -1,5 +1,6 @@
 import { router } from 'expo-router';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
+import { Text } from '@/components/ui';
 
 import { Button, Card, Muted, SectionTitle } from '@/components/ui';
 import ErrorNotice from '@/components/ErrorNotice';

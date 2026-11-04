@@ -1,7 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { useTheme } from '@/theme';
 import { PillarKey, Pillars } from '@/types';
+
+import { Text } from './ui';
 
 const LABELS: Record<PillarKey, string> = {
   grammar: 'Gramática',
@@ -12,38 +14,35 @@ const LABELS: Record<PillarKey, string> = {
 };
 const ORDER: PillarKey[] = ['grammar', 'speak', 'write', 'read', 'watch'];
 
-export default function PillarBar({ pillars, streak }: { pillars: Pillars; streak: number }) {
+/** The five daily habits as a row of stops: filled when done today. */
+export default function PillarBar({ pillars }: { pillars: Pillars }) {
   const theme = useTheme();
   return (
-    <View style={styles.wrapper}>
-      <View style={styles.row}>
-        {ORDER.map((key) => {
-          const done = pillars[key];
-          return (
+    <View style={styles.row}>
+      {ORDER.map((key) => {
+        const done = pillars[key];
+        return (
+          <View key={key} testID={`pillar-${key}`} accessibilityState={{ checked: done }} style={styles.item}>
             <View
-              key={key}
-              testID={`pillar-${key}`}
-              accessibilityState={{ checked: done }}
               style={[
-                styles.pillar,
+                styles.dot,
                 { backgroundColor: done ? theme.good : theme.card, borderColor: done ? theme.good : theme.border },
               ]}
             >
-              <Text style={{ color: done ? theme.onPrimary : theme.muted, fontSize: 12, fontWeight: '600' }}>
-                {done ? '✓ ' : ''}
-                {LABELS[key]}
-              </Text>
+              <Text style={{ color: done ? '#fff' : theme.border, fontWeight: '800', fontSize: 18 }}>{done ? '✓' : ''}</Text>
             </View>
-          );
-        })}
-      </View>
-      <Text style={{ color: theme.muted }}>{streak === 1 ? '1 dia seguido' : `${streak} dias seguidos`}</Text>
+            <Text style={{ color: done ? theme.text : theme.muted, fontSize: 12.5, fontWeight: done ? '700' : '500' }}>
+              {LABELS[key]}
+            </Text>
+          </View>
+        );
+      })}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  wrapper: { gap: 8 },
-  row: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
-  pillar: { borderWidth: 1, borderRadius: 999, paddingVertical: 6, paddingHorizontal: 10 },
+  row: { flexDirection: 'row', justifyContent: 'space-between', gap: 4 },
+  item: { alignItems: 'center', gap: 6, flex: 1 },
+  dot: { width: 46, height: 46, borderRadius: 23, borderWidth: 2, alignItems: 'center', justifyContent: 'center' },
 });

@@ -1,6 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { useTheme } from '@/theme';
+
+import { Text } from './ui';
 
 export default function ChatBubble({ role, text }: { role: 'user' | 'assistant'; text: string }) {
   const theme = useTheme();

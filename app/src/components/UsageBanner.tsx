@@ -1,9 +1,8 @@
-import { Text } from 'react-native';
 
 import { useTheme } from '@/theme';
 import { UsageStatus } from '@/types';
 
-import { Card } from './ui';
+import { Card, Text } from './ui';
 
 export function brl(value: number): string {
   return `R$ ${value.toFixed(2).replace('.', ',')}`;

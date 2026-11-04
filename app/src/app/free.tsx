@@ -1,7 +1,8 @@
 import { describeError } from '@/errors';
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
+import { Text } from '@/components/ui';
 
 import { api } from '@/api';
 import { Button, ErrorText, Muted, SectionTitle } from '@/components/ui';

@@ -1,4 +1,4 @@
-import { Text } from 'react-native';
+import { Text } from '@/components/ui';
 
 import { describeError } from '@/errors';
 import { useTheme } from '@/theme';

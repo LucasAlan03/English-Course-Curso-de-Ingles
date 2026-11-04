@@ -1,13 +1,13 @@
 import { describeError } from '@/errors';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
-import { ScrollView, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, Switch, TextInput, View } from 'react-native';
 
 import { api, audioUrl } from '@/api';
 import { Recording, appendAudio, playUrl } from '@/audio';
 import ChatBubble from '@/components/ChatBubble';
 import PushToTalk from '@/components/PushToTalk';
-import { Button, ErrorText, Muted } from '@/components/ui';
+import { Button, ErrorText, Muted, Text } from '@/components/ui';
 import { useTheme } from '@/theme';
 import { TurnResult } from '@/types';
 
@@ -98,7 +98,7 @@ export default function ChatScreen() {
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1 },
+  screen: { flex: 1, width: '100%', maxWidth: 640, alignSelf: 'center' },
   topRow: { flexDirection: 'row', justifyContent: 'flex-end', alignItems: 'center', gap: 8, padding: 12 },
   messages: { padding: 16, gap: 10 },
   composer: { padding: 12, gap: 10 },

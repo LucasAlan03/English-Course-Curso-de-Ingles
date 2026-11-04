@@ -1,9 +1,9 @@
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet } from 'react-native';
 
 import { Recording, useVoiceRecorder } from '@/audio';
 import { useTheme } from '@/theme';
 
-import { ErrorText } from './ui';
+import { ErrorText, Text } from './ui';
 
 /** Tap to start recording, tap again to stop and send. */
 export default function PushToTalk({ onRecorded, disabled }: { onRecorded: (r: Recording) => void; disabled?: boolean }) {

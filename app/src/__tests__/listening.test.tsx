@@ -105,3 +105,9 @@ test('finishing the lesson listening opens the chat of the created session', asy
   await userEvent.press(await screen.findByText('Ir para a conversa'));
   await waitFor(() => expect(router.replace).toHaveBeenCalledWith('/chat/7'));
 });
+
+test('MarkdownText never shows raw asterisks, even for nested examples', async () => {
+  await render(<MarkdownText text={'- Past simple: *I **watched** a movie.*\n- Erro: *I was go* ou *I goed*.'} />);
+  expect(screen.getByText('watched')).toBeTruthy();
+  expect(screen.queryByText(/\*/)).toBeNull();
+});

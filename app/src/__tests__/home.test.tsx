@@ -46,15 +46,14 @@ const MODULES = {
 
 beforeEach(() => apiMock.mockReset());
 
-test('PillarBar renders 5 pillars with done state and the streak', async () => {
-  await render(<PillarBar pillars={HOME.pillars} streak={3} />);
+test('PillarBar renders 5 pillars with done state', async () => {
+  await render(<PillarBar pillars={HOME.pillars} />);
   for (const key of ['grammar', 'speak', 'write', 'read', 'watch']) {
     expect(screen.getByTestId(`pillar-${key}`)).toBeTruthy();
   }
   expect(screen.getByTestId('pillar-grammar').props.accessibilityState.checked).toBe(true);
   expect(screen.getByTestId('pillar-speak').props.accessibilityState.checked).toBe(false);
   expect(screen.getByText(/Gramática/)).toBeTruthy();
-  expect(screen.getByText('3 dias seguidos')).toBeTruthy();
 });
 
 test('Home shows overdue reviews first and the next module', async () => {
