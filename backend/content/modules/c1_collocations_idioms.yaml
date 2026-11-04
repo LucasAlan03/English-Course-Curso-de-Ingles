@@ -1,0 +1,26 @@
+id: c1_collocations_idioms
+level: C1
+title: Collocations e idioms
+order: 7
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Collocations e idioms
+
+  Palavras que combinam naturalmente soam mais fluentes:
+
+  - **make** a decision / a mistake / an effort, **do** homework / business / your best, **take** a risk / a break / notice
+
+  - **heavy** rain / traffic, **strong** coffee / opinion, **deeply** concerned, **highly** recommended
+
+  - Idioms: **break the ice** (quebrar o gelo), **hit the nail on the head** (acertar em cheio), **a piece of cake** (moleza), **under the weather** (indisposto)
+
+  - **Dica:** aprenda a combinação inteira, não a palavra solta.
+
+  '
+scenario:
+  title: Networking at a conference
+  character: A friendly fellow attendee
+  goal: Make small talk and sound natural using common collocations and idioms
+target_structures:
+- make / do / take collocations
+- adjective collocations
+- idioms

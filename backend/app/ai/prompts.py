@@ -10,6 +10,7 @@ PROMPT_VARS: dict[str, set[str]] = {
     "summary": {"previous_summary", "transcript"},
     "writing_prompt": {"level", "recent_topics"},
     "writing_feedback": {"level", "prompt", "known_module_ids", "text"},
+    "module_content": {"level", "title", "source"},
 }
 
 

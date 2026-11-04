@@ -1,0 +1,27 @@
+id: b1_phrasal_verbs
+level: B1
+title: Phrasal verbs do dia a dia
+order: 9
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Phrasal verbs do dia a dia
+
+  Verbo + partícula muda o sentido. Alguns muito usados:
+
+  - **wake up** (acordar), **get up** (levantar), **turn on / off** (ligar, desligar), **pick up** (pegar, buscar)
+
+  - **look for** (procurar), **give up** (desistir), **find out** (descobrir), **come back** (voltar)
+
+  - Alguns se separam: *turn **the TV** off* / *turn **it** off* (com pronome, sempre no meio).
+
+  - **Erro comum:** *turn off it.* O correto é *turn it off.*
+
+  '
+scenario:
+  title: Describing your daily routine to a roommate
+  character: A new roommate
+  goal: Talk about your routine and solve a small household problem using phrasal verbs
+target_structures:
+- wake up / get up
+- turn on / off
+- look for
+- find out

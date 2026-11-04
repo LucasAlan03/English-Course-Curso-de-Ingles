@@ -1,0 +1,29 @@
+id: b2_contrast_connectors
+level: B2
+title: Conectivos de contraste e argumentação
+order: 9
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Conectivos de contraste e argumentação
+
+  - **but** (informal), **however** (início de frase, com vírgula): *It''s cheap. However, it''s slow.*
+
+  - **although / even though + oração**: *Although it was late, we kept working.*
+
+  - **despite / in spite of + substantivo ou -ing**: *Despite the rain, we went out.*
+
+  - **while / whereas** para comparar: *He likes tea, whereas I prefer coffee.*
+
+  - Para argumentar: **on the one hand ... on the other hand**, **in addition**, **as a result**.
+
+  - **Erro comum:** *Despite of the rain.* → *Despite the rain* ou *in spite of the rain*.
+
+  '
+scenario:
+  title: Debating the pros and cons of remote work
+  character: A colleague with a different opinion
+  goal: Give balanced arguments and respond to the other side
+target_structures:
+- although
+- however
+- despite + noun / -ing
+- whereas

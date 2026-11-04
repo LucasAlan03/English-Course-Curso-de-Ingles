@@ -1,0 +1,28 @@
+id: c1_participle_clauses
+level: C1
+title: Participle clauses
+order: 6
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Participle clauses
+
+  Encurtam frases e deixam o texto mais fluido:
+
+  - **-ing** (ação simultânea ou causa): *Walking home, I met an old friend.* (= While I was walking...)
+
+  - **particípio passado** (passiva): *Written in 1990, the book is still popular.*
+
+  - **Having + particípio** (ação anterior): *Having finished the report, she went home.*
+
+  - O sujeito das duas partes deve ser o mesmo.
+
+  - **Erro comum:** *Walking down the street, the rain started.* (quem caminhava? tem de ser a mesma pessoa)
+
+  '
+scenario:
+  title: Telling a vivid story at a dinner
+  character: A dinner guest who loves stories
+  goal: Tell a story smoothly using concise, fluid sentences
+target_structures:
+- -ing clauses
+- past participle clauses
+- having + participle

@@ -1,0 +1,26 @@
+id: b2_past_perfect_narrative
+level: B2
+title: Past perfect e narrativas
+order: 2
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Past perfect e narrativas
+
+  - Forma: **had + particípio**. Mostra o que aconteceu ANTES de outro momento no passado.
+
+  - *When I arrived, the film had already started.*
+
+  - Ajuda a contar histórias na ordem certa: past simple para a linha principal, past perfect para o que veio antes.
+
+  - Palavras úteis: **already, just, by the time, after, before, never ... before**.
+
+  - **Erro comum:** usar past simple para os dois: *When I arrived the film started* muda o sentido.
+
+  '
+scenario:
+  title: Telling a friend about a trip that went wrong
+  character: A sympathetic friend
+  goal: Tell a story in the right order, explaining what had already happened
+target_structures:
+- past perfect
+- past simple
+- by the time / already

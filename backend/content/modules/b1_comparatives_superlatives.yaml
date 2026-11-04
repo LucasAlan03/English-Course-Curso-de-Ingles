@@ -1,0 +1,26 @@
+id: b1_comparatives_superlatives
+level: B1
+title: Comparativos e superlativos
+order: 6
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Comparativos e superlativos
+
+  - Adjetivos curtos: **-er / the -est** → *taller, the tallest*; terminados em y: *happy → happier → the happiest*.
+
+  - Adjetivos longos: **more / the most** → *more interesting, the most expensive*.
+
+  - Irregulares: good → **better** → **the best**; bad → **worse** → **the worst**.
+
+  - Compare com **than**: *This phone is cheaper than that one.* Igualdade: **as ... as**.
+
+  - **Erro comum:** *more better* ou *the most tallest*. Use só uma forma.
+
+  '
+scenario:
+  title: Shopping for a new phone
+  character: A shop assistant
+  goal: Compare models and choose the best one for you
+target_structures:
+- comparatives
+- superlatives
+- as ... as

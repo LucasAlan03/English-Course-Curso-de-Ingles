@@ -49,3 +49,18 @@ def test_curriculum_outline_has_26_modules_10_9_7():
     assert len({m["id"] for m in modules}) == 26
     assert Counter(m["level"] for m in modules) == {"B1": 10, "B2": 9, "C1": 7}
     assert all(m["title"] and m["source"] for m in modules)
+
+
+def test_real_content_has_26_valid_modules():
+    from app.config import BASE_DIR
+
+    repo = ContentRepo.load(str(BASE_DIR / "content" / "modules"))
+    outline = yaml.safe_load(CURRICULUM.read_text(encoding="utf-8"))["modules"]
+    assert sorted(repo.ids()) == sorted(m["id"] for m in outline)
+    assert Counter(m.level for m in repo.all()) == {"B1": 10, "B2": 9, "C1": 7}
+    for module in repo.all():
+        assert len(module.theory_md) > 150, module.id
+        assert module.scenario.title and module.scenario.character and module.scenario.goal, module.id
+        assert module.target_structures, module.id
+    titles = {m["id"]: m["title"] for m in outline}
+    assert all(m.title == titles[m.id] for m in repo.all())

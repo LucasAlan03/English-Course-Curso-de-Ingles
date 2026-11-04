@@ -1,0 +1,29 @@
+id: b1_relative_clauses
+level: B1
+title: Relative clauses
+order: 10
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Relative clauses (who, which, that, where)
+
+  - **who / that** para pessoas: *The man **who** lives next door is a doctor.*
+
+  - **which / that** para coisas: *The book **which** I bought is great.*
+
+  - **where** para lugares: *That''s the café **where** we met.*
+
+  - **whose** para posse: *She''s the girl **whose** brother is famous.*
+
+  - Se o pronome é objeto, pode omitir: *The movie (that) I saw was funny.*
+
+  - **Erro comum:** repetir o sujeito: *The man who he lives...* Não use *he* depois de *who*.
+
+  '
+scenario:
+  title: Describing a person or place a friend wants to find
+  character: A friend looking for someone in a photo
+  goal: Describe people, things and places in detail
+target_structures:
+- who
+- which / that
+- where
+- whose

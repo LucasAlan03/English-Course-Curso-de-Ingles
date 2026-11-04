@@ -1,0 +1,29 @@
+id: b2_modals_deduction
+level: B2
+title: Modais de dedução
+order: 6
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Modais de dedução
+
+  Para dizer o quanto você tem certeza:
+
+  - **must** (quase certeza): *He must be at home. His car is outside.*
+
+  - **might / may / could** (possível): *She might be sleeping.*
+
+  - **can''t** (impossível): *That can''t be true!*
+
+  - No passado: **must have / might have / can''t have + particípio**: *They must have left early.*
+
+  - **Erro comum:** usar *mustn''t* para dedução. Para "não pode ser", diga *can''t be*.
+
+  '
+scenario:
+  title: Solving a small mystery with a friend
+  character: A curious friend
+  goal: Guess what happened using the clues you have
+target_structures:
+- must be
+- might be
+- can't be
+- must have + participle

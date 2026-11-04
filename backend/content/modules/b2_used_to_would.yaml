@@ -1,0 +1,24 @@
+id: b2_used_to_would
+level: B2
+title: Used to / would / be used to
+order: 7
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Used to, would e be used to
+
+  - **used to + verbo**: hábito ou estado do passado que não existe mais: *I used to play football.* / *She used to be shy.*
+
+  - **would + verbo**: hábito repetido no passado (não serve para estados): *Every summer we would visit my grandma.*
+
+  - **be / get used to + -ing**: estar acostumado: *I''m used to getting up early.* / *I''m getting used to the cold.*
+
+  - **Erro comum:** *I''m used to live here.* → *I''m used to living here.*
+
+  '
+scenario:
+  title: Comparing life in two different cities
+  character: A friend who moved abroad
+  goal: Describe how life used to be and what you are getting used to
+target_structures:
+- used to
+- would for past habits
+- be used to + -ing

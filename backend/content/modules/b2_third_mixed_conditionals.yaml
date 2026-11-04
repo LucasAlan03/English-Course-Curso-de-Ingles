@@ -1,0 +1,26 @@
+id: b2_third_mixed_conditionals
+level: B2
+title: 3º condicional e mistos
+order: 3
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# 3º condicional e condicionais mistos
+
+  - **3º condicional** (passado irreal): *If + past perfect, would have + particípio.* → *If I had studied, I would have passed.*
+
+  - Serve para arrependimento ou crítica: *If you had told me, I would have helped.*
+
+  - **Misto**, passado → presente: *If I had taken that job, I would be rich now.*
+
+  - **Misto**, presente → passado: *If I were more careful, I wouldn''t have lost it.*
+
+  - **Erro comum:** *If I would have known...* Depois do *if* use *had known*.
+
+  '
+scenario:
+  title: Talking about a decision you regret
+  character: A supportive colleague
+  goal: Discuss past decisions and how things could have been different
+target_structures:
+- third conditional
+- mixed conditionals
+- would have + participle

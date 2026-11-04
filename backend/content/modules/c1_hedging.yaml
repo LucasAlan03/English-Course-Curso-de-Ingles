@@ -1,0 +1,29 @@
+id: c1_hedging
+level: C1
+title: Hedging
+order: 5
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Hedging (suavizar opiniões)
+
+  Para soar diplomático e preciso:
+
+  - **I tend to think...** / **It seems to me that...** / **I''d say...**
+
+  - **might, may, could** e advérbios: *probably, perhaps, arguably, somewhat*
+
+  - **It could be argued that...** / **To some extent...**
+
+  - Suavizar críticas: *I''m not sure that''s the best approach.* / *It''s a bit unclear.*
+
+  - **Dica:** evite afirmações absolutas (*always, never, definitely*) quando há dúvida.
+
+  '
+scenario:
+  title: Disagreeing politely in a team meeting
+  character: A senior colleague
+  goal: Express disagreement and opinions diplomatically
+target_structures:
+- I tend to think
+- It seems that
+- arguably
+- to some extent

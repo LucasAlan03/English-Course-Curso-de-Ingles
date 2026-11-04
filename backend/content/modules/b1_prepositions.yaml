@@ -1,0 +1,24 @@
+id: b1_prepositions
+level: B1
+title: Preposições (tempo, lugar, movimento)
+order: 7
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Preposições de tempo, lugar e movimento
+
+  - **Tempo**: **at** + hora (*at 7*), **on** + dia (*on Monday*), **in** + mês, ano ou período (*in May, in 2024, in the morning*).
+
+  - **Lugar**: **at** (ponto: *at the bus stop*), **in** (dentro: *in the kitchen*), **on** (superfície: *on the table*).
+
+  - **Movimento**: **to** (destino: *go to school*), **from**, **into**, **through**, **across**.
+
+  - **Erro comum:** *I''m in home*. O certo é *I''m at home*.
+
+  '
+scenario:
+  title: Asking for directions in a new city
+  character: A local resident
+  goal: Ask where places are and understand directions and times
+target_structures:
+- at / on / in
+- to / from / across
+- giving directions
