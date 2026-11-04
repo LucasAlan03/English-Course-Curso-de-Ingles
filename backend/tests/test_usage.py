@@ -70,3 +70,11 @@ def test_usage_route(app_client):
     r = app_client.get("/usage/month")
     assert r.status_code == 200
     assert r.json()["level"] == "ok" and r.json()["total"] == 0
+
+
+def test_settings_route_reports_profile_and_providers(app_client):
+    body = app_client.get("/settings").json()
+    assert body["profile"] == "free"
+    assert body["providers"] == {"chat": "gemini", "report": "gemini", "stt": "local", "tts": "local"}
+    assert body["usage"]["level"] == "ok"
+    assert "api_key" not in str(body).lower()  # never leak keys
