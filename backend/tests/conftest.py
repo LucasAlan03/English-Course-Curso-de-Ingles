@@ -44,3 +44,10 @@ def conn(tmp_path):
     c = connect(str(tmp_path / "test.db"))
     init_schema(c)
     return c
+
+
+@pytest.fixture
+def tracker(conn, settings, clock):
+    from app.usage import UsageTracker
+
+    return UsageTracker(conn, settings, clock)
