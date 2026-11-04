@@ -1,0 +1,65 @@
+export type PillarKey = 'grammar' | 'speak' | 'write' | 'read' | 'watch';
+export type Pillars = Record<PillarKey, boolean>;
+
+export type UsageStatus = { total: number; warn: number; cap: number; level: 'ok' | 'warn' | 'blocked' };
+
+export type ReviewDue = { module_id: string; title: string; next_due: string; overdue_days: number };
+
+export type Home = {
+  reviews_due: ReviewDue[];
+  next_module: { id: string; title: string; level: string } | null;
+  pillars: Pillars;
+  streak: number;
+  usage: UsageStatus;
+};
+
+export type ModuleSummary = { id: string; title: string; order: number; completed: boolean };
+export type LevelSummary = { level: string; total: number; completed: number; modules: ModuleSummary[] };
+export type Modules = { levels: LevelSummary[] };
+
+export type ModuleDetail = {
+  id: string;
+  level: string;
+  title: string;
+  theory_md: string;
+  scenario: { title: string; character: string; goal: string };
+  target_structures: string[];
+  completed: boolean;
+};
+
+export type ListeningItem = {
+  id: number;
+  kind: 'choice' | 'gap';
+  prompt: string;
+  options: string[] | null;
+  audio_url: string;
+};
+
+export type AnswerResult = { correct: boolean; correct_answer: string; explanation: string };
+
+export type Mistake = { said: string; corrected: string; explanation: string; module_id: string | null };
+export type Report = { mistakes: Mistake[]; natural_expressions: string[]; strengths: string[]; score: number };
+export type FinishResult = {
+  report: Report;
+  listening_score: number | null;
+  conversation_score: number;
+  final_score: number;
+  next_due: string | null;
+};
+
+export type TurnResult = { user_text: string; reply_text: string; reply_audio_url: string | null };
+
+export type WritingFeedback = { corrected_text: string; improved_text: string; mistakes: Mistake[]; score: number };
+
+export type MediaItem = {
+  id: number;
+  date: string;
+  type: 'watch' | 'read';
+  category: string;
+  title: string;
+  episode: string | null;
+  minutes: number;
+  pages: number | null;
+};
+export type MediaTotals = { total_minutes: number; by_type: Record<string, number>; by_category: Record<string, number> };
+export type MediaSummary = { day: MediaTotals; week: MediaTotals; month: MediaTotals };
