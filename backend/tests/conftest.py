@@ -28,3 +28,12 @@ def clock() -> FixedClock:
 def app_client(settings, clock) -> TestClient:
     app = create_app(settings, clock=clock)
     return TestClient(app, headers={"X-API-Token": TEST_TOKEN})
+
+
+@pytest.fixture
+def conn(tmp_path):
+    from app.db import connect, init_schema
+
+    c = connect(str(tmp_path / "test.db"))
+    init_schema(c)
+    return c
