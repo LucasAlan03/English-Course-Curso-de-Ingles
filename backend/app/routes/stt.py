@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, File, UploadFile
 
 from app.deps import AppDeps, get_deps
 from app.errors import EmptyTranscript
+from app.speech import heard_words
 
 router = APIRouter()
 
@@ -14,6 +15,6 @@ async def speech_to_text(audio: UploadFile = File(...), deps: AppDeps = Depends(
     result = deps.providers.stt.transcribe(data, audio.content_type or "audio/webm")
     deps.tracker.record(result.usage)
     text = result.text.strip()
-    if not text:
+    if not heard_words(text):
         raise EmptyTranscript()
     return {"text": text}

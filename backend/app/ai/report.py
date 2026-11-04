@@ -11,6 +11,7 @@ from app.errors import AppError
 from app.mistakes import record_mistakes
 from app.providers.base import Msg
 from app.scoring import final_score
+from app.sessions_repo import get_session
 from app.srs import ReviewState, next_state
 
 
@@ -48,6 +49,25 @@ def finish_session(deps: AppDeps, session: sqlite3.Row) -> dict:
     if not any(m.role == "user" for m in messages):
         raise AppError("no_user_messages", 422, "Fale ou escreva algo antes de encerrar.")
 
+    claimed = deps.conn.execute(
+        "UPDATE sessions SET is_finished = 2 WHERE id = ? AND is_finished = 0", (session_id,)
+    ).rowcount
+    deps.conn.commit()
+    if not claimed:  # another request is finishing it, or already did
+        fresh = get_session(deps.conn, session_id)
+        if fresh["is_finished"] == 1 and fresh["report_json"]:
+            return json.loads(fresh["report_json"])
+        raise AppError("finish_in_progress", 409, "O relatório já está sendo gerado. Aguarde alguns segundos.")
+    try:
+        return _finish_claimed(deps, session, messages)
+    except BaseException:
+        deps.conn.execute("UPDATE sessions SET is_finished = 0 WHERE id = ? AND is_finished = 2", (session_id,))
+        deps.conn.commit()
+        raise
+
+
+def _finish_claimed(deps: AppDeps, session: sqlite3.Row, messages: list[Msg]) -> dict:
+    session_id = session["id"]
     if session["kind"] == "free":
         level = deps.settings.user_level
         context = f"Free conversation about: {session['topic'] or 'anything'}"

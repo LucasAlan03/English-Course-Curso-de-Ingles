@@ -4,6 +4,7 @@ from fastapi.responses import JSONResponse
 
 from app.clock import Clock, SystemClock
 from app.config import Settings
+import logging
 import os
 
 from app.content import ContentRepo
@@ -55,7 +56,11 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
             token = request.query_params.get("token")  # audio players cannot send headers
         if path != "/health" and not token_is_valid(token, settings.api_token):
             return JSONResponse({"error": "unauthorized", "detail": ""}, status_code=401)
-        return await call_next(request)
+        try:
+            return await call_next(request)
+        except Exception:
+            logging.getLogger("english").exception("Unhandled error on %s", path)
+            return JSONResponse({"error": "internal_error", "detail": "Erro inesperado no servidor."}, status_code=500)
 
     @app.get("/health")
     def health():

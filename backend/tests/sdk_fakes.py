@@ -23,12 +23,13 @@ class FakeGeminiClient:
 
 
 class FakeWhisperModel:
-    def __init__(self, texts=("Hello", " there"), duration=2.4):
+    def __init__(self, texts=("Hello", " there"), duration=2.4, no_speech=None):
         self._texts, self._duration, self.calls = texts, duration, []
+        self._no_speech = no_speech or [0.0] * len(texts)
 
-    def transcribe(self, audio, language=None):
-        self.calls.append(language)
-        segments = [SimpleNamespace(text=t) for t in self._texts]
+    def transcribe(self, audio, language=None, **kwargs):
+        self.calls.append({"language": language, **kwargs})
+        segments = [SimpleNamespace(text=t, no_speech_prob=p) for t, p in zip(self._texts, self._no_speech)]
         return iter(segments), SimpleNamespace(duration=self._duration)
 
 
@@ -91,3 +92,11 @@ class FakeOpenAIClient:
         self.calls.append(("tts", kwargs))
         self._maybe_fail()
         return SimpleNamespace(content=self._audio)
+
+
+class ServerError(Exception):
+    code = 503
+
+
+class AuthError(Exception):
+    status_code = 401

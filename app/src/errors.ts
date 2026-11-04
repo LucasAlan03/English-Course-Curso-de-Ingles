@@ -15,6 +15,14 @@ export function describeError(error: unknown): string {
       return 'A IA devolveu uma resposta inválida. Tente de novo.';
     case 'empty_transcript':
       return 'Não consegui ouvir nada. Repita, por favor.';
+    case 'provider_unavailable':
+      return `${who} está fora do ar ou sobrecarregado agora. Tente de novo em instantes.`;
+    case 'provider_auth_failed':
+      return `A chave de API de ${who} está ausente ou inválida. Confira o .env do backend.`;
+    case 'finish_in_progress':
+      return 'O relatório já está sendo gerado. Aguarde alguns segundos e tente de novo.';
+    case 'internal_error':
+      return 'Erro inesperado no servidor. Veja o terminal do backend e tente de novo.';
     default:
       return e.detail || String(error);
   }

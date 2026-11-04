@@ -14,6 +14,10 @@ test.each([
   ['monthly_cap_reached', undefined, 'teto mensal de gastos'],
   ['invalid_ai_output', undefined, 'A IA devolveu uma resposta inválida'],
   ['empty_transcript', undefined, 'Não consegui ouvir nada'],
+  ['provider_unavailable', 'gemini', 'gemini está fora do ar'],
+  ['provider_auth_failed', 'anthropic', 'chave de API de anthropic'],
+  ['internal_error', undefined, 'Erro inesperado'],
+  ['finish_in_progress', undefined, 'já está sendo gerado'],
 ])('describeError explains %s', (code, provider, expected) => {
   expect(describeError(err(code, 'server text', provider as string | undefined))).toContain(expected);
 });

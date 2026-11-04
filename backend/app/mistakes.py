@@ -23,7 +23,8 @@ def record_mistakes(deps: AppDeps, session_id: int, mistakes: list[MistakeOut], 
                corrected=m.corrected, explanation=m.explanation, created_at=now)
         if module_id:
             touched.add(module_id)
-    pull_forward_reviews(deps, touched)
+    if session_module_id is None:  # module sessions keep their own spaced-repetition schedule
+        pull_forward_reviews(deps, touched)
 
 
 def pull_forward_reviews(deps: AppDeps, module_ids: set[str]) -> None:

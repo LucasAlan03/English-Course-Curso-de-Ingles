@@ -7,6 +7,7 @@ from app.db import insert
 from app.deps import AppDeps
 from app.errors import AppError, EmptyTranscript
 from app.providers.base import Msg, TextModel
+from app.speech import heard_words
 from app.usage import UsageTracker
 
 RECENT_KEEP = 10  # messages that always travel verbatim
@@ -76,7 +77,7 @@ def run_turn(deps: AppDeps, session: sqlite3.Row, text: str | None, audio: bytes
         heard = providers.stt.transcribe(audio, mime)
         tracker.record(heard.usage)
         user_text = heard.text.strip()
-        if not user_text:
+        if not heard_words(user_text):
             raise EmptyTranscript()
     elif text is not None:
         user_text = text.strip()
@@ -93,9 +94,10 @@ def run_turn(deps: AppDeps, session: sqlite3.Row, text: str | None, audio: bytes
     if opener:
         recent = [Msg("user", OPENER)]
     else:
-        insert(deps.conn, "messages", session_id=session_id, role="user", text=user_text, created_at=now)
         history.append(Msg("user", user_text))
         new_summary, new_upto, recent = build_context(history, summary, upto, providers.chat, tracker)
+        if recent and recent[0].role == "assistant":  # after the AI opened the chat; some APIs need a user turn first
+            recent = [Msg("user", OPENER)] + recent
         if new_upto != upto:
             deps.conn.execute("UPDATE sessions SET summary = ?, summary_upto = ? WHERE id = ?",
                               (new_summary, new_upto, session_id))
@@ -115,6 +117,8 @@ def run_turn(deps: AppDeps, session: sqlite3.Row, text: str | None, audio: bytes
         speech = providers.tts.synthesize(reply_text)
         tracker.record(speech.usage)
         audio_name = save_audio(deps.settings.data_dir, speech.audio, speech.mime)
+    if not opener:  # saved only now, so a failed turn leaves nothing behind to be duplicated on resend
+        insert(deps.conn, "messages", session_id=session_id, role="user", text=user_text, created_at=now)
     insert(deps.conn, "messages", session_id=session_id, role="assistant", text=reply_text,
            audio_path=audio_name, created_at=now)
     return {"user_text": user_text, "reply_text": reply_text,

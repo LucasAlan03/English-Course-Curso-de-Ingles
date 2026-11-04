@@ -41,3 +41,21 @@ class InvalidAIOutput(AppError):
 class EmptyTranscript(AppError):
     def __init__(self):
         super().__init__("empty_transcript", 422, "Não consegui ouvir nada. Repita, por favor.")
+
+
+class ProviderUnavailable(AppError):
+    def __init__(self, provider: str):
+        super().__init__(
+            "provider_unavailable", 502,
+            f"{provider} está fora do ar ou sobrecarregado agora. Tente de novo em instantes.",
+            provider=provider,
+        )
+
+
+class ProviderAuthFailed(AppError):
+    def __init__(self, provider: str):
+        super().__init__(
+            "provider_auth_failed", 502,
+            f"A chave de API de {provider} está ausente ou inválida. Confira o .env do backend.",
+            provider=provider,
+        )

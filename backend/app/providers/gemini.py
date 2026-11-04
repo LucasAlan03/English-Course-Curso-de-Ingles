@@ -1,11 +1,8 @@
 import time
 
-from app.errors import ProviderRateLimited
+from app.errors import ProviderAuthFailed, ProviderRateLimited, ProviderUnavailable
+from app.providers.errors_map import is_auth_error, status_of
 from app.providers.base import Msg, TextResult, Usage
-
-
-def _is_rate_limit(exc: Exception) -> bool:
-    return getattr(exc, "code", None) == 429 or "RESOURCE_EXHAUSTED" in str(exc)
 
 
 class GeminiText:
@@ -41,12 +38,16 @@ class GeminiText:
                 response = client.models.generate_content(model=self.model, contents=contents, config=config)
                 break
             except Exception as exc:
-                if not _is_rate_limit(exc):
+                if is_auth_error(exc):
+                    raise ProviderAuthFailed("gemini") from exc
+                status = status_of(exc)
+                rate_limited = status == 429 or "RESOURCE_EXHAUSTED" in str(exc)
+                if not (rate_limited or (status is not None and status >= 500)):
                     raise
                 if attempt == 0:
                     self._sleep(self._retry_wait)
-                else:
-                    raise ProviderRateLimited("gemini") from exc
+                    continue
+                raise (ProviderRateLimited if rate_limited else ProviderUnavailable)("gemini") from exc
 
         meta = getattr(response, "usage_metadata", None)
         usage = Usage(

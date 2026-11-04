@@ -158,3 +158,20 @@ test('ReviewScreen starts a review session and its short listening', async () =>
   expect(await screen.findByText('Pick one')).toBeTruthy();
   expect(apiMock).toHaveBeenCalledWith('/sessions', expect.objectContaining({ json: { kind: 'review', module_id: 'b1_a' } }));
 });
+
+test('ReportScreen offers a retry after an error and then shows the report', async () => {
+  apiMock
+    .mockRejectedValueOnce(ERR('invalid_ai_output', 'A IA devolveu uma resposta inválida. Tente de novo.'))
+    .mockResolvedValueOnce(REPORT);
+  await render(<ReportScreen />);
+  await userEvent.press(await screen.findByText('Tentar de novo'));
+  expect(await screen.findByText('I goed home')).toBeTruthy();
+  expect(apiMock).toHaveBeenCalledTimes(2);
+});
+
+test('ReportScreen asks for the report only once per visit', async () => {
+  apiMock.mockResolvedValue(REPORT);
+  await render(<ReportScreen />);
+  await screen.findByText('I goed home');
+  expect(apiMock).toHaveBeenCalledTimes(1);
+});
