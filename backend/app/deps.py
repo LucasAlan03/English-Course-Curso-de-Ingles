@@ -6,6 +6,7 @@ from app.clock import Clock
 from app.config import Settings
 from app.content import ContentRepo
 from app.providers.base import Providers
+from app.usage import UsageTracker
 
 
 @dataclass
@@ -17,6 +18,7 @@ class AppDeps:
     conn: sqlite3.Connection
     providers: Providers
     content: ContentRepo
+    tracker: UsageTracker
 
 
 def token_is_valid(given: str | None, expected: str) -> bool:
