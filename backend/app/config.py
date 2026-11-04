@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     api_token: str = "change-me"
     provider_profile: str = "free"  # free | paid
     tz: str = "America/Sao_Paulo"
+    user_level: str = "B1"  # level used for free conversations and writing
 
     monthly_warn_brl: float = 45.0
     monthly_cap_brl: float = 50.0

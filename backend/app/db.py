@@ -15,6 +15,8 @@ CREATE TABLE IF NOT EXISTS sessions (
     finished_at TEXT,
     day TEXT,
     summary TEXT,
+    summary_upto INTEGER NOT NULL DEFAULT 0,
+    report_json TEXT,
     is_finished INTEGER NOT NULL DEFAULT 0
 );
 CREATE TABLE IF NOT EXISTS messages (
