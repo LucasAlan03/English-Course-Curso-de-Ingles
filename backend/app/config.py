@@ -1,4 +1,8 @@
+from pathlib import Path
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class Settings(BaseSettings):
@@ -11,9 +15,9 @@ class Settings(BaseSettings):
     monthly_warn_brl: float = 45.0
     monthly_cap_brl: float = 50.0
 
-    data_dir: str = "data"
-    content_dir: str = "content/modules"
-    prompts_dir: str = "prompts"
+    data_dir: str = str(BASE_DIR / "data")
+    content_dir: str = str(BASE_DIR / "content" / "modules")
+    prompts_dir: str = str(BASE_DIR / "prompts")
 
     gemini_api_key: str = ""
     anthropic_api_key: str = ""

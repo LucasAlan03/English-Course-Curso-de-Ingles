@@ -3,13 +3,26 @@ from fastapi.responses import JSONResponse
 
 from app.clock import Clock, SystemClock
 from app.config import Settings
+import os
+
+from app.content import ContentRepo
+from app.db import connect, init_schema
 from app.deps import AppDeps, token_is_valid
+from app.providers.factory import build_providers
 
 
 def create_app(settings: Settings, *, providers=None, clock: Clock | None = None) -> FastAPI:
     app = FastAPI(title="English App")
     clock = clock or SystemClock(settings.tz)
-    app.state.deps = AppDeps(settings=settings, clock=clock)
+    conn = connect(os.path.join(settings.data_dir, "app.db"))
+    init_schema(conn)
+    app.state.deps = AppDeps(
+        settings=settings,
+        clock=clock,
+        conn=conn,
+        providers=providers or build_providers(settings),
+        content=ContentRepo.load(settings.content_dir),
+    )
 
     @app.middleware("http")
     async def require_token(request: Request, call_next):

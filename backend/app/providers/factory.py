@@ -1,0 +1,49 @@
+from collections.abc import Callable
+
+from app.config import Settings
+from app.providers.base import Providers
+
+PROFILES = {
+    "free": {"chat": "gemini", "report": "gemini", "stt": "local", "tts": "local"},
+    "paid": {"chat": "anthropic", "report": "anthropic", "stt": "openai", "tts": "openai"},
+}
+VALID = {
+    "chat": {"gemini", "anthropic"},
+    "report": {"gemini", "anthropic"},
+    "stt": {"local", "openai"},
+    "tts": {"local", "openai"},
+}
+
+Builder = Callable[[Settings], object]
+# (role, name) -> builder. Real providers register themselves with lazy imports.
+REGISTRY: dict[tuple[str, str], Builder] = {}
+
+
+def resolve_names(settings: Settings) -> dict[str, str]:
+    if settings.provider_profile not in PROFILES:
+        raise ValueError(f"unknown PROVIDER_PROFILE: {settings.provider_profile!r}")
+    names = dict(PROFILES[settings.provider_profile])
+    overrides = {
+        "chat": settings.chat_provider,
+        "report": settings.report_provider,
+        "stt": settings.stt_provider,
+        "tts": settings.tts_provider,
+    }
+    for role, name in overrides.items():
+        if name:
+            names[role] = name
+    for role, name in names.items():
+        if name not in VALID[role]:
+            raise ValueError(f"provider {name!r} is not valid for {role}")
+    return names
+
+
+def build_providers(settings: Settings) -> Providers:
+    names = resolve_names(settings)
+    built = {}
+    for role in ("chat", "report", "stt", "tts"):
+        builder = REGISTRY.get((role, names[role]))
+        if builder is None:
+            raise ValueError(f"provider {names[role]!r} for {role} is not available")
+        built[role] = builder(settings)
+    return Providers(**built)

@@ -1,8 +1,11 @@
 import secrets
+import sqlite3
 from dataclasses import dataclass
 
 from app.clock import Clock
 from app.config import Settings
+from app.content import ContentRepo
+from app.providers.base import Providers
 
 
 @dataclass
@@ -11,6 +14,9 @@ class AppDeps:
 
     settings: Settings
     clock: Clock
+    conn: sqlite3.Connection
+    providers: Providers
+    content: ContentRepo
 
 
 def token_is_valid(given: str | None, expected: str) -> bool:

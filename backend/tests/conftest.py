@@ -6,6 +6,8 @@ from fastapi.testclient import TestClient
 from app.clock import FixedClock
 from app.config import Settings
 from app.main import create_app
+from app.providers.base import Providers
+from app.providers.fakes import FakeStt, FakeTextModel, FakeTts
 
 TEST_TOKEN = "test-token"
 
@@ -25,8 +27,13 @@ def clock() -> FixedClock:
 
 
 @pytest.fixture
-def app_client(settings, clock) -> TestClient:
-    app = create_app(settings, clock=clock)
+def providers() -> Providers:
+    return Providers(chat=FakeTextModel(), report=FakeTextModel(), stt=FakeStt(), tts=FakeTts())
+
+
+@pytest.fixture
+def app_client(settings, clock, providers) -> TestClient:
+    app = create_app(settings, providers=providers, clock=clock)
     return TestClient(app, headers={"X-API-Token": TEST_TOKEN})
 
 
