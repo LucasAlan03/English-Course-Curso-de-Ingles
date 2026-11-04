@@ -11,6 +11,7 @@ from app.deps import AppDeps, token_is_valid
 from app.errors import AppError
 from app.providers.factory import build_providers
 from app.routes import listening as listening_routes
+from app.routes import modules as modules_routes
 from app.routes import sessions as sessions_routes
 from app.routes import usage as usage_routes
 from app.usage import UsageTracker
@@ -37,6 +38,7 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
     app.include_router(usage_routes.router)
     app.include_router(listening_routes.router)
     app.include_router(sessions_routes.router)
+    app.include_router(modules_routes.router)
 
     @app.middleware("http")
     async def require_token(request: Request, call_next):
