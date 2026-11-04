@@ -1,3 +1,4 @@
+import { describeError } from '@/errors';
 import { router } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
@@ -25,7 +26,7 @@ export default function FreeScreen() {
       });
       router.replace(`/chat/${session.id}`);
     } catch (e) {
-      setError((e as { detail?: string }).detail ?? String(e));
+      setError(describeError(e));
       setBusy(false);
     }
   }

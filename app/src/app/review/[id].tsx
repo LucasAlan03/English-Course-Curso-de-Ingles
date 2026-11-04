@@ -1,3 +1,4 @@
+import { describeError } from '@/errors';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
@@ -24,7 +25,7 @@ export default function ReviewScreen() {
         setItems(await api<ListeningItem[]>(`/sessions/${session.id}/listening`));
         setSessionId(session.id);
       } catch (e) {
-        setError((e as { detail?: string }).detail ?? String(e));
+        setError(describeError(e));
       }
     })();
   }, [id]);

@@ -1,3 +1,4 @@
+import { describeError } from '@/errors';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
@@ -16,7 +17,7 @@ export default function ReportScreen() {
   useEffect(() => {
     api<FinishResult>(`/sessions/${sessionId}/finish`, { method: 'POST' })
       .then(setResult)
-      .catch((e) => setError((e as { detail?: string }).detail ?? String(e)));
+      .catch((e) => setError(describeError(e)));
   }, [sessionId]);
 
   return (

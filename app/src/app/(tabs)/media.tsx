@@ -1,3 +1,4 @@
+import { describeError } from '@/errors';
 import { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -25,7 +26,7 @@ export default function MediaScreen() {
       await action();
       await Promise.all([items.reload(), summary.reload()]);
     } catch (e) {
-      setError((e as { detail?: string }).detail ?? String(e));
+      setError(describeError(e));
     }
   }
 

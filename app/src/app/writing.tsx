@@ -1,3 +1,4 @@
+import { describeError } from '@/errors';
 import { useEffect, useRef, useState } from 'react';
 import { ScrollView, StyleSheet, Text, TextInput } from 'react-native';
 
@@ -24,7 +25,7 @@ export default function WritingScreen() {
         setSessionId(r.session_id);
         setPrompt(r.prompt);
       })
-      .catch((e) => setError((e as { detail?: string }).detail ?? String(e)));
+      .catch((e) => setError(describeError(e)));
   }, []);
 
   async function submit() {
@@ -33,7 +34,7 @@ export default function WritingScreen() {
     try {
       setFeedback(await api<WritingFeedback>('/writing/submit', { method: 'POST', json: { session_id: sessionId, text } }));
     } catch (e) {
-      setError((e as { detail?: string }).detail ?? String(e));
+      setError(describeError(e));
     } finally {
       setBusy(false);
     }

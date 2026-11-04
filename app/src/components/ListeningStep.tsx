@@ -1,3 +1,4 @@
+import { describeError } from '@/errors';
 import { useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
@@ -31,7 +32,7 @@ export default function ListeningStep({ items, checkAnswer, play, onFinish }: Pr
     try {
       setResult(await checkAnswer(item.id, answer));
     } catch (e) {
-      setError((e as { detail?: string }).detail ?? String(e));
+      setError(describeError(e));
     } finally {
       setBusy(false);
     }

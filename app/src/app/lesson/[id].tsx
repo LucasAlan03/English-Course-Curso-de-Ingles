@@ -1,3 +1,4 @@
+import { describeError } from '@/errors';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
@@ -30,7 +31,7 @@ export default function LessonScreen() {
       setItems(exercises);
       setStep('listening');
     } catch (e) {
-      setError((e as { detail?: string }).detail ?? String(e));
+      setError(describeError(e));
       setStep('theory');
     }
   }

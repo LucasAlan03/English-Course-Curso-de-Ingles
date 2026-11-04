@@ -1,3 +1,4 @@
+import { describeError } from './errors';
 import { useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 
@@ -15,7 +16,7 @@ export function useApi<T>(path: string) {
       setData(await api<T>(path));
       setError('');
     } catch (e) {
-      setError((e as { detail?: string }).detail ?? String(e));
+      setError(describeError(e));
     } finally {
       setLoading(false);
     }

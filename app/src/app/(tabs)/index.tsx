@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text } from 'react-native';
 
 import PillarBar from '@/components/PillarBar';
 import ReviewList from '@/components/ReviewList';
+import UsageBanner from '@/components/UsageBanner';
 import { Button, Card, ErrorText, Muted, SectionTitle } from '@/components/ui';
 import { useApi } from '@/useApi';
 import { useTheme } from '@/theme';
@@ -17,6 +18,7 @@ export default function HomeScreen() {
       {error ? <ErrorText>{error}</ErrorText> : null}
       {data ? (
         <>
+          <UsageBanner usage={data.usage} />
           <SectionTitle>Hoje</SectionTitle>
           <PillarBar pillars={data.pillars} streak={data.streak} />
 

@@ -1,3 +1,4 @@
+import { describeError } from '@/errors';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { ScrollView, StyleSheet, Switch, Text, TextInput, View } from 'react-native';
@@ -38,8 +39,8 @@ export default function ChatScreen() {
       ]);
       if (listen && result.reply_audio_url) playUrl(audioUrl(result.reply_audio_url));
     } catch (e) {
-      const err = e as { code?: string; detail?: string };
-      if (err.code !== 'empty_message') setError(err.detail ?? String(e)); // empty_message: the chat was already opened
+      const err = e as { code?: string };
+      if (err.code !== 'empty_message') setError(describeError(e)); // empty_message: the chat was already opened
     } finally {
       setBusy(false);
     }
