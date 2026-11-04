@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     prompts_dir: str = str(BASE_DIR / "prompts")
 
     gemini_api_key: str = ""
+    gemini_chat_model: str = "gemini-3.5-flash-lite"
+    gemini_report_model: str = "gemini-3.6-flash"
+    whisper_model_size: str = "base"
+    piper_voice_path: str = str(BASE_DIR / "data" / "voices" / "en_US-lessac-medium.onnx")
     anthropic_api_key: str = ""
     openai_api_key: str = ""
 

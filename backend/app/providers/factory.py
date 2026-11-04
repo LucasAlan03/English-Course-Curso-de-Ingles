@@ -47,3 +47,36 @@ def build_providers(settings: Settings) -> Providers:
             raise ValueError(f"provider {names[role]!r} for {role} is not available")
         built[role] = builder(settings)
     return Providers(**built)
+
+
+# --- free providers (imports are lazy so missing SDKs only matter when selected) ---
+def _gemini_chat(s: Settings):
+    from app.providers.gemini import GeminiText
+
+    return GeminiText(s.gemini_api_key, s.gemini_chat_model)
+
+
+def _gemini_report(s: Settings):
+    from app.providers.gemini import GeminiText
+
+    return GeminiText(s.gemini_api_key, s.gemini_report_model)
+
+
+def _local_stt(s: Settings):
+    from app.providers.local_stt import LocalWhisperStt
+
+    return LocalWhisperStt(s.whisper_model_size)
+
+
+def _local_tts(s: Settings):
+    from app.providers.local_tts import LocalTts
+
+    return LocalTts(s.piper_voice_path)
+
+
+REGISTRY.update({
+    ("chat", "gemini"): _gemini_chat,
+    ("report", "gemini"): _gemini_report,
+    ("stt", "local"): _local_stt,
+    ("tts", "local"): _local_tts,
+})

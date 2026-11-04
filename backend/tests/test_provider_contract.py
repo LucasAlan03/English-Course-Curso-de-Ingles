@@ -2,11 +2,24 @@ import pytest
 
 from app.providers.base import Msg, SttResult, TextResult, TtsResult, Usage
 from app.providers.fakes import FakeStt, FakeTextModel, FakeTts
+from app.providers.gemini import GeminiText
+from app.providers.local_stt import LocalWhisperStt
+from app.providers.local_tts import LocalTts
+from sdk_fakes import FakeGeminiClient, FakePiperVoice, FakeWhisperModel
 
 # Real implementations are appended to these lists in the free/paid provider tasks.
-TEXT_CASES = [lambda: FakeTextModel(["hello"])]
-STT_CASES = [lambda: FakeStt("hello")]
-TTS_CASES = [lambda: FakeTts()]
+TEXT_CASES = [
+    lambda: FakeTextModel(["hello"]),
+    lambda: GeminiText("k", "m", client=FakeGeminiClient("hello")),
+]
+STT_CASES = [
+    lambda: FakeStt("hello"),
+    lambda: LocalWhisperStt(model=FakeWhisperModel()),
+]
+TTS_CASES = [
+    lambda: FakeTts(),
+    lambda: LocalTts(voice=FakePiperVoice()),
+]
 
 
 @pytest.mark.parametrize("make", TEXT_CASES)
