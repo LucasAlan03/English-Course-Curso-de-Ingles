@@ -1,9 +1,11 @@
 import io
+import os
 
 from app.providers.base import SttResult, Usage
 
 NO_SPEECH_THRESHOLD = 0.6
 SAMPLE_RATE = 16000
+SUPPORTED = ("en", "pt")
 
 
 def pick_language(probabilities) -> str:
@@ -26,24 +28,37 @@ class LocalWhisperStt:
 
     is_paid = False
 
-    def __init__(self, model_size: str = "small", model=None, decode=None):
+    def __init__(self, model_size: str = "small", model=None, decode=None, cpu_threads: int = 0):
         self.model_size = model_size
         self._model = model
         self._decode = decode or _decode
+        self._cpu_threads = cpu_threads or max(4, (os.cpu_count() or 8) // 2)
 
     def _get_model(self):
         if self._model is None:
             from faster_whisper import WhisperModel  # heavy import, only when used
 
-            self._model = WhisperModel(self.model_size, device="cpu", compute_type="int8")
+            self._model = WhisperModel(
+                self.model_size, device="cpu", compute_type="int8", cpu_threads=self._cpu_threads
+            )
         return self._model
+
+    def warm_up(self) -> None:
+        """Load the model now so the first real request does not pay for it."""
+        self._get_model()
+
+    def _run(self, model, samples, language):
+        # Greedy decoding and no cross-segment conditioning are much faster and fine for short phrases.
+        return model.transcribe(
+            samples, language=language, vad_filter=True, beam_size=1, condition_on_previous_text=False
+        )
 
     def transcribe(self, audio: bytes, mime: str) -> SttResult:
         model = self._get_model()
         samples = self._decode(io.BytesIO(audio))
-        _, _, probabilities = model.detect_language(samples)
-        language = pick_language(probabilities)
-        segments, info = model.transcribe(samples, language=language, vad_filter=True)
+        segments, info = self._run(model, samples, None)  # detects the language in the same pass
+        if info.language not in SUPPORTED:
+            segments, info = self._run(model, samples, pick_language(getattr(info, "all_language_probs", None)))
         # Whisper invents phrases such as "Thank you." from noise; keep only segments it believes are speech.
         text = " ".join(
             s.text.strip() for s in segments if getattr(s, "no_speech_prob", 0.0) < NO_SPEECH_THRESHOLD

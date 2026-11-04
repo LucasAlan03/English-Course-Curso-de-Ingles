@@ -25,17 +25,15 @@ class FakeGeminiClient:
 class FakeWhisperModel:
     def __init__(self, texts=("Hello", " there"), duration=2.4, no_speech=None, probs=None):
         self._texts, self._duration, self.calls = texts, duration, []
-        self._probs = [("en", 0.9), ("pt", 0.05)] if probs is None else probs
         self._no_speech = no_speech or [0.0] * len(texts)
-
-    def detect_language(self, audio=None, **kwargs):
-        first = self._probs[0] if self._probs else ("en", 0.0)
-        return first[0], first[1], self._probs
+        self._probs = [("en", 0.9), ("pt", 0.05)] if probs is None else probs
 
     def transcribe(self, audio, language=None, **kwargs):
         self.calls.append({"language": language, **kwargs})
+        detected = language or (self._probs[0][0] if self._probs else "en")
         segments = [SimpleNamespace(text=t, no_speech_prob=p) for t, p in zip(self._texts, self._no_speech)]
-        return iter(segments), SimpleNamespace(duration=self._duration)
+        info = SimpleNamespace(duration=self._duration, language=detected, all_language_probs=self._probs)
+        return iter(segments), info
 
 
 class FakePiperVoice:

@@ -23,7 +23,12 @@ class Settings(BaseSettings):
     gemini_api_key: str = ""
     gemini_chat_model: str = "gemini-3.5-flash-lite"
     gemini_report_model: str = "gemini-3.6-flash"
+    gemini_fallback_model: str = "gemini-3.5-flash-lite"  # used when the main model is overloaded (503)
+    gemini_chat_thinking: str = "minimal"  # minimal | low | medium | high ("" = model default)
+    gemini_report_thinking: str = "low"
     whisper_model_size: str = "small"
+    whisper_cpu_threads: int = 0  # 0 = automatic
+    warm_up: bool = True  # load the voice models when the server starts
     piper_voice_path: str = str(BASE_DIR / "data" / "voices" / "en_US-lessac-medium.onnx")
     anthropic_api_key: str = ""
     openai_api_key: str = ""

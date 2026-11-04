@@ -37,6 +37,7 @@ def test_server_factory_builds_a_working_app(monkeypatch, tmp_path):
     monkeypatch.setenv("DATA_DIR", str(tmp_path / "data"))
     monkeypatch.setenv("API_TOKEN", "secret")
     monkeypatch.setenv("PROVIDER_PROFILE", "free")
+    monkeypatch.setenv("WARM_UP", "false")
     from app.server import app_factory
 
     client = TestClient(app_factory(), headers={"X-API-Token": "secret"})

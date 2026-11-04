@@ -53,19 +53,21 @@ def build_providers(settings: Settings) -> Providers:
 def _gemini_chat(s: Settings):
     from app.providers.gemini import GeminiText
 
-    return GeminiText(s.gemini_api_key, s.gemini_chat_model)
+    return GeminiText(s.gemini_api_key, s.gemini_chat_model, thinking_level=s.gemini_chat_thinking,
+                      fallback_model=s.gemini_fallback_model)
 
 
 def _gemini_report(s: Settings):
     from app.providers.gemini import GeminiText
 
-    return GeminiText(s.gemini_api_key, s.gemini_report_model)
+    return GeminiText(s.gemini_api_key, s.gemini_report_model, thinking_level=s.gemini_report_thinking,
+                      fallback_model=s.gemini_fallback_model)
 
 
 def _local_stt(s: Settings):
     from app.providers.local_stt import LocalWhisperStt
 
-    return LocalWhisperStt(s.whisper_model_size)
+    return LocalWhisperStt(s.whisper_model_size, cpu_threads=s.whisper_cpu_threads)
 
 
 def _local_tts(s: Settings):

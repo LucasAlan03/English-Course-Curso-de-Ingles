@@ -25,6 +25,10 @@ class LocalTts:
             self._voice = PiperVoice.load(self.voice_path)
         return self._voice
 
+    def warm_up(self) -> None:
+        """Load the voice and run one short sentence so the first real reply is fast."""
+        self.synthesize("Hello.")
+
     def synthesize(self, text: str) -> TtsResult:
         voice = self._get_voice()
         buffer = io.BytesIO()

@@ -38,7 +38,7 @@ def test_local_stt_drops_segments_that_are_probably_not_speech():
 def test_local_stt_asks_the_model_to_filter_silence():
     model = FakeWhisperModel()
     LocalWhisperStt(decode=lambda b: b, model=model).transcribe(b"x", "audio/wav")
-    assert model.calls[0]["vad_filter"] is True and model.calls[0]["language"] == "en"
+    assert model.calls[0]["vad_filter"] is True
 
 
 @pytest.mark.parametrize("heard", ["...", "♪ ♪", "  -  ", "123"])
