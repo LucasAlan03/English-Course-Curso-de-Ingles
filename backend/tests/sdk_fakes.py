@@ -23,9 +23,14 @@ class FakeGeminiClient:
 
 
 class FakeWhisperModel:
-    def __init__(self, texts=("Hello", " there"), duration=2.4, no_speech=None):
+    def __init__(self, texts=("Hello", " there"), duration=2.4, no_speech=None, probs=None):
         self._texts, self._duration, self.calls = texts, duration, []
+        self._probs = [("en", 0.9), ("pt", 0.05)] if probs is None else probs
         self._no_speech = no_speech or [0.0] * len(texts)
+
+    def detect_language(self, audio=None, **kwargs):
+        first = self._probs[0] if self._probs else ("en", 0.0)
+        return first[0], first[1], self._probs
 
     def transcribe(self, audio, language=None, **kwargs):
         self.calls.append({"language": language, **kwargs})

@@ -5,6 +5,8 @@ Transcript (USER is the learner):
 {{transcript}}
 
 Find the learner's real mistakes (grammar, word choice, unnatural phrasing). Do not invent mistakes.
+If the learner spoke Portuguese in some turns, do NOT list those turns as mistakes. Instead add the natural English
+way to say them to "natural_expressions", written as: Portuguese sentence -> English version.
 For each mistake give what they said, the corrected version, and a short explanation in Brazilian Portuguese.
 Set "module_id" to the id of the grammar module that best fits the mistake, chosen ONLY from this list, or null:
 {{known_module_ids}}

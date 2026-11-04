@@ -32,12 +32,12 @@ def turn(app_client, sid, text=None, audio=None):
 
 def test_local_stt_drops_segments_that_are_probably_not_speech():
     model = FakeWhisperModel(texts=("Thank you.", " Hello"), no_speech=[0.9, 0.05])
-    assert LocalWhisperStt(model=model).transcribe(b"x", "audio/wav").text == "Hello"
+    assert LocalWhisperStt(decode=lambda b: b, model=model).transcribe(b"x", "audio/wav").text == "Hello"
 
 
 def test_local_stt_asks_the_model_to_filter_silence():
     model = FakeWhisperModel()
-    LocalWhisperStt(model=model).transcribe(b"x", "audio/wav")
+    LocalWhisperStt(decode=lambda b: b, model=model).transcribe(b"x", "audio/wav")
     assert model.calls[0]["vad_filter"] is True and model.calls[0]["language"] == "en"
 
 

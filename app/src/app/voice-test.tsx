@@ -12,7 +12,11 @@ export default function VoiceTest() {
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
 
-  async function onRelease() {
+  async function toggle() {
+    if (!isRecording) {
+      await start();
+      return;
+    }
     const recording = await stop();
     if (!recording) return;
     setBusy(true);
@@ -33,18 +37,17 @@ export default function VoiceTest() {
   return (
     <View style={styles.container}>
       <Text style={[styles.hint, { color: theme.muted }]}>
-        Segure o botão, fale em inglês e solte. O texto reconhecido aparece abaixo.
+        Toque para começar a gravar, fale (em inglês ou português) e toque de novo para enviar. O texto reconhecido aparece abaixo.
       </Text>
       {denied ? (
         <Text style={{ color: theme.bad }}>Permissão do microfone negada. Libere nas configurações do aparelho.</Text>
       ) : null}
       <Pressable
-        onPressIn={start}
-        onPressOut={onRelease}
+        onPress={toggle}
         style={[styles.button, { backgroundColor: isRecording ? theme.bad : theme.primary }]}
       >
         <Text style={{ color: theme.onPrimary, fontWeight: '600' }}>
-          {isRecording ? 'Gravando… solte para enviar' : busy ? 'Enviando…' : 'Segurar para falar'}
+          {isRecording ? 'Gravando… toque para enviar' : busy ? 'Enviando…' : 'Toque para falar'}
         </Text>
       </Pressable>
       {text ? <Text style={[styles.result, { color: theme.text }]}>{text}</Text> : null}

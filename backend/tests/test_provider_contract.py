@@ -18,7 +18,7 @@ TEXT_CASES = [
 ]
 STT_CASES = [
     lambda: FakeStt("hello"),
-    lambda: LocalWhisperStt(model=FakeWhisperModel()),
+    lambda: LocalWhisperStt(decode=lambda b: b, model=FakeWhisperModel()),
     lambda: OpenAIStt("k", "m", client=FakeOpenAIClient("hello")),
 ]
 TTS_CASES = [

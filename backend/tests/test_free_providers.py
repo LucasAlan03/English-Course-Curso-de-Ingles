@@ -55,7 +55,7 @@ def test_gemini_other_errors_propagate():
 
 
 def test_local_stt_returns_text_and_seconds():
-    stt = LocalWhisperStt(model=FakeWhisperModel())
+    stt = LocalWhisperStt(decode=lambda b: b, model=FakeWhisperModel())
     result = stt.transcribe(b"RIFF....", "audio/wav")
     assert result.text == "Hello there"
     assert result.usage == Usage("local", "faster-whisper", "stt", 2, 0)
@@ -63,7 +63,7 @@ def test_local_stt_returns_text_and_seconds():
 
 
 def test_local_stt_silence_gives_empty_text():
-    stt = LocalWhisperStt(model=FakeWhisperModel(texts=()))
+    stt = LocalWhisperStt(decode=lambda b: b, model=FakeWhisperModel(texts=()))
     assert stt.transcribe(b"x", "audio/wav").text == ""
 
 
@@ -85,3 +85,36 @@ def test_free_profile_builds_without_network_or_models():
     assert isinstance(providers.chat, GeminiText) and providers.chat.model != providers.report.model
     assert isinstance(providers.stt, LocalWhisperStt) and isinstance(providers.tts, LocalTts)
     assert not any(p.is_paid for p in (providers.chat, providers.report, providers.stt, providers.tts))
+
+
+def stt_with(**kwargs):
+    model = FakeWhisperModel(**kwargs)
+    return LocalWhisperStt(decode=lambda data: data, model=model), model
+
+
+def test_local_stt_follows_the_language_the_user_spoke():
+    stt, model = stt_with(probs=[("pt", 0.9), ("en", 0.05)])
+    stt.transcribe(b"x", "audio/wav")
+    assert model.calls[0]["language"] == "pt"
+
+
+def test_local_stt_prefers_english_when_unsure():
+    stt, model = stt_with(probs=[("en", 0.45), ("pt", 0.44)])
+    stt.transcribe(b"x", "audio/wav")
+    assert model.calls[0]["language"] == "en"
+
+
+def test_local_stt_only_chooses_between_english_and_portuguese():
+    stt, model = stt_with(probs=[("es", 0.6), ("pt", 0.2), ("en", 0.15)])
+    stt.transcribe(b"x", "audio/wav")
+    assert model.calls[0]["language"] == "pt"
+
+
+def test_local_stt_defaults_to_english_without_probabilities():
+    stt, model = stt_with(probs=[])
+    stt.transcribe(b"x", "audio/wav")
+    assert model.calls[0]["language"] == "en"
+
+
+def test_whisper_model_default_is_small_for_better_accuracy():
+    assert Settings(_env_file=None).whisper_model_size == "small"

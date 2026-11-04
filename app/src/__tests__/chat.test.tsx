@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, userEvent, waitFor } from '@testing-library/react-native';
+import { render, screen, userEvent, waitFor } from '@testing-library/react-native';
 
 import { api } from '../api';
 import { playUrl } from '../audio';
@@ -14,12 +14,22 @@ jest.mock('../api', () => ({ api: jest.fn(), audioUrl: (p: string) => `http://x$
 jest.mock('../audio', () => ({
   playUrl: jest.fn().mockResolvedValue(undefined),
   appendAudio: jest.fn().mockResolvedValue(undefined),
-  useVoiceRecorder: () => ({
-    start: jest.fn().mockResolvedValue(true),
-    stop: jest.fn().mockResolvedValue({ uri: 'file://clip', mime: 'audio/webm' }),
-    isRecording: false,
-    denied: false,
-  }),
+  useVoiceRecorder: () => {
+    const React = require('react');
+    const [isRecording, setIsRecording] = React.useState(false);
+    return {
+      start: async () => {
+        setIsRecording(true);
+        return true;
+      },
+      stop: async () => {
+        setIsRecording(false);
+        return { uri: 'file://clip', mime: 'audio/webm' };
+      },
+      isRecording,
+      denied: false,
+    };
+  },
 }));
 jest.mock('expo-router', () => {
   const React = require('react');
@@ -81,17 +91,19 @@ test('chat sends typed text and shows both sides', async () => {
   expect(await screen.findByText('Nice, why?')).toBeTruthy();
 });
 
-test('empty_transcript error shows a retry message', async () => {
+test('tap once to record and tap again to send; empty_transcript shows a retry message', async () => {
   turnReplies(
     { user_text: '', reply_text: 'Hello!' },
     ERR('empty_transcript', 'Não consegui ouvir nada. Repita, por favor.'),
   );
   await render(<ChatScreen />);
   await screen.findByText('Hello!');
-  const talk = screen.getByText('Segurar para falar');
-  await fireEvent(talk, 'pressIn');
-  await fireEvent(talk, 'pressOut');
+  await userEvent.press(screen.getByText('Toque para falar'));
+  expect(await screen.findByText('Gravando… toque para enviar')).toBeTruthy();
+  expect(apiMock).toHaveBeenCalledTimes(1); // nothing is sent while recording
+  await userEvent.press(screen.getByText('Gravando… toque para enviar'));
   expect(await screen.findByText('Não consegui ouvir nada. Repita, por favor.')).toBeTruthy();
+  expect(await screen.findByText('Toque para falar')).toBeTruthy();
 });
 
 test('replies are played when listening is on', async () => {
