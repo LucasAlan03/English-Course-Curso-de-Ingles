@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app.clock import Clock, SystemClock
@@ -60,4 +61,6 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
     def health():
         return {"status": "ok"}
 
+    # Added last so it is the outermost layer: browser preflights are answered before the token check.
+    app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
     return app
