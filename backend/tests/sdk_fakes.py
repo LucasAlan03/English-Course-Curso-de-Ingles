@@ -38,3 +38,56 @@ class FakePiperVoice:
         wav_file.setsampwidth(2)
         wav_file.setframerate(22050)
         wav_file.writeframes(b"\x00\x00" * 100)
+
+
+class BillingError(Exception):
+    status_code = 402
+
+
+class InsufficientQuota(Exception):
+    status_code = 429
+
+
+class PlainRateLimit(Exception):
+    status_code = 429
+
+
+class FakeAnthropicClient:
+    def __init__(self, text="hi from claude", errors=None, stop_reason="end_turn"):
+        self.messages = self
+        self.calls = []
+        self.errors = list(errors or [])
+        self._text, self._stop = text, stop_reason
+
+    def create(self, **kwargs):
+        self.calls.append(kwargs)
+        if self.errors:
+            raise self.errors.pop(0)
+        content = [SimpleNamespace(type="thinking", thinking=""), SimpleNamespace(type="text", text=self._text)]
+        return SimpleNamespace(content=content, stop_reason=self._stop,
+                               usage=SimpleNamespace(input_tokens=12, output_tokens=7))
+
+
+class FakeOpenAIClient:
+    def __init__(self, transcript="hello", audio=b"RIFFfake", errors=None):
+        self.audio = SimpleNamespace(
+            transcriptions=SimpleNamespace(create=self._transcribe),
+            speech=SimpleNamespace(create=self._speak),
+        )
+        self.calls = []
+        self.errors = list(errors or [])
+        self._transcript, self._audio = transcript, audio
+
+    def _maybe_fail(self):
+        if self.errors:
+            raise self.errors.pop(0)
+
+    def _transcribe(self, **kwargs):
+        self.calls.append(("stt", kwargs))
+        self._maybe_fail()
+        return SimpleNamespace(text=self._transcript)
+
+    def _speak(self, **kwargs):
+        self.calls.append(("tts", kwargs))
+        self._maybe_fail()
+        return SimpleNamespace(content=self._audio)

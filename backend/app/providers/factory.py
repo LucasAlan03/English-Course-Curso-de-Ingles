@@ -80,3 +80,36 @@ REGISTRY.update({
     ("stt", "local"): _local_stt,
     ("tts", "local"): _local_tts,
 })
+
+
+# --- paid providers ---
+def _anthropic_chat(s: Settings):
+    from app.providers.anthropic_provider import AnthropicText
+
+    return AnthropicText(s.anthropic_api_key, s.anthropic_chat_model, s.anthropic_chat_effort, max_tokens=1024)
+
+
+def _anthropic_report(s: Settings):
+    from app.providers.anthropic_provider import AnthropicText
+
+    return AnthropicText(s.anthropic_api_key, s.anthropic_report_model, s.anthropic_report_effort, max_tokens=4096)
+
+
+def _openai_stt(s: Settings):
+    from app.providers.openai_provider import OpenAIStt
+
+    return OpenAIStt(s.openai_api_key, s.openai_stt_model)
+
+
+def _openai_tts(s: Settings):
+    from app.providers.openai_provider import OpenAITts
+
+    return OpenAITts(s.openai_api_key, s.openai_tts_model, s.openai_tts_voice)
+
+
+REGISTRY.update({
+    ("chat", "anthropic"): _anthropic_chat,
+    ("report", "anthropic"): _anthropic_report,
+    ("stt", "openai"): _openai_stt,
+    ("tts", "openai"): _openai_tts,
+})

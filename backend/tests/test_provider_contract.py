@@ -5,20 +5,26 @@ from app.providers.fakes import FakeStt, FakeTextModel, FakeTts
 from app.providers.gemini import GeminiText
 from app.providers.local_stt import LocalWhisperStt
 from app.providers.local_tts import LocalTts
-from sdk_fakes import FakeGeminiClient, FakePiperVoice, FakeWhisperModel
+from app.providers.anthropic_provider import AnthropicText
+from app.providers.openai_provider import OpenAIStt, OpenAITts
+from sdk_fakes import (FakeAnthropicClient, FakeGeminiClient, FakeOpenAIClient, FakePiperVoice,
+                       FakeWhisperModel)
 
 # Real implementations are appended to these lists in the free/paid provider tasks.
 TEXT_CASES = [
     lambda: FakeTextModel(["hello"]),
     lambda: GeminiText("k", "m", client=FakeGeminiClient("hello")),
+    lambda: AnthropicText("k", "claude-haiku-5-5", client=FakeAnthropicClient("hello")),
 ]
 STT_CASES = [
     lambda: FakeStt("hello"),
     lambda: LocalWhisperStt(model=FakeWhisperModel()),
+    lambda: OpenAIStt("k", "m", client=FakeOpenAIClient("hello")),
 ]
 TTS_CASES = [
     lambda: FakeTts(),
     lambda: LocalTts(voice=FakePiperVoice()),
+    lambda: OpenAITts("k", "m", "alloy", client=FakeOpenAIClient()),
 ]
 
 

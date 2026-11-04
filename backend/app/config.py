@@ -26,6 +26,13 @@ class Settings(BaseSettings):
     piper_voice_path: str = str(BASE_DIR / "data" / "voices" / "en_US-lessac-medium.onnx")
     anthropic_api_key: str = ""
     openai_api_key: str = ""
+    anthropic_chat_model: str = "claude-haiku-5-5"
+    anthropic_report_model: str = "claude-sonnet-5-5"
+    anthropic_chat_effort: str = "low"  # empty = do not send effort
+    anthropic_report_effort: str = "medium"
+    openai_stt_model: str = "gpt-4o-mini-transcribe"
+    openai_tts_model: str = "gpt-4o-mini-tts"
+    openai_tts_voice: str = "alloy"
 
     # Per-component overrides; empty means "use the profile default".
     chat_provider: str = ""
