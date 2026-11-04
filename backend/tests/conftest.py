@@ -13,10 +13,23 @@ TEST_TOKEN = "test-token"
 
 
 @pytest.fixture
-def settings(tmp_path) -> Settings:
+def module_dir(tmp_path):
+    from builders import write_module
+
+    directory = tmp_path / "modules"
+    directory.mkdir()
+    write_module(directory, "b1_past_simple_continuous", "B1", 1, "Past simple x past continuous")
+    write_module(directory, "b1_futures", "B1", 2, "Futures")
+    write_module(directory, "b2_passive_voice", "B2", 1, "Passive voice")
+    return directory
+
+
+@pytest.fixture
+def settings(tmp_path, module_dir) -> Settings:
     return Settings(
         api_token=TEST_TOKEN,
         data_dir=str(tmp_path / "data"),
+        content_dir=str(module_dir),
         _env_file=None,
     )
 
@@ -51,3 +64,8 @@ def tracker(conn, settings, clock):
     from app.usage import UsageTracker
 
     return UsageTracker(conn, settings, clock)
+
+
+@pytest.fixture
+def deps(app_client):
+    return app_client.app.state.deps

@@ -2,6 +2,8 @@ import secrets
 import sqlite3
 from dataclasses import dataclass
 
+from fastapi import Request
+
 from app.clock import Clock
 from app.config import Settings
 from app.content import ContentRepo
@@ -23,3 +25,7 @@ class AppDeps:
 
 def token_is_valid(given: str | None, expected: str) -> bool:
     return bool(given) and secrets.compare_digest(given, expected)
+
+
+def get_deps(request: Request) -> AppDeps:
+    return request.app.state.deps
