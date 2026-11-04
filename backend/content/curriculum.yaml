@@ -1,0 +1,157 @@
+modules:
+- id: b1_past_simple_continuous
+  level: B1
+  title: Past simple × past continuous
+  order: 1
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_present_perfect_vs_past
+  level: B1
+  title: Present perfect × past simple
+  order: 2
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_futures
+  level: B1
+  title: Futuros (will / going to / present continuous)
+  order: 3
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_first_second_conditionals
+  level: B1
+  title: 1º e 2º condicionais
+  order: 4
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_modals_obligation_advice
+  level: B1
+  title: Modais de obrigação e conselho
+  order: 5
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_comparatives_superlatives
+  level: B1
+  title: Comparativos e superlativos
+  order: 6
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_prepositions
+  level: B1
+  title: Preposições (tempo, lugar, movimento)
+  order: 7
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_gerund_infinitive
+  level: B1
+  title: Gerúndio × infinitivo
+  order: 8
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_phrasal_verbs
+  level: B1
+  title: Phrasal verbs do dia a dia
+  order: 9
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b1_relative_clauses
+  level: B1
+  title: Relative clauses
+  order: 10
+  source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_present_perfect_continuous
+  level: B2
+  title: Present perfect continuous
+  order: 1
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_past_perfect_narrative
+  level: B2
+  title: Past perfect e narrativas
+  order: 2
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_third_mixed_conditionals
+  level: B2
+  title: 3º condicional e mistos
+  order: 3
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_passive_voice
+  level: B2
+  title: Voz passiva
+  order: 4
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_reported_speech
+  level: B2
+  title: Reported speech
+  order: 5
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_modals_deduction
+  level: B2
+  title: Modais de dedução
+  order: 6
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_used_to_would
+  level: B2
+  title: Used to / would / be used to
+  order: 7
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_wish_if_only
+  level: B2
+  title: Wish / if only
+  order: 8
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: b2_contrast_connectors
+  level: B2
+  title: Conectivos de contraste e argumentação
+  order: 9
+  source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: c1_inversion
+  level: C1
+  title: Inversion
+  order: 1
+  source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: c1_cleft_sentences
+  level: C1
+  title: Cleft sentences
+  order: 2
+  source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: c1_past_modals
+  level: C1
+  title: Modais no passado
+  order: 3
+  source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: c1_causative
+  level: C1
+  title: Causative
+  order: 4
+  source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: c1_hedging
+  level: C1
+  title: Hedging
+  order: 5
+  source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: c1_participle_clauses
+  level: C1
+  title: Participle clauses
+  order: 6
+  source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
+- id: c1_collocations_idioms
+  level: C1
+  title: Collocations e idioms
+  order: 7
+  source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar
+    Profile
