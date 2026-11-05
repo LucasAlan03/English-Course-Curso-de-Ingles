@@ -94,10 +94,14 @@ def test_unknown_item_404(app_client):
     assert app_client.delete("/media/999").status_code == 404
 
 
-def test_media_marks_the_daily_pillars(app_client):
-    assert app_client.get("/home").json()["pillars"]["watch"] is False
+def watch_minutes(app_client):
+    return next(b for b in app_client.get("/home").json()["today"]["blocks"] if b["key"] == "watch")["minutes"]
+
+
+def test_media_fills_the_watch_block(app_client):
+    assert watch_minutes(app_client) == 0
     add(app_client)
-    assert app_client.get("/home").json()["pillars"]["watch"] is True
+    assert watch_minutes(app_client) == 22
 
 
 # ---------- episode counts, links and new words ----------

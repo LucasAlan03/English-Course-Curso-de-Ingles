@@ -1,7 +1,6 @@
 from datetime import date
 
 from app.db import insert
-from app.goals import pillars_for_day
 from builders import make_session, writing_json
 
 TEXT = "Last weekend I goed to the beach with my family and we ate a lot."
@@ -43,12 +42,12 @@ def test_submit_returns_feedback_and_saves_mistakes(app_client, deps, providers)
     assert TEXT in system and "Describe your last weekend." in system
 
 
-def test_submit_marks_write_pillar(app_client, deps, providers):
+def test_submit_finishes_the_session_on_the_local_day(app_client, deps, providers):
     sid = new_prompt(app_client, providers)["session_id"]
-    assert pillars_for_day(deps.conn, date(2026, 11, 3))["write"] is False
     providers.report.responses.append(writing_json())
     app_client.post("/writing/submit", json={"session_id": sid, "text": TEXT})
-    assert pillars_for_day(deps.conn, date(2026, 11, 3))["write"] is True
+    row = deps.conn.execute("SELECT is_finished, day FROM sessions WHERE id = ?", (sid,)).fetchone()
+    assert (row["is_finished"], row["day"]) == (1, "2026-11-03")
 
 
 def test_submit_empty_or_short_text_422_and_no_ai_call(app_client, deps, providers):

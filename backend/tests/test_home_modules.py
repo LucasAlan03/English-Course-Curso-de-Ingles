@@ -60,10 +60,11 @@ def test_home_next_module_skips_completed(app_client, deps):
     assert app_client.get("/home").json()["next_module"] is None
 
 
-def test_home_includes_pillars_streak_usage(app_client, deps):
+def test_home_includes_day_plan_streak_usage(app_client, deps):
     insert(deps.conn, "media_logs", date="2026-11-03", type="read", category="hq", title="Maus",
            minutes=10, created_at="x")
     body = app_client.get("/home").json()
-    assert body["pillars"] == {"grammar": False, "speak": False, "write": False, "read": True, "watch": False}
+    read = next(b for b in body["today"]["blocks"] if b["key"] == "read")
+    assert (read["minutes"], read["status"]) == (10, "pending")
     assert body["streak"] == 0
     assert body["usage"]["level"] == "ok"

@@ -6,7 +6,7 @@ from app.content import EXERCISE_COUNT
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
 from app.exams import exam_status, level_unlocked, passed_levels
-from app.goals import pillars_for_day, streak
+from app.daily_plan import day_plan, streak
 
 router = APIRouter()
 
@@ -75,7 +75,7 @@ def home(deps: AppDeps = Depends(get_deps)):
     return {
         "reviews_due": reviews_due,
         "next_module": next_module,
-        "pillars": pillars_for_day(deps.conn, today),
-        "streak": streak(deps.conn, today),
+        "today": day_plan(deps, today),
+        "streak": streak(deps, today),
         "usage": deps.tracker.status(),
     }

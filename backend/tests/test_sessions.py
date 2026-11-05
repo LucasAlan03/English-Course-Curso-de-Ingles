@@ -6,7 +6,6 @@ import pytest
 
 from app.ai.conversation import build_context
 from app.db import insert
-from app.goals import pillars_for_day
 from app.providers.base import Msg
 from app.providers.fakes import FakeTextModel
 from builders import add_user_message, make_session, report_json
@@ -169,7 +168,6 @@ def test_finish_returns_scores_and_records_mistakes(app_client, deps, providers)
     assert body["next_due"] is None and body["report"]["score"] == 90 and count(deps, "reviews") == 0
     saved = deps.conn.execute("SELECT module_id, said FROM mistakes").fetchall()
     assert [(x["module_id"], x["said"]) for x in saved] == [(MODULE, "I goed")]  # session module wins
-    assert pillars_for_day(deps.conn, date(2026, 11, 3))["grammar"] is True
 
 
 def test_finish_twice_is_idempotent(app_client, deps, providers):

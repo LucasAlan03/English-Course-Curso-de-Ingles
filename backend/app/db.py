@@ -164,6 +164,13 @@ CREATE TABLE IF NOT EXISTS song_practice (
     day TEXT NOT NULL,
     created_at TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS day_state (
+    date TEXT NOT NULL,
+    block TEXT NOT NULL,
+    skipped INTEGER NOT NULL DEFAULT 0,
+    checked INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (date, block)
+);
 CREATE TABLE IF NOT EXISTS api_usage (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     provider TEXT NOT NULL,

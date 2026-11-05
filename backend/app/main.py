@@ -16,6 +16,7 @@ from app.errors import AppError
 from app.providers.factory import build_providers
 from app.routes import calls as calls_routes
 from app.routes import songs as songs_routes
+from app.routes import today as today_routes
 from app.routes import exams as exams_routes
 from app.routes import exercises as exercises_routes
 from app.routes import media as media_routes
@@ -52,6 +53,7 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
     app.include_router(exams_routes.router)
     app.include_router(calls_routes.router)
     app.include_router(songs_routes.router)
+    app.include_router(today_routes.router)
     app.include_router(sessions_routes.router)
     app.include_router(modules_routes.router)
     app.include_router(media_routes.router)
