@@ -1,9 +1,10 @@
-import { render, screen, userEvent, within } from '@testing-library/react-native';
+import { fireEvent, render, screen, userEvent, within } from '@testing-library/react-native';
 
 import { api } from '../api';
 import MediaForm from '../components/MediaForm';
 import MediaSummary from '../components/MediaSummary';
 import WritingScreen from '../app/writing';
+import MediaScreen from '../app/(tabs)/media';
 
 jest.mock('../api', () => ({ api: jest.fn(), audioUrl: (p: string) => p, ApiError: class extends Error {} }));
 jest.mock('expo-router', () => {
@@ -15,10 +16,10 @@ const apiMock = api as jest.Mock;
 
 beforeEach(() => apiMock.mockReset());
 
-test('MediaForm blocks minutes <= 0', async () => {
+test('MediaForm blocks video minutes <= 0', async () => {
   const onSubmit = jest.fn();
-  await render(<MediaForm date="2026-11-03" onSubmit={onSubmit} />);
-  await userEvent.type(screen.getByPlaceholderText('Título'), 'Friends');
+  await render(<MediaForm date="2026-11-03" category="video" onSubmit={onSubmit} />);
+  await userEvent.type(screen.getByPlaceholderText('Título'), 'Some video');
   await userEvent.type(screen.getByPlaceholderText('Minutos'), '0');
   await userEvent.press(screen.getByText('Salvar'));
   expect(onSubmit).not.toHaveBeenCalled();
@@ -27,38 +28,98 @@ test('MediaForm blocks minutes <= 0', async () => {
 
 test('MediaForm requires a title', async () => {
   const onSubmit = jest.fn();
-  await render(<MediaForm date="2026-11-03" onSubmit={onSubmit} />);
+  await render(<MediaForm date="2026-11-03" category="video" onSubmit={onSubmit} />);
   await userEvent.type(screen.getByPlaceholderText('Minutos'), '20');
   await userEvent.press(screen.getByText('Salvar'));
   expect(onSubmit).not.toHaveBeenCalled();
   expect(await screen.findByText('Informe o título.')).toBeTruthy();
 });
 
-test('MediaForm submits a watch entry with episode', async () => {
+test('series: episodes stepper multiplies the minutes per episode', async () => {
   const onSubmit = jest.fn();
-  await render(<MediaForm date="2026-11-03" onSubmit={onSubmit} />);
+  await render(<MediaForm date="2026-11-03" category="series" onSubmit={onSubmit} />);
   await userEvent.type(screen.getByPlaceholderText('Título'), 'Friends');
-  await userEvent.type(screen.getByPlaceholderText('Episódio (opcional)'), 'S01E02');
-  await userEvent.type(screen.getByPlaceholderText('Minutos'), '22');
+  await userEvent.type(screen.getByPlaceholderText('Min por episódio'), '22');
+  await userEvent.press(screen.getByLabelText('Mais um episódio'));
+  await userEvent.press(screen.getByLabelText('Mais um episódio'));
+  expect(screen.getByText('3 × 22 = 66 min')).toBeTruthy();
   await userEvent.press(screen.getByText('Salvar'));
-  expect(onSubmit).toHaveBeenCalledWith({
-    date: '2026-11-03', type: 'watch', category: 'series', title: 'Friends',
-    episode: 'S01E02', minutes: 22, pages: null,
-  });
+  expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({
+    date: '2026-11-03', type: 'watch', category: 'series', title: 'Friends', unit_minutes: 22, count: 3, minutes: 66,
+  }));
 });
 
-test('MediaForm switches to reading categories and pages', async () => {
+test('video: pasting a YouTube link fills the title', async () => {
+  apiMock.mockResolvedValue({ title: 'How I Went From Zero English to C2' });
   const onSubmit = jest.fn();
-  await render(<MediaForm date="2026-11-03" onSubmit={onSubmit} />);
-  await userEvent.press(screen.getByText('Ler'));
-  await userEvent.press(screen.getByText('HQ'));
-  await userEvent.type(screen.getByPlaceholderText('Título'), 'Maus');
-  await userEvent.type(screen.getByPlaceholderText('Minutos'), '15');
-  await userEvent.type(screen.getByPlaceholderText('Páginas (opcional)'), '12');
+  await render(<MediaForm date="2026-11-03" category="video" onSubmit={onSubmit} />);
+  const link = screen.getByPlaceholderText('Link do YouTube');
+  await userEvent.type(link, 'https://youtu.be/3bh6Gb0oBN0');
+  fireEvent(link, 'blur');
+  expect(await screen.findByDisplayValue('How I Went From Zero English to C2')).toBeTruthy();
+  expect(apiMock).toHaveBeenCalledWith(`/media/youtube-title?url=${encodeURIComponent('https://youtu.be/3bh6Gb0oBN0')}`);
+  await userEvent.type(screen.getByPlaceholderText('Minutos'), '12');
   await userEvent.press(screen.getByText('Salvar'));
-  expect(onSubmit).toHaveBeenCalledWith({
-    date: '2026-11-03', type: 'read', category: 'hq', title: 'Maus', episode: null, minutes: 15, pages: 12,
+  expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({
+    category: 'video', title: 'How I Went From Zero English to C2', minutes: 12, url: 'https://youtu.be/3bh6Gb0oBN0',
+  }));
+});
+
+test('reading saves pages and new words', async () => {
+  const onSubmit = jest.fn();
+  await render(<MediaForm date="2026-11-03" category="hq" onSubmit={onSubmit} />);
+  await userEvent.type(screen.getByPlaceholderText('Título'), 'Batman');
+  await userEvent.type(screen.getByPlaceholderText('Minutos'), '20');
+  await userEvent.type(screen.getByPlaceholderText('Páginas'), '8');
+  await userEvent.type(screen.getByPlaceholderText('Palavras novas (opcional)'), 'grim, vigilante');
+  await userEvent.press(screen.getByText('Salvar'));
+  expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({
+    type: 'read', category: 'hq', title: 'Batman', minutes: 20, pages: 8, new_words: 'grim, vigilante',
+  }));
+});
+
+const SERIES = {
+  id: 5, date: '2026-11-03', type: 'watch', category: 'series', title: 'Friends', episode: null, minutes: 44,
+  pages: null, unit_minutes: 22, count: 2, url: null, new_words: null,
+};
+
+function mediaRoutes(extra: Record<string, unknown> = {}) {
+  apiMock.mockImplementation(async (path: string, init?: { method?: string }) => {
+    if (path.startsWith('/media?date=')) return [SERIES];
+    if (path.startsWith('/media/summary')) return EMPTY_SUMMARY;
+    if (path.startsWith('/calls?date=')) return { app_minutes: 4, external: [], total_minutes: 4 };
+    if (path in extra) return extra[path];
+    if (init?.method) return {};
+    throw new Error(`unexpected ${path}`);
   });
+}
+
+const EMPTY = { total_minutes: 0, by_type: {}, by_category: {} };
+const EMPTY_SUMMARY = { day: EMPTY, week: EMPTY, month: EMPTY };
+
+test('media screen: + episode on a saved series updates its count', async () => {
+  mediaRoutes();
+  await render(<MediaScreen />);
+  expect(await screen.findByText('2 × 22 = 44 min')).toBeTruthy();
+  await userEvent.press(screen.getByLabelText('Mais um episódio de Friends'));
+  expect(apiMock).toHaveBeenCalledWith('/media/5', expect.objectContaining({
+    method: 'PUT', json: expect.objectContaining({ count: 3, unit_minutes: 22 }),
+  }));
+});
+
+test('media screen: + outra série opens a new series form and an outside call is saved', async () => {
+  mediaRoutes();
+  await render(<MediaScreen />);
+  await userEvent.press(await screen.findByText('+ outra série'));
+  expect(screen.getByPlaceholderText('Min por episódio')).toBeTruthy();
+  await userEvent.press(screen.getByText('+ lançar ligação'));
+  await userEvent.type(screen.getByPlaceholderText('Onde (ex.: Be Confident)'), 'Be Confident');
+  await userEvent.type(screen.getByPlaceholderText('Minutos da ligação'), '25');
+  await userEvent.press(screen.getByText('Salvar ligação'));
+  expect(apiMock).toHaveBeenCalledWith('/calls/external', expect.objectContaining({
+    method: 'POST', json: expect.objectContaining({ source: 'Be Confident', minutes: 25 }),
+  }));
+  expect(screen.getByText('Ligações hoje: 4 min')).toBeTruthy();
 });
 
 test('MediaSummary shows totals by category for day, week and month', async () => {

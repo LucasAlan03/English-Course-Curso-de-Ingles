@@ -88,7 +88,13 @@ export type MediaItem = {
   episode: string | null;
   minutes: number;
   pages: number | null;
+  unit_minutes: number | null;
+  count: number | null;
+  url: string | null;
+  new_words: string | null;
 };
+export type ExternalCall = { id: number; date: string; source: string; minutes: number; note: string | null };
+export type CallsDay = { app_minutes: number; external: ExternalCall[]; total_minutes: number };
 export type MediaTotals = { total_minutes: number; by_type: Record<string, number>; by_category: Record<string, number> };
 export type MediaSummary = { day: MediaTotals; week: MediaTotals; month: MediaTotals };
 
