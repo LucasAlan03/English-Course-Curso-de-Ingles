@@ -1,5 +1,8 @@
 import datetime as dt
+import json
 import re
+import urllib.request
+from urllib.parse import parse_qs, quote, urlparse
 from typing import Literal
 
 from fastapi import APIRouter, Depends
@@ -126,6 +129,49 @@ def _totals(deps: AppDeps, start: dt.date, end: dt.date) -> dict:
         by_type[r["type"]] = by_type.get(r["type"], 0) + r["minutes"]
         by_category[r["category"]] = by_category.get(r["category"], 0) + r["minutes"]
     return {"total_minutes": sum(by_type.values()), "by_type": by_type, "by_category": by_category}
+
+
+_YT_ID = re.compile(r"^[A-Za-z0-9_-]{6,20}$")
+
+
+def youtube_video_url(url: str) -> str | None:
+    """Canonical watch URL for the usual YouTube link shapes, or None."""
+    text = url.strip()
+    if not text:
+        return None
+    if "://" not in text:
+        text = "https://" + text
+    parts = urlparse(text)
+    host = (parts.hostname or "").lower().removeprefix("www.").removeprefix("m.")
+    video_id = None
+    if host == "youtu.be":
+        video_id = parts.path.strip("/").split("/")[0]
+    elif host == "youtube.com":
+        if parts.path == "/watch":
+            video_id = (parse_qs(parts.query).get("v") or [None])[0]
+        elif parts.path.startswith("/shorts/"):
+            video_id = parts.path.split("/")[2]
+    if video_id and _YT_ID.match(video_id):
+        return f"https://www.youtube.com/watch?v={video_id}"
+    return None
+
+
+def fetch_oembed(url: str) -> dict:
+    with urllib.request.urlopen("https://www.youtube.com/oembed?format=json&url=" + quote(url, safe=""),
+                                timeout=5) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+@router.get("/media/youtube-title")
+def youtube_title(url: str = ""):
+    canonical = youtube_video_url(url)
+    if canonical is None:
+        return {"title": None}
+    try:
+        title = fetch_oembed(canonical).get("title")
+    except Exception:  # offline, private video, bad JSON: the user types the title
+        return {"title": None}
+    return {"title": title if isinstance(title, str) and title.strip() else None}
 
 
 @router.get("/media/summary")
