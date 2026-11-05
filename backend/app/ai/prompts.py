@@ -11,6 +11,7 @@ PROMPT_VARS: dict[str, set[str]] = {
     "module_content": {"level", "title", "source"},
     "song_grammar": {"modules", "chunks"},
     "translate": {"word", "sentence"},
+    "teach_persona": {"level", "module_title", "target_structures"},
 }
 
 

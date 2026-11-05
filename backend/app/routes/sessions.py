@@ -1,6 +1,7 @@
 from typing import Literal
 
 from fastapi import APIRouter, Depends, File, Form, UploadFile
+from fastapi.responses import Response
 from pydantic import BaseModel
 
 from app.ai.conversation import run_turn
@@ -8,20 +9,21 @@ from app.ai.report import finish_session
 from app.db import insert
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
+from app.report_md import report_markdown
 from app.sessions_repo import get_session
 
 router = APIRouter()
 
 
 class CreateSession(BaseModel):
-    kind: Literal["lesson", "review", "free", "writing"]
+    kind: Literal["lesson", "review", "free", "writing", "teach"]
     module_id: str | None = None
     topic: str | None = None
 
 
 @router.post("/sessions")
 def create_session(body: CreateSession, deps: AppDeps = Depends(get_deps)):
-    if body.kind in ("lesson", "review"):
+    if body.kind in ("lesson", "review", "teach"):
         if not body.module_id:
             raise AppError("module_required", 422, "Escolha um módulo.")
         try:
@@ -47,6 +49,12 @@ async def session_turn(
     data = await audio.read() if audio is not None else None
     mime = (audio.content_type if audio is not None else None) or "audio/webm"
     return run_turn(deps, session, text, data, mime, want_audio)
+
+
+@router.get("/sessions/{session_id}/report.md")
+def session_report_md(session_id: int, deps: AppDeps = Depends(get_deps)):
+    return Response(report_markdown(deps, session_id), media_type="text/markdown; charset=utf-8",
+                    headers={"Content-Disposition": f'attachment; filename="relatorio-{session_id}.md"'})
 
 
 @router.post("/sessions/{session_id}/finish")

@@ -17,7 +17,7 @@ def finish_session(deps: AppDeps, session: sqlite3.Row) -> dict:
     """Write the report and score the session. Reviews come from the exercise bank. Safe to call twice."""
     if session["is_finished"] and session["report_json"]:
         return json.loads(session["report_json"])
-    if session["kind"] not in ("lesson", "review", "free"):
+    if session["kind"] not in ("lesson", "review", "free", "teach"):
         raise AppError("invalid_session_kind", 400, "Esta sessão não gera relatório de conversa.")
 
     session_id = session["id"]
@@ -48,6 +48,11 @@ def _finish_claimed(deps: AppDeps, session: sqlite3.Row, messages: list[Msg]) ->
     if session["kind"] == "free":
         level = deps.settings.user_level
         context = f"Free conversation about: {session['topic'] or 'anything'}"
+    elif session["kind"] == "teach":
+        module = deps.content.get(session["module_id"])
+        level = module.level
+        context = (f"Learner explains {module.title} to a confused student. "
+                   "Judge clarity of the explanation and the learner's own English.")
     else:
         module = deps.content.get(session["module_id"])
         level = module.level

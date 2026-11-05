@@ -25,6 +25,9 @@ def persona_prompt(deps: AppDeps, session: sqlite3.Row) -> str:
             target_structures="none - just keep the conversation going",
         )
     module = deps.content.get(session["module_id"])
+    if session["kind"] == "teach":
+        return render("teach_persona", deps.settings.prompts_dir, level=module.level, module_title=module.title,
+                      target_structures=", ".join(module.target_structures))
     return render(
         "chat_persona", deps.settings.prompts_dir,
         level=module.level, scenario_title=module.scenario.title, character=module.scenario.character,
@@ -66,7 +69,7 @@ def run_turn(deps: AppDeps, session: sqlite3.Row, text: str | None, audio: bytes
              mime: str, want_audio: bool) -> dict:
     if session["is_finished"]:
         raise AppError("session_finished", 409, "Esta sessão já foi encerrada.")
-    if session["kind"] not in ("lesson", "review", "free"):
+    if session["kind"] not in ("lesson", "review", "free", "teach"):
         raise AppError("invalid_session_kind", 400, "Esta sessão não tem conversa.")
     providers, tracker, session_id = deps.providers, deps.tracker, session["id"]
     tracker.ensure_can_spend(providers.chat.is_paid)
