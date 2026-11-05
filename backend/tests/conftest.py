@@ -35,12 +35,23 @@ def exercises_dir(tmp_path):
 
 
 @pytest.fixture
-def settings(tmp_path, module_dir, exercises_dir) -> Settings:
+def exams_dir(tmp_path):
+    from builders import valid_exam, write_exam
+
+    directory = tmp_path / "exams"
+    directory.mkdir()
+    write_exam(directory, "B1", valid_exam(["b1_past_simple_continuous", "b1_futures"]))
+    return directory
+
+
+@pytest.fixture
+def settings(tmp_path, module_dir, exercises_dir, exams_dir) -> Settings:
     return Settings(
         api_token=TEST_TOKEN,
         data_dir=str(tmp_path / "data"),
         content_dir=str(module_dir),
         exercises_dir=str(exercises_dir),
+        exams_dir=str(exams_dir),
         _env_file=None,
     )
 

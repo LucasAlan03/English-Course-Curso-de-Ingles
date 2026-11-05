@@ -80,6 +80,26 @@ CREATE TABLE IF NOT EXISTS review_runs (
     finished_at TEXT,
     score INTEGER
 );
+CREATE TABLE IF NOT EXISTS exam_runs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    level TEXT NOT NULL,
+    question_ids TEXT NOT NULL,
+    started_at TEXT NOT NULL,
+    finished_at TEXT,
+    score INTEGER,
+    passed INTEGER
+);
+CREATE TABLE IF NOT EXISTS exam_attempts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    run_id INTEGER NOT NULL REFERENCES exam_runs(id),
+    question_id TEXT NOT NULL,
+    answer TEXT NOT NULL,
+    correct INTEGER NOT NULL,
+    seconds INTEGER NOT NULL DEFAULT 0,
+    day TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    UNIQUE (run_id, question_id)
+);
 CREATE TABLE IF NOT EXISTS exercise_reports (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     module_id TEXT NOT NULL,

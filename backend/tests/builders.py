@@ -110,3 +110,27 @@ def complete_module(deps, module_id, day="2026-11-03", correct=1):
     for i in range(1, 28):
         insert(deps.conn, "exercise_attempts", module_id=module_id, exercise_id=f"e{i:02d}", kind="lesson",
                answer="x", correct=correct, seconds=10, day=day, created_at=f"{day}T12:00:00+00:00")
+
+
+EXAM_TYPES_CYCLE = ["choice", "gap", "fix", "transform", "order", "translate"]
+
+
+def valid_exam(module_ids, size=40) -> list[dict]:
+    """A level exam bank that satisfies every validator rule, cycling through the modules."""
+    questions = []
+    for n in range(1, size + 1):
+        kind = EXAM_TYPES_CYCLE[(n - 1) % len(EXAM_TYPES_CYCLE)]
+        item = {"id": f"q{n:02d}", "type": kind, "module_id": module_ids[(n - 1) % len(module_ids)],
+                "explanation": "Explicação curta."}
+        item.update(_ITEM_TEMPLATES[kind](100 + n))
+        questions.append(item)
+    return questions
+
+
+def exam_answers(module_ids) -> dict[str, str]:
+    return {q["id"]: q["answers"][0] for q in valid_exam(module_ids)}
+
+
+def write_exam(directory, level, questions):
+    data = {"level": level, "questions": questions}
+    (directory / f"{level.lower()}.yaml").write_text(yaml.safe_dump(data, allow_unicode=True), encoding="utf-8")

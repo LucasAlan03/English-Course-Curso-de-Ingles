@@ -11,6 +11,7 @@ from app.audio import find_audio
 from app.content import EXERCISE_COUNT, Exercise
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
+from app.exams import ensure_module_unlocked
 from app.exercises import is_correct, pick_review
 from app.reviews import exercise_audio_name, schedule_review
 
@@ -74,6 +75,7 @@ def lesson_attempts(deps: AppDeps, module_id: str) -> dict:
 @router.get("/modules/{module_id}/exercises")
 def list_exercises(module_id: str, deps: AppDeps = Depends(get_deps)):
     exercises = module_exercises(deps, module_id)
+    ensure_module_unlocked(deps, module_id)
     attempts = lesson_attempts(deps, module_id)
     return [item_view(module_id, e, attempts.get(e.id)) for e in exercises]
 
@@ -99,6 +101,9 @@ def save_attempt(deps: AppDeps, module_id: str, e: Exercise, answer: str, second
 
 @router.post("/exercises/{module_id}/{exercise_id}/answer")
 def answer_exercise(module_id: str, exercise_id: str, body: AnswerBody, deps: AppDeps = Depends(get_deps)):
+    if body.run_id is None:  # lessons follow the level lock; reviews of done modules never do
+        module_exercises(deps, module_id)
+        ensure_module_unlocked(deps, module_id)
     e = find_exercise(deps, module_id, exercise_id)
     response = {"correct_answer": e.answers[0], "explanation": e.explanation,
                 "module_completed": False, "score": None, "next_due": None}

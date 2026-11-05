@@ -5,6 +5,7 @@ from fastapi import APIRouter, Depends
 from app.content import EXERCISE_COUNT
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
+from app.exams import exam_status, level_unlocked, passed_levels
 from app.goals import pillars_for_day, streak
 
 router = APIRouter()
@@ -22,13 +23,19 @@ def completed_module_ids(deps: AppDeps) -> set[str]:
 @router.get("/modules")
 def list_modules(deps: AppDeps = Depends(get_deps)):
     done = completed_module_ids(deps)
+    passed = passed_levels(deps)
     levels: dict[str, dict] = {}
     for m in deps.content.all():
-        level = levels.setdefault(m.level, {"level": m.level, "total": 0, "completed": 0, "modules": []})
+        level = levels.setdefault(m.level, {
+            "level": m.level, "total": 0, "completed": 0, "modules": [],
+            "unlocked": level_unlocked(deps, m.level, passed),
+        })
         completed = m.id in done
         level["total"] += 1
         level["completed"] += int(completed)
         level["modules"].append({"id": m.id, "title": m.title, "order": m.order, "completed": completed})
+    for level in levels.values():
+        level["exam"] = exam_status(deps, level["level"], done, passed)
     return {"levels": list(levels.values())}
 
 

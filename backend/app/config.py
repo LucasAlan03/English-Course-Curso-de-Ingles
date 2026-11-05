@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     data_dir: str = str(BASE_DIR / "data")
     content_dir: str = str(BASE_DIR / "content" / "modules")
     exercises_dir: str = str(BASE_DIR / "content" / "exercises")
+    exams_dir: str = str(BASE_DIR / "content" / "exams")
     prompts_dir: str = str(BASE_DIR / "prompts")
 
     gemini_api_key: str = ""

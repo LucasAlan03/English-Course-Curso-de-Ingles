@@ -13,6 +13,7 @@ from app.db import connect, init_schema
 from app.deps import AppDeps, token_is_valid
 from app.errors import AppError
 from app.providers.factory import build_providers
+from app.routes import exams as exams_routes
 from app.routes import exercises as exercises_routes
 from app.routes import media as media_routes
 from app.routes import modules as modules_routes
@@ -34,7 +35,7 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
         clock=clock,
         conn=conn,
         providers=providers or build_providers(settings),
-        content=ContentRepo.load(settings.content_dir, settings.exercises_dir),
+        content=ContentRepo.load(settings.content_dir, settings.exercises_dir, settings.exams_dir),
         tracker=UsageTracker(conn, settings, clock),
     )
 
@@ -44,6 +45,7 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
 
     app.include_router(usage_routes.router)
     app.include_router(exercises_routes.router)
+    app.include_router(exams_routes.router)
     app.include_router(sessions_routes.router)
     app.include_router(modules_routes.router)
     app.include_router(media_routes.router)

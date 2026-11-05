@@ -116,14 +116,58 @@ def validate_exercises(exercises: list[Exercise]) -> list[str]:
     return problems
 
 
+ExamType = Literal["choice", "gap", "fix", "transform", "order", "translate"]
+EXAM_BANK_SIZE = 40
+EXAM_MAX_CHOICE = 20
+
+
+class ExamQuestion(BaseModel):
+    id: str
+    module_id: str
+    type: ExamType
+    prompt: str
+    answers: list[str] = Field(min_length=1)
+    explanation: str
+    options: list[str] | None = None
+    words: list[str] | None = None
+    prompt_pt: str | None = None
+    glossary: dict[str, str] = {}
+
+
+def validate_exam(level: str, questions: list[ExamQuestion], module_ids: list[str]) -> list[str]:
+    problems: list[str] = []
+    if len(questions) != EXAM_BANK_SIZE:
+        problems.append(f"{level}: expected {EXAM_BANK_SIZE} questions, found {len(questions)}")
+    if sorted(q.id for q in questions) != [f"q{i:02d}" for i in range(1, len(questions) + 1)]:
+        problems.append(f"{level}: ids must be exactly q01..q{len(questions):02d}")
+    choices = sum(q.type == "choice" for q in questions)
+    if choices > EXAM_MAX_CHOICE:
+        problems.append(f"{level}: {choices} choice questions (max {EXAM_MAX_CHOICE})")
+    covered = {q.module_id for q in questions}
+    for module_id in module_ids:
+        if module_id not in covered:
+            problems.append(f"{level}: no question covers {module_id}")
+    seen: set[str] = set()
+    for q in questions:
+        if q.module_id not in module_ids:
+            problems.append(f"{q.id}: module {q.module_id} is not in level {level}")
+        problems += item_problems(q)
+        if normalize(q.prompt) in seen:
+            problems.append(f"{q.id}: duplicate prompt")
+        seen.add(normalize(q.prompt))
+    return problems
+
+
 class ContentRepo:
-    def __init__(self, modules: list[Module], exercises: dict[str, list[Exercise]] | None = None):
+    def __init__(self, modules: list[Module], exercises: dict[str, list[Exercise]] | None = None,
+                 exams: dict[str, list[ExamQuestion]] | None = None):
         self._modules = sorted(modules, key=lambda m: (LEVEL_RANK[m.level], m.order))
         self._by_id = {m.id: m for m in self._modules}
         self._exercises = exercises or {}
+        self._exams = exams or {}
 
     @classmethod
-    def load(cls, directory: str, exercises_dir: str | None = None) -> "ContentRepo":
+    def load(cls, directory: str, exercises_dir: str | None = None, exams_dir: str | None = None) -> "ContentRepo":
         modules: list[Module] = []
         seen: set[str] = set()
         for path in sorted(Path(directory).glob("*.yaml")):
@@ -138,10 +182,18 @@ class ContentRepo:
                 data = yaml.safe_load(path.read_text(encoding="utf-8"))
                 items = [Exercise(**e) for e in data["exercises"]]
                 exercises[data["module_id"]] = sorted(items, key=lambda e: e.id)
-        return cls(modules, exercises)
+        exams: dict[str, list[ExamQuestion]] = {}
+        if exams_dir and Path(exams_dir).is_dir():
+            for path in sorted(Path(exams_dir).glob("*.yaml")):
+                data = yaml.safe_load(path.read_text(encoding="utf-8"))
+                exams[data["level"]] = sorted((ExamQuestion(**q) for q in data["questions"]), key=lambda q: q.id)
+        return cls(modules, exercises, exams)
 
     def exercises(self, module_id: str) -> list[Exercise]:
         return list(self._exercises.get(module_id, []))
+
+    def exam(self, level: str) -> list[ExamQuestion]:
+        return list(self._exams.get(level, []))
 
     def all(self) -> list[Module]:
         return list(self._modules)
