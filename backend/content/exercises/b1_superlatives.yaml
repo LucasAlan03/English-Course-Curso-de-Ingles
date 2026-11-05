@@ -1,0 +1,212 @@
+module_id: b1_superlatives
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Everest is ___ mountain in the world."
+    prompt_pt: "O Everest é a montanha mais alta do mundo."
+    glossary: {mountain: montanha}
+    options: ["the highest", "the higher", "the most high"]
+    answers: ["the highest"]
+    explanation: "High é curto: o superlativo é the highest."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "This is ___ restaurant in the neighbourhood."
+    prompt_pt: "Este é o restaurante mais caro do bairro."
+    glossary: {neighbourhood: bairro}
+    options: ["the most expensive", "the expensivest", "the more expensive"]
+    answers: ["the most expensive"]
+    explanation: "Expensive é longo: the most expensive."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Friday is ___ day of the week for me."
+    prompt_pt: "Sexta é o melhor dia da semana para mim."
+    options: ["the best", "the better", "the goodest"]
+    answers: ["the best"]
+    explanation: "Good é irregular: o superlativo é the best."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "That was ___ flight I've ever taken. Six hours of delays!"
+    prompt_pt: "Aquele foi o pior voo que eu já peguei. Seis horas de atraso!"
+    glossary: {delays: atrasos}
+    options: ["the worst", "the baddest", "the worse"]
+    answers: ["the worst"]
+    explanation: "Bad é irregular: o superlativo é the worst."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Who is ___ person in your family?"
+    prompt_pt: "Quem é a pessoa mais engraçada da sua família?"
+    options: ["the funniest", "the funnyest", "the funnier"]
+    answers: ["the funniest"]
+    explanation: "Funny termina em -y: troca por -iest (the funniest)."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "We stayed at three hotels. The first was the cheapest, but the last one had the best view."
+    prompt: "Which hotel had the best view?"
+    prompt_pt: "Qual hotel tinha a melhor vista?"
+    options: ["The last one", "The first one", "The second one"]
+    answers: ["The last one"]
+    explanation: "A pessoa diz que o último tinha the best view; o primeiro era the cheapest."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Of all my friends, Bruno lives the farthest from the city, about two hours away."
+    prompt: "Who lives the farthest from the city?"
+    prompt_pt: "Quem mora mais longe da cidade?"
+    answers: ["Bruno"]
+    explanation: "The farthest = o mais longe; é o Bruno, a duas horas da cidade."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Leo is ___ player on our team. (tall)"
+    prompt_pt: "O Leo é o jogador mais alto do nosso time."
+    answers: ["the tallest"]
+    explanation: "Tall é curto: the + tall + -est."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "It was ___ concert I've ever been to. (exciting)"
+    prompt_pt: "Foi o show mais empolgante a que eu já fui."
+    answers: ["the most exciting"]
+    explanation: "Exciting é longo: the most exciting."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "It's the biggest shopping mall ___ Brazil."
+    prompt_pt: "É o maior shopping do Brasil."
+    glossary: {shopping mall: shopping center}
+    options: ["in", "of", "at"]
+    answers: ["in"]
+    explanation: "Com lugares, o superlativo usa in (in Brazil)."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "This is the ___ app I have on my phone."
+    prompt_pt: "Este é o app mais útil que eu tenho no celular."
+    options: ["most useful", "usefullest", "more useful"]
+    answers: ["most useful"]
+    explanation: "Useful tem duas sílabas e não termina em -y: the most useful."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Of the three laptops, this one is ___."
+    prompt_pt: "Dos três notebooks, este é o mais leve."
+    options: ["the lightest", "lighter", "the most light"]
+    answers: ["the lightest"]
+    explanation: "Um entre três → superlativo; light é curto (the lightest)."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "This is ___ coffee I've ever had. (good)"
+    prompt_pt: "Este é o melhor café que eu já tomei."
+    answers: ["the best"]
+    explanation: "Good é irregular: the best."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "This is the most cheapest gym in the area."
+    prompt_pt: "Esta é a academia mais barata da região."
+    answers: ["This is the cheapest gym in the area."]
+    explanation: "Cheapest já é superlativo; não se usa most junto com -est."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Carla is the best cook of the city."
+    prompt_pt: "A Carla é a melhor cozinheira da cidade."
+    answers: ["Carla is the best cook in the city."]
+    explanation: "Com lugares, o superlativo usa in, não of."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["restaurant", "the", "is", "in", "best", "what", "city", "the"]
+    answers: ["What is the best restaurant in the city?"]
+    explanation: "Pergunta com what is + the best + substantivo + in + lugar."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (with ever)."
+    prompt_pt: "Coloque as palavras em ordem (com ever)."
+    words: ["watched", "funniest", "I've", "the", "It's", "ever", "series"]
+    answers: ["It's the funniest series I've ever watched."]
+    explanation: "Superlativo + substantivo + I've ever + particípio."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "December is the busiest month of the year at the store."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["December is the busiest month of the year at the store."]
+    explanation: "Busy → the busiest; com período usamos of (of the year)."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "My brother is tall, but my dad is ___ person in the family."
+    prompt_pt: "Meu irmão é alto, mas meu pai é a pessoa mais alta da família."
+    options: ["the tallest", "taller", "tallest than"]
+    answers: ["the tallest"]
+    explanation: "Uma pessoa destacada do grupo inteiro (in the family) → superlativo."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Which sentence compares only two things?"
+    prompt_pt: "Qual frase compara só duas coisas?"
+    options: ["This bag is cheaper than that one.", "This bag is the cheapest in the shop.", "This is the cheapest bag I've ever bought."]
+    answers: ["This bag is cheaper than that one."]
+    explanation: "Comparativo + than compara duas coisas; o superlativo destaca uma de um grupo."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Paulo's new apartment is smaller than his old one, but it's the closest to his office."
+    prompt: "What is true about Paulo's new apartment?"
+    prompt_pt: "O que é verdade sobre o novo apartamento do Paulo?"
+    options: ["It's the closest to his office.", "It's bigger than his old one.", "It's the farthest from his office."]
+    answers: ["It's the closest to his office."]
+    explanation: "Ele diz smaller than (menor) e the closest (o mais perto)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "It was the more beautiful beach we visited."
+    prompt_pt: "Foi a praia mais bonita que nós visitamos."
+    answers: ["It was the most beautiful beach we visited."]
+    explanation: "No superlativo de adjetivo longo usamos the most, não the more."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using a superlative: No other student in the class is as fast as Sofia."
+    prompt_pt: "Reescreva usando um superlativo: Nenhum outro aluno da turma é tão rápido quanto a Sofia."
+    answers: ["Sofia is the fastest student in the class.", "Sofia's the fastest student in the class.", "Sofia is the fastest in the class.", "Sofia's the fastest in the class."]
+    explanation: "Ninguém é tão rápido quanto ela = ela é the fastest; com grupo usamos in."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using a superlative + ever: I have never read a more interesting book."
+    prompt_pt: "Reescreva usando um superlativo + ever: Eu nunca li um livro mais interessante."
+    answers: ["This is the most interesting book I have ever read.", "This is the most interesting book I've ever read.", "It is the most interesting book I have ever read.", "It is the most interesting book I've ever read.", "It's the most interesting book I have ever read.", "It's the most interesting book I've ever read.", "That is the most interesting book I have ever read.", "That's the most interesting book I've ever read."]
+    explanation: "Nunca li um mais interessante = é the most interesting book I've ever read."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Qual é o lugar mais bonito do Brasil?"
+    answers: ["What is the most beautiful place in Brazil?", "What's the most beautiful place in Brazil?", "Which is the most beautiful place in Brazil?", "Which place is the most beautiful in Brazil?"]
+    explanation: "Beautiful é longo (the most beautiful) e com país usamos in."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Foi o dia mais frio do ano."
+    answers: ["It was the coldest day of the year.", "That was the coldest day of the year."]
+    explanation: "Cold é curto (the coldest) e com período usamos of (of the year)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "This was the cheapest flight, but also the longest one."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["This was the cheapest flight, but also the longest one."]
+    explanation: "Dois superlativos de adjetivos curtos: the cheapest e the longest."

@@ -1,0 +1,24 @@
+id: b1_future_going_to
+level: B1
+title: Futuro com going to
+order: 5
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Futuro com going to
+
+  - **Forma:** *am/is/are + going to* + verbo base: *I'm going to study*, *they're going to travel*.
+  - **Negativa e pergunta:** *She isn't going to come.* / *Are you going to apply?*
+  - **Planos e intenções** já decididos antes da fala: *I'm going to start a course next month.*
+  - **Previsões com base em sinais** do presente: *Look at those clouds! It's going to rain.*
+  - Na fala informal, *going to* soa como *gonna* — mas escreva *going to*.
+  - **Contraste com will:** *will* é decisão na hora (*OK, I'll take it!*); *going to* é plano já decidido (*I'm going to buy a new laptop on Friday.*).
+  - **Erro comum:** esquecer o verbo *to be*: *I going to travel*. O certo é *I'm going to travel*.
+scenario:
+  title: Sharing your plans for next year
+  character: A friend catching up with you at a café
+  goal: Talk about your plans and intentions for next year and what you think is about to happen
+target_structures:
+- am / is / are + going to + base verb
+- plans and intentions
+- predictions based on present evidence
+- going to vs will

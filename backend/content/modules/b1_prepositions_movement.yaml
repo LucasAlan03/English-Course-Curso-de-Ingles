@@ -1,0 +1,31 @@
+id: b1_prepositions_movement
+level: B1
+title: Preposições de movimento
+order: 15
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Preposições de movimento
+
+  - **to** = destino: *go to work, fly to Recife*. Exceção: *go home* (sem *to*). **from** = origem: *I just got back from Chile.*
+
+  - **into / out of** = entrar em / sair de um espaço: *She walked into the shop. He got out of the car.*
+
+  - **across** = atravessar de um lado ao outro (rua, ponte, praça): *walk across the street*. **through** = atravessar por dentro (túnel, parque, floresta): *drive through the tunnel*.
+
+  - **along** = ao longo de (*walk along the beach*), **past** = passar por (*go past the church*), **up / down** = subir / descer (*go up the stairs*).
+
+  - Transporte: **get on / off** (ônibus, trem, avião) × **get in / out of** (carro, táxi).
+
+  - Lugar × movimento: *She is **in** the office* (onde está) × *She walked **into** the office* (para onde foi).
+
+  - **Erro comum:** *I go to home* ou *enter in the room*. Diga *go home* e *enter the room* (ou *go into the room*).
+
+  '
+scenario:
+  title: Helping a tourist get around your city
+  character: A tourist visiting your city
+  goal: Explain how to get from the hotel to the beach, the museum and the bus station
+target_structures:
+- to / from / into / out of
+- across / through / along / past
+- up / down
+- get on / off and get in / out of

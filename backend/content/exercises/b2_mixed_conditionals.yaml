@@ -1,0 +1,259 @@
+module_id: b2_mixed_conditionals
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "If I had accepted that job in Dublin, I ___ in Ireland now."
+    prompt_pt: "Se eu tivesse aceitado aquele emprego em Dublin, eu moraria na Irlanda agora."
+    options: [would live, would have lived, will live]
+    answers: [would live]
+    explanation: "Condição passada com resultado no presente (now) → would + verbo."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "If she weren't so shy, she ___ to him at the party last night."
+    prompt_pt: "Se ela não fosse tão tímida, teria falado com ele na festa ontem à noite."
+    options: [would have talked, would talk, talks]
+    answers: [would have talked]
+    explanation: "Característica presente (weren't so shy) com resultado passado (last night) → would have + particípio."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "If we had bought that apartment in 2015, it ___ worth twice as much today."
+    prompt_pt: "Se tivéssemos comprado aquele apartamento em 2015, hoje ele valeria o dobro."
+    options: [would be, would have been, is]
+    answers: [would be]
+    explanation: "Today indica resultado presente → would be."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "If I ___ allergic to cats, I would have adopted the kitten we found yesterday."
+    prompt_pt: "Se eu não fosse alérgico a gatos, teria adotado o filhote que encontramos ontem."
+    glossary: {kitten: filhote de gato}
+    options: [weren't, won't be, am not]
+    answers: [weren't, wasn't]
+    explanation: "A alergia é uma condição presente e permanente → past simple irreal (weren't)."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Which sentence links a PAST event to a PRESENT result?"
+    prompt_pt: "Qual frase liga um acontecimento PASSADO a um resultado PRESENTE?"
+    options: ["If I had slept more, I wouldn't be so tired now.", "If I had slept more, I wouldn't have been tired.", "If I slept more, I wouldn't be tired."]
+    answers: ["If I had slept more, I wouldn't be so tired now."]
+    explanation: "Had slept (passado) + wouldn't be ... now (presente) é o condicional misto."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "If Bruno hadn't broken his leg last month, he would be playing in tonight's game."
+    prompt: "Is Bruno playing tonight?"
+    prompt_pt: "O Bruno vai jogar hoje à noite?"
+    options: ["No, he isn't.", "Yes, he is.", "Yes, but only for a few minutes."]
+    answers: ["No, he isn't."]
+    explanation: "Would be playing descreve o presente imaginário: na realidade, ele não vai jogar."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "If I spoke French, I would have understood what the tour guide was saying yesterday."
+    prompt: "Does the speaker speak French?"
+    prompt_pt: "A pessoa que fala fala francês?"
+    options: ["No.", "Yes.", "Yes, fluently."]
+    answers: ["No."]
+    explanation: "If I spoke French é presente irreal: a pessoa não fala francês."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "If I had saved more money, I ___ (be) on holiday right now."
+    prompt_pt: "Se eu tivesse economizado mais dinheiro, estaria de férias agora mesmo."
+    answers: [would be, could be, might be]
+    explanation: "Right now indica resultado presente → would be."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "If you had listened to my advice, you ___ (not / be) in this mess now."
+    prompt_pt: "Se você tivesse ouvido meu conselho, não estaria nessa confusão agora."
+    glossary: {mess: confusão}
+    answers: [wouldn't be, would not be]
+    explanation: "Conselho ignorado no passado, problema no presente (now) → wouldn't be."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "If I ___ a morning person, I wouldn't have missed the 6 a.m. flight."
+    prompt_pt: "Se eu fosse uma pessoa matinal, não teria perdido o voo das 6 da manhã."
+    options: [were, had, am]
+    answers: [were, was]
+    explanation: "Traço de personalidade presente → if + past simple (were), resultado passado com wouldn't have."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "If they had invested in that start-up, they ___ millionaires now."
+    prompt_pt: "Se eles tivessem investido naquela start-up, seriam milionários agora."
+    options: [would be, would have been, are]
+    answers: [would be]
+    explanation: "Investimento passado, resultado presente (now) → would be."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "If Carla didn't trust everyone, she ___ her password to that stranger yesterday."
+    prompt_pt: "Se a Carla não confiasse em todo mundo, não teria dado a senha para aquele desconhecido ontem."
+    glossary: {stranger: desconhecido}
+    options: [wouldn't have given, wouldn't give, didn't give]
+    answers: [wouldn't have given, would not have given]
+    explanation: "Traço presente (trusts everyone) com resultado passado (yesterday) → wouldn't have given."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "If I ___ (not / eat) that seafood last night, I wouldn't feel sick now."
+    prompt_pt: "Se eu não tivesse comido aqueles frutos do mar ontem à noite, não estaria passando mal agora."
+    glossary: {seafood: frutos do mar}
+    answers: [hadn't eaten, had not eaten]
+    explanation: "Condição passada (last night) → if + past perfect."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "If I had learned to drive, I would have driven to work now."
+    prompt_pt: "Se eu tivesse aprendido a dirigir, iria de carro para o trabalho agora."
+    answers:
+      - "If I had learned to drive, I would drive to work now."
+      - "If I'd learned to drive, I would drive to work now."
+      - "If I had learned to drive, I'd drive to work now."
+      - "If I'd learned to drive, I'd drive to work now."
+      - "If I had learned to drive, I would be driving to work now."
+      - "If I'd learned to drive, I'd be driving to work now."
+    explanation: "Com now o resultado é presente: would drive, não would have driven."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "If she wasn't so busy, she would come to your birthday party last Saturday."
+    prompt_pt: "Se ela não fosse tão ocupada, teria vindo à sua festa de aniversário no sábado passado."
+    answers:
+      - "If she wasn't so busy, she would have come to your birthday party last Saturday."
+      - "If she wasn't so busy, she'd have come to your birthday party last Saturday."
+      - "If she weren't so busy, she would have come to your birthday party last Saturday."
+      - "If she weren't so busy, she'd have come to your birthday party last Saturday."
+    explanation: "Last Saturday é passado: o resultado precisa de would have + particípio."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (past → present)."
+    prompt_pt: "Coloque as palavras em ordem (passado → presente)."
+    words: [now, doctor, had, I, would, if, studied, a, medicine, be, I]
+    answers: ["If I had studied medicine, I would be a doctor now."]
+    explanation: "If + past perfect (passado), would + verbo + now (presente)."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (present → past)."
+    prompt_pt: "Coloque as palavras em ordem (presente → passado)."
+    words: [applied, she, were, the, she, have, would, braver, for, if, job]
+    answers: ["If she were braver, she would have applied for the job."]
+    explanation: "If + past simple (presente irreal), would have + particípio (passado)."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "If we had left earlier, we would be there by now."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["If we had left earlier, we would be there by now.", "If we'd left earlier, we'd be there by now.", "If we had left earlier, we'd be there by now.", "If we'd left earlier, we would be there by now."]
+    explanation: "Had left (passado) + would be ... by now (presente): condicional misto."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "If I had gone to bed earlier the night before, I ___ so tired at work yesterday."
+    prompt_pt: "Se eu tivesse ido dormir mais cedo na noite anterior, não teria ficado tão cansado no trabalho ontem."
+    options: [wouldn't have been, wouldn't be, won't be]
+    answers: [wouldn't have been, would not have been]
+    explanation: "As duas partes são passado (yesterday) → 3º condicional, wouldn't have been."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "If I had gone to bed earlier last night, I ___ so tired right now."
+    prompt_pt: "Se eu tivesse ido dormir mais cedo ontem à noite, não estaria tão cansado agora."
+    options: [wouldn't be, wouldn't have been, won't be]
+    answers: [wouldn't be, would not be]
+    explanation: "Resultado no presente (right now) → condicional misto com wouldn't be."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "If my parents hadn't moved to Curitiba, I wouldn't speak with this accent today."
+    prompt: "Did the speaker's parents move to Curitiba?"
+    prompt_pt: "Os pais da pessoa que fala se mudaram para Curitiba?"
+    options: ["Yes, they did.", "No, they didn't.", "They are going to move."]
+    answers: ["Yes, they did."]
+    explanation: "Hadn't moved é o contrário do que aconteceu: eles se mudaram, e o sotaque é o resultado hoje."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "If he hadn't lost his job, he would have been happier now."
+    prompt_pt: "Se ele não tivesse perdido o emprego, estaria mais feliz agora."
+    answers: ["If he hadn't lost his job, he would be happier now.", "If he hadn't lost his job, he'd be happier now."]
+    explanation: "Now pede resultado presente: would be, não would have been."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite as a mixed conditional: I didn't learn English as a child, so I'm not fluent now."
+    prompt_pt: "Reescreva como condicional misto: Eu não aprendi inglês na infância, então não sou fluente agora."
+    answers:
+      - "If I had learned English as a child, I would be fluent now."
+      - "If I'd learned English as a child, I would be fluent now."
+      - "If I had learned English as a child, I'd be fluent now."
+      - "If I'd learned English as a child, I'd be fluent now."
+      - "If I had learnt English as a child, I would be fluent now."
+      - "If I'd learnt English as a child, I'd be fluent now."
+      - "I would be fluent now if I had learned English as a child."
+      - "I'd be fluent now if I'd learned English as a child."
+      - "I would be fluent now if I'd learned English as a child."
+      - "I'd be fluent now if I had learned English as a child."
+    explanation: "Passado (didn't learn → had learned) com resultado presente (not fluent → would be fluent)."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite as a mixed conditional: I'm not good with numbers, so I didn't become an engineer."
+    prompt_pt: "Reescreva como condicional misto: Eu não sou bom com números, então não me tornei engenheiro."
+    answers:
+      - "If I were good with numbers, I would have become an engineer."
+      - "If I was good with numbers, I would have become an engineer."
+      - "If I were good with numbers, I'd have become an engineer."
+      - "If I was good with numbers, I'd have become an engineer."
+      - "I would have become an engineer if I were good with numbers."
+      - "I would have become an engineer if I was good with numbers."
+      - "I'd have become an engineer if I were good with numbers."
+      - "I'd have become an engineer if I was good with numbers."
+    explanation: "Presente (not good → were good) com resultado passado (didn't become → would have become)."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Se eu tivesse aceitado aquele emprego, eu estaria morando em Londres agora."
+    answers:
+      - "If I had accepted that job, I would be living in London now."
+      - "If I'd accepted that job, I would be living in London now."
+      - "If I had accepted that job, I'd be living in London now."
+      - "If I'd accepted that job, I'd be living in London now."
+      - "If I had taken that job, I would be living in London now."
+      - "If I'd taken that job, I would be living in London now."
+      - "If I had taken that job, I'd be living in London now."
+      - "If I'd taken that job, I'd be living in London now."
+      - "If I had accepted that job, I would live in London now."
+      - "If I'd accepted that job, I'd live in London now."
+    explanation: "Tivesse aceitado = had accepted (passado); estaria morando agora = would be living now (presente)."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Se eu não fosse tão tímido, eu teria falado com ela ontem."
+    answers:
+      - "If I weren't so shy, I would have talked to her yesterday."
+      - "If I wasn't so shy, I would have talked to her yesterday."
+      - "If I weren't so shy, I'd have talked to her yesterday."
+      - "If I wasn't so shy, I'd have talked to her yesterday."
+      - "If I weren't so shy, I would have spoken to her yesterday."
+      - "If I wasn't so shy, I would have spoken to her yesterday."
+      - "If I weren't so shy, I'd have spoken to her yesterday."
+      - "If I wasn't so shy, I'd have spoken to her yesterday."
+    explanation: "Não fosse tímido = weren't so shy (presente); teria falado ontem = would have talked (passado)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "If she had taken the medicine, she would feel better now."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["If she had taken the medicine, she would feel better now.", "If she'd taken the medicine, she'd feel better now."]
+    explanation: "Had taken (passado) + would feel ... now (presente): condicional misto."

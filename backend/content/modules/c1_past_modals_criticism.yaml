@@ -1,0 +1,24 @@
+id: c1_past_modals_criticism
+level: C1
+title: 'Modais no passado: crítica e arrependimento'
+order: 5
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Modais no passado: crítica e arrependimento
+
+  - **Forma:** modal + *have* + particípio: *should have called*, *shouldn't have said*.
+  - **should have / ought to have**: era o certo, mas não aconteceu (crítica ou arrependimento): *You should have told me.* / *We ought to have checked.*
+  - **shouldn't have**: aconteceu, mas foi um erro: *I shouldn't have sent that email.*
+  - **could have** (tom de bronca): *You could have warned me!* (= você podia ter avisado)
+  - **needn't have**: você fez algo que não era necessário: *You needn't have printed the slides.*
+  - **didn't need to**: não era necessário e normalmente você não fez: *I didn't need to take a taxi, so I walked.*
+  - **Erro comum:** escrever *should of* (soa igual a *should've*, mas está errado). Escreva **should have**.
+scenario:
+  title: Reviewing a project that went badly
+  character: A reflective team lead running a post-mortem meeting
+  goal: Discuss what should or shouldn't have been done and what was unnecessary
+target_structures:
+- should have + past participle
+- shouldn't have + past participle
+- ought to have
+- needn't have

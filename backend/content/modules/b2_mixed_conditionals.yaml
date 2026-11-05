@@ -1,0 +1,24 @@
+id: b2_mixed_conditionals
+level: B2
+title: Condicionais mistos
+order: 4
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Condicionais mistos
+
+  - Misturam tempos: a condição está num tempo e o resultado em outro.
+  - **Passado → presente**: *If + past perfect, would + verbo*: *If I had taken that job, I would be rich now.* (não aceitei, e hoje não sou rico)
+  - **Presente → passado**: *If + past simple, would have + particípio*: *If I were more careful, I wouldn't have lost my phone.* (não sou cuidadoso, e perdi o celular)
+  - Marcadores ajudam a ver o tempo de cada parte: *now, today, these days* (presente) × *yesterday, last year, in 2015* (passado).
+  - Para algo em andamento agora, use *would be + -ing*: *If I hadn't missed the flight, I would be lying on a beach right now.*
+  - **Contraste com o 3º condicional:** no 3º as duas partes são passado (*If I had slept, I wouldn't have been tired yesterday*); no misto, uma delas é presente (*If I had slept, I wouldn't be tired now*).
+  - **Erro comum:** *If I had studied medicine, I would have been a doctor now.* Com *now*, o resultado é presente: *I would be a doctor now.*
+scenario:
+  title: A school reunion
+  character: A former classmate you haven't seen for fifteen years
+  goal: Compare your life now with how it could have been if you had made different choices
+target_structures:
+- if + past perfect, would + base form (now)
+- if + past simple, would have + past participle
+- would be + -ing
+- third vs mixed conditional

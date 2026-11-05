@@ -1,0 +1,216 @@
+module_id: b1_prepositions_place
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Sorry, I can't talk now. I'm ___ work."
+    prompt_pt: "Desculpa, não posso falar agora. Estou no trabalho."
+    options: ["at", "in", "on"]
+    answers: ["at"]
+    explanation: "Lugar onde se faz uma atividade: at work, at home, at school."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Your keys are ___ the kitchen table."
+    prompt_pt: "Suas chaves estão na mesa da cozinha."
+    options: ["on", "in", "at"]
+    answers: ["on"]
+    explanation: "Sobre uma superfície usamos on."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Helena lives ___ Curitiba."
+    prompt_pt: "A Helena mora em Curitiba."
+    options: ["in", "at", "on"]
+    answers: ["in"]
+    explanation: "Com cidades e países usamos in."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "Our office is ___ the fifth floor."
+    prompt_pt: "Nosso escritório fica no quinto andar."
+    glossary: {floor: andar}
+    options: ["on", "in", "at"]
+    answers: ["on"]
+    explanation: "Com andares usamos on (on the fifth floor)."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "The milk is ___ the fridge."
+    prompt_pt: "O leite está na geladeira."
+    glossary: {fridge: geladeira}
+    options: ["in", "on", "at"]
+    answers: ["in"]
+    explanation: "Dentro de um espaço fechado usamos in."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "The pharmacy is between the bakery and the bank, opposite the post office."
+    prompt: "What is opposite the pharmacy?"
+    prompt_pt: "O que fica em frente à farmácia?"
+    glossary: {pharmacy: farmácia}
+    options: ["The post office", "The bakery", "The bank"]
+    answers: ["The post office"]
+    explanation: "Opposite the post office: o correio fica do outro lado; padaria e banco ficam dos lados."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "I left my glasses on the sofa, next to the remote control."
+    prompt: "Where are the glasses?"
+    prompt_pt: "Onde estão os óculos?"
+    glossary: {glasses: óculos}
+    options: ["On the sofa", "Under the sofa", "In the bedroom"]
+    answers: ["On the sofa"]
+    explanation: "A pessoa diz on the sofa, next to the remote control."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "I'll wait for you ___ the bus stop."
+    prompt_pt: "Eu te espero no ponto de ônibus."
+    answers: ["at"]
+    explanation: "Um ponto específico (bus stop) pede at."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "There's a nice picture ___ the wall in the living room."
+    prompt_pt: "Tem um quadro bonito na parede da sala."
+    answers: ["on"]
+    explanation: "Coisas presas numa superfície, como a parede, pedem on."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "The cat is hiding ___ the bed, so I can't see it."
+    prompt_pt: "O gato está escondido embaixo da cama, então não consigo vê-lo."
+    glossary: {hiding: escondido}
+    options: ["under", "on", "at"]
+    answers: ["under"]
+    explanation: "Escondido e fora de vista = embaixo: under the bed."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "The café is ___ the bookshop and the gym."
+    prompt_pt: "O café fica entre a livraria e a academia."
+    glossary: {bookshop: livraria}
+    options: ["between", "opposite", "behind"]
+    answers: ["between"]
+    explanation: "Entre duas coisas (X and Y) usamos between."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Park the car ___ the house, not behind it."
+    prompt_pt: "Estacione o carro na frente da casa, não atrás dela."
+    options: ["in front of", "in front", "front of"]
+    answers: ["in front of"]
+    explanation: "A expressão completa é in front of."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "My desk is next ___ the window."
+    prompt_pt: "Minha mesa fica ao lado da janela."
+    glossary: {desk: mesa de trabalho}
+    answers: ["to"]
+    explanation: "A expressão é next to (ao lado de)."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I stayed in home all weekend."
+    prompt_pt: "Eu fiquei em casa o fim de semana todo."
+    answers: ["I stayed at home all weekend.", "I stayed home all weekend."]
+    explanation: "Dizemos at home, nunca in home."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "The documents are on my bag."
+    prompt_pt: "Os documentos estão na minha bolsa."
+    answers: ["The documents are in my bag."]
+    explanation: "Dentro da bolsa = in my bag."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (where is the bank?)."
+    prompt_pt: "Coloque as palavras em ordem (onde fica o banco?)."
+    words: ["supermarket", "is", "the", "opposite", "bank", "the"]
+    answers: ["The bank is opposite the supermarket."]
+    explanation: "Sujeito + is + preposição de lugar + referência."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["near", "a", "there", "here", "gym", "is"]
+    answers: ["Is there a gym near here?"]
+    explanation: "Pergunta com Is there + coisa + near here (perto daqui)."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "The towels are in the cupboard behind the bathroom door."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["The towels are in the cupboard behind the bathroom door."]
+    explanation: "In the cupboard (dentro do armário), behind the door (atrás da porta)."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "We had dinner ___ a Japanese restaurant last night."
+    prompt_pt: "Nós jantamos num restaurante japonês ontem à noite."
+    options: ["at", "on", "to"]
+    answers: ["at", "in"]
+    explanation: "Lugar onde fazemos uma atividade: at a restaurant (in também é possível)."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Which sentence is correct?"
+    prompt_pt: "Qual frase está correta?"
+    options: ["My flat is on the third floor.", "My flat is in the third floor.", "My flat is at the third floor."]
+    answers: ["My flat is on the third floor."]
+    explanation: "Com andares usamos on."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "The meeting room is on the second floor, at the end of the corridor, next to the kitchen."
+    prompt: "Where is the meeting room?"
+    prompt_pt: "Onde fica a sala de reunião?"
+    options: ["On the second floor, next to the kitchen", "On the first floor, next to the kitchen", "On the second floor, opposite the kitchen"]
+    answers: ["On the second floor, next to the kitchen"]
+    explanation: "On the second floor (andar) e next to the kitchen (ao lado da cozinha)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "The supermarket is next the pharmacy."
+    prompt_pt: "O supermercado fica ao lado da farmácia."
+    answers: ["The supermarket is next to the pharmacy."]
+    explanation: "Next sozinho não funciona como preposição: o certo é next to."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using behind: The car is in front of the tree."
+    prompt_pt: "Reescreva usando behind: O carro está na frente da árvore."
+    answers: ["The tree is behind the car."]
+    explanation: "Se o carro está na frente da árvore, a árvore está behind the car."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using between: The bakery is on the left of the bank, and the gym is on the right of the bank."
+    prompt_pt: "Reescreva usando between: A padaria fica à esquerda do banco, e a academia fica à direita do banco."
+    answers: ["The bank is between the bakery and the gym.", "The bank is between the gym and the bakery.", "The bank's between the bakery and the gym."]
+    explanation: "O banco tem uma coisa de cada lado, então está between the bakery and the gym."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "O celular está embaixo do travesseiro."
+    answers: ["The phone is under the pillow.", "The cell phone is under the pillow.", "The cellphone is under the pillow.", "The mobile is under the pillow.", "The mobile phone is under the pillow.", "The phone is underneath the pillow.", "The phone's under the pillow."]
+    explanation: "Embaixo de = under."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu estou no aeroporto."
+    answers: ["I'm at the airport.", "I am at the airport."]
+    explanation: "Um lugar visto como ponto (aeroporto, estação) pede at."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "There is a small bakery opposite the station."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["There is a small bakery opposite the station.", "There's a small bakery opposite the station."]
+    explanation: "Opposite = do outro lado, em frente."

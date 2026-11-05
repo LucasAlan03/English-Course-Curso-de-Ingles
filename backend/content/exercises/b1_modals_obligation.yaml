@@ -1,0 +1,214 @@
+module_id: b1_modals_obligation
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "You ___ wear a helmet on a motorbike. It's the law."
+    prompt_pt: "Você tem que usar capacete na moto. É a lei."
+    glossary: {helmet: capacete, law: lei}
+    options: ["must", "mustn't", "don't have to"]
+    answers: ["must", "have to"]
+    explanation: "Regra obrigatória (a lei) → must."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "It's Sunday tomorrow, so I ___ get up early."
+    prompt_pt: "Amanhã é domingo, então eu não preciso acordar cedo."
+    options: ["don't have to", "mustn't", "must"]
+    answers: ["don't have to"]
+    explanation: "Não é necessário (mas não é proibido) → don't have to."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "Welcome to the museum. You mustn't touch the paintings, but you can take photos without flash."
+    prompt: "What is not allowed in the museum?"
+    prompt_pt: "O que não é permitido no museu?"
+    options: ["touching the paintings", "taking photos", "talking"]
+    answers: ["touching the paintings"]
+    explanation: "\"You mustn't touch the paintings\": mustn't = proibido."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "My sister ___ to work night shifts at the hospital."
+    prompt_pt: "Minha irmã tem que trabalhar em plantões noturnos no hospital."
+    glossary: {"night shifts": plantões noturnos}
+    options: ["has", "have", "must"]
+    answers: ["has"]
+    explanation: "Obrigação do trabalho; my sister (she) → has to. Must não leva to."
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "We ___ (have to) wait two hours at the airport yesterday."
+    prompt_pt: "Nós tivemos que esperar duas horas no aeroporto ontem."
+    answers: ["had to"]
+    explanation: "Obrigação no passado → had to (must não tem passado)."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "You ___ smoke inside the restaurant."
+    prompt_pt: "Você não pode fumar dentro do restaurante."
+    options: ["mustn't", "don't have to", "have to"]
+    answers: ["mustn't", "can't"]
+    explanation: "Proibição → mustn't."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "The good news is that you don't have to come to the office on Fridays. You can work from home."
+    prompt: "What is true about Fridays?"
+    prompt_pt: "O que é verdade sobre as sextas-feiras?"
+    options: ["Working from home is allowed.", "Everyone must be in the office.", "The office is closed."]
+    answers: ["Working from home is allowed."]
+    explanation: "\"You don't have to come\" = não é necessário vir; pode trabalhar de casa."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Does Rodrigo ___ (have to) travel a lot for his job?"
+    prompt_pt: "O Rodrigo tem que viajar muito a trabalho?"
+    answers: ["have to"]
+    explanation: "Na pergunta com does, have to fica na forma base: Does he have to...?"
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "Students ___ bring their own laptops; the school provides them."
+    prompt_pt: "Os alunos não precisam trazer o próprio notebook; a escola fornece."
+    glossary: {provides: fornece}
+    options: ["don't have to", "mustn't", "must"]
+    answers: ["don't have to"]
+    explanation: "A escola fornece, então não é necessário → don't have to."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "I ___ remember to buy Mom's birthday present!"
+    prompt_pt: "Eu preciso lembrar de comprar o presente de aniversário da mamãe!"
+    options: ["must", "mustn't", "don't have to"]
+    answers: ["must", "have to"]
+    explanation: "Algo que eu mesmo acho importante → must."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "You ___ (not / have to) pay. The concert is free."
+    prompt_pt: "Você não precisa pagar. O show é de graça."
+    answers: ["don't have to", "do not have to"]
+    explanation: "Não é necessário pagar → don't have to."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "You must to show your passport at the gate."
+    prompt_pt: "Você tem que mostrar o passaporte no portão de embarque."
+    glossary: {gate: portão de embarque}
+    answers: ["You must show your passport at the gate.", "You have to show your passport at the gate."]
+    explanation: "Depois de must vem o verbo sem to: must show."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["has", "Carol", "to", "finish", "the", "report", "today"]
+    answers: ["Carol has to finish the report today.", "Today Carol has to finish the report."]
+    explanation: "Sujeito (she) + has to + verbo base."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "Yesterday I ___ take my cat to the vet."
+    prompt_pt: "Ontem eu tive que levar meu gato ao veterinário."
+    glossary: {vet: veterinário}
+    options: ["had to", "must", "have to"]
+    answers: ["had to"]
+    explanation: "Obrigação no passado (yesterday) → had to."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "He don't have to work on weekends."
+    prompt_pt: "Ele não precisa trabalhar nos fins de semana."
+    answers: ["He doesn't have to work on weekends.", "He does not have to work on weekends."]
+    explanation: "Com he a negativa é doesn't have to."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["do", "have", "we", "to", "book", "a", "table"]
+    answers: ["Do we have to book a table?"]
+    explanation: "Pergunta com have to: Do + sujeito + have to + verbo base."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "You mustn't park in front of the garage."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["You mustn't park in front of the garage.", "You must not park in front of the garage."]
+    explanation: "Mustn't + verbo base = é proibido."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "You ___ use your phone while you're driving. It's dangerous and against the law."
+    prompt_pt: "Você não pode usar o celular enquanto dirige. É perigoso e contra a lei."
+    glossary: {dangerous: perigoso, "against the law": contra a lei}
+    options: ["mustn't", "don't have to", "must"]
+    answers: ["mustn't", "can't"]
+    explanation: "É proibido → mustn't."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "The meeting is online, so you ___ come to the office."
+    prompt_pt: "A reunião é online, então você não precisa vir ao escritório."
+    options: ["don't have to", "mustn't", "has to"]
+    answers: ["don't have to"]
+    explanation: "Não é necessário vir, mas também não é proibido → don't have to."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Last year Beatriz ___ move back in with her parents to save money."
+    prompt_pt: "No ano passado a Beatriz teve que voltar a morar com os pais para economizar."
+    options: ["had to", "must", "has to"]
+    answers: ["had to"]
+    explanation: "Obrigação no passado (last year) → had to."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "At this gym you have to wear sneakers, and you mustn't leave the weights on the floor."
+    prompt: "What do you have to wear at the gym?"
+    prompt_pt: "O que é obrigatório usar na academia?"
+    answers: ["sneakers", "trainers", "tennis shoes", "sports shoes", "running shoes"]
+    explanation: "\"You have to wear sneakers\": have to = obrigação."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Last week I must work late every day."
+    prompt_pt: "Na semana passada eu tive que trabalhar até tarde todos os dias."
+    answers: ["Last week I had to work late every day."]
+    explanation: "Must não tem passado; para obrigação no passado use had to."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite with don't have to: It isn't necessary for you to bring food."
+    prompt_pt: "Reescreva com don't have to: Não é necessário você trazer comida."
+    answers: ["You don't have to bring food.", "You don't have to bring any food.", "You do not have to bring food."]
+    explanation: "Não é necessário = don't have to."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite with mustn't, starting with 'You': Running near the pool is not allowed."
+    prompt_pt: "Reescreva com mustn't, começando com 'You': Não é permitido correr perto da piscina."
+    answers: ["You mustn't run near the pool.", "You must not run near the pool."]
+    explanation: "Não é permitido = mustn't + verbo base."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu tenho que trabalhar no sábado."
+    answers: ["I have to work on Saturday.", "I have to work Saturday.", "I must work on Saturday.", "I've got to work on Saturday.", "I have to work this Saturday."]
+    explanation: "Obrigação vinda do trabalho → have to."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Você não precisa me esperar."
+    answers: ["You don't have to wait for me.", "You don't need to wait for me.", "You needn't wait for me."]
+    explanation: "Não precisa (é opcional) = don't have to, não mustn't."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Do I have to bring my ID to the interview?"
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Do I have to bring my ID to the interview?"]
+    explanation: "Pergunta com have to: Do I have to + verbo base?"

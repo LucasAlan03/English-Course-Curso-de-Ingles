@@ -1,28 +1,24 @@
 id: c1_causative
 level: C1
-title: Causative
-order: 4
+title: Causative (have/get something done)
+order: 7
 source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
-theory_md: '# Causative (have / get something done)
+theory_md: |
+  # Causative (have/get something done)
 
-  Quando outra pessoa faz o serviço para você:
-
-  - **have + objeto + particípio**: *I had my car repaired.* / *She''s having her hair cut.*
-
-  - **get** é mais informal: *I need to get my phone fixed.*
-
-  - Perguntas: *Where do you get your suits made?*
-
-  - **have someone do**: *I had the mechanic check the brakes.*
-
-  - **Erro comum:** *I cut my hair yesterday* (se foi o cabeleireiro) → *I had my hair cut.*
-
-  '
+  - **Forma:** *have* + objeto + particípio: *I had my car repaired.* / *She's having her hair cut.*
+  - Use quando outra pessoa faz o serviço para você (normalmente um profissional pago).
+  - **get** + objeto + particípio é mais informal: *I need to get my phone fixed.*
+  - O *have / get* muda de tempo verbal; o particípio fica igual: *We're having the kitchen renovated.* / *I'll get it done.*
+  - **have someone do** e **get someone to do**: dizer quem faz: *I had the mechanic check the brakes.* / *I got Marcos to call the client.*
+  - Também para coisas ruins que aconteceram com você: *She had her phone stolen.*
+  - **Erro comum:** dizer *I cut my hair* quando foi o cabeleireiro: o certo é *I had my hair cut.*
 scenario:
   title: Preparing a house for guests
-  character: A relative helping you prepare
-  goal: Explain which jobs you have arranged for others to do
+  character: A relative helping you get the house ready
+  goal: Explain which jobs you have arranged for other people to do
 target_structures:
 - have something done
 - get something done
 - have someone do
+- get someone to do

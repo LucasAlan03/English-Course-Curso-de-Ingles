@@ -1,0 +1,216 @@
+module_id: b1_future_going_to
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I ___ going to learn Spanish next year."
+    prompt_pt: "Eu vou aprender espanhol no ano que vem."
+    options: ["am", "is", "will"]
+    answers: ["am"]
+    explanation: "Going to precisa do verbo to be: I am going to."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Look at that guy! He ___ fall off his bike."
+    prompt_pt: "Olha aquele cara! Ele vai cair da bicicleta."
+    glossary: {"fall off": cair de}
+    options: ["is going to", "are going to", "going to"]
+    answers: ["is going to"]
+    explanation: "Previsão pelo que se vê agora; he → is going to."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "We're going to paint the living room this weekend. We've already bought the paint."
+    prompt: "What are they going to do this weekend?"
+    prompt_pt: "O que eles vão fazer neste fim de semana?"
+    options: ["paint the living room", "buy a sofa", "visit friends"]
+    answers: ["paint the living room"]
+    explanation: "\"We're going to paint...\": plano já decidido (até compraram a tinta)."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "They ___ going to get married in December."
+    prompt_pt: "Eles vão se casar em dezembro."
+    options: ["are", "is", "am"]
+    answers: ["are"]
+    explanation: "They pede are: they are going to."
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "Bianca ___ (going to / start) a new diet on Monday."
+    prompt_pt: "A Bianca vai começar uma dieta nova na segunda."
+    answers: ["is going to start"]
+    explanation: "Plano decidido; Bianca (she) → is going to start."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "___ you going to watch the final tonight?"
+    prompt_pt: "Você vai assistir à final hoje à noite?"
+    options: ["Are", "Do", "Will"]
+    answers: ["Are"]
+    explanation: "Pergunta com going to: Are + you + going to...?"
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "The sky is so dark. I think it's going to storm, so let's go inside."
+    prompt: "Why does the speaker want to go inside?"
+    prompt_pt: "Por que a pessoa quer entrar?"
+    options: ["A storm is coming.", "It's too hot.", "The park is closing."]
+    answers: ["A storm is coming."]
+    explanation: "\"It's going to storm\": previsão com base num sinal (o céu escuro)."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "We ___ (not / going to / buy) a car this year."
+    prompt_pt: "Nós não vamos comprar um carro este ano."
+    answers: ["aren't going to buy", "are not going to buy"]
+    explanation: "Negativa: we aren't going to + verbo base."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "My sister is going to ___ a master's degree abroad."
+    prompt_pt: "Minha irmã vai fazer mestrado no exterior."
+    glossary: {"master's degree": mestrado, abroad: no exterior}
+    options: ["do", "doing", "does"]
+    answers: ["do"]
+    explanation: "Depois de going to vem o verbo base: going to do."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "Be careful! You ___ spill your coffee."
+    prompt_pt: "Cuidado! Você vai derramar o café."
+    glossary: {spill: derramar}
+    options: ["are going to", "is going to", "going to"]
+    answers: ["are going to"]
+    explanation: "Previsão pelo que se vê; you → are going to."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "What ___ you going to cook for the party?"
+    prompt_pt: "O que você vai cozinhar para a festa?"
+    answers: ["are"]
+    explanation: "Pergunta: What + are + you + going to...?"
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "I going to visit my parents on Sunday."
+    prompt_pt: "Eu vou visitar meus pais no domingo."
+    answers: ["I'm going to visit my parents on Sunday.", "I am going to visit my parents on Sunday."]
+    explanation: "Falta o verbo to be: I'm going to."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["is", "going", "Leo", "to", "sell", "his", "old", "car"]
+    answers: ["Leo is going to sell his old car."]
+    explanation: "Sujeito + is going to + verbo base + complemento."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "I've saved enough money. I ___ buy a new laptop."
+    prompt_pt: "Eu juntei dinheiro suficiente. Vou comprar um notebook novo."
+    glossary: {saved: juntei, enough: suficiente}
+    options: ["am going to", "is going to", "are going to"]
+    answers: ["am going to"]
+    explanation: "Plano já decidido; I → am going to."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "She is going to moves to Recife next month."
+    prompt_pt: "Ela vai se mudar para Recife no mês que vem."
+    answers: ["She is going to move to Recife next month.", "She's going to move to Recife next month."]
+    explanation: "Depois de going to o verbo fica na forma base: move, sem -s."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["are", "going", "you", "to", "where", "stay", "in", "London"]
+    answers: ["Where are you going to stay in London?"]
+    explanation: "Pergunta: Where + are + you + going to + verbo base."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "We're going to watch a movie at home tonight."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We're going to watch a movie at home tonight.", "We are going to watch a movie at home tonight."]
+    explanation: "Plano para hoje à noite → we're going to + verbo base."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "The team is losing 3-0. They ___ win this game."
+    prompt_pt: "O time está perdendo de 3 a 0. Eles não vão ganhar este jogo."
+    options: ["aren't going to", "isn't going to", "not going to"]
+    answers: ["aren't going to"]
+    explanation: "Previsão pelo placar; they → aren't going to."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Next summer my friends and I ___ to travel around Patagonia."
+    prompt_pt: "No próximo verão, eu e meus amigos vamos viajar pela Patagônia."
+    options: ["are going", "is going", "will going"]
+    answers: ["are going"]
+    explanation: "Plano decidido; my friends and I (we) → are going to."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Oh no, I ___ late for my interview! The traffic is terrible."
+    prompt_pt: "Ah, não, eu vou me atrasar para a entrevista! O trânsito está horrível."
+    glossary: {traffic: trânsito}
+    options: ["am going to be", "is going to be", "going to be"]
+    answers: ["am going to be"]
+    explanation: "Previsão com base num sinal (o trânsito) → I'm going to be."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "I'm going to visit my aunt on Saturday. Oh, you need a ride to the airport? OK, I'll take you."
+    prompt: "What had the speaker already planned before the conversation?"
+    prompt_pt: "O que a pessoa já tinha planejado antes da conversa?"
+    options: ["visiting the aunt", "taking a friend to the airport", "buying a car"]
+    answers: ["visiting the aunt"]
+    explanation: "Going to = plano já decidido (visitar a tia); I'll take you = decisão na hora."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Look at those clouds! It will going to rain."
+    prompt_pt: "Olha essas nuvens! Vai chover."
+    glossary: {clouds: nuvens}
+    answers: ["Look at those clouds! It's going to rain.", "Look at those clouds! It is going to rain."]
+    explanation: "Não se mistura will com going to; previsão por sinal → it's going to rain."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using going to: I plan to apply for the job."
+    prompt_pt: "Reescreva usando going to: Eu pretendo me candidatar à vaga."
+    glossary: {"apply for": candidatar-se a}
+    answers: ["I'm going to apply for the job.", "I am going to apply for the job."]
+    explanation: "Intenção já decidida → am going to + verbo base."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Turn into a question: Rita is going to study tonight."
+    prompt_pt: "Transforme em pergunta: A Rita vai estudar hoje à noite."
+    answers: ["Is Rita going to study tonight?"]
+    explanation: "Na pergunta, is vem antes do sujeito: Is Rita going to...?"
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu vou fazer um curso de inglês no ano que vem."
+    answers: ["I'm going to take an English course next year.", "I am going to take an English course next year.", "I'm going to do an English course next year.", "I am going to do an English course next year.", "I'm going to take English classes next year.", "I'll take an English course next year.", "I will take an English course next year.", "I'll do an English course next year."]
+    explanation: "Plano decidido para o futuro → I'm going to + verbo base."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Cuidado! Você vai cair!"
+    answers: ["Be careful! You're going to fall!", "Be careful! You are going to fall!", "Be careful, you're going to fall!", "Careful! You're going to fall!", "Careful, you're going to fall!", "Watch out! You're going to fall!", "Watch out, you're going to fall!"]
+    explanation: "Previsão pelo que se vê agora → you're going to fall."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Is Marcos going to drive to the beach tomorrow?"
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Is Marcos going to drive to the beach tomorrow?"]
+    explanation: "Pergunta com going to: Is + sujeito + going to + verbo base."

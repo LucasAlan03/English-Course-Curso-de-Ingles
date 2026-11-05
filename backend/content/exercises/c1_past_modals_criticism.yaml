@@ -1,0 +1,228 @@
+module_id: c1_past_modals_criticism
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "You ___ me you were coming; I would have cooked something special."
+    prompt_pt: "Você devia ter me contado que vinha; eu teria cozinhado algo especial."
+    options: [should have told, should told, should have tell]
+    answers: [should have told]
+    explanation: "Crítica sobre o passado: should + have + particípio (told)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "I ___ so much at the office party. I'm so embarrassed now."
+    prompt_pt: "Eu não devia ter bebido tanto na festa do escritório. Estou com tanta vergonha agora."
+    glossary: {embarrassed: com vergonha}
+    options: [shouldn't have drunk, shouldn't drink, shouldn't have drank]
+    answers: [shouldn't have drunk]
+    explanation: "Arrependimento: shouldn't have + particípio; o particípio de drink é drunk."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "We ___ the contract more carefully before we signed it."
+    prompt_pt: "Devíamos ter lido o contrato com mais cuidado antes de assiná-lo."
+    options: [should have read, must have read, would read]
+    answers: [should have read]
+    explanation: "Algo que era o certo e não foi feito no passado: should have read (must have é dedução)."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "You ___ brought a gift — it wasn't necessary, but thank you!"
+    prompt_pt: "Você não precisava ter trazido um presente, não era necessário, mas obrigado!"
+    options: [needn't have, mustn't have, can't have]
+    answers: [needn't have]
+    explanation: "Needn't have + particípio = fez algo que não era necessário."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "He ___ his manager before posting about the project online."
+    prompt_pt: "Ele deveria ter perguntado ao gerente antes de postar sobre o projeto na internet."
+    options: [ought to have asked, ought have asked, ought to asked]
+    answers: [ought to have asked]
+    explanation: "Ought to have + particípio tem o mesmo sentido de should have (o to é obrigatório)."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "I really shouldn't have sent that email when I was angry. Now the whole team has seen it."
+    prompt: "How does the speaker feel about the email?"
+    prompt_pt: "Como o falante se sente em relação ao e-mail?"
+    options: ["They regret sending it.", "They are proud of it.", "They haven't sent it yet."]
+    answers: ["They regret sending it."]
+    explanation: "Shouldn't have sent = mandou e se arrepende."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "You needn't have printed the slides; everyone is reading them on their laptops."
+    prompt: "Was it necessary to print the slides?"
+    prompt_pt: "Era necessário imprimir os slides?"
+    options: ["No, it wasn't.", "Yes, it was.", "Only for the manager."]
+    answers: ["No, it wasn't."]
+    explanation: "Needn't have printed = imprimiu, mas não precisava."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Ana ___ (should / leave) earlier. She missed her flight."
+    prompt_pt: "A Ana devia ter saído mais cedo. Ela perdeu o voo."
+    glossary: {flight: voo}
+    answers: ["should have left", "should've left"]
+    explanation: "Crítica ao passado: should have + particípio (left)."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "You ___ (shouldn't / say) that to the client; he was really offended."
+    prompt_pt: "Você não devia ter dito isso ao cliente; ele ficou muito ofendido."
+    glossary: {offended: ofendido}
+    answers: ["shouldn't have said", "should not have said"]
+    explanation: "Algo feito que foi um erro: shouldn't have + particípio (said)."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "We ___ Diego to the meeting. He's upset that he was left out."
+    prompt_pt: "Devíamos ter convidado o Diego para a reunião. Ele está chateado por ter sido deixado de fora."
+    glossary: {upset: chateado, left out: deixado de fora}
+    options: [should have invited, should invite, must have invited]
+    answers: [should have invited]
+    explanation: "Ele não foi convidado (passado) e isso foi um erro: should have invited."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "She ___ to have checked the figures before the presentation."
+    prompt_pt: "Ela deveria ter conferido os números antes da apresentação."
+    glossary: {figures: números}
+    options: [ought, should, must]
+    answers: [ought]
+    explanation: "Só ought é seguido de to: ought to have checked."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "We ___ booked a table; the restaurant was almost empty."
+    prompt_pt: "Não precisávamos ter reservado uma mesa; o restaurante estava quase vazio."
+    options: [needn't have, shouldn't, mustn't have]
+    answers: [needn't have]
+    explanation: "Reservaram, mas não era necessário: needn't have booked."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "I ___ (shouldn't / accept) such a low salary. I regret it now."
+    prompt_pt: "Eu não devia ter aceitado um salário tão baixo. Eu me arrependo agora."
+    glossary: {regret: me arrependo}
+    answers: ["shouldn't have accepted", "should not have accepted"]
+    explanation: "Arrependimento por algo que fez: shouldn't have + particípio."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "You should of called me when the train was delayed."
+    prompt_pt: "Você devia ter me ligado quando o trem atrasou."
+    answers: ["You should have called me when the train was delayed.", "You should've called me when the train was delayed."]
+    explanation: "Should of não existe; o som de should've engana. O certo é should have."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "We shouldn't have spend so much on the launch party."
+    prompt_pt: "Não devíamos ter gastado tanto na festa de lançamento."
+    glossary: {launch: lançamento}
+    answers: ["We shouldn't have spent so much on the launch party."]
+    explanation: "Depois de have vem o particípio: spent, não spend."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a criticism)."
+    prompt_pt: "Coloque as palavras na ordem (uma crítica)."
+    words: [warned, You, the, have, should, team]
+    answers: ["You should have warned the team."]
+    explanation: "Sujeito + should have + particípio + objeto."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a regret)."
+    prompt_pt: "Coloque as palavras na ordem (um arrependimento)."
+    words: [offer, have, I, that, accepted, shouldn't]
+    answers: ["I shouldn't have accepted that offer."]
+    explanation: "Sujeito + shouldn't have + particípio + objeto."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "We should have tested the app before the launch."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We should have tested the app before the launch."]
+    explanation: "Should have tested = era o certo testar, mas não testaram."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I ___ take a taxi, so I walked to the office."
+    prompt_pt: "Eu não precisava pegar um táxi, então fui a pé para o escritório."
+    options: [didn't need to, needn't have, shouldn't have]
+    answers: [didn't need to]
+    explanation: "Não era necessário e a pessoa não fez (walked): didn't need to. Needn't have seria se tivesse pegado o táxi."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "You ___ told me about the schedule change! I looked like an idiot."
+    prompt_pt: "Você podia ter me falado da mudança de horário! Eu pareci um idiota."
+    glossary: {schedule: horário}
+    options: [could have, must have, can have]
+    answers: [could have]
+    explanation: "Could have em tom de bronca = você podia ter feito e não fez; must have é dedução."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Leo ought to have backed up his files. When his laptop crashed, he lost two weeks of work."
+    prompt: "What did Leo fail to do?"
+    prompt_pt: "O que o Leo deixou de fazer?"
+    options: ["Back up his files", "Buy a new laptop", "Finish his work"]
+    answers: ["Back up his files"]
+    explanation: "Ought to have backed up = deveria ter feito backup, mas não fez."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "She needn't have to buy a new suit for the interview."
+    prompt_pt: "Ela não precisava ter comprado um terno novo para a entrevista."
+    glossary: {suit: terno}
+    answers: ["She needn't have bought a new suit for the interview.", "She need not have bought a new suit for the interview."]
+    explanation: "Needn't have + particípio: needn't have bought."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite with 'should have': It was a mistake that you didn't ask for a discount."
+    prompt_pt: "Reescreva com 'should have': Foi um erro você não ter pedido um desconto."
+    answers: ["You should have asked for a discount."]
+    explanation: "Algo que não foi feito e era o certo: should have + particípio."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite with 'needn't have': It wasn't necessary for us to rent a car, but we did."
+    prompt_pt: "Reescreva com 'needn't have': Não era necessário alugarmos um carro, mas alugamos."
+    answers: ["We needn't have rented a car.", "We need not have rented a car."]
+    explanation: "Fizeram algo desnecessário: needn't have + particípio."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu não devia ter dito aquilo na reunião."
+    answers:
+      - "I shouldn't have said that in the meeting."
+      - "I shouldn't have said that at the meeting."
+      - "I ought not to have said that in the meeting."
+      - "I ought not to have said that at the meeting."
+    explanation: "Não devia ter + particípio = shouldn't have + particípio."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Você devia ter me avisado sobre o atraso."
+    answers:
+      - "You should have told me about the delay."
+      - "You should have warned me about the delay."
+      - "You should have let me know about the delay."
+      - "You ought to have told me about the delay."
+      - "You ought to have warned me about the delay."
+      - "You ought to have let me know about the delay."
+    explanation: "Devia ter + particípio = should have (ou ought to have) + particípio."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "You ought to have asked for help much earlier."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["You ought to have asked for help much earlier."]
+    explanation: "Ought to have asked = deveria ter pedido (crítica)."

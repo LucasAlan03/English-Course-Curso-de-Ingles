@@ -1,0 +1,25 @@
+id: c1_inversion_negative
+level: C1
+title: Inversão com advérbios negativos
+order: 1
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Inversão com advérbios negativos
+
+  - **Forma:** advérbio negativo ou restritivo no início + auxiliar + sujeito + verbo: *Never **have I** seen such a view.*
+  - Sem auxiliar na frase normal, use *do / does / did*: *Rarely **do they** complain.* / *Not only **did she** win...*
+  - **Not only ... but also**: soma duas ideias com ênfase: *Not only did she meet the deadline, but she also cut costs.*
+  - **Hardly / Scarcely ... when** e **No sooner ... than** (com past perfect): uma coisa logo depois da outra: *No sooner had we sat down than the phone rang.*
+  - **Only then / Only after / Not until** invertem a oração principal: *Only after the call **did I** understand.*
+  - **Little / At no time / Under no circumstances** soam formais e enfáticos: *Little did he know...*
+  - Uso: discursos, textos de opinião, relatos dramáticos. Na conversa do dia a dia, a ordem normal é mais comum: *I have never seen...*
+  - **Erro comum:** esquecer de inverter: *Never I have seen...* → *Never have I seen...*
+scenario:
+  title: Giving a speech at a work award ceremony
+  character: A master of ceremonies who interviews you on stage
+  goal: Talk about your team's achievements and surprises with dramatic emphasis
+target_structures:
+- Never / Rarely / Seldom + auxiliary + subject
+- Not only ... but also
+- Hardly ... when / No sooner ... than
+- Only then / Not until + inversion

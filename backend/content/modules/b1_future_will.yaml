@@ -1,0 +1,23 @@
+id: b1_future_will
+level: B1
+title: Futuro com will
+order: 4
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Futuro com will
+
+  - **Forma:** *will* + verbo base, igual para todas as pessoas: *I will help*, *she will call*. Contrações: *I'll*, *you'll*, *it'll*.
+  - **Negativa e pergunta:** *won't* (= will not): *I won't tell anyone.* / *Will you come?*
+  - **Decisão na hora** da fala: *The phone's ringing — I'll get it!*
+  - **Promessas, ofertas e pedidos:** *I'll pay you back tomorrow.* / *Will you help me?*
+  - **Previsões e opiniões** sobre o futuro, muitas vezes com *I think, probably, I'm sure*: *I think it will be a great party.*
+  - **Erro comum:** *I will to call you* ou *She wills go*. Depois de *will* vem o verbo sem *to* e sem -s: *I will call you.*
+scenario:
+  title: Helping a friend move apartments
+  character: A stressed friend who is moving next week
+  goal: Offer help, make promises and predict how the moving day will go
+target_structures:
+- will + base verb
+- won't
+- I'll for offers, promises and instant decisions
+- I think / probably + will for predictions

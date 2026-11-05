@@ -1,0 +1,24 @@
+id: b2_reported_statements
+level: B2
+title: 'Reported speech: afirmações'
+order: 7
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Reported speech: afirmações
+
+  - Para contar o que alguém disse: **said (that)** ou **told + pessoa (that)**: *She said (that) she was tired.* / *She told me (that) she was tired.*
+  - Recue o tempo verbal: present → past: *"I'm busy"* → *He said he was busy.* / present continuous → past continuous: *"I'm working"* → *He said he was working.*
+  - past simple e present perfect → past perfect: *"I saw him" / "I've seen him"* → *She said she had seen him.*
+  - **will → would**, **can → could**, **must → had to**: *"I'll call you"* → *She said she would call me.*
+  - Mude pronomes e marcadores de tempo e lugar: *today → that day*, *tomorrow → the next day*, *yesterday → the day before*, *here → there*.
+  - Se o que foi dito ainda é verdade, o recuo é opcional: *He said he lives in Recife.*
+  - **Erro comum:** *She said me that...* Use *said* sem pessoa ou *told + pessoa*: *She told me that...*
+scenario:
+  title: Passing on news from a meeting
+  character: A colleague who missed this morning's team meeting
+  goal: Report what each person said in the meeting, changing tenses, pronouns and time words
+target_structures:
+- said (that) / told + person (that)
+- backshift of tenses
+- will → would, can → could
+- time and place changes (the next day, there)

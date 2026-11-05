@@ -1,0 +1,24 @@
+id: b2_third_conditional
+level: B2
+title: 3º condicional
+order: 3
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # 3º condicional
+
+  - Forma: **If + past perfect, would have + particípio**: *If I had studied, I would have passed.*
+  - Fala de um passado imaginário, diferente do que aconteceu: *If it hadn't rained, we would have gone to the beach* (choveu e não fomos).
+  - Serve para arrependimento e crítica: *If you had told me, I would have helped.*
+  - Para possibilidade, troque *would* por **could have** ou **might have**: *If we had left earlier, we might have caught the train.*
+  - A ordem pode inverter, sem vírgula: *I would have called you if I had known.*
+  - Na fala, *'d* pode ser *had* ou *would*: *If I'd known, I'd have come* = *If I had known, I would have come.*
+  - **Erro comum:** *If I would have known...* Depois do *if* use o past perfect: *If I had known...*
+scenario:
+  title: Looking back on a missed opportunity
+  character: An old friend from university
+  goal: Talk about what would have happened if things had gone differently in the past
+target_structures:
+- if + past perfect
+- would have + past participle
+- could have / might have + past participle
+- I'd known / I'd have done

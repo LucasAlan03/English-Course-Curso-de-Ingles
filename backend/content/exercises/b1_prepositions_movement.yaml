@@ -1,0 +1,214 @@
+module_id: b1_prepositions_movement
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "We're flying ___ Fortaleza next week."
+    prompt_pt: "Nós vamos voar para Fortaleza semana que vem."
+    options: ["to", "at", "in"]
+    answers: ["to"]
+    explanation: "Destino de um movimento: to."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Be careful when you walk ___ the street."
+    prompt_pt: "Tome cuidado quando atravessar a rua."
+    options: ["across", "through", "into"]
+    answers: ["across"]
+    explanation: "Atravessar de um lado ao outro de uma superfície (rua) = across."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "The train goes ___ a long tunnel under the mountain."
+    prompt_pt: "O trem passa por dentro de um túnel longo embaixo da montanha."
+    glossary: {tunnel: túnel, mountain: montanha}
+    options: ["through", "across", "onto"]
+    answers: ["through"]
+    explanation: "Atravessar por dentro de algo (túnel) = through."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "It started raining, so we ran ___ the shopping mall."
+    prompt_pt: "Começou a chover, então corremos para dentro do shopping."
+    options: ["into", "out of", "along"]
+    answers: ["into"]
+    explanation: "Entrar em um espaço = into; com chuva, faz sentido entrar no shopping."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Let's walk ___ the beach until sunset."
+    prompt_pt: "Vamos caminhar pela praia até o pôr do sol."
+    glossary: {sunset: pôr do sol}
+    options: ["along", "into", "through"]
+    answers: ["along"]
+    explanation: "Seguir ao longo de uma linha (praia, rio, rua) = along."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Go down this street, walk past the church, and the museum is on your right."
+    prompt: "What do you walk past?"
+    prompt_pt: "Por onde você passa?"
+    options: ["The church", "The museum", "The station"]
+    answers: ["The church"]
+    explanation: "Walk past the church = passar pela igreja; o museu é o destino."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Get on the blue line at Central, get off at Park Station, and walk across the square."
+    prompt: "Where do you leave the train?"
+    prompt_pt: "Onde você desce do trem?"
+    options: ["At Park Station", "At Central", "At the square"]
+    answers: ["At Park Station"]
+    explanation: "Get off = descer do transporte: get off at Park Station."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Thiago got ___ of the taxi and paid the driver."
+    prompt_pt: "O Thiago saiu do táxi e pagou o motorista."
+    answers: ["out"]
+    explanation: "Sair de carro ou táxi = get out of."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "We walked ___ the stairs to the fourth floor."
+    prompt_pt: "Nós subimos as escadas até o quarto andar."
+    glossary: {stairs: escadas}
+    answers: ["up"]
+    explanation: "Subir = up (up the stairs)."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "I usually go ___ after the gym."
+    prompt_pt: "Eu normalmente vou para casa depois da academia."
+    options: ["home", "to home", "at home"]
+    answers: ["home"]
+    explanation: "Com home não se usa to: go home."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "Hurry! We need to get ___ the bus now."
+    prompt_pt: "Rápido! Precisamos subir no ônibus agora."
+    options: ["on", "at", "to"]
+    answers: ["on"]
+    explanation: "Ônibus, trem e avião: get on (entrar) e get off (descer)."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "I just got back ___ a trip to Chile."
+    prompt_pt: "Acabei de voltar de uma viagem ao Chile."
+    options: ["from", "to", "at"]
+    answers: ["from"]
+    explanation: "Origem do movimento (de onde voltei) = from."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Fernanda jumped ___ the pool with all her clothes on."
+    prompt_pt: "A Fernanda pulou na piscina de roupa e tudo."
+    glossary: {pool: piscina}
+    answers: ["into", "in"]
+    explanation: "Movimento para dentro de algo = into."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "We went to home early because of the rain."
+    prompt_pt: "Nós fomos para casa cedo por causa da chuva."
+    answers: ["We went home early because of the rain."]
+    explanation: "Com home não se usa to: went home."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Please get off the car, we've arrived."
+    prompt_pt: "Por favor, saia do carro, chegamos."
+    answers: ["Please get out of the car, we've arrived.", "Please get out of the car, we have arrived."]
+    explanation: "Carro e táxi usam get in / get out of; get off é para ônibus e trem."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (directions)."
+    prompt_pt: "Coloque as palavras em ordem (instruções de caminho)."
+    words: ["left", "the", "and", "park", "through", "turn", "walk"]
+    answers: ["Walk through the park and turn left."]
+    explanation: "Imperativo + through (por dentro do parque) + and + turn left."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (about a weekend trip)."
+    prompt_pt: "Coloque as palavras em ordem (sobre uma viagem de fim de semana)."
+    words: ["Gramado", "drove", "from", "to", "we", "Porto Alegre"]
+    answers: ["We drove from Porto Alegre to Gramado."]
+    explanation: "From marca a origem e to marca o destino."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Walk along the river until you see the bridge."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Walk along the river until you see the bridge."]
+    explanation: "Along the river = seguindo o rio."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "To get to the hotel, go ___ the bridge and turn right."
+    prompt_pt: "Para chegar ao hotel, atravesse a ponte e vire à direita."
+    glossary: {bridge: ponte}
+    options: ["across", "through", "into"]
+    answers: ["across", "over"]
+    explanation: "Atravessar de um lado ao outro de uma ponte = across."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Which sentence shows movement?"
+    prompt_pt: "Qual frase mostra movimento?"
+    options: ["She walked into the office.", "She is in the office.", "She is at the office."]
+    answers: ["She walked into the office."]
+    explanation: "Into indica movimento para dentro; in e at indicam onde a pessoa está."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Take the escalator down to the ground floor, go out of the main exit and cross the road."
+    prompt: "Which exit should you use?"
+    prompt_pt: "Qual saída você deve usar?"
+    options: ["The main exit", "The side exit", "The car park exit"]
+    answers: ["The main exit"]
+    explanation: "Go out of the main exit = saia pela saída principal."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "When I entered in the room, everybody stopped talking."
+    prompt_pt: "Quando eu entrei na sala, todo mundo parou de falar."
+    answers: ["When I entered the room, everybody stopped talking.", "When I went into the room, everybody stopped talking.", "When I walked into the room, everybody stopped talking.", "When I came into the room, everybody stopped talking."]
+    explanation: "Enter não leva preposição (enter the room); ou use go into."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using into: Clara entered the kitchen."
+    prompt_pt: "Reescreva usando into: A Clara entrou na cozinha."
+    answers: ["Clara went into the kitchen.", "Clara walked into the kitchen.", "Clara came into the kitchen."]
+    explanation: "Enter = go / walk into."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using out of: Mateus left the building at 6."
+    prompt_pt: "Reescreva usando out of: O Mateus saiu do prédio às 6."
+    answers: ["Mateus went out of the building at 6.", "Mateus walked out of the building at 6.", "Mateus came out of the building at 6.", "Mateus went out of the building at six.", "Mateus walked out of the building at six.", "Mateus came out of the building at six."]
+    explanation: "Leave a place = go / walk out of."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Nós atravessamos a rua."
+    answers: ["We crossed the street.", "We walked across the street.", "We went across the street.", "We crossed the road.", "We walked across the road.", "We went across the road."]
+    explanation: "Atravessar a rua = cross the street ou walk across the street."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Ela desceu do trem em Campinas."
+    answers: ["She got off the train in Campinas.", "She got off the train at Campinas."]
+    explanation: "Descer de trem, ônibus ou avião = get off."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Get on the bus at the corner and get off at the third stop."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Get on the bus at the corner and get off at the third stop."]
+    explanation: "Get on = subir no ônibus; get off = descer."

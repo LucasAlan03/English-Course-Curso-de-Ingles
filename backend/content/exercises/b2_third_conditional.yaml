@@ -1,0 +1,252 @@
+module_id: b2_third_conditional
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "If I had left home earlier, I ___ the bus."
+    prompt_pt: "Se eu tivesse saído de casa mais cedo, eu teria pegado o ônibus."
+    options: [would have caught, would catch, will catch]
+    answers: [would have caught]
+    explanation: "Passado imaginário: if + past perfect pede would have + particípio."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "If she ___ harder, she would have passed the exam."
+    prompt_pt: "Se ela tivesse estudado mais, teria passado na prova."
+    options: [had studied, would have studied, studied]
+    answers: [had studied]
+    explanation: "Na oração com if do 3º condicional usamos o past perfect (had studied)."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "We would have gone to the beach if it ___."
+    prompt_pt: "Nós teríamos ido à praia se não tivesse chovido."
+    options: [hadn't rained, didn't rain, wouldn't have rained]
+    answers: [hadn't rained]
+    explanation: "A condição no passado irreal fica no past perfect: hadn't rained."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "If you had told me about the party, I ___ come."
+    prompt_pt: "Se você tivesse me contado sobre a festa, eu teria vindo."
+    options: [would have, will have, would]
+    answers: [would have]
+    explanation: "Resultado imaginário no passado → would have + particípio (come)."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Which sentence is about an imaginary PAST situation?"
+    prompt_pt: "Qual frase fala de uma situação imaginária no PASSADO?"
+    options: ["If I had known, I would have helped.", "If I knew, I would help.", "If I know, I will help."]
+    answers: ["If I had known, I would have helped."]
+    explanation: "Had known + would have helped é o 3º condicional: o passado que não aconteceu."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "If Paulo hadn't missed the penalty, his team would have won the final."
+    prompt: "Did Paulo's team win the final?"
+    prompt_pt: "O time do Paulo ganhou a final?"
+    options: ["No, they didn't.", "Yes, they did.", "We don't know."]
+    answers: ["No, they didn't."]
+    explanation: "Would have won descreve algo que NÃO aconteceu: o time perdeu."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Honestly, if I'd checked the weather forecast, I wouldn't have planned a picnic for Saturday."
+    prompt: "What didn't the speaker do?"
+    prompt_pt: "O que a pessoa que fala não fez?"
+    options: [Check the weather forecast., Plan a picnic for Saturday., Think about the weekend.]
+    answers: [Check the weather forecast.]
+    explanation: "If I'd checked = if I had checked: na realidade, a pessoa não olhou a previsão."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "If they had booked earlier, the tickets ___ (be) cheaper."
+    prompt_pt: "Se eles tivessem reservado antes, os ingressos teriam sido mais baratos."
+    answers: [would have been, might have been, could have been]
+    explanation: "Resultado imaginário no passado → would have been."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "If I ___ (not / drink) so much coffee, I would have slept better."
+    prompt_pt: "Se eu não tivesse tomado tanto café, teria dormido melhor."
+    answers: [hadn't drunk, had not drunk]
+    explanation: "Condição no passado irreal, negativa → hadn't + particípio (drunk)."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "If the driver ___ more careful, the accident wouldn't have happened."
+    prompt_pt: "Se o motorista tivesse sido mais cuidadoso, o acidente não teria acontecido."
+    options: [had been, would have been, was]
+    answers: [had been]
+    explanation: "Depois de if, no 3º condicional, vem had + particípio (had been)."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "She ___ the job if she had spoken better English in the interview."
+    prompt_pt: "Ela talvez tivesse conseguido o emprego se tivesse falado inglês melhor na entrevista."
+    options: [might have got, might get, may get]
+    answers: [might have got, might have gotten]
+    explanation: "Possibilidade no passado imaginário → might have + particípio."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "What ___ you have done if you had lost your passport?"
+    prompt_pt: "O que você teria feito se tivesse perdido o passaporte?"
+    options: [would, did, will]
+    answers: [would]
+    explanation: "Pergunta no 3º condicional: What would you have done if ...?"
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "If we had taken a taxi, we ___ (not / miss) the start of the show."
+    prompt_pt: "Se tivéssemos pegado um táxi, não teríamos perdido o começo do show."
+    answers: [wouldn't have missed, would not have missed]
+    explanation: "Resultado negativo no passado imaginário → wouldn't have + particípio."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "If I would have known about the traffic, I would have taken the metro."
+    prompt_pt: "Se eu tivesse sabido do trânsito, teria pegado o metrô."
+    glossary: {traffic: trânsito}
+    answers:
+      - "If I had known about the traffic, I would have taken the metro."
+      - "If I'd known about the traffic, I would have taken the metro."
+      - "If I had known about the traffic, I'd have taken the metro."
+      - "If I'd known about the traffic, I'd have taken the metro."
+    explanation: "Would não vai na oração com if: use had known."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "If you had asked me, I would helped you."
+    prompt_pt: "Se você tivesse me pedido, eu teria te ajudado."
+    answers:
+      - "If you had asked me, I would have helped you."
+      - "If you'd asked me, I would have helped you."
+      - "If you had asked me, I'd have helped you."
+      - "If you'd asked me, I'd have helped you."
+    explanation: "Falta o have: would have + particípio (helped)."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a regret)."
+    prompt_pt: "Coloque as palavras em ordem (um arrependimento)."
+    words: [gone, would, if, I, known, had, have, I]
+    answers: ["If I had known, I would have gone."]
+    explanation: "If + had + particípio, would have + particípio."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: [my, done, if, you, what, been, had, would, place, in, have, you]
+    answers: ["What would you have done if you had been in my place?"]
+    explanation: "Pergunta: What would you have + particípio + if + past perfect."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "If we had left on time, we wouldn't have missed the flight."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["If we had left on time, we wouldn't have missed the flight.", "If we'd left on time, we wouldn't have missed the flight."]
+    explanation: "3º condicional: had left + wouldn't have missed."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "If I ___ more money last year, I would have bought a car."
+    prompt_pt: "Se eu tivesse tido mais dinheiro no ano passado, teria comprado um carro."
+    options: [had had, had, would have]
+    answers: [had had]
+    explanation: "Past perfect de have é had had; o 3º condicional pede essa forma depois de if."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "If I had more free time these days, I ___ a new language."
+    prompt_pt: "Se eu tivesse mais tempo livre hoje em dia, aprenderia um idioma novo."
+    options: [would learn, would have learned, had learned]
+    answers: [would learn]
+    explanation: "These days é presente imaginário → 2º condicional (would + verbo), não o 3º."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "If Camila hadn't moved to Lisbon, she would never have met her husband."
+    prompt: "Did Camila move to Lisbon?"
+    prompt_pt: "A Camila se mudou para Lisboa?"
+    options: ["Yes, she did.", "No, she didn't.", "She is going to move."]
+    answers: ["Yes, she did."]
+    explanation: "Hadn't moved é o contrário da realidade: ela se mudou e conheceu o marido."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "If he had listened to the GPS, he wouldn't get lost."
+    prompt_pt: "Se ele tivesse seguido o GPS, não teria se perdido."
+    answers:
+      - "If he had listened to the GPS, he wouldn't have got lost."
+      - "If he had listened to the GPS, he wouldn't have gotten lost."
+      - "If he'd listened to the GPS, he wouldn't have got lost."
+      - "If he'd listened to the GPS, he wouldn't have gotten lost."
+    explanation: "O resultado também é passado imaginário → wouldn't have + particípio."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite as a third conditional: I didn't know you were in town, so I didn't call you."
+    prompt_pt: "Reescreva como 3º condicional: Eu não sabia que você estava na cidade, então não te liguei."
+    answers:
+      - "If I had known you were in town, I would have called you."
+      - "If I'd known you were in town, I would have called you."
+      - "If I had known you were in town, I'd have called you."
+      - "If I'd known you were in town, I'd have called you."
+      - "I would have called you if I had known you were in town."
+      - "I would have called you if I'd known you were in town."
+      - "I'd have called you if I had known you were in town."
+      - "I'd have called you if I'd known you were in town."
+    explanation: "Inverta a realidade: didn't know → had known; didn't call → would have called."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite as a third conditional: The restaurant was closed, so we ate at home."
+    prompt_pt: "Reescreva como 3º condicional: O restaurante estava fechado, então comemos em casa."
+    answers:
+      - "If the restaurant hadn't been closed, we wouldn't have eaten at home."
+      - "We wouldn't have eaten at home if the restaurant hadn't been closed."
+      - "If the restaurant had been open, we wouldn't have eaten at home."
+      - "We wouldn't have eaten at home if the restaurant had been open."
+    explanation: "Was closed → hadn't been closed; ate → wouldn't have eaten."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Se eu tivesse estudado mais, teria passado na prova."
+    answers:
+      - "If I had studied more, I would have passed the exam."
+      - "If I'd studied more, I would have passed the exam."
+      - "If I had studied more, I'd have passed the exam."
+      - "If I'd studied more, I'd have passed the exam."
+      - "If I had studied more, I would have passed the test."
+      - "If I'd studied more, I would have passed the test."
+      - "If I had studied more, I'd have passed the test."
+      - "If I'd studied more, I'd have passed the test."
+      - "If I had studied harder, I would have passed the exam."
+      - "If I'd studied harder, I would have passed the exam."
+    explanation: "Se tivesse + particípio = if + had + particípio; teria + particípio = would have + particípio."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Nós teríamos chegado a tempo se não tivesse chovido."
+    answers:
+      - "We would have arrived on time if it hadn't rained."
+      - "We'd have arrived on time if it hadn't rained."
+      - "We would have arrived in time if it hadn't rained."
+      - "We'd have arrived in time if it hadn't rained."
+      - "We would have got there on time if it hadn't rained."
+      - "We would have gotten there on time if it hadn't rained."
+      - "If it hadn't rained, we would have arrived on time."
+      - "If it hadn't rained, we'd have arrived on time."
+    explanation: "Teríamos chegado = would have arrived; se não tivesse chovido = if it hadn't rained."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "She would have called you if she had had your number."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["She would have called you if she had had your number.", "She'd have called you if she'd had your number."]
+    explanation: "Had had é o past perfect de have, usado depois de if no 3º condicional."

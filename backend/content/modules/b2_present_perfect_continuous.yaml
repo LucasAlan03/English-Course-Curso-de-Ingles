@@ -3,26 +3,22 @@ level: B2
 title: Present perfect continuous
 order: 1
 source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
-theory_md: '# Present perfect continuous
+theory_md: |
+  # Present perfect continuous
 
-  - Forma: **have / has been + verbo-ing**.
-
-  - Ação que começou no passado e continua: *I''ve been studying English for two years.*
-
-  - Ação recente com resultado visível: *Why are you wet? — I''ve been running.*
-
-  - Com **for** (duração) e **since** (ponto de partida): *for three hours, since 9 o''clock*.
-
-  - *I''ve been reading this book* (em andamento) × *I''ve read this book* (terminei).
-
-  - **Erro comum:** *I am studying since Monday.* O certo é *I''ve been studying since Monday.*
-
-  '
+  - Forma: **have / has + been + verbo-ing**. Pergunta: *How long have you been waiting?* Negativa: *I haven't been sleeping well.*
+  - Ação que começou no passado e continua até agora: *I've been studying English for two years.*
+  - Ação recente cujo resultado ainda se vê: *Why are you so wet? — I've been running.*
+  - Com **for** (duração) e **since** (ponto de partida): *for three hours*, *since 9 o'clock*, *since I moved here*.
+  - Continuous foca na atividade; o present perfect simples foca no resultado ou na quantidade: *I've been reading this book* (ainda lendo) × *I've read three chapters* (quantidade concluída).
+  - Verbos de estado (*know, like, believe, own*) ficam no simples: *I've known her for years*, nunca *I've been knowing*.
+  - **Erro comum:** usar o presente com *since/for*: *I am living here since 2019.* O certo é *I've been living here since 2019.*
 scenario:
   title: A job interview at an international company
-  character: An interviewer
+  character: An interviewer from the HR team
   goal: Explain how long you have been doing things and what you have been working on lately
 target_structures:
-- present perfect continuous
+- have / has been + -ing
 - for / since
-- present perfect
+- How long have you been ...?
+- present perfect simple vs continuous

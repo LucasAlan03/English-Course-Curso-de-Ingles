@@ -1,0 +1,213 @@
+module_id: b2_be_used_to
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I grew up in Porto Alegre, so I'm used to ___ in cold weather."
+    prompt_pt: "Eu cresci em Porto Alegre, então estou acostumado a viver no frio."
+    options: [living, live, lived]
+    answers: [living]
+    explanation: "Depois de be used to vem verbo com -ing: living."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Don't worry about the new software. You'll ___ used to it quickly."
+    prompt_pt: "Não se preocupe com o software novo. Você vai se acostumar com ele rápido."
+    options: [get, use, have]
+    answers: [get]
+    explanation: "O processo de se acostumar é get used to."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Nurses ___ used to working long shifts."
+    prompt_pt: "Enfermeiros estão acostumados a trabalhar em turnos longos."
+    glossary: {nurses: enfermeiros, shifts: turnos}
+    options: [are, do, have]
+    answers: [are]
+    explanation: "Estar acostumado = be used to: are used to."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "After two years in Tokyo, Rafa is used to ___ with chopsticks."
+    prompt_pt: "Depois de dois anos em Tóquio, o Rafa está acostumado a comer de hashi."
+    glossary: {chopsticks: hashis}
+    options: [eating, eat, ate]
+    answers: [eating]
+    explanation: "Be used to + -ing: eating."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "It took me months to ___ used to the time difference."
+    prompt_pt: "Levei meses para me acostumar com o fuso horário."
+    options: [get, being, use]
+    answers: [get]
+    explanation: "Acostumar-se (processo) = get used to."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "I moved to Lisbon in March. The hills were hard at first, but I'm getting used to walking up and down them."
+    prompt: "How does the speaker feel about the hills now?"
+    prompt_pt: "Como quem fala se sente em relação às ladeiras agora?"
+    options: ["They are becoming easier.", "They are still impossible.", "They were always easy."]
+    answers: ["They are becoming easier."]
+    explanation: "I'm getting used to = estou me acostumando, ou seja, está ficando mais fácil."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Ricardo is a chef, so he's used to working on weekends and holidays. It doesn't bother him."
+    prompt: "What does Ricardo think about working on weekends?"
+    prompt_pt: "O que o Ricardo acha de trabalhar nos fins de semana?"
+    options: ["It's normal for him.", "He hates it.", "He never does it."]
+    answers: ["It's normal for him."]
+    explanation: "He's used to working = ele está acostumado, é normal para ele."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "I'm not used to ___ (speak) English on the phone."
+    prompt_pt: "Não estou acostumado a falar inglês ao telefone."
+    answers: ["speaking"]
+    explanation: "Be used to + -ing: speaking."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "My new flatmate snores, but I'm slowly ___ (get) used to it."
+    prompt_pt: "Meu novo colega de apartamento ronca, mas aos poucos estou me acostumando."
+    glossary: {flatmate: colega de apartamento, snores: ronca}
+    answers: ["getting"]
+    explanation: "Processo em andamento: I'm getting used to."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "When I started working from home, I ___ used to being alone all day."
+    prompt_pt: "Quando comecei a trabalhar de casa, eu não estava acostumado a ficar sozinho o dia todo."
+    options: [wasn't, didn't, hadn't]
+    answers: [wasn't]
+    explanation: "Be used to no passado: wasn't used to."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "I'll never get used to ___ at 5 a.m. for the gym."
+    prompt_pt: "Nunca vou me acostumar a acordar às 5 da manhã para ir à academia."
+    options: [getting up, get up, got up]
+    answers: [getting up]
+    explanation: "Get used to + -ing: getting up."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Are you ___ to the spicy food here yet?"
+    prompt_pt: "Você já está acostumado com a comida apimentada daqui?"
+    glossary: {spicy: apimentada}
+    options: [used, use, using]
+    answers: [used]
+    explanation: "Estar acostumado = be used to: Are you used to...?"
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Have you ___ (get) used to your new manager yet?"
+    prompt_pt: "Você já se acostumou com o seu novo gerente?"
+    answers: ["got", "gotten"]
+    explanation: "Present perfect de get used to: have got (ou gotten, no inglês americano) used to."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I'm used to wake up early for work."
+    prompt_pt: "Estou acostumado a acordar cedo para trabalhar."
+    answers: ["I'm used to waking up early for work."]
+    explanation: "O to de be used to é preposição: vem -ing (waking)."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "He is use to living alone."
+    prompt_pt: "Ele está acostumado a morar sozinho."
+    answers: ["He is used to living alone.", "He's used to living alone."]
+    explanation: "A expressão é be used to (com -d)."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: [used, I'm, to, the, noise, not]
+    answers: ["I'm not used to the noise."]
+    explanation: "Sujeito + be + not + used to + substantivo."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order. (a change in progress)"
+    prompt_pt: "Coloque as palavras em ordem. (uma mudança em andamento)"
+    words: [getting, she's, used, to, her, new, glasses]
+    answers: ["She's getting used to her new glasses."]
+    explanation: "Be getting used to + substantivo para um processo em andamento."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "It took him a while to get used to the weather."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["It took him a while to get used to the weather."]
+    explanation: "Get used to + substantivo: o processo de se acostumar."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I ___ work at night, but now I have a normal schedule."
+    prompt_pt: "Eu trabalhava à noite, mas agora tenho um horário normal."
+    options: [used to, am used to, get used to]
+    answers: [used to]
+    explanation: "Hábito antigo que acabou = used to + verbo base (não é estar acostumado)."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "I work at night, so I ___ sleeping during the day."
+    prompt_pt: "Eu trabalho à noite, então estou acostumado a dormir durante o dia."
+    options: [am used to, used to, use to]
+    answers: [am used to]
+    explanation: "Estar acostumado hoje = am used to + -ing."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Pablo used to live by the sea, so he isn't used to the dry air here in Brasília."
+    prompt: "What is difficult for Pablo?"
+    prompt_pt: "O que é difícil para o Pablo?"
+    options: ["The dry air.", "Living by the sea.", "His new job."]
+    answers: ["The dry air."]
+    explanation: "He isn't used to the dry air = ele não está acostumado com o ar seco."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "You will soon get used to drive on the left."
+    prompt_pt: "Você logo vai se acostumar a dirigir pela esquerda."
+    answers: ["You will soon get used to driving on the left.", "You'll soon get used to driving on the left."]
+    explanation: "Get used to + -ing: driving."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using be used to: Working under pressure is normal for me."
+    prompt_pt: "Reescreva usando be used to: Trabalhar sob pressão é normal para mim."
+    answers: ["I'm used to working under pressure.", "I am used to working under pressure."]
+    explanation: "Algo normal para você = I'm used to + -ing."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using get used to: Living in a big city is becoming easier for Ana."
+    prompt_pt: "Reescreva usando get used to: Morar numa cidade grande está ficando mais fácil para a Ana."
+    answers: ["Ana is getting used to living in a big city.", "Ana's getting used to living in a big city."]
+    explanation: "Processo em andamento: is getting used to + -ing."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu não estou acostumado a acordar cedo."
+    answers: ["I'm not used to waking up early.", "I am not used to waking up early.", "I'm not used to getting up early.", "I am not used to getting up early."]
+    explanation: "Estar acostumado a = be used to + -ing."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Você vai se acostumar com isso."
+    answers: ["You'll get used to it.", "You will get used to it.", "You're going to get used to it.", "You are going to get used to it.", "You'll get used to that.", "You will get used to that."]
+    explanation: "Acostumar-se = get used to."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "We're slowly getting used to the new office hours."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We're slowly getting used to the new office hours.", "We are slowly getting used to the new office hours."]
+    explanation: "Be getting used to: estamos nos acostumando."

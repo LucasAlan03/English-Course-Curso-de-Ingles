@@ -1,0 +1,25 @@
+id: b2_passive_advanced
+level: B2
+title: 'Voz passiva: perfect, futuro e modais'
+order: 6
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Voz passiva: perfect, futuro e modais
+
+  - A regra é a mesma: **to be + particípio**. Só o *to be* muda de forma conforme o tempo.
+  - Present perfect: **has / have been + particípio**: *My room hasn't been cleaned yet.* / *Your visa has been approved.*
+  - Past perfect: **had been + particípio**: *When I arrived, all the food had been eaten.*
+  - Futuro: **will be / is going to be + particípio**: *The results will be published on Monday.* / *A new line is going to be built.*
+  - Modais: **can / must / should / might + be + particípio**: *Phones must be switched off.* / *The form can be downloaded online.*
+  - No passado com modal: **should have been + particípio**: *The package should have been delivered yesterday.*
+  - **Contraste com a passiva básica:** tempo passado definido usa *was/were* (*The bridge was built in 1974*); resultado presente ou sem data usa *has been* (*The bridge has been repaired*).
+  - **Erro comum:** esquecer o *be* depois do modal ou do *will*: *The house will built* → *The house will be built.*
+scenario:
+  title: Reporting problems at a hotel
+  character: A hotel receptionist
+  goal: Describe what has or hasn't been done in your room and agree on what will be fixed and when
+target_structures:
+- has / have been + past participle
+- will be / is going to be + past participle
+- modal + be + past participle
+- had been + past participle

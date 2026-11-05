@@ -1,0 +1,31 @@
+id: b1_verb_ing
+level: B1
+title: Verbo + -ing
+order: 16
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Verbo + -ing
+
+  - Alguns verbos pedem o segundo verbo com **-ing**: **enjoy, avoid, finish, mind, suggest, keep, miss, consider, give up, can''t stand**.
+
+  - *I enjoy cooking. She keeps calling me. Do you mind waiting?*
+
+  - Depois de **preposição**, o verbo vai sempre com -ing: *good at singing, interested in learning, tired of waiting, before leaving, after eating*.
+
+  - **look forward to** + -ing (aqui o *to* é preposição): *I''m looking forward to seeing you.*
+
+  - O -ing também funciona como sujeito da frase: *Swimming is good for your back.*
+
+  - **go + -ing** para atividades: *go running, go shopping, go dancing*.
+
+  - **Erro comum:** *I enjoy to read* ou *I''m thinking about to move*. Diga *I enjoy reading* e *I''m thinking about moving*.
+
+  '
+scenario:
+  title: Chatting with a new neighbour about free time
+  character: A friendly neighbour
+  goal: Talk about what you enjoy, avoid and are interested in doing in your free time
+target_structures:
+- enjoy / avoid / finish / mind + -ing
+- preposition + -ing
+- look forward to + -ing
+- -ing as the subject

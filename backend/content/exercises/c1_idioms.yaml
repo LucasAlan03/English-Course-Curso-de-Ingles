@@ -1,0 +1,223 @@
+module_id: c1_idioms
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Max told a funny story to break the ___ at the start of the meeting."
+    prompt_pt: "O Max contou uma história engraçada para quebrar o gelo no começo da reunião."
+    options: [ice, glass, wall]
+    answers: [ice]
+    explanation: "Break the ice = quebrar o gelo, deixar o clima mais leve."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "The test was a piece of ___ — I finished it in ten minutes."
+    prompt_pt: "A prova foi moleza; terminei em dez minutos."
+    options: [cake, bread, pie]
+    answers: [cake]
+    explanation: "A piece of cake = algo muito fácil, moleza."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "I'm feeling a bit under the ___ today, so I'll work from home."
+    prompt_pt: "Estou me sentindo meio indisposto hoje, então vou trabalhar de casa."
+    options: [weather, rain, sky]
+    answers: [weather]
+    explanation: "Under the weather = indisposto, meio doente."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "You've hit the nail on the ___ — that's exactly the problem."
+    prompt_pt: "Você acertou em cheio; esse é exatamente o problema."
+    glossary: {nail: prego}
+    options: [head, top, point]
+    answers: [head]
+    explanation: "Hit the nail on the head = acertar em cheio."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "We've made our final offer. Now the ball is in their ___."
+    prompt_pt: "Fizemos a nossa oferta final. Agora a decisão é deles."
+    options: [court, garden, pocket]
+    answers: [court]
+    explanation: "The ball is in your/their court = agora a decisão é sua/deles."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "The client rejected all three designs, so it's back to the drawing board for us."
+    prompt: "What does the team have to do?"
+    prompt_pt: "O que a equipe tem que fazer?"
+    options: ["Start again with new ideas", "Draw the designs by hand", "Celebrate the result"]
+    answers: ["Start again with new ideas"]
+    explanation: "Back to the drawing board = voltar à estaca zero, recomeçar."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Before we go any further, let's make sure we're all on the same page."
+    prompt: "What does the speaker want?"
+    prompt_pt: "O que o falante quer?"
+    options: ["Everyone to agree and understand the plan", "Everyone to read the same document", "A short break"]
+    answers: ["Everyone to agree and understand the plan"]
+    explanation: "On the same page = alinhados, com o mesmo entendimento."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Don't cut ___ on safety; it could cost us much more later."
+    prompt_pt: "Não faça as coisas de qualquer jeito com a segurança; isso pode nos custar muito mais depois."
+    glossary: {safety: segurança}
+    answers: ["corners"]
+    explanation: "Cut corners = economizar fazendo de qualquer jeito."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Finding a flat in São Paulo was easier said than ___."
+    prompt_pt: "Encontrar um apartamento em São Paulo foi mais fácil falar do que fazer."
+    answers: ["done"]
+    explanation: "Easier said than done = falar é fácil, difícil é fazer."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "We're all exhausted. Let's call it a ___ and finish the rest tomorrow."
+    prompt_pt: "Estamos todos exaustos. Vamos encerrar por hoje e terminar o resto amanhã."
+    glossary: {exhausted: exaustos}
+    options: [day, rest, stop]
+    answers: [day]
+    explanation: "Call it a day = encerrar o trabalho por hoje."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "I'll keep an ___ on your bag while you get a coffee."
+    prompt_pt: "Eu fico de olho na sua bolsa enquanto você pega um café."
+    options: [eye, hand, ear]
+    answers: [eye]
+    explanation: "Keep an eye on = ficar de olho em."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Learning to code has a steep learning ___, but it's worth it."
+    prompt_pt: "Aprender a programar tem uma curva de aprendizado íngreme, mas vale a pena."
+    glossary: {steep: íngreme}
+    options: [curve, line, road]
+    answers: [curve]
+    explanation: "A steep learning curve = algo difícil de aprender no começo."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Getting the visa took ages, but we got there in the ___."
+    prompt_pt: "Tirar o visto levou uma eternidade, mas no fim conseguimos."
+    glossary: {took ages: levou uma eternidade}
+    answers: ["end"]
+    explanation: "Get there in the end = conseguir no final."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "We're all in the same boot, so let's help each other."
+    prompt_pt: "Estamos todos no mesmo barco, então vamos nos ajudar."
+    answers: ["We're all in the same boat, so let's help each other.", "We are all in the same boat, so let's help each other."]
+    explanation: "A expressão é in the same boat (no mesmo barco); boot é bota."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Sorry, I'm a bit under weather today."
+    prompt_pt: "Desculpe, estou meio indisposto hoje."
+    answers: ["Sorry, I'm a bit under the weather today.", "Sorry, I am a bit under the weather today."]
+    explanation: "Idioms são fixos: o artigo the faz parte de under the weather."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (an idiom about being direct)."
+    prompt_pt: "Coloque as palavras na ordem (uma expressão sobre ser direto)."
+    words: [beat, the, Let's, around, not, bush]
+    answers: ["Let's not beat around the bush."]
+    explanation: "Beat around the bush = enrolar; Let's not beat around the bush = vamos direto ao ponto."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (an idiom about time)."
+    prompt_pt: "Coloque as palavras na ordem (uma expressão sobre o tempo)."
+    words: [when, flies, having, Time, fun, you're]
+    answers: ["Time flies when you're having fun."]
+    explanation: "Time flies = o tempo voa."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Don't worry, the presentation will be a piece of cake."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Don't worry, the presentation will be a piece of cake."]
+    explanation: "A piece of cake = moleza."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Which one is an idiom (its meaning is not literal)?"
+    prompt_pt: "Qual delas é uma expressão idiomática (o sentido não é literal)?"
+    options: [spill the beans, make a mistake, heavy traffic]
+    answers: [spill the beans]
+    explanation: "Spill the beans significa contar um segredo; make a mistake e heavy traffic são collocations com sentido literal."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "What does 'cost an arm and a leg' mean?"
+    prompt_pt: "O que significa 'cost an arm and a leg'?"
+    options: [be very expensive, cause an injury, be very cheap]
+    answers: [be very expensive]
+    explanation: "Cost an arm and a leg = custar os olhos da cara."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Rodrigo got cold feet the night before his big presentation and almost cancelled it."
+    prompt: "How did Rodrigo feel before the presentation?"
+    prompt_pt: "Como o Rodrigo se sentiu antes da apresentação?"
+    options: ["Nervous and unsure", "Cold and ill", "Excited and confident"]
+    answers: ["Nervous and unsure"]
+    explanation: "Get cold feet = ficar com medo e quase desistir (amarelar)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Keep your fingers cross for me — I have a job interview tomorrow."
+    prompt_pt: "Torça por mim; tenho uma entrevista de emprego amanhã."
+    answers: ["Keep your fingers crossed for me — I have a job interview tomorrow.", "Keep your fingers crossed for me, I have a job interview tomorrow.", "Keep your fingers crossed for me. I have a job interview tomorrow."]
+    explanation: "A expressão é keep your fingers crossed (particípio crossed)."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite with an idiom using 'piece of cake': The exam was very easy."
+    prompt_pt: "Reescreva com uma expressão usando 'piece of cake': A prova foi muito fácil."
+    answers: ["The exam was a piece of cake."]
+    explanation: "Very easy = a piece of cake."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite with an idiom using 'weather': I feel a bit ill today."
+    prompt_pt: "Reescreva com uma expressão usando 'weather': Estou me sentindo um pouco mal hoje."
+    answers:
+      - "I feel a bit under the weather today."
+      - "I'm feeling a bit under the weather today."
+      - "I am feeling a bit under the weather today."
+    explanation: "A bit ill = a bit under the weather."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Vamos quebrar o gelo com um jogo rápido."
+    answers:
+      - "Let's break the ice with a quick game."
+      - "Let us break the ice with a quick game."
+    explanation: "Quebrar o gelo tem tradução literal em inglês: break the ice."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Agora a decisão é sua. (use uma expressão idiomática)"
+    answers:
+      - "The ball is in your court now."
+      - "Now the ball is in your court."
+      - "The ball's in your court now."
+      - "Now the ball's in your court."
+    explanation: "A decisão é sua = the ball is in your court."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "We need to think outside the box on this project."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We need to think outside the box on this project."]
+    explanation: "Think outside the box = pensar fora da caixa, de forma criativa."

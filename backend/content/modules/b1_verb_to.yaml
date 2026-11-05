@@ -1,0 +1,31 @@
+id: b1_verb_to
+level: B1
+title: Verbo + to
+order: 17
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Verbo + to
+
+  - Alguns verbos pedem **to + verbo**: **want, need, decide, hope, plan, promise, agree, refuse, learn, afford, manage, offer**.
+
+  - *I want to travel. We decided to stay. She managed to finish on time.*
+
+  - Negativa com **not to**: *He promised not to be late.*
+
+  - Com objeto: **want / ask / tell + pessoa + to**: *My boss asked me to call the client.* (nunca *want that you*)
+
+  - Depois de **would like / would love / would prefer** também vem *to*: *I''d like to book a table.* E depois de adjetivos: *It''s easy to use.*
+
+  - Verbo + -ing × verbo + to: *enjoy, avoid, finish, mind* pedem -ing; *want, decide, hope, plan* pedem to. Alguns mudam o sentido: *stop smoking* (parar o hábito) × *stop to buy bread* (parar para comprar); *remember to call* (lembrar de ligar) × *remember calling* (lembrar que ligou).
+
+  - **Erro comum:** *I want that you come* ou *I decided going*. Diga *I want you to come* e *I decided to go*.
+
+  '
+scenario:
+  title: Planning a career change with a coach
+  character: A career coach
+  goal: Talk about what you want, hope and plan to do next in your career
+target_structures:
+- want / decide / hope / plan + to
+- verb + object + to (ask me to, want you to)
+- would like to
+- -ing vs to (stop, remember)

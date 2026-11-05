@@ -1,0 +1,24 @@
+id: b1_future_present_continuous
+level: B1
+title: Presente contínuo para o futuro
+order: 6
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Presente contínuo para o futuro
+
+  - **Forma:** *am/is/are* + verbo com -ing + expressão de futuro: *I'm meeting Ana at 8 tonight.*
+  - **Uso:** compromissos já **marcados e combinados** (com hora, lugar ou outra pessoa): *We're flying to Recife on Friday.*
+  - Muito comum com verbos de movimento e encontros: *go, come, leave, meet, have dinner, play*.
+  - **Negativa e pergunta:** *I'm not working tomorrow.* / *What are you doing this weekend?*
+  - A expressão de tempo (*tonight, on Friday, next week*) mostra que é futuro, não agora.
+  - **Contraste com going to:** *going to* é intenção (*I'm going to see a dentist* — ainda vou marcar); o presente contínuo é compromisso marcado (*I'm seeing the dentist at 3*).
+  - **Erro comum:** usar *will* para um compromisso marcado. *I will meet Ana at 8* soa como decisão de agora; prefira *I'm meeting Ana at 8*.
+scenario:
+  title: Scheduling a meeting with a busy colleague
+  character: A busy colleague checking their calendar
+  goal: Compare your plans for the week and find a time when you are both free
+target_structures:
+- am / is / are + -ing for arrangements
+- future time expressions (tonight, on Friday, next week)
+- What are you doing...?
+- present continuous vs going to

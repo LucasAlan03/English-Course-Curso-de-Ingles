@@ -1,0 +1,214 @@
+module_id: b1_verb_ing
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I really enjoy ___ in the park on Sundays."
+    prompt_pt: "Eu gosto muito de correr no parque aos domingos."
+    options: ["running", "to run", "run"]
+    answers: ["running"]
+    explanation: "Enjoy é sempre seguido de verbo com -ing."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Have you finished ___ the report?"
+    prompt_pt: "Você terminou de escrever o relatório?"
+    glossary: {report: relatório}
+    options: ["writing", "to write", "write"]
+    answers: ["writing"]
+    explanation: "Finish é seguido de -ing."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Gabriel is very good at ___ the guitar."
+    prompt_pt: "O Gabriel é muito bom em tocar violão."
+    options: ["playing", "to play", "play"]
+    answers: ["playing"]
+    explanation: "Depois de preposição (at) o verbo vai com -ing."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "I try to avoid ___ coffee after 6 p.m."
+    prompt_pt: "Eu tento evitar tomar café depois das 18h."
+    options: ["drinking", "to drink", "drink"]
+    answers: ["drinking"]
+    explanation: "Avoid é seguido de -ing."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "___ before bed helps me relax."
+    prompt_pt: "Ler antes de dormir me ajuda a relaxar."
+    options: ["Reading", "Read", "Readed"]
+    answers: ["Reading"]
+    explanation: "Como sujeito da frase, o verbo vai com -ing."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "I don't mind working on Saturdays, but I hate missing my son's football games."
+    prompt: "What doesn't the speaker mind?"
+    prompt_pt: "O que a pessoa não se importa de fazer?"
+    options: ["Working on Saturdays", "Missing football games", "Playing football"]
+    answers: ["Working on Saturdays"]
+    explanation: "Don't mind working = não se importa de trabalhar aos sábados."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Pedro suggested going to the new Thai restaurant instead of ordering pizza again."
+    prompt: "What did Pedro suggest?"
+    prompt_pt: "O que o Pedro sugeriu?"
+    options: ["Going to the Thai restaurant", "Ordering pizza", "Cooking at home"]
+    answers: ["Going to the Thai restaurant"]
+    explanation: "Suggested going = sugeriu ir; instead of ordering = em vez de pedir pizza."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "My neighbour keeps ___ loud music at night. (play)"
+    prompt_pt: "Meu vizinho fica tocando música alta à noite."
+    glossary: {loud: alta}
+    answers: ["playing"]
+    explanation: "Keep (continuar, ficar fazendo) é seguido de -ing."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Would you mind ___ the window? It's cold. (close)"
+    prompt_pt: "Você se importaria de fechar a janela? Está frio."
+    answers: ["closing"]
+    explanation: "Mind é seguido de -ing."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "I'm interested in ___ a photography course."
+    prompt_pt: "Tenho interesse em fazer um curso de fotografia."
+    options: ["taking", "to take", "take"]
+    answers: ["taking"]
+    explanation: "Depois da preposição in, o verbo vai com -ing."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "We're looking forward to ___ you in Recife!"
+    prompt_pt: "Estamos ansiosos para ver você em Recife!"
+    options: ["seeing", "see", "saw"]
+    answers: ["seeing"]
+    explanation: "Em look forward to, o to é preposição, então vem -ing."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Let's go ___ this weekend. There are big sales at the mall."
+    prompt_pt: "Vamos fazer compras neste fim de semana. Tem grandes promoções no shopping."
+    glossary: {sales: promoções}
+    options: ["shopping", "to shop", "shop"]
+    answers: ["shopping"]
+    explanation: "Go + -ing para atividades: go shopping, go running."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Wash your hands before ___ dinner. (have)"
+    prompt_pt: "Lave as mãos antes de jantar."
+    answers: ["having"]
+    explanation: "Before é preposição, então o verbo vai com -ing."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I enjoy to watch documentaries on weekends."
+    prompt_pt: "Eu gosto de assistir documentários nos fins de semana."
+    answers: ["I enjoy watching documentaries on weekends."]
+    explanation: "Enjoy pede -ing, não to + verbo."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Juliana is thinking about change jobs."
+    prompt_pt: "A Juliana está pensando em mudar de emprego."
+    answers: ["Juliana is thinking about changing jobs.", "Juliana's thinking about changing jobs."]
+    explanation: "Depois da preposição about, o verbo vai com -ing."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (about a habit)."
+    prompt_pt: "Coloque as palavras em ordem (sobre um hábito)."
+    words: ["sugar", "up", "last", "I", "eating", "year", "gave"]
+    answers: ["I gave up eating sugar last year."]
+    explanation: "Give up (desistir, largar) é seguido de -ing."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a polite request)."
+    prompt_pt: "Coloque as palavras em ordem (um pedido educado)."
+    words: ["minutes", "you", "waiting", "few", "do", "a", "mind"]
+    answers: ["Do you mind waiting a few minutes?"]
+    explanation: "Do you mind + -ing? é um pedido educado."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "I miss living near the beach and walking to work."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I miss living near the beach and walking to work."]
+    explanation: "Miss (sentir falta) é seguido de -ing nos dois verbos."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I'm tired of ___ for the bus every morning."
+    prompt_pt: "Estou cansado de esperar o ônibus toda manhã."
+    options: ["waiting", "to wait", "wait"]
+    answers: ["waiting"]
+    explanation: "Depois da preposição of, o verbo vai com -ing."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Which sentence is correct?"
+    prompt_pt: "Qual frase está correta?"
+    options: ["She's considering moving to Portugal.", "She's considering to move to Portugal.", "She's considering move to Portugal."]
+    answers: ["She's considering moving to Portugal."]
+    explanation: "Consider é seguido de -ing."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "After finishing my degree, I spent a year travelling and working in hostels."
+    prompt: "What did the speaker do after finishing the degree?"
+    prompt_pt: "O que a pessoa fez depois de terminar a graduação?"
+    glossary: {degree: graduação}
+    options: ["Travelled and worked in hostels", "Started a master's course", "Worked in an office"]
+    answers: ["Travelled and worked in hostels"]
+    explanation: "Spent a year travelling and working = passou um ano viajando e trabalhando."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "I'm looking forward to meet your parents."
+    prompt_pt: "Estou ansioso para conhecer seus pais."
+    answers: ["I'm looking forward to meeting your parents.", "I am looking forward to meeting your parents."]
+    explanation: "Em look forward to, o to é preposição: vem -ing (meeting)."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite starting with the -ing form: It is relaxing to cook for friends."
+    prompt_pt: "Reescreva começando com a forma -ing: É relaxante cozinhar para os amigos."
+    answers: ["Cooking for friends is relaxing.", "Cooking for my friends is relaxing."]
+    explanation: "O -ing pode ser o sujeito da frase: Cooking ... is relaxing."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using avoid: I don't drive at rush hour."
+    prompt_pt: "Reescreva usando avoid: Eu não dirijo na hora do rush."
+    glossary: {rush hour: hora do rush}
+    answers: ["I avoid driving at rush hour.", "I avoid driving during rush hour."]
+    explanation: "Avoid + -ing: I avoid driving."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Você se importa de esperar?"
+    answers: ["Do you mind waiting?", "Would you mind waiting?"]
+    explanation: "Mind é seguido de -ing: Do you mind waiting?"
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Ela parou de fumar no ano passado."
+    answers: ["She stopped smoking last year.", "She quit smoking last year.", "She gave up smoking last year."]
+    explanation: "Stop / give up + -ing = parar de fazer um hábito."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "He is really good at remembering people's names."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["He is really good at remembering people's names.", "He's really good at remembering people's names."]
+    explanation: "Good at + -ing: depois de preposição, o verbo vai com -ing."

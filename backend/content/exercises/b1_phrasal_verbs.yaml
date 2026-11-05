@@ -1,0 +1,211 @@
+module_id: b1_phrasal_verbs
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I usually ___ at 6, but I stay in bed until 6:15."
+    prompt_pt: "Eu normalmente acordo às 6, mas fico na cama até as 6:15."
+    options: ["wake up", "get up", "give up"]
+    answers: ["wake up"]
+    explanation: "Wake up = acordar; get up = levantar da cama, o que não combina com ficar na cama."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "It's dark in here. Can you ___ the light?"
+    prompt_pt: "Está escuro aqui. Você pode acender a luz?"
+    options: ["turn on", "turn off", "give up"]
+    answers: ["turn on"]
+    explanation: "Turn on = ligar, acender."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "I'm ___ my phone. Have you seen it?"
+    prompt_pt: "Estou procurando meu celular. Você viu?"
+    options: ["looking for", "giving up", "finding out"]
+    answers: ["looking for"]
+    explanation: "Look for = procurar."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "It's cold outside, so ___ your jacket."
+    prompt_pt: "Está frio lá fora, então vista sua jaqueta."
+    options: ["put on", "take off", "turn off"]
+    answers: ["put on"]
+    explanation: "Put on = vestir, colocar roupa."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Don't ___! You're almost at the end of the course."
+    prompt_pt: "Não desista! Você está quase no fim do curso."
+    options: ["give up", "find out", "wake up"]
+    answers: ["give up"]
+    explanation: "Give up = desistir."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Can you pick up the kids from school today? I have to work late."
+    prompt: "What does the speaker ask?"
+    prompt_pt: "O que a pessoa pede?"
+    options: ["To get the kids from school", "To take the kids to school", "To work late"]
+    answers: ["To get the kids from school"]
+    explanation: "Pick up the kids = buscar as crianças."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "I found out yesterday that my flight was cancelled, so I'm coming back on Monday."
+    prompt: "When is the speaker coming back?"
+    prompt_pt: "Quando a pessoa vai voltar?"
+    answers: ["On Monday", "Monday"]
+    explanation: "Coming back on Monday = vai voltar na segunda."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Please take ___ your shoes before you come in."
+    prompt_pt: "Por favor, tire os sapatos antes de entrar."
+    answers: ["off"]
+    explanation: "Take off = tirar (roupa, sapato)."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "I'm going to the bakery. I'll come ___ in ten minutes."
+    prompt_pt: "Vou à padaria. Volto em dez minutos."
+    glossary: {bakery: padaria}
+    answers: ["back"]
+    explanation: "Come back = voltar."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "The TV is still on. Can you ___?"
+    prompt_pt: "A TV ainda está ligada. Você pode desligar?"
+    options: ["turn it off", "turn off it", "it turn off"]
+    answers: ["turn it off"]
+    explanation: "Com pronome, ele fica no meio: turn it off."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "Your sister is at the airport. Can you ___?"
+    prompt_pt: "Sua irmã está no aeroporto. Você pode buscá-la?"
+    options: ["pick her up", "pick up her", "pick she up"]
+    answers: ["pick her up"]
+    explanation: "Pronome objeto (her) no meio do phrasal verb: pick her up."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "We need to ___ what time the store closes."
+    prompt_pt: "Precisamos descobrir que horas a loja fecha."
+    options: ["find out", "look for", "give up"]
+    answers: ["find out"]
+    explanation: "Find out = descobrir uma informação."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "These boots are wet. Take ___ off before you come in."
+    prompt_pt: "Estas botas estão molhadas. Tire-as antes de entrar."
+    glossary: {boots: botas, wet: molhadas}
+    answers: ["them"]
+    explanation: "Pronome objeto no plural (them) fica no meio: take them off."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "The music is too loud. Please turn down it."
+    prompt_pt: "A música está alta demais. Por favor, abaixe."
+    glossary: {loud: alta}
+    answers: ["The music is too loud. Please turn it down."]
+    explanation: "Com pronome, ele vai no meio: turn it down."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "I'm looking my glasses. Have you seen them?"
+    prompt_pt: "Estou procurando meus óculos. Você viu?"
+    glossary: {glasses: óculos}
+    answers: ["I'm looking for my glasses. Have you seen them?", "I am looking for my glasses. Have you seen them?"]
+    explanation: "Procurar é look for; sem for, o sentido muda."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a morning routine)."
+    prompt_pt: "Coloque as palavras em ordem (uma rotina da manhã)."
+    words: ["every", "at", "up", "I", "day", "seven", "get"]
+    answers: ["I get up at seven every day."]
+    explanation: "Get up (levantar) fica junto: I get up at seven."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (with a pronoun)."
+    prompt_pt: "Coloque as palavras em ordem (com um pronome)."
+    words: ["on", "please", "it", "can", "turn", "you"]
+    answers: ["Can you turn it on, please?"]
+    explanation: "O pronome it fica no meio: turn it on."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Turn off your phone before the movie starts."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Turn off your phone before the movie starts.", "Turn your phone off before the movie starts."]
+    explanation: "Turn off = desligar; com substantivo, pode ficar junto ou separado."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I didn't know about the party. I only ___ this morning."
+    prompt_pt: "Eu não sabia da festa. Só descobri hoje de manhã."
+    options: ["found out", "looked for", "picked up"]
+    answers: ["found out"]
+    explanation: "Find out (passado: found out) = descobrir."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Which sentence is correct?"
+    prompt_pt: "Qual frase está correta?"
+    options: ["I'll pick you up at eight.", "I'll pick up you at eight.", "I'll pick you at eight up."]
+    answers: ["I'll pick you up at eight."]
+    explanation: "O pronome fica entre o verbo e a partícula: pick you up."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Marcos gave up coffee last month, and now he wakes up without an alarm."
+    prompt: "What did Marcos give up?"
+    prompt_pt: "O que o Marcos largou?"
+    answers: ["coffee", "drinking coffee"]
+    explanation: "Gave up coffee = largou o café."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "I put off my coat because it was hot."
+    prompt_pt: "Eu tirei o casaco porque estava calor."
+    answers: ["I took off my coat because it was hot.", "I took my coat off because it was hot."]
+    explanation: "Tirar roupa é take off; put on é vestir (e put off é adiar)."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using it instead of the radio: Turn off the radio."
+    prompt_pt: "Reescreva usando it no lugar de the radio: Desligue o rádio."
+    answers: ["Turn it off."]
+    explanation: "Com pronome, ele vai no meio: turn it off."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using a phrasal verb with up: I stopped trying to learn the piano."
+    prompt_pt: "Reescreva usando um phrasal verb com up: Eu parei de tentar aprender piano."
+    answers: ["I gave up learning the piano.", "I gave up trying to learn the piano.", "I gave up the piano.", "I gave up learning piano.", "I gave up trying to learn piano."]
+    explanation: "Give up = desistir, parar de tentar."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Que horas você acorda?"
+    answers: ["What time do you wake up?", "When do you wake up?"]
+    explanation: "Acordar = wake up."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu vou te buscar no aeroporto."
+    answers: ["I'll pick you up at the airport.", "I will pick you up at the airport.", "I'm going to pick you up at the airport.", "I am going to pick you up at the airport.", "I'll pick you up from the airport.", "I'm going to pick you up from the airport."]
+    explanation: "Buscar alguém = pick up, com o pronome no meio: pick you up."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "She is looking for a new apartment near the station."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["She is looking for a new apartment near the station.", "She's looking for a new apartment near the station."]
+    explanation: "Look for = procurar."

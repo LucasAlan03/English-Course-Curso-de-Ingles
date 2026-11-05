@@ -1,0 +1,28 @@
+id: b1_prepositions_place
+level: B1
+title: Preposições de lugar
+order: 14
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Preposições de lugar
+
+  - **at** = um ponto, ou um lugar onde se faz uma atividade: *at the bus stop, at work, at home, at the gym*.
+
+  - **in** = dentro de um espaço ou área: *in the kitchen, in my bag, in Curitiba, in Brazil*.
+
+  - **on** = sobre uma superfície: *on the table, on the wall, on the sofa*; e andares: *on the second floor*.
+
+  - Posição: **next to** (ao lado de), **between** (entre dois), **opposite** (em frente, do outro lado), **in front of** (na frente de), **behind** (atrás de), **under** (embaixo de).
+
+  - Endereços: **at** + número (*at 25 Oak Street*), **in** + cidade ou bairro (*in Copacabana*).
+
+  - **Erro comum:** *I''m in home* ou *in the second floor*. O certo é *at home* e *on the second floor*.
+
+  '
+scenario:
+  title: Moving into a shared flat
+  character: Your new flatmate
+  goal: Ask where things are in the flat and in the neighbourhood and describe where you put your things
+target_structures:
+- at / in / on
+- next to / between / opposite
+- in front of / behind / under

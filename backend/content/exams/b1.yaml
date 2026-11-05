@@ -1,0 +1,371 @@
+level: B1
+questions:
+  - id: q01
+    module_id: b1_past_simple
+    type: choice
+    prompt: "Two years ago Marcos ___ his job and moved to Lisbon."
+    prompt_pt: "Há dois anos Marcos largou o emprego e se mudou para Lisboa."
+    glossary: {}
+    options: [quit, has quit, was quitting, quits]
+    answers: [quit]
+    explanation: "Tempo passado definido (two years ago) e ação terminada → past simple, não present perfect."
+  - id: q02
+    module_id: b1_past_simple
+    type: fix
+    prompt: "Did you saw the last episode of the series on Friday?"
+    prompt_pt: "Você viu o último episódio da série na sexta?"
+    glossary: {episode: episódio}
+    answers: ["Did you see the last episode of the series on Friday?"]
+    explanation: "Depois de did o verbo volta para a forma base: did you see, não did you saw."
+  - id: q03
+    module_id: b1_past_continuous
+    type: choice
+    prompt: "When Diego called, I ___ the dishes, so I let it go to voicemail."
+    prompt_pt: "Quando Diego ligou, eu estava lavando a louça, então deixei cair na caixa postal."
+    glossary: {dishes: louça, voicemail: caixa postal}
+    options: [was washing, have washed, am washing, wash]
+    answers: [was washing]
+    explanation: "Ação em andamento interrompida por outra no passado (when Diego called) → past continuous."
+  - id: q04
+    module_id: b1_past_continuous
+    type: transform
+    prompt: "Combine the sentences starting with 'While' and use the past continuous: Lucas / run in the park. He saw a famous actor."
+    prompt_pt: "Junte as frases começando com 'While' e use o past continuous: Lucas corria no parque. Ele viu um ator famoso."
+    glossary: {actor: ator}
+    answers:
+      - "While Lucas was running in the park, he saw a famous actor."
+      - "While he was running in the park, Lucas saw a famous actor."
+    explanation: "While + past continuous para a ação longa; past simple para a ação curta que a interrompe."
+  - id: q05
+    module_id: b1_present_perfect
+    type: choice
+    prompt: "Paula ___ her passport yet, so she can't book the trip."
+    prompt_pt: "Paula ainda não renovou o passaporte, então não pode reservar a viagem."
+    glossary: {passport: passaporte, book: reservar}
+    options: ["hasn't renewed", "doesn't renew", "hadn't renewed"]
+    answers: ["hasn't renewed"]
+    explanation: "Algo que ainda não aconteceu até agora, com yet → present perfect negativo."
+  - id: q06
+    module_id: b1_present_perfect
+    type: gap
+    prompt: "Rafa ___ (work) at this startup since 2023, and he still loves it."
+    prompt_pt: "Rafa trabalha nesta startup desde 2023 e ainda adora."
+    glossary: {}
+    answers: [has worked, "'s worked", has been working, "'s been working"]
+    explanation: "Situação que começou no passado e continua até hoje, com since → present perfect."
+  - id: q07
+    module_id: b1_present_perfect
+    type: translate
+    prompt: "Você já experimentou comida tailandesa?"
+    answers:
+      - "Have you ever tried Thai food?"
+      - "Have you tried Thai food?"
+      - "Have you ever eaten Thai food?"
+      - "Have you eaten Thai food?"
+    explanation: "Pergunta sobre experiência de vida → Have you (ever) + particípio."
+  - id: q08
+    module_id: b1_future_will
+    type: choice
+    prompt: "A: These bags look really heavy. B: Wait, I ___ you with them."
+    prompt_pt: "A: Essas sacolas parecem bem pesadas. B: Espera, eu te ajudo com elas."
+    glossary: {heavy: pesado}
+    options: [will help, help, have helped, helped]
+    answers: [will help]
+    explanation: "Oferta decidida na hora da fala → will + verbo."
+  - id: q09
+    module_id: b1_future_will
+    type: fix
+    prompt: "My sister will to be thirty next week, so we're planning a surprise party."
+    prompt_pt: "Minha irmã vai fazer trinta anos semana que vem, então estamos planejando uma festa surpresa."
+    glossary: {surprise: surpresa}
+    answers:
+      - "My sister will be thirty next week, so we're planning a surprise party."
+    explanation: "Depois de will vem o verbo sem to: will be."
+  - id: q10
+    module_id: b1_future_going_to
+    type: choice
+    prompt: "I've made up my mind: I ___ learn to drive this year."
+    prompt_pt: "Já me decidi: vou aprender a dirigir este ano."
+    glossary: {made up my mind: tomei uma decisão}
+    options: [am going to, will going to, going to, am go to]
+    answers: [am going to]
+    explanation: "Intenção já decidida → be going to + verbo; precisa do verbo be (am)."
+  - id: q11
+    module_id: b1_future_going_to
+    type: transform
+    prompt: "Make a question with 'When' about the time: Ana is going to sell her car next month."
+    prompt_pt: "Faça uma pergunta com 'When' sobre o tempo: Ana vai vender o carro dela no mês que vem."
+    glossary: {}
+    answers: ["When is Ana going to sell her car?"]
+    explanation: "Na pergunta com going to, o verbo be vem antes do sujeito: When is Ana going to...?"
+  - id: q12
+    module_id: b1_future_present_continuous
+    type: gap
+    prompt: "I can't meet you on Friday — I ___ (fly) to Recife in the morning, and the ticket's already booked."
+    prompt_pt: "Não posso te encontrar na sexta — vou voar para Recife de manhã, e a passagem já está reservada."
+    glossary: {booked: reservado}
+    answers: [am flying, "'m flying", am going to fly, "'m going to fly"]
+    explanation: "Compromisso já combinado (passagem reservada) → present continuous para o futuro."
+  - id: q13
+    module_id: b1_future_present_continuous
+    type: order
+    prompt: "Put the words in order (a question about weekend plans)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta sobre planos do fim de semana)."
+    glossary: {}
+    words: [doing, Saturday, you, and, what, night, "on", are, Leo]
+    answers: ["What are you and Leo doing on Saturday night?"]
+    explanation: "Pergunta sobre planos combinados → What + are + sujeito + verbo-ing."
+  - id: q14
+    module_id: b1_first_conditional
+    type: choice
+    prompt: "If the train ___ late again, I'll take an Uber."
+    prompt_pt: "Se o trem atrasar de novo, eu vou pegar um Uber."
+    glossary: {}
+    options: [is, will be, would be, was]
+    answers: [is]
+    explanation: "1º condicional: if + present simple, will + verbo; não se usa will na parte do if."
+  - id: q15
+    module_id: b1_first_conditional
+    type: gap
+    prompt: "You ___ (not / pass) the exam unless you start studying now."
+    prompt_pt: "Você não vai passar na prova a menos que comece a estudar agora."
+    glossary: {unless: a menos que}
+    answers: ["won't pass", will not pass]
+    explanation: "Resultado futuro de uma condição real (unless = if not) → will not + verbo."
+  - id: q16
+    module_id: b1_second_conditional
+    type: choice
+    prompt: "If I ___ you, I'd get a second opinion before buying that apartment."
+    prompt_pt: "Se eu fosse você, pediria uma segunda opinião antes de comprar aquele apartamento."
+    glossary: {opinion: opinião}
+    options: [were, am, would be, will be]
+    answers: [were]
+    explanation: "Conselho com 2º condicional: If I were you + would."
+  - id: q17
+    module_id: b1_second_conditional
+    type: transform
+    prompt: "Rewrite as a second conditional: I don't have a car, so I can't drive you home."
+    prompt_pt: "Reescreva como 2º condicional: Eu não tenho carro, então não posso te levar para casa."
+    glossary: {}
+    answers:
+      - "If I had a car, I could drive you home."
+      - "If I had a car, I would drive you home."
+      - "If I had a car, I'd drive you home."
+      - "I could drive you home if I had a car."
+      - "I would drive you home if I had a car."
+      - "I'd drive you home if I had a car."
+    explanation: "Situação irreal no presente → if + past simple, could/would + verbo."
+  - id: q18
+    module_id: b1_second_conditional
+    type: translate
+    prompt: "Se você pudesse morar em qualquer país, qual escolheria?"
+    answers:
+      - "If you could live in any country, which one would you choose?"
+      - "If you could live in any country, which would you choose?"
+      - "If you could live in any country, which one would you pick?"
+      - "If you could live in any country, which would you pick?"
+    explanation: "Situação imaginária → if + could/past simple, would + verbo."
+  - id: q19
+    module_id: b1_modals_obligation
+    type: choice
+    prompt: "You ___ smoke in here — it's a hospital."
+    prompt_pt: "Você não pode fumar aqui dentro — é um hospital."
+    glossary: {}
+    options: ["mustn't", "don't have to", should, can]
+    answers: ["mustn't"]
+    explanation: "Proibição → mustn't; don't have to só diz que não é necessário."
+  - id: q20
+    module_id: b1_modals_obligation
+    type: fix
+    prompt: "We don't must wear a suit on Fridays, so most people come in jeans."
+    prompt_pt: "Não precisamos usar terno às sextas, então a maioria vem de jeans."
+    glossary: {suit: terno}
+    answers:
+      - "We don't have to wear a suit on Fridays, so most people come in jeans."
+      - "We don't need to wear a suit on Fridays, so most people come in jeans."
+      - "We needn't wear a suit on Fridays, so most people come in jeans."
+    explanation: "Must não tem forma com don't; ausência de obrigação → don't have to."
+  - id: q21
+    module_id: b1_modals_advice
+    type: gap
+    prompt: "Your back hurts every day? You ___ (better / see) a doctor before it gets worse."
+    prompt_pt: "Suas costas doem todo dia? É melhor você ver um médico antes que piore."
+    glossary: {back: costas, hurts: dói}
+    answers: [had better see, "'d better see"]
+    explanation: "Conselho forte com aviso → had better ('d better) + verbo sem to."
+  - id: q22
+    module_id: b1_modals_advice
+    type: order
+    prompt: "Put the words in order (a question asking for advice)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta pedindo conselho)."
+    glossary: {}
+    words: [should, I, do, think, a, you, ask, for, raise]
+    answers: ["Do you think I should ask for a raise?"]
+    explanation: "Pedido de conselho → Do you think + sujeito + should + verbo."
+  - id: q23
+    module_id: b1_comparatives
+    type: choice
+    prompt: "This laptop is ___ than the one I had before."
+    prompt_pt: "Este notebook é muito mais leve do que o que eu tinha antes."
+    glossary: {}
+    options: [much lighter, more lighter, much more light, the lightest]
+    answers: [much lighter]
+    explanation: "Adjetivo curto → -er (lighter), reforçado por much; nunca more + -er."
+  - id: q24
+    module_id: b1_comparatives
+    type: fix
+    prompt: "The new metro line is more fast than the old bus route."
+    prompt_pt: "A nova linha de metrô é mais rápida do que a antiga rota de ônibus."
+    glossary: {route: rota}
+    answers: ["The new metro line is faster than the old bus route."]
+    explanation: "Fast é adjetivo curto: o comparativo é faster, sem more."
+  - id: q25
+    module_id: b1_superlatives
+    type: gap
+    prompt: "That was ___ (bad) meal I've ever had in this city."
+    prompt_pt: "Aquela foi a pior refeição que eu já comi nesta cidade."
+    glossary: {meal: refeição}
+    answers: [the worst]
+    explanation: "Superlativo irregular de bad → the worst, comum com I've ever."
+  - id: q26
+    module_id: b1_superlatives
+    type: transform
+    prompt: "Rewrite starting with 'This is': No other app on my phone is as useful as this one."
+    prompt_pt: "Reescreva começando com 'This is': Nenhum outro app no meu celular é tão útil quanto este."
+    glossary: {useful: útil}
+    answers: ["This is the most useful app on my phone."]
+    explanation: "Adjetivo longo → the most + adjetivo para o superlativo."
+  - id: q27
+    module_id: b1_prepositions_time
+    type: choice
+    prompt: "The meeting starts ___ 9:30 ___ Monday."
+    prompt_pt: "A reunião começa às 9h30 na segunda."
+    glossary: {}
+    options: ["at / on", "on / at", "in / on", "at / in"]
+    answers: ["at / on"]
+    explanation: "At para horas, on para dias da semana."
+  - id: q28
+    module_id: b1_prepositions_time
+    type: gap
+    prompt: "Can you call me back ___ Friday afternoon?"
+    prompt_pt: "Você pode me ligar de volta na sexta à tarde?"
+    glossary: {}
+    answers: ["on"]
+    explanation: "Dia específico + parte do dia (Friday afternoon) → on, não in."
+  - id: q29
+    module_id: b1_prepositions_place
+    type: choice
+    prompt: "Julia lives ___ the third floor of that building."
+    prompt_pt: "Julia mora no terceiro andar daquele prédio."
+    glossary: {floor: andar}
+    options: ["on", "in", "at"]
+    answers: ["on"]
+    explanation: "Andares de um prédio usam on: on the third floor."
+  - id: q30
+    module_id: b1_prepositions_place
+    type: fix
+    prompt: "My parents live at Brazil, in a small town near Porto Alegre."
+    prompt_pt: "Meus pais moram no Brasil, numa cidade pequena perto de Porto Alegre."
+    glossary: {town: cidade pequena}
+    answers: ["My parents live in Brazil, in a small town near Porto Alegre."]
+    explanation: "Países e cidades usam in, não at."
+  - id: q31
+    module_id: b1_prepositions_movement
+    type: choice
+    prompt: "The cat jumped ___ the fence and ran ___ the street."
+    prompt_pt: "O gato pulou por cima da cerca e atravessou a rua correndo."
+    glossary: {fence: cerca}
+    options: ["over / across", "above / across", "over / at"]
+    answers: ["over / across"]
+    explanation: "Over = por cima (movimento); across = de um lado ao outro."
+  - id: q32
+    module_id: b1_prepositions_movement
+    type: order
+    prompt: "Put the words in order (directions)."
+    prompt_pt: "Coloque as palavras em ordem (instruções de caminho)."
+    glossary: {}
+    words: [past, walk, the, bank, and, turn, left, into, Rua, Augusta]
+    answers:
+      - "Walk past the bank and turn left into Rua Augusta."
+      - "Turn left into Rua Augusta and walk past the bank."
+    explanation: "Past = passar por algo; into = entrar numa rua ou lugar."
+  - id: q33
+    module_id: b1_verb_ing
+    type: choice
+    prompt: "Mateus suggested ___ a taxi because it was getting late."
+    prompt_pt: "Mateus sugeriu pegar um táxi porque estava ficando tarde."
+    glossary: {}
+    options: [taking, to take, take, took]
+    answers: [taking]
+    explanation: "Suggest é seguido de verbo com -ing: suggested taking."
+  - id: q34
+    module_id: b1_verb_ing
+    type: transform
+    prompt: "Rewrite using 'keep': Leo checks his phone again and again during dinner."
+    prompt_pt: "Reescreva usando 'keep': Leo olha o celular sem parar durante o jantar."
+    glossary: {}
+    answers:
+      - "Leo keeps checking his phone during dinner."
+      - "Leo keeps on checking his phone during dinner."
+    explanation: "Keep (= continuar, repetir) é seguido de verbo com -ing: keeps checking."
+  - id: q35
+    module_id: b1_verb_to
+    type: fix
+    prompt: "I've decided learning Spanish before my trip to Buenos Aires."
+    prompt_pt: "Decidi aprender espanhol antes da minha viagem a Buenos Aires."
+    glossary: {trip: viagem}
+    answers:
+      - "I've decided to learn Spanish before my trip to Buenos Aires."
+      - "I have decided to learn Spanish before my trip to Buenos Aires."
+    explanation: "Decide é seguido de to + verbo, não de -ing."
+  - id: q36
+    module_id: b1_verb_to
+    type: translate
+    prompt: "Ela prometeu me ligar amanhã."
+    answers:
+      - "She promised to call me tomorrow."
+      - "She promised to phone me tomorrow."
+      - "She promised to give me a call tomorrow."
+      - "She promised she'd call me tomorrow."
+      - "She promised she would call me tomorrow."
+    explanation: "Promise é seguido de to + verbo."
+  - id: q37
+    module_id: b1_phrasal_verbs
+    type: choice
+    prompt: "After three failed attempts, Carla didn't ___ — she passed her driving test on the fourth one."
+    prompt_pt: "Depois de três tentativas fracassadas, Carla não desistiu — passou na prova de direção na quarta."
+    glossary: {failed: fracassado, attempts: tentativas}
+    options: [give up, find out, look for, pick up]
+    answers: [give up]
+    explanation: "Give up = desistir; os outros phrasal verbs não fazem sentido aqui."
+  - id: q38
+    module_id: b1_phrasal_verbs
+    type: translate
+    prompt: "Você pode desligar a TV?"
+    answers:
+      - "Can you turn off the TV?"
+      - "Can you turn the TV off?"
+      - "Could you turn off the TV?"
+      - "Could you turn the TV off?"
+      - "Can you switch off the TV?"
+      - "Can you switch the TV off?"
+      - "Could you switch off the TV?"
+      - "Could you switch the TV off?"
+    explanation: "Desligar = turn off (ou switch off), que pode separar: turn the TV off."
+  - id: q39
+    module_id: b1_relative_clauses
+    type: gap
+    prompt: "Is that the guy ___ dog keeps barking all night?"
+    prompt_pt: "Aquele é o cara cujo cachorro fica latindo a noite toda?"
+    glossary: {barking: latindo}
+    answers: [whose]
+    explanation: "Posse dentro da oração relativa → whose."
+  - id: q40
+    module_id: b1_relative_clauses
+    type: order
+    prompt: "Put the words in order (a sentence with a relative clause)."
+    prompt_pt: "Coloque as palavras em ordem (uma frase com oração relativa)."
+    glossary: {}
+    words: [that, I, use, the, app, for, running, tracks, my, heart, rate]
+    answers: ["The app that I use for running tracks my heart rate."]
+    explanation: "That I use for running é a oração relativa que vem logo depois de the app, antes do verbo principal (tracks)."

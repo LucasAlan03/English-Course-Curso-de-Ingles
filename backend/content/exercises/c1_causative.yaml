@@ -1,0 +1,252 @@
+module_id: c1_causative
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I'm having my car ___ this afternoon, so I'll take the bus."
+    prompt_pt: "Vou levar o meu carro para a revisão hoje à tarde, então vou de ônibus."
+    options: [serviced, service, servicing]
+    answers: [serviced]
+    explanation: "Have + objeto + particípio: outra pessoa faz o serviço (serviced)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "We need to get the roof ___ before winter."
+    prompt_pt: "Precisamos mandar consertar o telhado antes do inverno."
+    glossary: {roof: telhado}
+    options: [repaired, repair, to repair]
+    answers: [repaired]
+    explanation: "Get + objeto + particípio (repaired) = mandar fazer."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "She had her phone ___ on the metro yesterday."
+    prompt_pt: "Roubaram o celular dela no metrô ontem."
+    options: [stolen, steal, stole]
+    answers: [stolen]
+    explanation: "Have + objeto + particípio também descreve algo ruim que aconteceu com alguém: had her phone stolen."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "I'll have my assistant ___ you the documents this afternoon."
+    prompt_pt: "Vou pedir para a minha assistente te mandar os documentos hoje à tarde."
+    options: [send, sent, to send]
+    answers: [send]
+    explanation: "Have + pessoa + verbo base (sem to): have my assistant send."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Can you get Marcos ___ the client tomorrow morning?"
+    prompt_pt: "Você consegue fazer o Marcos ligar para o cliente amanhã de manhã?"
+    options: [to call, call, called]
+    answers: [to call]
+    explanation: "Get + pessoa + to + verbo: get Marcos to call."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "I didn't paint the flat myself. I had it painted by a local company."
+    prompt: "Who painted the flat?"
+    prompt_pt: "Quem pintou o apartamento?"
+    options: ["A local company", "The speaker", "The speaker's friend"]
+    answers: ["A local company"]
+    explanation: "Had it painted = mandou pintar; quem pintou foi a empresa."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Mariana is getting her teeth whitened before her wedding next month."
+    prompt: "What is Mariana doing?"
+    prompt_pt: "O que a Mariana está fazendo?"
+    options: ["A dentist is whitening her teeth.", "She is whitening her teeth at home.", "She is cancelling her wedding."]
+    answers: ["A dentist is whitening her teeth."]
+    explanation: "Getting her teeth whitened = um profissional faz o clareamento para ela."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Where do you usually get your suits ___ (make)?"
+    prompt_pt: "Onde você costuma mandar fazer os seus ternos?"
+    glossary: {suits: ternos}
+    answers: ["made"]
+    explanation: "Get + objeto + particípio: made."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "We're having the kitchen ___ (renovate) next month."
+    prompt_pt: "Vamos reformar a cozinha mês que vem (com uma empresa)."
+    glossary: {kitchen: cozinha}
+    answers: ["renovated"]
+    explanation: "Have + objeto + particípio: renovated."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "I ___ my hair cut yesterday. Do you like it?"
+    prompt_pt: "Cortei o cabelo ontem. Você gostou?"
+    options: [had, did, made]
+    answers: [had]
+    explanation: "Foi o cabeleireiro que cortou: had my hair cut."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "The landlord had the plumber ___ the leak in the bathroom."
+    prompt_pt: "O proprietário pediu ao encanador para consertar o vazamento no banheiro."
+    glossary: {landlord: proprietário, plumber: encanador, leak: vazamento}
+    options: [fix, fixed, to fix]
+    answers: [fix]
+    explanation: "Have + pessoa + verbo base, sem to: had the plumber fix."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "You should get your eyes ___ if you keep having headaches."
+    prompt_pt: "Você devia fazer um exame de vista se continua tendo dores de cabeça."
+    glossary: {headaches: dores de cabeça}
+    options: [tested, test, testing]
+    answers: [tested]
+    explanation: "Get + objeto + particípio: get your eyes tested."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Have you ___ (have) your passport renewed yet?"
+    prompt_pt: "Você já renovou o seu passaporte?"
+    glossary: {renewed: renovado}
+    answers: ["had"]
+    explanation: "Present perfect do causative: have you had + objeto + particípio."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I had my laptop repair last week."
+    prompt_pt: "Mandei consertar o meu notebook semana passada."
+    answers: ["I had my laptop repaired last week."]
+    explanation: "Depois do objeto vem o particípio: repaired."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "We got the electrician check the wiring."
+    prompt_pt: "Pedimos ao eletricista para verificar a fiação."
+    glossary: {wiring: fiação}
+    answers: ["We got the electrician to check the wiring.", "We had the electrician check the wiring."]
+    explanation: "Get + pessoa pede to + verbo: got the electrician to check."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a service done for you)."
+    prompt_pt: "Coloque as palavras na ordem (um serviço feito para você)."
+    words: [fixed, need, my, I, get, bike, to]
+    answers: ["I need to get my bike fixed."]
+    explanation: "Get + objeto + particípio: get my bike fixed."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras na ordem (uma pergunta)."
+    words: [your, did, photos, Where, have, printed, you]
+    answers: ["Where did you have your photos printed?"]
+    explanation: "Pergunta com did + sujeito + have + objeto + particípio."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "We're having the whole office cleaned before the client visit."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We're having the whole office cleaned before the client visit."]
+    explanation: "Having the office cleaned = uma empresa vai fazer a limpeza."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I didn't fix the washing machine myself — I ___."
+    prompt_pt: "Eu não consertei a máquina de lavar sozinho; eu mandei consertar."
+    glossary: {washing machine: máquina de lavar}
+    options: [had it fixed, fixed it, had fixed it]
+    answers: [had it fixed]
+    explanation: "Had it fixed = outra pessoa consertou; had fixed it seria past perfect (eu mesmo consertei)."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Paula finally got her brother ___ with the move."
+    prompt_pt: "A Paula finalmente conseguiu que o irmão ajudasse na mudança."
+    glossary: {move: mudança}
+    options: [to help, help, helped]
+    answers: [to help]
+    explanation: "Get + pessoa + to + verbo (convencer alguém a fazer)."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Ricardo had his wallet stolen at the festival, so he couldn't pay for the taxi."
+    prompt: "What happened to Ricardo's wallet?"
+    prompt_pt: "O que aconteceu com a carteira do Ricardo?"
+    glossary: {wallet: carteira}
+    options: ["Someone stole it.", "He left it at home.", "He gave it to a friend."]
+    answers: ["Someone stole it."]
+    explanation: "Had his wallet stolen = roubaram a carteira dele."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "She's going to have her wedding dress make in Paris."
+    prompt_pt: "Ela vai mandar fazer o vestido de noiva em Paris."
+    answers: ["She's going to have her wedding dress made in Paris.", "She is going to have her wedding dress made in Paris."]
+    explanation: "Have + objeto + particípio: made."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using 'have something done': A technician is installing our new router tomorrow."
+    prompt_pt: "Reescreva usando 'have something done': Um técnico vai instalar o nosso roteador novo amanhã."
+    glossary: {technician: técnico}
+    answers:
+      - "We're having our new router installed tomorrow."
+      - "We are having our new router installed tomorrow."
+      - "We're having the new router installed tomorrow."
+      - "We are having the new router installed tomorrow."
+    explanation: "Mantemos o tempo verbal no have (are having) e usamos o particípio (installed)."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using 'get': A mechanic checked my brakes."
+    prompt_pt: "Reescreva usando 'get': Um mecânico verificou os meus freios."
+    glossary: {mechanic: mecânico, brakes: freios}
+    answers:
+      - "I got my brakes checked."
+      - "I got my brakes checked by a mechanic."
+      - "I got a mechanic to check my brakes."
+    explanation: "Get + objeto + particípio (got my brakes checked) ou get + pessoa + to + verbo."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu vou mandar consertar meu celular amanhã."
+    answers:
+      - "I'm going to have my phone fixed tomorrow."
+      - "I am going to have my phone fixed tomorrow."
+      - "I'm going to get my phone fixed tomorrow."
+      - "I am going to get my phone fixed tomorrow."
+      - "I'm going to have my phone repaired tomorrow."
+      - "I am going to have my phone repaired tomorrow."
+      - "I'm going to get my phone repaired tomorrow."
+      - "I am going to get my phone repaired tomorrow."
+      - "I'll have my phone fixed tomorrow."
+      - "I'll get my phone fixed tomorrow."
+      - "I'll have my phone repaired tomorrow."
+      - "I'll get my phone repaired tomorrow."
+      - "I'm having my phone fixed tomorrow."
+      - "I'm getting my phone fixed tomorrow."
+      - "I'm having my phone repaired tomorrow."
+      - "I'm getting my phone repaired tomorrow."
+      - "I'm going to have my cell phone fixed tomorrow."
+      - "I'm going to get my cell phone fixed tomorrow."
+      - "I'm going to have my mobile fixed tomorrow."
+      - "I'm going to get my mobile fixed tomorrow."
+    explanation: "Mandar consertar = have/get + objeto + particípio (fixed/repaired)."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Ela cortou o cabelo ontem. (foi ao cabeleireiro)"
+    answers:
+      - "She had her hair cut yesterday."
+      - "She got her hair cut yesterday."
+      - "Yesterday she had her hair cut."
+      - "Yesterday she got her hair cut."
+    explanation: "Quando outra pessoa corta, em inglês dizemos had/got her hair cut."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "I need to get my passport renewed before the trip."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I need to get my passport renewed before the trip."]
+    explanation: "Get + objeto + particípio: get my passport renewed."

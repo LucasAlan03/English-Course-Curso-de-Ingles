@@ -1,0 +1,211 @@
+module_id: b1_present_perfect
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Have you ever ___ to Argentina?"
+    prompt_pt: "Você já foi para a Argentina?"
+    options: ["been", "went", "go"]
+    answers: ["been"]
+    explanation: "Present perfect = have + particípio; para experiências de viagem usa-se been (have been to)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "She ___ just finished her report."
+    prompt_pt: "Ela acabou de terminar o relatório."
+    glossary: {report: relatório}
+    options: ["has", "have", "is"]
+    answers: ["has"]
+    explanation: "Com she o auxiliar é has: has just finished."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "I've lived in Curitiba for six years, but I've never visited the south coast."
+    prompt: "How long has the speaker lived in Curitiba?"
+    prompt_pt: "Há quanto tempo a pessoa mora em Curitiba?"
+    options: ["six years", "sixteen years", "two years"]
+    answers: ["six years"]
+    explanation: "\"I've lived... for six years\": present perfect com for para algo que continua."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "We ___ the new Marvel movie yet."
+    prompt_pt: "Nós ainda não vimos o filme novo da Marvel."
+    options: ["haven't seen", "hasn't seen", "not seen"]
+    answers: ["haven't seen"]
+    explanation: "Com we o auxiliar é have; negativa com yet: haven't seen."
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "My brother ___ (work) at that bank since 2018."
+    prompt_pt: "Meu irmão trabalha naquele banco desde 2018."
+    answers: ["has worked", "has been working"]
+    explanation: "Começou no passado e continua (since 2018) → has worked."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "Have you ___ your homework yet?"
+    prompt_pt: "Você já fez sua lição de casa?"
+    options: ["done", "did", "do"]
+    answers: ["done"]
+    explanation: "Depois de have vem o particípio: do → done."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Sorry, I can't come to the gym today. I've hurt my back and the doctor told me to rest."
+    prompt: "Why can't the speaker go to the gym?"
+    prompt_pt: "Por que a pessoa não pode ir à academia?"
+    options: ["a back injury", "too much work", "the gym is closed"]
+    answers: ["a back injury"]
+    explanation: "\"I've hurt my back\": present perfect para um resultado que importa agora."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "They ___ (not / reply) to my email yet."
+    prompt_pt: "Eles ainda não responderam ao meu e-mail."
+    glossary: {reply: responder}
+    answers: ["haven't replied", "have not replied"]
+    explanation: "Negativa com yet → haven't + particípio (replied)."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "Paula has had this car ___ 2020."
+    prompt_pt: "A Paula tem este carro desde 2020."
+    options: ["since", "for", "ago"]
+    answers: ["since"]
+    explanation: "Since + ponto de início (2020); for seria para duração."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "I've known Diego ___ ten years."
+    prompt_pt: "Eu conheço o Diego há dez anos."
+    options: ["for", "since", "ago"]
+    answers: ["for"]
+    explanation: "For + duração (ten years); since seria um ponto de início."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "Oh no! I ___ (lose) my wallet."
+    prompt_pt: "Ah, não! Eu perdi minha carteira."
+    glossary: {wallet: carteira}
+    answers: ["have lost"]
+    explanation: "Resultado que importa agora (estou sem carteira) → have lost."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "I have seen that series last month."
+    prompt_pt: "Eu vi essa série no mês passado."
+    answers: ["I saw that series last month."]
+    explanation: "Last month é tempo terminado e definido → past simple (saw), não present perfect."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["already", "I've", "the", "booked", "tickets"]
+    answers: ["I've already booked the tickets.", "I've booked the tickets already."]
+    explanation: "Already costuma ficar entre have e o particípio: I've already booked."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "My parents ___ to Europe three times."
+    prompt_pt: "Meus pais já foram para a Europa três vezes."
+    options: ["have been", "has been", "have went"]
+    answers: ["have been"]
+    explanation: "Experiência sem data; my parents (plural) → have been."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "She has went to the supermarket."
+    prompt_pt: "Ela foi ao supermercado."
+    answers: ["She has gone to the supermarket.", "She's gone to the supermarket.", "She went to the supermarket."]
+    explanation: "Depois de has vem o particípio: gone, não went (que é o past simple)."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["you", "have", "ever", "Korean", "food", "tried"]
+    answers: ["Have you ever tried Korean food?"]
+    explanation: "Pergunta de experiência: Have + sujeito + ever + particípio."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "We've just moved to a new apartment downtown."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We've just moved to a new apartment downtown.", "We have just moved to a new apartment downtown."]
+    explanation: "Just + present perfect para algo que acabou de acontecer."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "How long ___ you lived in this city?"
+    prompt_pt: "Há quanto tempo você mora nesta cidade?"
+    options: ["have", "did", "are"]
+    answers: ["have"]
+    explanation: "How long + present perfect para algo que continua até agora."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I ___ Maria at a party in 2021."
+    prompt_pt: "Eu conheci a Maria numa festa em 2021."
+    options: ["met", "have met", "have meet"]
+    answers: ["met"]
+    explanation: "Ano definido (in 2021) → past simple, não present perfect."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "I ___ to Japan, but I'd love to go one day."
+    prompt_pt: "Eu nunca fui ao Japão, mas adoraria ir um dia."
+    options: ["have never been", "has never been", "never been"]
+    answers: ["have never been"]
+    explanation: "Experiência de vida sem data → have never been."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "I've been to Mexico twice. The first time was in 2016, and I went back last year."
+    prompt: "When did the speaker first go to Mexico?"
+    prompt_pt: "Quando a pessoa foi ao México pela primeira vez?"
+    answers: ["in 2016", "2016"]
+    explanation: "A experiência vem no present perfect (I've been), mas a data exata vem no past simple (was in 2016)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "When have you arrived in Brazil?"
+    prompt_pt: "Quando você chegou ao Brasil?"
+    answers: ["When did you arrive in Brazil?"]
+    explanation: "Perguntas com when pedem um momento definido → past simple (did you arrive)."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite with the present perfect and 'since': I started working here in 2022, and I still work here."
+    prompt_pt: "Reescreva com o present perfect e 'since': Eu comecei a trabalhar aqui em 2022 e ainda trabalho aqui."
+    answers: ["I've worked here since 2022.", "I have worked here since 2022.", "I've been working here since 2022.", "I have been working here since 2022."]
+    explanation: "Algo que começou no passado e continua → have worked + since + início."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite with the past simple and 'last Saturday': I've cleaned the whole apartment."
+    prompt_pt: "Reescreva com o past simple e 'last Saturday': Eu limpei o apartamento inteiro."
+    answers: ["I cleaned the whole apartment last Saturday.", "Last Saturday I cleaned the whole apartment."]
+    explanation: "Com tempo definido (last Saturday) o present perfect vira past simple: cleaned."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Você já foi a Buenos Aires?"
+    answers: ["Have you ever been to Buenos Aires?", "Have you been to Buenos Aires?", "Have you ever visited Buenos Aires?", "Have you visited Buenos Aires?"]
+    explanation: "\"Já foi\" como experiência de vida → Have you ever been to...?"
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu comprei este celular há duas semanas."
+    answers: ["I bought this phone two weeks ago.", "I bought this cell phone two weeks ago.", "I bought this cellphone two weeks ago.", "I bought this mobile phone two weeks ago.", "I bought this mobile two weeks ago."]
+    explanation: "\"Há duas semanas\" = two weeks ago, tempo definido → past simple (bought)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Have you finished the project yet? The client is waiting."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Have you finished the project yet? The client is waiting."]
+    explanation: "Pergunta com yet → present perfect: Have you finished...?"

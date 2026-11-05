@@ -1,0 +1,231 @@
+module_id: c1_participle_clauses
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "___ home from the office, I bumped into an old colleague."
+    prompt_pt: "Voltando a pé do escritório para casa, encontrei por acaso um antigo colega."
+    glossary: {bumped into: encontrei por acaso}
+    options: [Walking, Walked, Having walk]
+    answers: [Walking]
+    explanation: "Ação ao mesmo tempo, com sentido ativo: -ing (Walking = while I was walking)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "___ in 1990, the novel is still a bestseller."
+    prompt_pt: "Escrito em 1990, o romance ainda é um best-seller."
+    glossary: {novel: romance}
+    options: [Written, Writing, Having writing]
+    answers: [Written]
+    explanation: "O romance foi escrito (sentido passivo): usamos o particípio passado."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "___ the report, she logged off and went home."
+    prompt_pt: "Depois de terminar o relatório, ela se desconectou e foi para casa."
+    glossary: {logged off: se desconectou}
+    options: [Having finished, Having finish, Finished having]
+    answers: [Having finished]
+    explanation: "Ação concluída antes da outra: Having + particípio."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "The woman ___ next to me on the plane was a famous chef."
+    prompt_pt: "A mulher que estava sentada ao meu lado no avião era uma chef famosa."
+    options: [sitting, sits, to sit]
+    answers: [sitting]
+    explanation: "Sitting substitui a oração relativa who was sitting."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "___ by the noise, the baby started crying."
+    prompt_pt: "Acordado pelo barulho, o bebê começou a chorar."
+    options: [Woken, Waking, Having woke]
+    answers: [Woken]
+    explanation: "O bebê foi acordado (sentido passivo): particípio passado woken."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Having lived in Tokyo for five years, Rina speaks fluent Japanese."
+    prompt: "Why does Rina speak fluent Japanese?"
+    prompt_pt: "Por que a Rina fala japonês fluente?"
+    options: ["She lived in Tokyo for five years.", "She studied it at school.", "Her parents are Japanese."]
+    answers: ["She lived in Tokyo for five years."]
+    explanation: "Having lived ... dá a causa (ação anterior): ela morou em Tóquio."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Shocked by the prices on the menu, Gabriel left the restaurant without ordering."
+    prompt: "Why did Gabriel leave?"
+    prompt_pt: "Por que o Gabriel foi embora?"
+    options: ["The prices shocked him.", "The food was bad.", "He was in a hurry."]
+    answers: ["The prices shocked him."]
+    explanation: "Shocked by the prices = porque ficou chocado com os preços."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "___ (not / know) what to say, I just smiled."
+    prompt_pt: "Sem saber o que dizer, eu só sorri."
+    answers: ["Not knowing"]
+    explanation: "Na negativa, not vem antes do -ing: Not knowing."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "The products ___ (make) in this factory are exported to Asia."
+    prompt_pt: "Os produtos fabricados nesta fábrica são exportados para a Ásia."
+    glossary: {factory: fábrica}
+    answers: ["made"]
+    explanation: "Os produtos são feitos (passivo): made = which are made."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "___ the email, I realized I had attached the wrong file."
+    prompt_pt: "Depois de enviar o e-mail, percebi que tinha anexado o arquivo errado."
+    glossary: {attached: anexado}
+    options: [Having sent, Sent, Having send]
+    answers: [Having sent]
+    explanation: "Primeiro enviou, depois percebeu: Having + particípio (sent)."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "Anyone ___ to join the team trip should sign up by Friday."
+    prompt_pt: "Quem quiser participar da viagem da equipe deve se inscrever até sexta."
+    glossary: {sign up: se inscrever}
+    options: [wanting, wanted, want]
+    answers: [wanting]
+    explanation: "Wanting substitui who wants (sentido ativo)."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "___ correctly, this machine can last for decades."
+    prompt_pt: "Se usada corretamente, esta máquina pode durar décadas."
+    options: [Used, Using, Having used]
+    answers: [Used]
+    explanation: "A máquina é usada (passivo): Used correctly = if it is used correctly."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "___ (lose) my keys, I had to wait outside for the locksmith."
+    prompt_pt: "Tendo perdido as chaves, tive que esperar o chaveiro do lado de fora."
+    glossary: {locksmith: chaveiro}
+    answers: ["Having lost"]
+    explanation: "A perda aconteceu antes da espera: Having lost."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "Having finish the project, the team celebrated with a dinner."
+    prompt_pt: "Depois de terminar o projeto, a equipe comemorou com um jantar."
+    answers: ["Having finished the project, the team celebrated with a dinner."]
+    explanation: "Depois de Having vem o particípio: finished."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "The man stood at the door is my new landlord."
+    prompt_pt: "O homem parado na porta é o meu novo proprietário."
+    glossary: {landlord: proprietário}
+    answers: ["The man standing at the door is my new landlord."]
+    explanation: "Sentido ativo (who is standing) pede -ing: standing."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (start with 'Feeling')."
+    prompt_pt: "Coloque as palavras na ordem (comece com 'Feeling')."
+    words: [to, Feeling, went, tired, early, I, bed]
+    answers: ["Feeling tired, I went to bed early."]
+    explanation: "Feeling tired dá a causa; o sujeito I vem logo depois da vírgula."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (start with 'Built')."
+    prompt_pt: "Coloque as palavras na ordem (comece com 'Built')."
+    words: [hotel, "1920", a, Built, landmark, the, is, in]
+    answers: ["Built in 1920, the hotel is a landmark."]
+    explanation: "Built in 1920 (passivo) descreve o sujeito the hotel."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Having missed the last train, we shared a taxi home."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Having missed the last train, we shared a taxi home."]
+    explanation: "Having missed = ação anterior que explica a seguinte."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Which sentence is correct?"
+    prompt_pt: "Qual frase está correta?"
+    options: ["Arriving late, I missed the opening speech.", "Arriving late, the opening speech was missed.", "Arriving late, the speech had already started."]
+    answers: ["Arriving late, I missed the opening speech."]
+    explanation: "Quem chegou atrasado foi I, então I tem de ser o sujeito da oração principal."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "___ by her success, Bia decided to open a second café."
+    prompt_pt: "Encorajada pelo sucesso, a Bia decidiu abrir um segundo café."
+    options: [Encouraged, Encouraging, Having encouraged]
+    answers: [Encouraged]
+    explanation: "Bia foi encorajada (passivo): particípio passado encouraged."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Not wanting to wake the kids, Thiago took off his shoes and tiptoed upstairs."
+    prompt: "Why did Thiago take off his shoes?"
+    prompt_pt: "Por que o Thiago tirou os sapatos?"
+    options: ["He didn't want to wake the kids.", "His feet hurt.", "The shoes were wet."]
+    answers: ["He didn't want to wake the kids."]
+    explanation: "Not wanting to wake = porque não queria acordar as crianças."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Having been arrived at the hotel, we went straight to the pool."
+    prompt_pt: "Depois de chegar ao hotel, fomos direto para a piscina."
+    answers: ["Having arrived at the hotel, we went straight to the pool."]
+    explanation: "Arrive não tem passiva: Having arrived."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using a participle clause: After she had finished her shift, Lia went to the gym."
+    prompt_pt: "Reescreva usando uma participle clause: Depois de terminar o turno, a Lia foi à academia."
+    glossary: {shift: turno}
+    answers:
+      - "Having finished her shift, Lia went to the gym."
+      - "After finishing her shift, Lia went to the gym."
+    explanation: "Ação anterior com o mesmo sujeito: Having finished..."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using a participle clause: Because I didn't know the city, I got lost."
+    prompt_pt: "Reescreva usando uma participle clause: Como eu não conhecia a cidade, me perdi."
+    answers: ["Not knowing the city, I got lost."]
+    explanation: "Causa negativa: Not + -ing (Not knowing)."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Tendo terminado o relatório, ela foi para casa."
+    answers:
+      - "Having finished the report, she went home."
+      - "Having completed the report, she went home."
+    explanation: "Tendo + particípio = Having + particípio."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Cansado da viagem, eu dormi o dia inteiro."
+    answers:
+      - "Tired from the trip, I slept all day."
+      - "Tired from the trip, I slept the whole day."
+      - "Tired from the journey, I slept all day."
+      - "Tired from the journey, I slept the whole day."
+      - "Tired after the trip, I slept all day."
+      - "Tired after the trip, I slept the whole day."
+      - "Tired after the journey, I slept all day."
+      - "Tired from travelling, I slept all day."
+      - "Tired from traveling, I slept all day."
+    explanation: "Uma oração com particípio (Tired from ...) dá a causa, com o mesmo sujeito I."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Feeling nervous, Lucas checked his notes one last time."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Feeling nervous, Lucas checked his notes one last time."]
+    explanation: "Feeling nervous descreve o estado do sujeito (Lucas) e explica a ação."

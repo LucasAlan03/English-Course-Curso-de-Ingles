@@ -1,0 +1,431 @@
+level: B2
+questions:
+  - id: q01
+    module_id: b2_present_perfect_continuous
+    type: choice
+    prompt: "Sorry about the mess in here. I ___ the living room all afternoon and I haven't finished yet."
+    prompt_pt: "Desculpe a bagunça aqui. Estou pintando a sala a tarde toda e ainda não terminei."
+    glossary: {mess: bagunça}
+    options: [have been painting, have painted, had been painting, am painting]
+    answers: [have been painting]
+    explanation: "Atividade que começou no passado, continua agora e ainda não terminou (all afternoon, haven't finished) → present perfect continuous."
+
+  - id: q02
+    module_id: b2_present_perfect_continuous
+    type: gap
+    prompt: "Nina ___ (try) to call the bank since nine o'clock, but nobody picks up."
+    prompt_pt: "A Nina está tentando ligar para o banco desde as nove horas, mas ninguém atende."
+    glossary: {picks up: atende}
+    answers: [has been trying, "'s been trying"]
+    explanation: "Ação repetida que começou às nove e continua até agora (since) → has been + -ing."
+
+  - id: q03
+    module_id: b2_present_perfect_continuous
+    type: fix
+    prompt: "How long have you been owning this car?"
+    prompt_pt: "Há quanto tempo você tem este carro?"
+    glossary: {}
+    answers: ["How long have you had this car?", "How long have you owned this car?"]
+    explanation: "Verbos de posse (have, own) são estativos e não vão para o contínuo → present perfect simples."
+
+  - id: q04
+    module_id: b2_past_perfect_narrative
+    type: choice
+    prompt: "Leo was furious when he got home: his flatmate ___ all the leftovers, so there was nothing for dinner."
+    prompt_pt: "O Leo ficou furioso quando chegou em casa: o colega de apartamento tinha comido todas as sobras, então não havia nada para o jantar."
+    glossary: {furious: furioso, flatmate: colega de apartamento, leftovers: sobras}
+    options: [had eaten, has eaten, would eat, eats]
+    answers: [had eaten]
+    explanation: "O colega comeu ANTES de o Leo chegar (outro ponto no passado) → past perfect."
+
+  - id: q05
+    module_id: b2_past_perfect_narrative
+    type: order
+    prompt: "Put the words in order (a first experience in the past)."
+    prompt_pt: "Coloque as palavras em ordem (uma primeira experiência no passado)."
+    glossary: {}
+    words: [driven, before, she, the, had, trip, "on", never, left, that]
+    answers: ["She had never driven on the left before that trip.", "Before that trip, she had never driven on the left."]
+    explanation: "had + never + particípio mostra que algo nunca tinha acontecido até um momento do passado."
+
+  - id: q06
+    module_id: b2_past_perfect_narrative
+    type: transform
+    prompt: "Combine using 'by the time' and the past perfect: The show started. Then we found a parking space."
+    prompt_pt: "Junte as frases usando 'by the time' e o past perfect: O show começou. Depois nós encontramos uma vaga."
+    glossary: {}
+    answers:
+      - "By the time we found a parking space, the show had started."
+      - "By the time we found a parking space, the show had already started."
+      - "The show had started by the time we found a parking space."
+      - "The show had already started by the time we found a parking space."
+    explanation: "A ação mais antiga (o show começar) vai para o past perfect; by the time + past simple marca o segundo momento."
+
+  - id: q07
+    module_id: b2_third_conditional
+    type: choice
+    prompt: "We ___ the ferry if the captain hadn't waited for us."
+    prompt_pt: "Nós teríamos perdido a balsa se o capitão não tivesse esperado por nós."
+    glossary: {ferry: balsa, captain: capitão}
+    options: [would have missed, would miss, had missed, will have missed]
+    answers: [would have missed]
+    explanation: "3º condicional (passado imaginário): if + past perfect, would have + particípio."
+
+  - id: q08
+    module_id: b2_third_conditional
+    type: gap
+    prompt: "If Diego ___ (not / forget) to charge his phone, he could have called us."
+    prompt_pt: "Se o Diego não tivesse esquecido de carregar o celular, ele poderia ter ligado para nós."
+    glossary: {charge: carregar}
+    answers: [hadn't forgotten, had not forgotten]
+    explanation: "Na oração com if do 3º condicional usamos past perfect (had not + particípio)."
+
+  - id: q09
+    module_id: b2_third_conditional
+    type: translate
+    prompt: "Se você tivesse me contado, eu teria reservado uma mesa maior."
+    glossary: {}
+    answers:
+      - "If you had told me, I would have booked a bigger table."
+      - "If you'd told me, I would have booked a bigger table."
+      - "If you had told me, I'd have booked a bigger table."
+      - "If you'd told me, I'd have booked a bigger table."
+      - "If you had told me, I would have reserved a bigger table."
+      - "If you'd told me, I would have reserved a bigger table."
+      - "If you had told me, I'd have reserved a bigger table."
+      - "If you'd told me, I'd have reserved a bigger table."
+      - "I would have booked a bigger table if you had told me."
+      - "I'd have booked a bigger table if you'd told me."
+      - "I would have reserved a bigger table if you had told me."
+    explanation: "Passado imaginário: if + past perfect (had told), would have + particípio (would have booked)."
+
+  - id: q10
+    module_id: b2_mixed_conditionals
+    type: choice
+    prompt: "If Kai hadn't grown up in São Paulo, he ___ Portuguese so well today."
+    prompt_pt: "Se o Kai não tivesse crescido em São Paulo, ele não falaria português tão bem hoje."
+    glossary: {grown up: crescido}
+    options: [wouldn't speak, wouldn't have spoken, didn't speak, won't speak]
+    answers: [wouldn't speak]
+    explanation: "Condicional misto: condição no passado (hadn't grown up) com resultado no presente (today) → would + verbo."
+
+  - id: q11
+    module_id: b2_mixed_conditionals
+    type: fix
+    prompt: "If I had taken the job in Berlin, I would have lived in Germany now."
+    prompt_pt: "Se eu tivesse aceitado o emprego em Berlim, eu estaria morando na Alemanha agora."
+    glossary: {}
+    answers:
+      - "If I had taken the job in Berlin, I would be living in Germany now."
+      - "If I had taken the job in Berlin, I'd be living in Germany now."
+      - "If I had taken the job in Berlin, I would live in Germany now."
+      - "If I had taken the job in Berlin, I'd live in Germany now."
+    explanation: "O resultado é no presente (now), então usamos would (be living), não would have + particípio."
+
+  - id: q12
+    module_id: b2_mixed_conditionals
+    type: transform
+    prompt: "Rewrite as a mixed conditional: Tom isn't organised, so he lost his passport last week."
+    prompt_pt: "Reescreva como condicional misto: O Tom não é organizado, então perdeu o passaporte semana passada."
+    glossary: {}
+    answers:
+      - "If Tom were organised, he wouldn't have lost his passport last week."
+      - "If Tom was organised, he wouldn't have lost his passport last week."
+      - "If Tom were organized, he wouldn't have lost his passport last week."
+      - "If Tom was organized, he wouldn't have lost his passport last week."
+      - "If Tom were more organised, he wouldn't have lost his passport last week."
+      - "If Tom was more organised, he wouldn't have lost his passport last week."
+      - "If Tom were more organized, he wouldn't have lost his passport last week."
+      - "If Tom was more organized, he wouldn't have lost his passport last week."
+    explanation: "Característica presente (if + past simple) com resultado no passado (wouldn't have + particípio)."
+
+  - id: q13
+    module_id: b2_passive_basic
+    type: gap
+    prompt: "Most of the songs on this album ___ (record) in a tiny studio in Recife."
+    prompt_pt: "A maioria das músicas deste álbum foi gravada num estúdio minúsculo em Recife."
+    glossary: {tiny: minúsculo}
+    answers: [were recorded]
+    explanation: "As músicas não gravam, elas são gravadas → passiva no passado: were + particípio."
+
+  - id: q14
+    module_id: b2_passive_basic
+    type: translate
+    prompt: "Os ingressos foram vendidos em dez minutos."
+    glossary: {}
+    answers:
+      - "The tickets were sold in ten minutes."
+      - "The tickets were sold within ten minutes."
+      - "The tickets were sold out in ten minutes."
+      - "The tickets were sold out within ten minutes."
+      - "Tickets were sold in ten minutes."
+      - "Tickets were sold out in ten minutes."
+    explanation: "Passiva no passado: were (plural) + particípio (sold)."
+
+  - id: q15
+    module_id: b2_passive_advanced
+    type: choice
+    prompt: "Your new password ___ to your email in a few minutes."
+    prompt_pt: "Sua nova senha será enviada para o seu e-mail em alguns minutos."
+    glossary: {}
+    options: [will be sent, will send, will been sent, is sending]
+    answers: [will be sent]
+    explanation: "Passiva no futuro: will be + particípio; a senha não envia nada, ela é enviada."
+
+  - id: q16
+    module_id: b2_passive_advanced
+    type: gap
+    prompt: "The report must ___ (finish) before the client arrives."
+    prompt_pt: "O relatório precisa ser terminado antes de o cliente chegar."
+    glossary: {}
+    answers: [be finished]
+    explanation: "Passiva com modal: modal + be + particípio."
+
+  - id: q17
+    module_id: b2_passive_advanced
+    type: transform
+    prompt: "Rewrite in the passive: Someone should have told us about the delay."
+    prompt_pt: "Reescreva na voz passiva: Alguém deveria ter nos contado sobre o atraso."
+    glossary: {delay: atraso}
+    answers: ["We should have been told about the delay."]
+    explanation: "Passiva com modal perfeito: should have been + particípio; o objeto (us) vira sujeito (we)."
+
+  - id: q18
+    module_id: b2_reported_statements
+    type: choice
+    prompt: "“I'm meeting the investors tomorrow.” (said on Monday, reported on Friday) → Clara said she ___ the investors the next day."
+    prompt_pt: "“Vou me encontrar com os investidores amanhã.” → A Clara disse que ia se encontrar com os investidores no dia seguinte."
+    glossary: {investors: investidores}
+    options: [was meeting, is meeting, had met, will meet]
+    answers: [was meeting]
+    explanation: "No reported speech o present continuous recua para o past continuous (am meeting → was meeting)."
+
+  - id: q19
+    module_id: b2_reported_statements
+    type: fix
+    prompt: "Bruno told to me that he had sold his car."
+    prompt_pt: "O Bruno me disse que tinha vendido o carro."
+    glossary: {}
+    answers:
+      - "Bruno told me that he had sold his car."
+      - "Bruno told me he had sold his car."
+      - "Bruno told me that he'd sold his car."
+      - "Bruno told me he'd sold his car."
+    explanation: "Tell vem direto com a pessoa, sem 'to': told me (já say é que usaria 'to': said to me)."
+
+  - id: q20
+    module_id: b2_reported_questions
+    type: choice
+    prompt: "“Where did you park the car?” → My wife asked me where ___ the car."
+    prompt_pt: "“Onde você estacionou o carro?” → Minha esposa me perguntou onde eu tinha estacionado o carro."
+    glossary: {}
+    options: [I had parked, had I parked, did I park, I have parked]
+    answers: [I had parked]
+    explanation: "Pergunta indireta usa ordem de afirmação (sujeito + verbo) e recua o tempo: did park → had parked."
+
+  - id: q21
+    module_id: b2_reported_questions
+    type: order
+    prompt: "Put the words in order (a reported yes/no question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta de sim/não em discurso indireto)."
+    glossary: {}
+    words: [asked, menu, the, us, wanted, waiter, if, to, the, see, we, dessert]
+    answers: ["The waiter asked us if we wanted to see the dessert menu."]
+    explanation: "Pergunta de sim/não indireta: asked + if + sujeito + verbo, sem inversão."
+
+  - id: q22
+    module_id: b2_reported_questions
+    type: transform
+    prompt: "Report this request using 'asked': Marcos: “Can you send me the slides before lunch?”"
+    prompt_pt: "Relate este pedido usando 'asked': Marcos: “Você pode me mandar os slides antes do almoço?”"
+    glossary: {}
+    answers:
+      - "Marcos asked me to send him the slides before lunch."
+      - "Marcos asked me if I could send him the slides before lunch."
+      - "Marcos asked me whether I could send him the slides before lunch."
+      - "Marcos asked if I could send him the slides before lunch."
+    explanation: "Pedido indireto: asked + pessoa + to + verbo (ou asked if I could...), ajustando os pronomes (me → him)."
+
+  - id: q23
+    module_id: b2_deduction_present
+    type: fix
+    prompt: "Ana has three jobs and two kids. She mustn't have much free time."
+    prompt_pt: "A Ana tem três empregos e dois filhos. Ela não pode ter muito tempo livre."
+    glossary: {}
+    answers: ["Ana has three jobs and two kids. She can't have much free time."]
+    explanation: "Para dedução negativa usamos can't; mustn't significa proibição, não dedução."
+
+  - id: q24
+    module_id: b2_deduction_present
+    type: gap
+    prompt: "Igor isn't answering. He ___ (work): he always does the night shift on Tuesdays. (quase certeza)"
+    prompt_pt: "O Igor não está atendendo. Ele deve estar trabalhando: ele sempre faz o turno da noite às terças."
+    glossary: {shift: turno}
+    answers: [must be working]
+    explanation: "Dedução quase certa sobre algo em andamento agora: must + be + -ing."
+
+  - id: q25
+    module_id: b2_deduction_past
+    type: choice
+    prompt: "Carol's car isn't in the garage and her keys are gone. She ___ to work already."
+    prompt_pt: "O carro da Carol não está na garagem e as chaves dela sumiram. Ela deve ter ido de carro para o trabalho."
+    glossary: {}
+    options: [must have driven, must drive, can't have driven, should drive]
+    answers: [must have driven]
+    explanation: "Dedução quase certa sobre o passado: must have + particípio."
+
+  - id: q26
+    module_id: b2_deduction_past
+    type: fix
+    prompt: "Ivan's laptop is working perfectly now. The technician must has replaced the battery."
+    prompt_pt: "O notebook do Ivan está funcionando perfeitamente agora. O técnico deve ter trocado a bateria."
+    glossary: {technician: técnico}
+    answers: ["Ivan's laptop is working perfectly now. The technician must have replaced the battery."]
+    explanation: "Depois de modal o verbo fica na forma base: must have (nunca must has) + particípio."
+
+  - id: q27
+    module_id: b2_deduction_past
+    type: translate
+    prompt: "Ele não pode ter visto a mensagem, porque o celular dele estava desligado."
+    glossary: {}
+    answers:
+      - "He can't have seen the message because his phone was off."
+      - "He can't have seen the message because his phone was switched off."
+      - "He can't have seen the message because his phone was turned off."
+      - "He couldn't have seen the message because his phone was off."
+      - "He couldn't have seen the message because his phone was switched off."
+      - "He couldn't have seen the message because his phone was turned off."
+      - "He can't have seen the message because his cell phone was off."
+      - "He can't have seen the message because his mobile was off."
+    explanation: "Dedução negativa sobre o passado: can't/couldn't have + particípio."
+
+  - id: q28
+    module_id: b2_used_to_would
+    type: choice
+    prompt: "When we lived by the sea, my dad ___ go fishing every Sunday morning."
+    prompt_pt: "Quando morávamos perto do mar, meu pai ia pescar todo domingo de manhã."
+    glossary: {}
+    options: [would, was used to, is used to, use]
+    answers: [would]
+    explanation: "Hábito repetido no passado (ação) → would + verbo; be used to significa 'estar acostumado' e pede -ing."
+
+  - id: q29
+    module_id: b2_used_to_would
+    type: fix
+    prompt: "My sister use to work in a bank before she became a chef."
+    prompt_pt: "Minha irmã trabalhava num banco antes de virar chef."
+    glossary: {}
+    answers: ["My sister used to work in a bank before she became a chef."]
+    explanation: "Em frases afirmativas a forma é used to (com -d); use to só aparece depois de did/didn't."
+
+  - id: q30
+    module_id: b2_be_used_to
+    type: choice
+    prompt: "I've lived in Manaus for years, so I ___ the heat."
+    prompt_pt: "Moro em Manaus há anos, então estou acostumado com o calor."
+    glossary: {heat: calor}
+    options: [am used to, used to, use to, am use to]
+    answers: [am used to]
+    explanation: "Estar acostumado com algo = be used to + substantivo; used to sozinho é hábito passado."
+
+  - id: q31
+    module_id: b2_argumentation
+    type: fix
+    prompt: "Because of the heavy rain, so the match was postponed."
+    prompt_pt: "Por causa da chuva forte, o jogo foi adiado."
+    glossary: {postponed: adiado}
+    answers: ["Because of the heavy rain, the match was postponed."]
+    explanation: "Because of já introduz a causa; não se usa so na mesma frase para ligar causa e consequência."
+
+  - id: q32
+    module_id: b2_be_used_to
+    type: translate
+    prompt: "Ela nunca vai se acostumar a dirigir em Londres."
+    glossary: {}
+    answers:
+      - "She will never get used to driving in London."
+      - "She'll never get used to driving in London."
+      - "She is never going to get used to driving in London."
+      - "She's never going to get used to driving in London."
+    explanation: "Se acostumar = get used to + -ing (driving), não o infinitivo."
+
+  - id: q33
+    module_id: b2_wish_present
+    type: choice
+    prompt: "I wish my boss ___ me messages on Sunday nights. It's so annoying!"
+    prompt_pt: "Eu queria que o meu chefe não me mandasse mensagens no domingo à noite. É tão irritante!"
+    glossary: {annoying: irritante}
+    options: [wouldn't send, doesn't send, isn't sending, won't send]
+    answers: [wouldn't send]
+    explanation: "Para reclamar de um hábito de outra pessoa que queremos que mude: wish + would/wouldn't + verbo."
+
+  - id: q34
+    module_id: b2_wish_present
+    type: transform
+    prompt: "Rewrite using I wish: I'm sorry I can't come to your wedding."
+    prompt_pt: "Reescreva usando I wish: Sinto muito não poder ir ao seu casamento."
+    glossary: {wedding: casamento}
+    answers:
+      - "I wish I could come to your wedding."
+      - "I wish I could go to your wedding."
+      - "I wish I could be at your wedding."
+    explanation: "Desejo sobre o presente com can → wish + could + verbo."
+
+  - id: q35
+    module_id: b2_wish_past
+    type: choice
+    prompt: "Now I'm broke. I wish I ___ so much on that trip to Chile."
+    prompt_pt: "Agora estou sem dinheiro. Queria não ter gastado tanto naquela viagem ao Chile."
+    glossary: {broke: sem dinheiro}
+    options: [hadn't spent, didn't spend, wouldn't spend, haven't spent]
+    answers: [hadn't spent]
+    explanation: "Arrependimento sobre o passado (a viagem já aconteceu) → wish + past perfect."
+
+  - id: q36
+    module_id: b2_wish_past
+    type: gap
+    prompt: "If only I ___ (check) the weather forecast before we left!"
+    prompt_pt: "Se ao menos eu tivesse olhado a previsão do tempo antes de sairmos!"
+    glossary: {forecast: previsão}
+    answers: [had checked, "'d checked"]
+    explanation: "If only + past perfect expressa arrependimento sobre algo do passado."
+
+  - id: q37
+    module_id: b2_wish_past
+    type: order
+    prompt: "Put the words in order (a regret with wish)."
+    prompt_pt: "Coloque as palavras em ordem (um arrependimento com wish)."
+    glossary: {}
+    words: [taken, the, I, photos, wish, more, at, had, I, wedding]
+    answers: ["I wish I had taken more photos at the wedding."]
+    explanation: "Arrependimento no passado: I wish + sujeito + had + particípio."
+
+  - id: q38
+    module_id: b2_contrast
+    type: choice
+    prompt: "___ having a broken arm, Thiago played the whole match."
+    prompt_pt: "Apesar de estar com o braço quebrado, o Thiago jogou a partida inteira."
+    glossary: {}
+    options: [Despite, Although, However, Whereas]
+    answers: [Despite]
+    explanation: "Despite vem antes de substantivo ou -ing (having); although e whereas pedem uma oração completa."
+
+  - id: q39
+    module_id: b2_contrast
+    type: order
+    prompt: "Put the words in order (contrast with even though)."
+    prompt_pt: "Coloque as palavras em ordem (contraste com even though)."
+    glossary: {}
+    words: [even, kept, we, the, though, talking, café, was, closing]
+    answers: ["We kept talking even though the café was closing.", "Even though the café was closing, we kept talking."]
+    explanation: "Even though + oração completa (sujeito + verbo) introduz um contraste forte."
+
+  - id: q40
+    module_id: b2_argumentation
+    type: choice
+    prompt: "The gym is close to my office. ___, it's open 24 hours."
+    prompt_pt: "A academia é perto do meu escritório. Além disso, ela fica aberta 24 horas."
+    glossary: {}
+    options: [What's more, However, Therefore, Despite this]
+    answers: [What's more]
+    explanation: "A segunda frase acrescenta outra vantagem → conectivo de adição (what's more), não de contraste nem de consequência."

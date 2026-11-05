@@ -1,0 +1,213 @@
+module_id: b1_prepositions_time
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "My yoga class starts ___ 6:30."
+    prompt_pt: "Minha aula de ioga começa às 6:30."
+    options: ["at", "on", "in"]
+    answers: ["at"]
+    explanation: "Com horário exato usamos at."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "We're having a team lunch ___ Friday."
+    prompt_pt: "Vamos ter um almoço da equipe na sexta."
+    options: ["on", "at", "in"]
+    answers: ["on"]
+    explanation: "Com dias da semana usamos on."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Marina was born ___ 1995."
+    prompt_pt: "A Marina nasceu em 1995."
+    options: ["in", "on", "at"]
+    answers: ["in"]
+    explanation: "Com anos usamos in."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "I usually go to the gym ___ the morning."
+    prompt_pt: "Eu normalmente vou à academia de manhã."
+    options: ["in", "on", "at"]
+    answers: ["in"]
+    explanation: "Com partes do dia (the morning, the afternoon) usamos in."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "The festival is ___ 20 July."
+    prompt_pt: "O festival é no dia 20 de julho."
+    options: ["on", "in", "at"]
+    answers: ["on"]
+    explanation: "Com datas completas (dia + mês) usamos on."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Your appointment with Doctor Silva is on Thursday at ten fifteen in the morning."
+    prompt: "When is the appointment?"
+    prompt_pt: "Quando é a consulta?"
+    glossary: {appointment: consulta}
+    options: ["Thursday at 10:15 a.m.", "Tuesday at 10:50 a.m.", "Thursday at 10:15 p.m."]
+    answers: ["Thursday at 10:15 a.m."]
+    explanation: "On Thursday (dia), at ten fifteen (hora), in the morning (manhã)."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "I've lived in Lisbon since 2019, and before that I worked in London for two years."
+    prompt: "How long did the speaker work in London?"
+    prompt_pt: "Por quanto tempo a pessoa trabalhou em Londres?"
+    answers: ["two years", "for two years", "2 years", "for 2 years"]
+    explanation: "For + duração: for two years. Since 2019 é o ponto de início em Lisboa."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Let's meet ___ noon in front of the cinema."
+    prompt_pt: "Vamos nos encontrar ao meio-dia em frente ao cinema."
+    glossary: {noon: meio-dia}
+    answers: ["at"]
+    explanation: "Noon é um momento exato do dia, então usamos at."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "It's always very hot here ___ summer."
+    prompt_pt: "Aqui é sempre muito quente no verão."
+    answers: ["in"]
+    explanation: "Com estações do ano usamos in."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "I've worked at this company ___ 2021."
+    prompt_pt: "Eu trabalho nesta empresa desde 2021."
+    options: ["since", "for", "during"]
+    answers: ["since"]
+    explanation: "2021 é o ponto de início, então usamos since."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "We waited at the airport ___ three hours."
+    prompt_pt: "Nós esperamos no aeroporto por três horas."
+    options: ["for", "since", "during"]
+    answers: ["for"]
+    explanation: "Three hours é uma duração, então usamos for."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Please send me the report ___ Friday at the latest."
+    prompt_pt: "Por favor, me mande o relatório até sexta, no máximo."
+    glossary: {report: relatório, at the latest: no máximo}
+    options: ["by", "until", "since"]
+    answers: ["by"]
+    explanation: "Prazo (no máximo até) é by; until é para algo que continua até aquele momento."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "My phone rang twice ___ the meeting."
+    prompt_pt: "Meu celular tocou duas vezes durante a reunião."
+    answers: ["during", "in"]
+    explanation: "Durante um evento: during the meeting."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I'll call you in Monday."
+    prompt_pt: "Eu te ligo na segunda."
+    answers: ["I'll call you on Monday.", "I will call you on Monday."]
+    explanation: "Com dias da semana usamos on, não in."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "We're going to Bahia on next month."
+    prompt_pt: "Nós vamos para a Bahia no mês que vem."
+    answers: ["We're going to Bahia next month.", "We are going to Bahia next month."]
+    explanation: "Antes de next, last, this e every não se usa preposição."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question about time)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta sobre horário)."
+    words: ["start", "time", "on", "the", "what", "Saturday", "does", "show"]
+    answers: ["What time does the show start on Saturday?"]
+    explanation: "What time + does + sujeito + verbo; on + dia da semana."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (with until)."
+    prompt_pt: "Coloque as palavras em ordem (com until)."
+    words: ["midnight", "open", "the", "until", "is", "pharmacy"]
+    answers: ["The pharmacy is open until midnight."]
+    explanation: "Until marca até quando algo continua (aberta até a meia-noite)."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "The bank closes at four on weekdays."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["The bank closes at four on weekdays.", "The bank closes at 4 on weekdays."]
+    explanation: "At + horário; on + dias (on weekdays)."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I usually read ___ night before I go to sleep."
+    prompt_pt: "Eu normalmente leio à noite antes de dormir."
+    options: ["at", "in", "on"]
+    answers: ["at"]
+    explanation: "A expressão fixa é at night (mas in the morning, in the evening)."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "The gym is closed ___ Christmas Day."
+    prompt_pt: "A academia fica fechada no dia de Natal."
+    options: ["on", "in", "at"]
+    answers: ["on"]
+    explanation: "Christmas Day é um dia específico, então usamos on."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "The course starts in March, classes are on Tuesdays, and you need to sign up by the end of February."
+    prompt: "When do you need to sign up?"
+    prompt_pt: "Até quando você precisa se inscrever?"
+    glossary: {sign up: se inscrever}
+    options: ["By the end of February", "In March", "On Tuesdays"]
+    answers: ["By the end of February"]
+    explanation: "By the end of February = no máximo até o fim de fevereiro (prazo)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "She has worked here since five years."
+    prompt_pt: "Ela trabalha aqui há cinco anos."
+    answers: ["She has worked here for five years.", "She's worked here for five years."]
+    explanation: "Five years é uma duração, então usamos for, não since."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using since: I've lived here for ten years. (It's 2026 now.)"
+    prompt_pt: "Reescreva usando since: Eu moro aqui há dez anos. (Agora é 2026.)"
+    answers: ["I've lived here since 2016.", "I have lived here since 2016."]
+    explanation: "Since marca o ponto de início: dez anos atrás = 2016."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using during: I fell asleep while the film was on."
+    prompt_pt: "Reescreva usando during: Eu dormi enquanto o filme passava."
+    glossary: {fell asleep: peguei no sono}
+    answers: ["I fell asleep during the film.", "I fell asleep during the movie."]
+    explanation: "During + substantivo (the film) substitui while + frase."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "A reunião é na terça às três."
+    answers: ["The meeting is on Tuesday at three.", "The meeting is on Tuesday at 3.", "The meeting is on Tuesday at three o'clock.", "The meeting is on Tuesday at 3:00.", "The meeting is at three on Tuesday.", "The meeting is at 3 on Tuesday.", "The meeting is at three o'clock on Tuesday.", "The meeting is at 3:00 on Tuesday.", "The meeting's on Tuesday at three.", "The meeting's at three on Tuesday."]
+    explanation: "On + dia da semana e at + horário."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu nasci em março."
+    answers: ["I was born in March."]
+    explanation: "Com meses usamos in."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "I have to finish this project by the end of the week."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I have to finish this project by the end of the week."]
+    explanation: "By the end of the week = no máximo até o fim da semana (prazo)."

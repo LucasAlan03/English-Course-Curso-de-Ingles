@@ -1,0 +1,211 @@
+module_id: b2_wish_present
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I wish I ___ more time to read."
+    prompt_pt: "Eu queria ter mais tempo para ler."
+    options: [had, have, will have]
+    answers: [had]
+    explanation: "Desejo sobre o presente: wish + past simple (had)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "If only I ___ how to fix this bug!"
+    prompt_pt: "Se ao menos eu soubesse como resolver esse bug!"
+    options: [knew, know, have known]
+    answers: [knew]
+    explanation: "If only + past simple para algo irreal agora."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "I wish I ___ a bit taller."
+    prompt_pt: "Eu queria ser um pouco mais alto."
+    options: [were, am, will be]
+    answers: [were]
+    explanation: "Com be, depois de wish usamos were."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "I wish I ___ speak Italian. My in-laws don't speak any English."
+    prompt_pt: "Eu queria saber falar italiano. Meus sogros não falam nada de inglês."
+    glossary: {in-laws: sogros}
+    options: [could, can, will]
+    answers: [could]
+    explanation: "Habilidade que você não tem: wish + could."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "I wish my neighbours ___ stop playing loud music at 2 a.m."
+    prompt_pt: "Eu queria que meus vizinhos parassem de tocar música alta às 2 da manhã."
+    options: [would, will, are]
+    answers: [would]
+    explanation: "Queixa sobre o comportamento de outras pessoas: wish + would."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "I wish I lived closer to the office. I spend almost three hours a day on the bus."
+    prompt: "What does the speaker want?"
+    prompt_pt: "O que quem fala quer?"
+    options: ["To live nearer to work.", "A new job.", "A car."]
+    answers: ["To live nearer to work."]
+    explanation: "I wish I lived closer = queria morar mais perto (mas não mora)."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "If only it weren't so expensive to eat out in this city. I'd go to restaurants every weekend."
+    prompt: "What's the speaker's problem?"
+    prompt_pt: "Qual é o problema de quem fala?"
+    options: ["Restaurants are expensive.", "Restaurants are far away.", "The food is bad."]
+    answers: ["Restaurants are expensive."]
+    explanation: "If only it weren't so expensive = se ao menos não fosse tão caro."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "I wish I ___ (not / have) so many meetings this week."
+    prompt_pt: "Eu queria não ter tantas reuniões esta semana."
+    answers: ["didn't have", "did not have"]
+    explanation: "Wish + past simple na negativa: didn't have."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "If only my laptop ___ (be) faster!"
+    prompt_pt: "Se ao menos meu notebook fosse mais rápido!"
+    answers: ["were", "was"]
+    explanation: "If only + were (ou was, mais informal) para o presente irreal."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "My brother never calls me. I wish he ___ call more often."
+    prompt_pt: "Meu irmão nunca me liga. Eu queria que ele ligasse mais vezes."
+    options: [would, will, does]
+    answers: [would]
+    explanation: "Queixa sobre o comportamento de alguém: wish + would."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "I wish it ___ raining. I want to go for a run."
+    prompt_pt: "Eu queria que não estivesse chovendo. Quero sair para correr."
+    options: [weren't, isn't, won't be]
+    answers: [weren't]
+    explanation: "Wish + past (weren't) para uma situação atual que você quer diferente."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Paula wishes she ___ drive, so she wouldn't depend on Uber."
+    prompt_pt: "A Paula queria saber dirigir, para não depender do Uber."
+    glossary: {depend: depender}
+    options: [could, can, is able]
+    answers: [could]
+    explanation: "Habilidade que ela não tem: wish + could."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "I wish you ___ (stop) looking at your phone during dinner."
+    prompt_pt: "Eu queria que você parasse de olhar o celular durante o jantar."
+    answers: ["would stop", "'d stop"]
+    explanation: "Queixa sobre o comportamento de outra pessoa: wish + would."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I wish I have a bigger apartment."
+    prompt_pt: "Eu queria ter um apartamento maior."
+    answers: ["I wish I had a bigger apartment."]
+    explanation: "Depois de wish, para o presente, usamos o past simple: had."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "If only I can play the guitar like my sister."
+    prompt_pt: "Se ao menos eu soubesse tocar violão como a minha irmã."
+    answers: ["If only I could play the guitar like my sister."]
+    explanation: "Depois de if only, can vira could."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: [wish, I, I, more, had, money]
+    answers: ["I wish I had more money."]
+    explanation: "I wish + sujeito + past simple."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order. (a complaint)"
+    prompt_pt: "Coloque as palavras em ordem. (uma queixa)"
+    words: [wish, would, I, he, listen]
+    answers: ["I wish he would listen."]
+    explanation: "I wish + outra pessoa + would para uma queixa."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "I wish I didn't have to work this weekend."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I wish I didn't have to work this weekend.", "I wish I did not have to work this weekend."]
+    explanation: "Wish + past simple na negativa: didn't have to."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I wish I ___ go to the concert tonight, but I have to work."
+    prompt_pt: "Eu queria poder ir ao show hoje à noite, mas tenho que trabalhar."
+    options: [could, would, can]
+    answers: [could]
+    explanation: "Possibilidade que você não tem: wish + could (nunca I wish I would)."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "I wish the bus ___ come. We've been waiting for forty minutes!"
+    prompt_pt: "Queria que o ônibus viesse logo. Estamos esperando há quarenta minutos!"
+    options: [would, will, comes]
+    answers: [would]
+    explanation: "Algo que você quer que mude, com impaciência: wish + would."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Honestly, I wish my boss would stop sending emails at midnight. I need some time to rest."
+    prompt: "What does the speaker want the boss to do?"
+    prompt_pt: "O que quem fala quer que o chefe faça?"
+    options: ["Stop sending late emails.", "Give a pay rise.", "Reply faster."]
+    answers: ["Stop sending late emails."]
+    explanation: "I wish my boss would stop = queixa sobre o comportamento do chefe."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "I wish I would be on holiday right now."
+    prompt_pt: "Eu queria estar de férias agora."
+    answers: ["I wish I were on holiday right now.", "I wish I was on holiday right now."]
+    explanation: "Não usamos I wish I would; para o presente com be, use were."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using I wish: I don't know how to cook."
+    prompt_pt: "Reescreva usando I wish: Eu não sei cozinhar."
+    answers: ["I wish I knew how to cook.", "I wish I could cook."]
+    explanation: "Situação real no presente → wish + past simple (knew) ou could."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using If only: My phone battery dies so fast."
+    prompt_pt: "Reescreva usando If only: A bateria do meu celular acaba muito rápido."
+    answers: ["If only my phone battery didn't die so fast.", "If only my phone battery did not die so fast.", "If only my phone battery wouldn't die so fast.", "If only my phone battery lasted longer."]
+    explanation: "If only + past simple para inverter a situação real do presente."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu queria ter mais tempo livre."
+    answers: ["I wish I had more free time.", "I wish I had more spare time.", "If only I had more free time."]
+    explanation: "Desejo sobre o presente: I wish + past simple (had)."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Quem me dera eu pudesse falar francês."
+    answers: ["I wish I could speak French.", "If only I could speak French."]
+    explanation: "Habilidade que você não tem: wish / if only + could."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "If only we lived closer to the beach."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["If only we lived closer to the beach."]
+    explanation: "If only + past simple: desejo sobre o presente."

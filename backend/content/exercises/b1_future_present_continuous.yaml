@@ -1,0 +1,213 @@
+module_id: b1_future_present_continuous
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I ___ my dentist at 3 p.m. tomorrow."
+    prompt_pt: "Eu vou ao dentista amanhã às 15h."
+    options: ["am seeing", "is seeing", "seeing"]
+    answers: ["am seeing"]
+    explanation: "Consulta marcada → presente contínuo: I am seeing."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "We ___ to Florianópolis on Friday morning."
+    prompt_pt: "Nós vamos de avião para Florianópolis na sexta de manhã."
+    options: ["are flying", "is flying", "flying"]
+    answers: ["are flying"]
+    explanation: "Viagem já comprada e marcada; we → are flying."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "Sorry, I can't go out tonight. I'm having dinner with my in-laws at seven."
+    prompt: "What is the speaker doing tonight?"
+    prompt_pt: "O que a pessoa vai fazer hoje à noite?"
+    options: ["having dinner with the in-laws", "going to the gym", "working late"]
+    answers: ["having dinner with the in-laws"]
+    explanation: "\"I'm having dinner... at seven\": compromisso marcado no presente contínuo."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "What ___ you doing this weekend?"
+    prompt_pt: "O que você vai fazer neste fim de semana?"
+    options: ["are", "do", "is"]
+    answers: ["are"]
+    explanation: "Pergunta sobre planos marcados: What are you doing...?"
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "Camila ___ (leave) for Lisbon next Tuesday."
+    prompt_pt: "A Camila vai partir para Lisboa na próxima terça."
+    answers: ["is leaving", "is going to leave", "leaves"]
+    explanation: "Viagem marcada → presente contínuo: is leaving."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "My parents ___ coming to visit next weekend."
+    prompt_pt: "Meus pais vêm nos visitar no próximo fim de semana."
+    options: ["are", "is", "will"]
+    answers: ["are"]
+    explanation: "Visita combinada; my parents (plural) → are coming."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Are you free on Thursday? No, sorry. I'm playing football with the guys after work."
+    prompt: "What is the person doing on Thursday?"
+    prompt_pt: "O que a pessoa vai fazer na quinta?"
+    options: ["playing football", "working late", "visiting family"]
+    answers: ["playing football"]
+    explanation: "\"I'm playing football... after work\": combinado com os amigos."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "I ___ (not / work) tomorrow, so we can go to the beach."
+    prompt_pt: "Eu não vou trabalhar amanhã, então podemos ir à praia."
+    answers: ["am not working", "won't be working", "don't work", "am not going to work"]
+    explanation: "Folga já combinada → presente contínuo negativo: I'm not working."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "Tiago is ___ his girlfriend's parents on Sunday."
+    prompt_pt: "O Tiago vai conhecer os pais da namorada no domingo."
+    options: ["meeting", "meet", "meets"]
+    answers: ["meeting"]
+    explanation: "Depois de is vem o verbo com -ing: is meeting."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "___ Laura coming to the party tonight?"
+    prompt_pt: "A Laura vem para a festa hoje à noite?"
+    options: ["Is", "Are", "Does"]
+    answers: ["Is"]
+    explanation: "Pergunta no presente contínuo; Laura (she) → Is."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "We ___ (have) a team meeting at 10 tomorrow."
+    prompt_pt: "Nós vamos ter uma reunião de equipe amanhã às 10."
+    answers: ["are having", "have", "are going to have", "will have"]
+    explanation: "Reunião marcada → are having (presente contínuo)."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "I meeting the new client at noon tomorrow."
+    prompt_pt: "Eu vou me encontrar com o cliente novo amanhã ao meio-dia."
+    glossary: {noon: meio-dia}
+    answers: ["I'm meeting the new client at noon tomorrow.", "I am meeting the new client at noon tomorrow."]
+    explanation: "Falta o verbo to be: I'm meeting."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["we're", "a", "party", "having", "on", "Saturday"]
+    answers: ["We're having a party on Saturday.", "On Saturday we're having a party."]
+    explanation: "Sujeito + are + -ing + expressão de futuro."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "Sorry, I can't help you move. I ___ my cousin up at the airport on Sunday."
+    prompt_pt: "Desculpa, não posso te ajudar na mudança. Vou buscar meu primo no aeroporto no domingo."
+    options: ["am picking", "is picking", "picking"]
+    answers: ["am picking"]
+    explanation: "Compromisso combinado; I → am picking up."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Are they come to dinner on Friday?"
+    prompt_pt: "Eles vêm jantar na sexta?"
+    answers: ["Are they coming to dinner on Friday?"]
+    explanation: "Presente contínuo precisa do -ing: Are they coming?"
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["time", "what", "you", "are", "leaving", "tomorrow"]
+    answers: ["What time are you leaving tomorrow?"]
+    explanation: "Pergunta: What time + are + you + -ing + expressão de futuro."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "I'm taking my car to the mechanic on Monday."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I'm taking my car to the mechanic on Monday.", "I am taking my car to the mechanic on Monday."]
+    explanation: "Compromisso marcado com o mecânico → I'm taking."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "Paulo isn't ___ to the gym tonight. He's too tired."
+    prompt_pt: "O Paulo não vai à academia hoje à noite. Ele está cansado demais."
+    options: ["going", "go", "goes"]
+    answers: ["going"]
+    explanation: "Depois de isn't vem o -ing: isn't going."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Rafa ___ next Saturday — the wedding invitations are already out."
+    prompt_pt: "O Rafa vai se casar no próximo sábado — os convites do casamento já foram enviados."
+    glossary: {invitations: convites}
+    options: ["is getting married", "are getting married", "getting married"]
+    answers: ["is getting married"]
+    explanation: "Casamento marcado (até os convites saíram) → presente contínuo: is getting married."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Which sentence describes an appointment that is already booked?"
+    prompt_pt: "Qual frase descreve um compromisso que já está marcado?"
+    glossary: {appointment: consulta, booked: marcado}
+    options: ["I'm seeing the doctor at four today.", "Maybe I'll see a doctor.", "I think I'll see a doctor someday."]
+    answers: ["I'm seeing the doctor at four today."]
+    explanation: "O presente contínuo com horário (at four today) indica compromisso marcado."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "I'm going to look for a new gym soon. But tonight I'm meeting my personal trainer at the old one."
+    prompt: "What has the speaker already arranged?"
+    prompt_pt: "O que a pessoa já combinou?"
+    glossary: {arranged: combinou}
+    options: ["meeting the trainer tonight", "joining a new gym", "quitting the gym"]
+    answers: ["meeting the trainer tonight"]
+    explanation: "Going to é só intenção (procurar academia); I'm meeting é o compromisso marcado."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "We are fly to Chile next month."
+    prompt_pt: "Nós vamos voar para o Chile no mês que vem."
+    answers: ["We are flying to Chile next month.", "We're flying to Chile next month."]
+    explanation: "Presente contínuo: are + -ing → are flying."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite as a fixed arrangement, using the present continuous: I'm going to meet Joana for lunch tomorrow."
+    prompt_pt: "Reescreva como compromisso marcado, usando o presente contínuo: Eu vou almoçar com a Joana amanhã."
+    answers: ["I'm meeting Joana for lunch tomorrow.", "I am meeting Joana for lunch tomorrow."]
+    explanation: "Combinado com outra pessoa e horário → I'm meeting."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Turn into a question: Your brother is coming to Brazil in July."
+    prompt_pt: "Transforme em pergunta: Seu irmão vem para o Brasil em julho."
+    answers: ["Is your brother coming to Brazil in July?"]
+    explanation: "Na pergunta, is vem antes do sujeito: Is your brother coming...?"
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "O que você vai fazer hoje à noite?"
+    answers: ["What are you doing tonight?", "What are you going to do tonight?", "What're you doing tonight?", "What are you doing this evening?", "What are you going to do this evening?"]
+    explanation: "Pergunta sobre planos: What are you doing tonight?"
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu vou jantar com meus pais no domingo."
+    answers: ["I'm having dinner with my parents on Sunday.", "I am having dinner with my parents on Sunday.", "I'm going to have dinner with my parents on Sunday.", "I am going to have dinner with my parents on Sunday.", "I'm eating dinner with my parents on Sunday.", "I'll have dinner with my parents on Sunday.", "On Sunday I'm having dinner with my parents."]
+    explanation: "Jantar combinado com os pais → I'm having dinner."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Are you coming to the barbecue on Saturday afternoon?"
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Are you coming to the barbecue on Saturday afternoon?"]
+    explanation: "Convite para algo marcado → Are you coming...?"

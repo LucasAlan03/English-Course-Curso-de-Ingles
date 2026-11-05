@@ -1,0 +1,212 @@
+module_id: b2_deduction_past
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "The ground is completely wet. It ___ rained last night."
+    prompt_pt: "O chão está completamente molhado. Deve ter chovido ontem à noite."
+    options: [must have, must, can't have]
+    answers: [must have]
+    explanation: "Dedução com evidência sobre o passado: must have + particípio."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Bia didn't come to the meeting. I'm not sure why. She ___ forgotten about it."
+    prompt_pt: "A Bia não veio à reunião. Não sei por quê. Ela pode ter esquecido."
+    options: [might have, must have, can't have]
+    answers: [might have]
+    explanation: "Sem certeza (I'm not sure why), usamos might have para possibilidade."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Gabriel ___ taken the money. He was with me all evening."
+    prompt_pt: "O Gabriel não pode ter pegado o dinheiro. Ele estava comigo a noite toda."
+    options: [can't have, must have, might have]
+    answers: [can't have]
+    explanation: "Ele tem um álibi, então é impossível: can't have + particípio."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "You didn't sleep the night before your interview. You ___ been really nervous."
+    prompt_pt: "Você não dormiu na noite antes da entrevista. Você deve ter ficado muito nervoso."
+    options: [must have, must, can't have]
+    answers: [must have]
+    explanation: "Não dormir é evidência de nervosismo: must have been."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "I can't find my wallet anywhere. I ___ it at the restaurant."
+    prompt_pt: "Não acho minha carteira em lugar nenhum. Posso ter deixado no restaurante."
+    glossary: {wallet: carteira}
+    options: [may have left, may left, may have leave]
+    answers: [may have left]
+    explanation: "A forma é modal + have + particípio: may have left."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Sofia's flight landed at six, but she still isn't here. She must have got stuck in traffic."
+    prompt: "What does the speaker think happened?"
+    prompt_pt: "O que quem fala acha que aconteceu?"
+    options: ["She got stuck in traffic.", "Her flight was cancelled.", "She went to a hotel."]
+    answers: ["She got stuck in traffic."]
+    explanation: "She must have got stuck in traffic = ela deve ter ficado presa no trânsito."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Daniel can't have written this report. It's full of mistakes, and he's the most careful person on the team."
+    prompt: "What does the speaker believe about the report?"
+    prompt_pt: "No que quem fala acredita sobre o relatório?"
+    options: ["Daniel didn't write it.", "Daniel wrote it quickly.", "Daniel will correct it."]
+    answers: ["Daniel didn't write it."]
+    explanation: "Can't have written = é impossível que ele tenha escrito."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "The window is broken. Someone ___ (throw) a ball through it. (quase certeza)"
+    prompt_pt: "A janela está quebrada. Alguém deve ter jogado uma bola nela."
+    answers: ["must have thrown"]
+    explanation: "Quase certeza sobre o passado: must have + particípio (thrown)."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Lia ___ (hear) the doorbell. She had her headphones on. (impossível)"
+    prompt_pt: "A Lia não pode ter ouvido a campainha. Ela estava de fone de ouvido."
+    glossary: {doorbell: campainha, headphones: fones de ouvido}
+    answers: ["can't have heard", "cannot have heard", "couldn't have heard"]
+    explanation: "Impossibilidade no passado: can't have + particípio (heard)."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "Why didn't Rodrigo answer? He ___ been sleeping when you called."
+    prompt_pt: "Por que o Rodrigo não atendeu? Ele podia estar dormindo quando você ligou."
+    options: [might have, might, can't]
+    answers: [might have]
+    explanation: "Possibilidade sobre uma ação em andamento no passado: might have been + -ing."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "Juliana is very tanned. She ___ been on holiday."
+    prompt_pt: "A Juliana está muito bronzeada. Ela deve ter saído de férias."
+    glossary: {tanned: bronzeada}
+    options: [must have, can't have, mustn't have]
+    answers: [must have]
+    explanation: "O bronzeado é evidência, então must have been."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "The cake is gone! The kids ___ eaten it while we were out."
+    prompt_pt: "O bolo sumiu! As crianças devem ter comido enquanto estávamos fora."
+    options: [must have, must, mustn't have]
+    answers: [must have]
+    explanation: "Dedução com evidência no passado: must have + particípio."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "I don't know why Marcos left early. He ___ (feel) ill. (possibilidade)"
+    prompt_pt: "Não sei por que o Marcos saiu cedo. Ele pode ter se sentido mal."
+    answers: ["might have felt", "may have felt", "could have felt", "might have been feeling", "may have been feeling", "could have been feeling"]
+    explanation: "Possibilidade no passado: might/may/could have + particípio."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "She must have went home early."
+    prompt_pt: "Ela deve ter ido para casa cedo."
+    answers: ["She must have gone home early."]
+    explanation: "Depois de must have vem o particípio (gone), não o past simple (went)."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "They can't have saw the new series yet."
+    prompt_pt: "Eles não podem ter visto a série nova ainda."
+    answers: ["They can't have seen the new series yet.", "They cannot have seen the new series yet.", "They couldn't have seen the new series yet."]
+    explanation: "Can't have + particípio: seen, não saw."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: [have, he, missed, must, the, train]
+    answers: ["He must have missed the train."]
+    explanation: "Sujeito + must + have + particípio."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order. (a negative deduction)"
+    prompt_pt: "Coloque as palavras em ordem. (uma dedução negativa)"
+    words: [can't, have, she, it, forgotten]
+    answers: ["She can't have forgotten it."]
+    explanation: "Sujeito + can't + have + particípio para algo impossível no passado."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "You must have been working all night on this project."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["You must have been working all night on this project."]
+    explanation: "Must have been + -ing para uma ação longa no passado."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Look at Thiago's face. He ___ very tired right now."
+    prompt_pt: "Olha a cara do Thiago. Ele deve estar muito cansado agora."
+    options: [must be, must have been, can't have been]
+    answers: [must be]
+    explanation: "Right now indica dedução sobre o presente: must be."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Thiago went to bed at 8 p.m. last night. He ___ very tired."
+    prompt_pt: "O Thiago foi dormir às 8 da noite ontem. Ele devia estar muito cansado."
+    options: [must have been, must be, can't be]
+    answers: [must have been]
+    explanation: "Last night indica dedução sobre o passado: must have been."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "The door was open when I got home, but nothing was missing. I might have forgotten to lock it this morning."
+    prompt: "What does the speaker think?"
+    prompt_pt: "O que quem fala acha?"
+    options: ["They possibly forgot to lock the door.", "Someone stole something.", "The neighbour opened the door."]
+    answers: ["They possibly forgot to lock the door."]
+    explanation: "Might have forgotten = posso ter esquecido (possibilidade)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "He might have forget his keys at the office."
+    prompt_pt: "Ele pode ter esquecido as chaves no escritório."
+    answers: ["He might have forgotten his keys at the office."]
+    explanation: "Depois de might have vem o particípio: forgotten."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using must have: I'm sure Beatriz finished the report yesterday."
+    prompt_pt: "Reescreva usando must have: Tenho certeza de que a Beatriz terminou o relatório ontem."
+    answers: ["Beatriz must have finished the report yesterday."]
+    explanation: "Certeza sobre o passado: must have + particípio."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using can't have: It's impossible that Igor saw me at the concert."
+    prompt_pt: "Reescreva usando can't have: É impossível que o Igor tenha me visto no show."
+    answers: ["Igor can't have seen me at the concert.", "Igor cannot have seen me at the concert.", "Igor couldn't have seen me at the concert."]
+    explanation: "Impossibilidade no passado: can't have + particípio (seen)."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Ela deve ter perdido o ônibus."
+    answers: ["She must have missed the bus."]
+    explanation: "Deve ter + particípio = must have + particípio."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eles podem ter saído mais cedo."
+    answers: ["They might have left early.", "They may have left early.", "They could have left early.", "They might have left earlier.", "They may have left earlier.", "They could have left earlier."]
+    explanation: "Podem ter saído = might/may/could have left."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Somebody must have taken my umbrella by mistake."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Somebody must have taken my umbrella by mistake."]
+    explanation: "Must have taken: dedução com quase certeza sobre o passado."

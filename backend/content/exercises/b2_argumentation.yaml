@@ -1,0 +1,215 @@
+module_id: b2_argumentation
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Remote work saves commuting time. ___, it lets people live wherever they want."
+    prompt_pt: "O trabalho remoto economiza o tempo de deslocamento. Além disso, permite que as pessoas morem onde quiserem."
+    glossary: {commuting: deslocamento, wherever: onde quer que}
+    options: [Moreover, However, Although]
+    answers: [Moreover]
+    explanation: "As duas frases são vantagens, então usamos moreover para adicionar."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "The flight was cancelled ___ the storm."
+    prompt_pt: "O voo foi cancelado por causa da tempestade."
+    options: [due to, because, therefore]
+    answers: [due to]
+    explanation: "The storm é um substantivo, então usamos due to (because precisa de oração)."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Prices went up a lot. ___, many customers stopped buying."
+    prompt_pt: "Os preços subiram muito. Como resultado, muitos clientes pararam de comprar."
+    options: [As a result, In addition, On the other hand]
+    answers: [As a result]
+    explanation: "A segunda frase é consequência da primeira: as a result."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "On the one hand, the city is exciting. On the ___ hand, it's very expensive."
+    prompt_pt: "Por um lado, a cidade é empolgante. Por outro lado, é muito cara."
+    options: [other, another, second]
+    answers: [other]
+    explanation: "A expressão fixa é on the one hand ... on the other hand."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "We've discussed both sides. ___, I think the benefits are bigger than the risks."
+    prompt_pt: "Discutimos os dois lados. No geral, acho que os benefícios são maiores que os riscos."
+    options: [All in all, Because of, As well as]
+    answers: [All in all]
+    explanation: "Para concluir depois de discutir os dois lados, usamos all in all."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Firstly, the gym is close to my house. Secondly, it's cheap. And finally, it opens at five in the morning."
+    prompt: "How many reasons does the speaker give?"
+    prompt_pt: "Quantos motivos quem fala dá?"
+    options: ["Three", "Two", "One"]
+    answers: ["Three"]
+    explanation: "Firstly, secondly e finally organizam três motivos."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "The bridge is closed due to repairs. As a result, the buses will take a different route this week."
+    prompt: "Why are the buses changing their route?"
+    prompt_pt: "Por que os ônibus estão mudando de trajeto?"
+    options: ["The bridge is closed for repairs.", "There is a strike.", "It's raining a lot."]
+    answers: ["The bridge is closed for repairs."]
+    explanation: "Due to repairs dá a causa e as a result dá a consequência."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "The app is free. ___, it has no ads. (in addition / however)"
+    prompt_pt: "O aplicativo é gratuito. Além disso, não tem anúncios."
+    glossary: {ads: anúncios}
+    answers: ["In addition", "Moreover", "Furthermore", "What's more", "Also", "Besides"]
+    explanation: "As duas frases são pontos positivos, então adicionamos com in addition."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Many people moved out of the centre ___ the high rents. (due to / since)"
+    prompt_pt: "Muitas pessoas saíram do centro por causa dos aluguéis altos."
+    glossary: {rents: aluguéis}
+    answers: ["due to", "because of", "owing to"]
+    explanation: "The high rents é substantivo, então due to (since precisa de oração)."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "Paulo didn't study at all. ___, he failed the exam."
+    prompt_pt: "O Paulo não estudou nada. Por isso, foi reprovado na prova."
+    options: [Therefore, Moreover, Despite]
+    answers: [Therefore]
+    explanation: "A reprovação é consequência de não estudar: therefore."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "___ it was a public holiday, all the banks were closed."
+    prompt_pt: "Como era feriado, todos os bancos estavam fechados."
+    options: [Since, Due to, Therefore]
+    answers: [Since]
+    explanation: "Depois vem uma oração (it was a holiday), então usamos since para causa."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Camila speaks Spanish ___ English and Portuguese."
+    prompt_pt: "A Camila fala espanhol, além de inglês e português."
+    options: [as well as, moreover, in addition]
+    answers: [as well as]
+    explanation: "As well as + substantivo dentro da frase; moreover e in addition iniciam frases."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "The hotel has a pool ___ a free gym. (as well as / moreover)"
+    prompt_pt: "O hotel tem uma piscina, além de uma academia gratuita."
+    answers: ["as well as"]
+    explanation: "Para adicionar um substantivo dentro da frase, usamos as well as."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "Due to it was raining, the game was postponed."
+    prompt_pt: "Como estava chovendo, o jogo foi adiado."
+    glossary: {postponed: adiado}
+    answers: ["Due to the rain, the game was postponed.", "Because it was raining, the game was postponed.", "Since it was raining, the game was postponed.", "As it was raining, the game was postponed.", "Because of the rain, the game was postponed.", "Due to the fact that it was raining, the game was postponed."]
+    explanation: "Due to não aceita oração: use due to the rain ou because it was raining."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "In the other hand, working from home can feel lonely."
+    prompt_pt: "Por outro lado, trabalhar de casa pode ser solitário."
+    glossary: {lonely: solitário}
+    answers: ["On the other hand, working from home can feel lonely."]
+    explanation: "A expressão fixa é on the other hand (com on)."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: [as, a, result, the, event, was, cancelled]
+    answers: ["As a result, the event was cancelled.", "The event was cancelled as a result."]
+    explanation: "As a result introduz a consequência, normalmente no início da frase."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order. (adding a point)"
+    prompt_pt: "Coloque as palavras em ordem. (adicionando um argumento)"
+    words: [in, addition, it's, much, cheaper, to, run]
+    answers: ["In addition, it's much cheaper to run."]
+    explanation: "In addition, no início da frase, acrescenta um argumento."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Due to the strike, all trains are delayed this morning."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Due to the strike, all trains are delayed this morning.", "Due to the strike, all the trains are delayed this morning."]
+    explanation: "Due to + substantivo para dar a causa."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Living alone gives you a lot of freedom. ___, it can be lonely sometimes."
+    prompt_pt: "Morar sozinho dá muita liberdade. Por outro lado, pode ser solitário às vezes."
+    glossary: {freedom: liberdade}
+    options: [On the other hand, In addition, As a result]
+    answers: [On the other hand]
+    explanation: "A segunda frase apresenta o outro lado do argumento: on the other hand."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Cycling to work keeps you fit. ___, it's good for the environment."
+    prompt_pt: "Ir de bicicleta para o trabalho mantém você em forma. Além disso, é bom para o meio ambiente."
+    options: [What's more, On the other hand, Although]
+    answers: [What's more]
+    explanation: "Duas vantagens: what's more adiciona um argumento."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "To sum up, electric cars are cheaper to run and better for the planet. Therefore, the government should support them."
+    prompt: "What is the speaker's opinion?"
+    prompt_pt: "Qual é a opinião de quem fala?"
+    options: ["The government should support electric cars.", "Electric cars are too expensive.", "Petrol cars are better."]
+    answers: ["The government should support electric cars."]
+    explanation: "To sum up resume os argumentos e therefore traz a conclusão."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "The company lost money and as result it closed two stores."
+    prompt_pt: "A empresa perdeu dinheiro e, como resultado, fechou duas lojas."
+    answers: ["The company lost money and as a result it closed two stores.", "The company lost money and, as a result, it closed two stores."]
+    explanation: "A expressão completa é as a result (com a)."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using due to: The match was cancelled because it was snowing heavily."
+    prompt_pt: "Reescreva usando due to: A partida foi cancelada porque estava nevando muito."
+    answers: ["The match was cancelled due to the heavy snow.", "The match was cancelled due to heavy snow.", "Due to the heavy snow, the match was cancelled.", "Due to heavy snow, the match was cancelled.", "The match was canceled due to the heavy snow.", "The match was canceled due to heavy snow.", "Due to the heavy snow, the match was canceled.", "Due to heavy snow, the match was canceled.", "The match was cancelled due to the heavy snowfall.", "The match was cancelled due to heavy snowfall."]
+    explanation: "Due to precisa de substantivo: due to the heavy snow."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using therefore: We missed the last bus, so we took a taxi."
+    prompt_pt: "Reescreva usando therefore: Perdemos o último ônibus, então pegamos um táxi."
+    answers: ["We missed the last bus. Therefore, we took a taxi.", "We missed the last bus; therefore, we took a taxi.", "We missed the last bus and therefore we took a taxi.", "We missed the last bus, therefore we took a taxi.", "We missed the last bus. We therefore took a taxi."]
+    explanation: "Therefore introduz a consequência, como so, mas é mais formal."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Além disso, é mais barato."
+    answers: ["In addition, it's cheaper.", "In addition, it is cheaper.", "Moreover, it's cheaper.", "Moreover, it is cheaper.", "Furthermore, it's cheaper.", "Furthermore, it is cheaper.", "What's more, it's cheaper.", "What's more, it is cheaper.", "Besides, it's cheaper.", "Besides, it is cheaper.", "Also, it's cheaper.", "Also, it is cheaper."]
+    explanation: "Além disso = in addition / moreover / what's more."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Por causa da greve, o metrô fechou."
+    answers: ["Due to the strike, the metro closed.", "Because of the strike, the metro closed.", "Due to the strike, the subway closed.", "Because of the strike, the subway closed.", "Due to the strike, the metro was closed.", "Because of the strike, the metro was closed.", "Due to the strike, the subway was closed.", "Because of the strike, the subway was closed.", "Due to the strike, the underground closed.", "Because of the strike, the underground closed."]
+    explanation: "Por causa de + substantivo = due to / because of."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "On the one hand, the job pays really well."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["On the one hand, the job pays really well."]
+    explanation: "On the one hand apresenta o primeiro lado de um argumento."

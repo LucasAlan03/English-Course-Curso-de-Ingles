@@ -1,0 +1,25 @@
+id: c1_wh_cleft
+level: C1
+title: Wh-cleft sentences
+order: 4
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Wh-cleft sentences
+
+  - **Forma:** *What* + oração + *is / was* + parte destacada: *What I need is a break.*
+  - Destaca uma coisa ou uma ideia: *What surprised me was the price.*
+  - Destaca uma ação com *do*: *What we did was call the client.* / *What I'd like to do is restructure the team.*
+  - **All** = a única coisa: *All I want is some peace.*
+  - **The thing that / The reason why ... is that**: *The reason why I left is that the commute was exhausting.*
+  - **What happened was (that)**: para contar um problema: *What happened was that the server crashed.*
+  - **Contraste com it-cleft:** *It was the deadline that stressed us* destaca algo já conhecido; *What stressed us was the deadline* guarda a informação nova para o fim.
+  - **Erro comum:** esquecer o *be* no meio: *What I need a break* → *What I need is a break.*
+scenario:
+  title: Giving feedback on a project
+  character: A project manager collecting feedback after a launch
+  goal: Emphasize what worked, what surprised you and what you need next time
+target_structures:
+- What I need is ...
+- What happened was ...
+- All I want is ...
+- The reason why ... is that ...

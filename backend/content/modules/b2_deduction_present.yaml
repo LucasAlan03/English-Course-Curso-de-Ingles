@@ -1,0 +1,23 @@
+id: b2_deduction_present
+level: B2
+title: Modais de dedução no presente
+order: 9
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Modais de dedução no presente
+
+  - **Forma:** modal + verbo base (*must be*, *might know*) ou modal + *be* + -ing para algo acontecendo agora (*She must be working*).
+  - **must**: quase certeza de que algo é verdade, com base em evidências: *His car is outside. He must be at home.*
+  - **might / may / could**: é possível, mas você não tem certeza: *She might be in a meeting.*
+  - **can't / couldn't**: quase certeza de que algo NÃO é verdade: *That can't be Ana. She's in Lisbon this week.*
+  - **might not / may not**: talvez não: *He might not know about the change.*
+  - **Erro comum:** usar *mustn't* para dedução. *Mustn't* é proibição; para "não pode ser", diga *can't be*.
+scenario:
+  title: Guessing who's who at a work party
+  character: A friendly colleague at the company party
+  goal: Make guesses about the people around you based on what you can see and hear
+target_structures:
+- must be
+- might / may / could be
+- can't be
+- must be + -ing

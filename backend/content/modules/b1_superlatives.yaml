@@ -1,0 +1,33 @@
+id: b1_superlatives
+level: B1
+title: Superlativos
+order: 12
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Superlativos
+
+  - Adjetivos curtos: **the + adjetivo + -est** → *the cheapest, the tallest*; consoante-vogal-consoante dobra: *big → the biggest*.
+
+  - Terminados em **-y**: **the -iest** → *easy → the easiest, funny → the funniest*.
+
+  - Adjetivos longos: **the most + adjetivo** → *the most expensive, the most beautiful*.
+
+  - Irregulares: *good → the best*, *bad → the worst*, *far → the farthest / the furthest*.
+
+  - Use **in** com lugares e grupos (*the best café in town*) e **of** com períodos e números (*the best day of the year, the cheapest of the three*).
+
+  - É comum com o present perfect + **ever**: *It''s the best film I''ve ever seen.*
+
+  - Comparativo × superlativo: o comparativo compara **duas** coisas com *than* (*faster than Leo*); o superlativo destaca **uma** de um grupo, com *the* (*the fastest in the team*).
+
+  - **Erro comum:** *the most cheapest* ou *the best of the city*. Use uma forma só e **in** com lugar.
+
+  '
+scenario:
+  title: Planning a holiday with a travel agent
+  character: A travel agent
+  goal: Ask about the cheapest, best and most popular options and choose a holiday package
+target_structures:
+- the + adjective + -est
+- the most + adjective
+- the best / the worst
+- superlative + I've ever ...

@@ -1,0 +1,24 @@
+id: b1_modals_advice
+level: B1
+title: Modais de conselho
+order: 10
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Modais de conselho
+
+  - **should** + verbo base: conselho ou opinião sobre o que é bom fazer: *You should drink more water.*
+  - **Negativa e pergunta:** *You shouldn't work so late.* / *Should I call her?*
+  - **ought to** tem o mesmo sentido, mais formal e menos comum: *You ought to see a doctor.*
+  - Para suavizar: *I think you should...* / *Maybe you should...* / *I don't think you should...*
+  - **had better** (*'d better*) é um conselho forte, com tom de aviso: *You'd better leave now or you'll miss the bus.*
+  - **Contraste com must/have to:** *must/have to* são obrigação (*You have to show your ID*); *should* é só recomendação (*You should bring a jacket*).
+  - **Erro comum:** *You should to rest* ou *She shoulds go*. O certo é *You should rest* / *She should go*.
+scenario:
+  title: Visiting a doctor with a small health problem
+  character: A helpful doctor
+  goal: Describe your symptoms and ask what you should and shouldn't do to feel better
+target_structures:
+- should / shouldn't
+- ought to
+- had better
+- should vs must / have to

@@ -1,0 +1,24 @@
+id: b1_present_perfect
+level: B1
+title: Present perfect
+order: 3
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Present perfect
+
+  - **Forma:** *have/has* + particípio passado: *I have finished*, *she has seen*. Contrações: *I've*, *she's*.
+  - **Negativa e pergunta:** *I haven't eaten yet.* / *Have you ever been to Chile?*
+  - **Experiências** na vida, sem dizer quando: *I've visited Argentina twice.*
+  - Com **ever, never, already, yet, just**: *She's just arrived.* / *Have you finished yet?*
+  - Algo que **começou no passado e continua**, com *for/since*: *I've lived here for five years.* / *I've known her since 2015.*
+  - **Contraste com o past simple:** com tempo terminado e definido (*yesterday, last year, in 2019, ago*) use past simple: *I visited Paris in 2019.*
+  - **Erro comum:** *I have seen him yesterday.* Com "yesterday" o certo é *I saw him yesterday.*
+scenario:
+  title: Getting to know a new colleague
+  character: A friendly new coworker
+  goal: Talk about experiences you have and haven't had, and say when some of them happened
+target_structures:
+- have / has + past participle
+- ever / never / already / yet / just
+- for / since
+- present perfect vs past simple with finished time

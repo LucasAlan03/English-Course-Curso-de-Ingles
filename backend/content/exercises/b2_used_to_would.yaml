@@ -1,0 +1,212 @@
+module_id: b2_used_to_would
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "When I was a teenager, I ___ play video games every night."
+    prompt_pt: "Quando eu era adolescente, eu jogava videogame toda noite."
+    options: [used to, use to, am used to]
+    answers: [used to]
+    explanation: "Hábito do passado que não existe mais: used to + verbo base."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "We ___ live in Curitiba before we moved to São Paulo."
+    prompt_pt: "A gente morava em Curitiba antes de se mudar para São Paulo."
+    options: [used to, would, are used to]
+    answers: [used to]
+    explanation: "Live é um estado, então não usamos would: used to live."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "I ___ like spicy food, but now I love it."
+    prompt_pt: "Eu não gostava de comida apimentada, mas agora eu amo."
+    glossary: {spicy: apimentada}
+    options: [didn't use to, didn't used to, wouldn't use to]
+    answers: [didn't use to]
+    explanation: "Depois de didn't, o verbo fica na forma base: didn't use to."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "___ you use to have long hair?"
+    prompt_pt: "Você tinha cabelo comprido?"
+    options: [Did, Were, Used]
+    answers: [Did]
+    explanation: "A pergunta com used to é feita com did: Did you use to...?"
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Every summer, my grandmother ___ take us to the beach in Ubatuba."
+    prompt_pt: "Todo verão, minha avó levava a gente à praia em Ubatuba."
+    options: [would, was used to, uses to]
+    answers: [would]
+    explanation: "Ação repetida no passado (every summer): would + verbo base."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "When I lived in London, I would cycle to work every morning, even when it was raining."
+    prompt: "What did the speaker do regularly in London?"
+    prompt_pt: "O que quem fala fazia regularmente em Londres?"
+    options: ["Cycle to work", "Take the bus to work", "Work from home"]
+    answers: ["Cycle to work"]
+    explanation: "I would cycle to work every morning = eu ia de bicicleta todo dia."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Marta used to be really shy at school, but now she's a lawyer and speaks in court every week."
+    prompt: "What was Marta like at school?"
+    prompt_pt: "Como a Marta era na escola?"
+    options: ["Shy", "Talkative", "Lazy"]
+    answers: ["Shy"]
+    explanation: "Used to be shy = ela era tímida (e não é mais)."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "My dad ___ (smoke), but he stopped ten years ago."
+    prompt_pt: "Meu pai fumava, mas parou há dez anos."
+    answers: ["used to smoke"]
+    explanation: "Hábito antigo que acabou: used to + verbo base."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "There ___ (be) a cinema on this corner, but now it's a pharmacy."
+    prompt_pt: "Tinha um cinema nesta esquina, mas agora é uma farmácia."
+    glossary: {corner: esquina}
+    answers: ["used to be"]
+    explanation: "Situação do passado que mudou (estado): used to be."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "I ___ have a cat called Pipoca when I was a kid."
+    prompt_pt: "Eu tinha uma gata chamada Pipoca quando era criança."
+    options: [used to, would, use to]
+    answers: [used to]
+    explanation: "Have (posse) é um estado, então só used to funciona."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "On Friday nights, my friends and I ___ order pizza and watch horror films."
+    prompt_pt: "Nas sextas à noite, eu e meus amigos pedíamos pizza e víamos filmes de terror."
+    options: [would, use to, are used to]
+    answers: [would]
+    explanation: "Ação repetida no passado: would + verbo base."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Where ___ you use to work before this job?"
+    prompt_pt: "Onde você trabalhava antes deste emprego?"
+    options: [did, were, would]
+    answers: [did]
+    explanation: "Perguntas com used to usam did + use to."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Renata ___ (not / like) vegetables, but now she's a vegetarian."
+    prompt_pt: "A Renata não gostava de legumes, mas agora ela é vegetariana."
+    answers: ["didn't use to like", "did not use to like", "used not to like"]
+    explanation: "Negativa de used to: didn't use to + verbo base."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I didn't used to wake up so early."
+    prompt_pt: "Eu não costumava acordar tão cedo."
+    answers: ["I didn't use to wake up so early.", "I did not use to wake up so early.", "I used not to wake up so early."]
+    explanation: "Depois de didn't, use a forma base: use to."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "When I was younger, I would be very thin."
+    prompt_pt: "Quando eu era mais novo, eu era muito magro."
+    answers: ["When I was younger, I used to be very thin.", "When I was younger, I was very thin."]
+    explanation: "Be é estado, então não aceita would: used to be."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: [to, we, used, in, a, small, live, town]
+    answers: ["We used to live in a small town."]
+    explanation: "Sujeito + used to + verbo base."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order. (a question)"
+    prompt_pt: "Coloque as palavras em ordem. (uma pergunta)"
+    words: [you, did, use, to, play, football]
+    answers: ["Did you use to play football?"]
+    explanation: "Did + sujeito + use to + verbo base."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "My grandfather would tell us stories every night before bed."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["My grandfather would tell us stories every night before bed."]
+    explanation: "Would + verbo base para uma lembrança de hábito repetido."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "In 2015, I ___ to Chile for a conference."
+    prompt_pt: "Em 2015, eu fui ao Chile para uma conferência."
+    options: [went, used to go, would go]
+    answers: [went]
+    explanation: "Aconteceu uma vez só, então usamos o past simple, não used to nem would."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Back then, Felipe ___ a big fan of heavy metal."
+    prompt_pt: "Naquela época, o Felipe era muito fã de heavy metal."
+    options: [used to be, would be, use to be]
+    answers: [used to be]
+    explanation: "Ser fã é um estado, então só used to be funciona."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "As kids, we would spend every July at my uncle's farm. We'd ride horses and swim in the river."
+    prompt: "What does the speaker describe?"
+    prompt_pt: "O que quem fala descreve?"
+    options: ["Repeated holidays at a farm.", "One trip to a farm.", "A plan to visit a farm."]
+    answers: ["Repeated holidays at a farm."]
+    explanation: "Would e every July mostram algo que se repetia no passado."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Did you used to go to concerts a lot?"
+    prompt_pt: "Você ia muito a shows?"
+    answers: ["Did you use to go to concerts a lot?"]
+    explanation: "Em perguntas com did, o verbo fica na base: use to."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using used to: Lucas played tennis as a child. He doesn't play now."
+    prompt_pt: "Reescreva usando used to: O Lucas jogava tênis quando criança. Ele não joga mais."
+    answers: ["Lucas used to play tennis as a child.", "Lucas used to play tennis when he was a child.", "As a child, Lucas used to play tennis.", "Lucas used to play tennis as a child but he doesn't play now.", "Lucas used to play tennis as a child but he doesn't anymore."]
+    explanation: "Hábito antigo que acabou: used to + verbo base."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using would: Every Saturday, my mum made pancakes for breakfast."
+    prompt_pt: "Reescreva usando would: Todo sábado, minha mãe fazia panquecas no café da manhã."
+    glossary: {pancakes: panquecas}
+    answers: ["Every Saturday, my mum would make pancakes for breakfast.", "Every Saturday, my mom would make pancakes for breakfast.", "My mum would make pancakes for breakfast every Saturday.", "My mom would make pancakes for breakfast every Saturday."]
+    explanation: "Ação repetida no passado: would + verbo base."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu morava em Belo Horizonte."
+    answers: ["I used to live in Belo Horizonte.", "I lived in Belo Horizonte."]
+    explanation: "Morava (estado do passado que mudou) = used to live; would não serve para estados."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Você costumava ir à academia?"
+    answers: ["Did you use to go to the gym?", "Did you use to go to the gym regularly?"]
+    explanation: "Pergunta com used to: Did you use to + verbo base?"
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "She didn't use to drink coffee, but now she loves it."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["She didn't use to drink coffee, but now she loves it."]
+    explanation: "Negativa de used to: didn't use to."

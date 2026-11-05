@@ -1,0 +1,240 @@
+module_id: c1_inversion_conditional
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "___ I known about the strike, I would have booked a different flight."
+    prompt_pt: "Se eu soubesse da greve, teria reservado outro voo."
+    glossary: {strike: greve}
+    options: [Had, If, Have]
+    answers: [Had]
+    explanation: "Had + sujeito + particípio substitui If I had known na 3ª condicional."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "___ you need any further information, please do not hesitate to contact me."
+    prompt_pt: "Caso precise de mais informações, por favor não hesite em entrar em contato comigo."
+    glossary: {further: adicional, hesitate: hesitar}
+    options: [Should, Would, Will]
+    answers: [Should]
+    explanation: "Should + sujeito + verbo base é a forma formal de If you need (comum em e-mails)."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "___ I in your position, I would accept the offer."
+    prompt_pt: "Se eu estivesse na sua posição, aceitaria a oferta."
+    options: [Were, Was, Am]
+    answers: [Were]
+    explanation: "Na condicional invertida do 2º tipo usamos sempre Were, mesmo com I."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "Had the client ___ earlier, we could have met the deadline."
+    prompt_pt: "Se o cliente tivesse pagado antes, poderíamos ter cumprido o prazo."
+    glossary: {deadline: prazo}
+    options: [paid, pay, paying]
+    answers: [paid]
+    explanation: "Depois de Had + sujeito vem o particípio passado (paid)."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Had it not ___ for your help, the launch would have failed."
+    prompt_pt: "Se não fosse pela sua ajuda, o lançamento teria fracassado."
+    glossary: {launch: lançamento}
+    options: [been, be, was]
+    answers: [been]
+    explanation: "A expressão fixa é Had it not been for (= If it hadn't been for)."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Should the shipment be delayed again, we will cancel the contract."
+    prompt: "What will happen if the shipment is late again?"
+    prompt_pt: "O que vai acontecer se a remessa atrasar de novo?"
+    glossary: {shipment: remessa}
+    options: ["The contract will be cancelled.", "The shipment will be free.", "Nothing will change."]
+    answers: ["The contract will be cancelled."]
+    explanation: "Should the shipment be delayed = If the shipment is delayed; o resultado é cancelar o contrato."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Had we invested in better software last year, we would have saved a fortune."
+    prompt: "Did they invest in better software last year?"
+    prompt_pt: "Eles investiram em um software melhor no ano passado?"
+    options: ["No, they didn't.", "Yes, they did.", "They are investing in it right now."]
+    answers: ["No, they didn't."]
+    explanation: "Had we invested = If we had invested: uma condição irreal no passado, ou seja, não investiram."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "___ (be) the CEO to resign tomorrow, the company's shares would fall."
+    prompt_pt: "Se o CEO renunciasse amanhã, as ações da empresa cairiam."
+    glossary: {resign: renunciar, shares: ações}
+    answers: ["Were"]
+    explanation: "Were + sujeito + to + verbo é a forma invertida de If the CEO resigned."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Had I ___ (know) the meeting was cancelled, I would have stayed at home."
+    prompt_pt: "Se eu soubesse que a reunião tinha sido cancelada, teria ficado em casa."
+    answers: ["known"]
+    explanation: "Had + sujeito + particípio: known."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "___ you require assistance, our team is available 24 hours a day."
+    prompt_pt: "Caso você precise de assistência, nossa equipe está disponível 24 horas por dia."
+    glossary: {require: precisar, assistance: assistência}
+    options: [Should, Had, Were]
+    answers: [Should]
+    explanation: "Should + sujeito + verbo base (require) = If you require; Had e Were pediriam outra forma do verbo."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "Were we ___ your offer, how soon could you deliver?"
+    prompt_pt: "Se aceitássemos a sua oferta, em quanto tempo vocês poderiam entregar?"
+    options: [to accept, accept, accepted]
+    answers: [to accept]
+    explanation: "Were + sujeito + to + verbo base: Were we to accept."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "___ not been for the traffic, we would have arrived on time."
+    prompt_pt: "Se não fosse pelo trânsito, teríamos chegado na hora."
+    options: [Had it, If it, Has it]
+    answers: [Had it]
+    explanation: "Had it not been for = If it hadn't been for, sem o if."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "___ (should / anyone / ask), tell them the report is confidential."
+    prompt_pt: "Caso alguém pergunte, diga que o relatório é confidencial."
+    glossary: {confidential: confidencial}
+    answers: ["Should anyone ask"]
+    explanation: "Should vem antes do sujeito e o verbo fica na forma base: Should anyone ask."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "If had I known about the problem, I would have helped."
+    prompt_pt: "Se eu soubesse do problema, teria ajudado."
+    answers: ["Had I known about the problem, I would have helped.", "If I had known about the problem, I would have helped."]
+    explanation: "Na inversão o if desaparece: Had I known... (ou mantenha o if com a ordem normal)."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Hadn't we checked the figures, we would have lost the deal."
+    prompt_pt: "Se não tivéssemos conferido os números, teríamos perdido o negócio."
+    glossary: {figures: números, deal: negócio}
+    answers: ["Had we not checked the figures, we would have lost the deal.", "If we hadn't checked the figures, we would have lost the deal.", "If we had not checked the figures, we would have lost the deal."]
+    explanation: "Na condicional invertida a negativa não tem contração: Had we not checked."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a formal offer of help)."
+    prompt_pt: "Coloque as palavras na ordem (uma oferta formal de ajuda)."
+    words: [any, contact, you, us, Should, questions, have]
+    answers: ["Should you have any questions, contact us."]
+    explanation: "Should + sujeito + verbo base na condição, e depois o imperativo: contact us."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a past regret)."
+    prompt_pt: "Coloque as palavras na ordem (um arrependimento no passado)."
+    words: [known, I, the, would, Had, truth, have, I, resigned]
+    answers: ["Had I known the truth, I would have resigned."]
+    explanation: "Had + sujeito + particípio na condição; would have + particípio no resultado."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Were I in charge, I would change the whole strategy."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Were I in charge, I would change the whole strategy.", "Were I in charge, I'd change the whole strategy."]
+    explanation: "Were I in charge = If I were in charge (2ª condicional invertida)."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "___ I to lose this job, I would start my own business."
+    prompt_pt: "Se eu perdesse este emprego, abriria o meu próprio negócio."
+    options: [Were, Had, Did]
+    answers: [Were]
+    explanation: "Só Were combina com sujeito + to + verbo base (Were I to lose)."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Should the client ___, tell him I'm in a meeting."
+    prompt_pt: "Caso o cliente ligue, diga a ele que estou em reunião."
+    options: [call, calls, called]
+    answers: [call]
+    explanation: "Depois de Should + sujeito, o verbo fica na forma base, sem -s."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Were it not for the annual bonus, Lucas would quit his job tomorrow."
+    prompt: "Why doesn't Lucas quit his job?"
+    prompt_pt: "Por que o Lucas não pede demissão?"
+    glossary: {quit: pedir demissão}
+    options: ["Because of the bonus", "Because he loves his boss", "Because he can't find another job"]
+    answers: ["Because of the bonus"]
+    explanation: "Were it not for the bonus = se não fosse pelo bônus: é o bônus que o segura."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Should you needed help, call the IT desk."
+    prompt_pt: "Caso precise de ajuda, ligue para o suporte de TI."
+    answers: ["Should you need help, call the IT desk."]
+    explanation: "Depois de Should + sujeito o verbo fica na forma base: need."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite without 'if': If I had known about the delay, I would have warned the client."
+    prompt_pt: "Reescreva sem 'if': Se eu soubesse do atraso, teria avisado o cliente."
+    glossary: {delay: atraso, warned: avisado}
+    answers:
+      - "Had I known about the delay, I would have warned the client."
+      - "Had I known about the delay, I'd have warned the client."
+      - "Had I known of the delay, I would have warned the client."
+    explanation: "Tiramos o if e invertemos: If I had known → Had I known."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite without 'if': If you have any questions, please contact our team."
+    prompt_pt: "Reescreva sem 'if': Se tiver alguma dúvida, por favor entre em contato com nossa equipe."
+    answers:
+      - "Should you have any questions, please contact our team."
+      - "Should you have any questions, contact our team."
+    explanation: "Para condições no presente/futuro, a forma invertida usa Should + sujeito + verbo base."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Se eu soubesse do problema, teria ligado para você. (use inversão)"
+    answers:
+      - "Had I known about the problem, I would have called you."
+      - "Had I known about the problem, I'd have called you."
+      - "Had I known about the problem, I would have phoned you."
+      - "Had I known about the problem, I'd have phoned you."
+      - "Had I known of the problem, I would have called you."
+      - "Had I known about the issue, I would have called you."
+      - "Had I known about the issue, I'd have called you."
+    explanation: "Condição irreal no passado sem if: Had I known..., I would have + particípio."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Caso você precise de ajuda, me ligue. (use inversão)"
+    answers:
+      - "Should you need help, call me."
+      - "Should you need any help, call me."
+      - "Should you need help, give me a call."
+      - "Should you need any help, give me a call."
+      - "Should you need help, phone me."
+      - "Should you need any help, phone me."
+      - "Should you need help, please call me."
+      - "Should you need any help, please call me."
+    explanation: "Caso + subjuntivo vira Should + sujeito + verbo base em inglês formal."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Had it not been for the rain, the event would have been perfect."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Had it not been for the rain, the event would have been perfect."]
+    explanation: "Had it not been for = se não fosse por, na 3ª condicional invertida."

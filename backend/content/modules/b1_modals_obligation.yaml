@@ -1,0 +1,23 @@
+id: b1_modals_obligation
+level: B1
+title: Modais de obrigação e proibição
+order: 9
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Modais de obrigação e proibição
+
+  - **must** + verbo base: obrigação forte, regras escritas ou algo que *você* acha importante: *Passengers must wear a seatbelt.* / *I must call my mom.*
+  - **have to / has to**: obrigação que vem de fora (trabalho, leis, horários): *I have to work on Saturday.* Pergunta: *Do you have to wear a uniform?*
+  - No passado use **had to** (*must* não tem passado): *I had to wait for an hour.*
+  - **mustn't**: proibição: *You mustn't use your phone during the exam.* Informalmente, *can't*: *You can't park here.*
+  - **don't have to**: não é necessário, é opcional: *You don't have to bring anything.*
+  - **Erro comum:** confundir *mustn't* (proibido) com *don't have to* (não precisa). E nunca *must to*: o certo é *You must go.*
+scenario:
+  title: First day at a new job
+  character: An HR manager explaining the office rules
+  goal: Ask about and understand what you have to do, don't have to do and mustn't do at your new job
+target_structures:
+- must / have to
+- mustn't / can't
+- don't have to
+- had to (past obligation)

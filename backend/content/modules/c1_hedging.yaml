@@ -1,29 +1,25 @@
 id: c1_hedging
 level: C1
 title: Hedging
-order: 5
+order: 8
 source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
-theory_md: '# Hedging (suavizar opiniões)
+theory_md: |
+  # Hedging
 
-  Para soar diplomático e preciso:
-
-  - **I tend to think...** / **It seems to me that...** / **I''d say...**
-
-  - **might, may, could** e advérbios: *probably, perhaps, arguably, somewhat*
-
-  - **It could be argued that...** / **To some extent...**
-
-  - Suavizar críticas: *I''m not sure that''s the best approach.* / *It''s a bit unclear.*
-
-  - **Dica:** evite afirmações absolutas (*always, never, definitely*) quando há dúvida.
-
-  '
+  - **O que é:** formas de suavizar opiniões e não soar absoluto, para parecer diplomático e preciso em reuniões e textos.
+  - **seem / appear**: *It seems that the client is unhappy.* / *The delay appears to be caused by the supplier.*
+  - **tend to / I'd say**: *I tend to think smaller teams work better.* / *I'd say it's a bit expensive.*
+  - **Modais** *may, might, could*: *It might be a good idea to wait.*
+  - **Advérbios e expressões:** *arguably, somewhat, to some extent, likely to*: *This is arguably our best campaign.*
+  - **Passiva impessoal:** *It could be argued that... / It is thought that...*
+  - Suavizar críticas: *I'm not sure that's the best approach.*
+  - **Erro comum:** esquecer o *to* depois de *tend / seem / appear*: *I tend think* → *I tend to think.*
 scenario:
   title: Disagreeing politely in a team meeting
-  character: A senior colleague
-  goal: Express disagreement and opinions diplomatically
+  character: A senior colleague defending a risky plan
+  goal: Express disagreement and opinions diplomatically, without sounding rude
 target_structures:
-- I tend to think
-- It seems that
-- arguably
-- to some extent
+- It seems / appears that
+- I tend to think / I'd say
+- arguably / to some extent
+- It could be argued that

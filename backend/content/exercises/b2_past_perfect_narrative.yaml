@@ -1,0 +1,226 @@
+module_id: b2_past_perfect_narrative
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "When we got to the gate, the plane ___."
+    prompt_pt: "Quando chegamos ao portão de embarque, o avião já tinha partido."
+    glossary: {gate: portão de embarque}
+    options: [had already left, has already left, already leaves]
+    answers: [had already left]
+    explanation: "O avião partiu antes de chegarmos ao portão → had + particípio."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "By the time the police arrived, the thieves ___."
+    prompt_pt: "Quando a polícia chegou, os ladrões já tinham fugido."
+    glossary: {thieves: ladrões}
+    options: [had escaped, have escaped, escape]
+    answers: [had escaped]
+    explanation: "By the time + past simple pede o past perfect para a ação que veio antes."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "I didn't recognise Beatriz because she ___ her hair."
+    prompt_pt: "Eu não reconheci a Beatriz porque ela tinha pintado o cabelo."
+    glossary: {recognise: reconhecer}
+    options: [had dyed, has dyed, dyes]
+    answers: [had dyed]
+    explanation: "Pintar o cabelo aconteceu antes de eu não a reconhecer → past perfect."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "It was my first time in Japan. I ___ there before."
+    prompt_pt: "Era minha primeira vez no Japão. Eu nunca tinha estado lá antes."
+    options: [had never been, have never been, never was]
+    answers: [had never been]
+    explanation: "Experiência anterior a um momento passado (aquela viagem) → had never been ... before."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Which sentence means the meeting started BEFORE Tom arrived?"
+    prompt_pt: "Qual frase significa que a reunião começou ANTES de o Tom chegar?"
+    options: ["When Tom arrived, the meeting had started.", "When Tom arrived, the meeting started.", "Tom arrived before the meeting started."]
+    answers: ["When Tom arrived, the meeting had started."]
+    explanation: "Had started indica que a reunião já estava acontecendo quando o Tom chegou."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "When I finally got home, I realised I had left my keys at the office."
+    prompt: "Where were the speaker's keys?"
+    prompt_pt: "Onde estavam as chaves da pessoa que fala?"
+    options: [At the office., In the car., At home.]
+    answers: [At the office.]
+    explanation: "Had left my keys at the office: as chaves ficaram no escritório antes de a pessoa chegar em casa."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Nadia was exhausted at the party because she had worked a twelve-hour shift."
+    prompt: "Why was Nadia exhausted?"
+    prompt_pt: "Por que a Nadia estava exausta?"
+    glossary: {exhausted: exausta}
+    options: ["She had worked a long shift.", "She had danced all night.", "She had been ill."]
+    answers: ["She had worked a long shift."]
+    explanation: "Had worked explica a causa, anterior à festa, do cansaço."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "The restaurant was full because someone ___ (book) a table for thirty people."
+    prompt_pt: "O restaurante estava lotado porque alguém tinha reservado uma mesa para trinta pessoas."
+    answers: [had booked]
+    explanation: "A reserva aconteceu antes de o restaurante estar lotado → had booked."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "She was nervous because she had never ___ (give) a presentation in English before."
+    prompt_pt: "Ela estava nervosa porque nunca tinha feito uma apresentação em inglês antes."
+    answers: [given]
+    explanation: "Past perfect = had + particípio; o particípio de give é given."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "After she ___ the email, she realised there was a mistake in it."
+    prompt_pt: "Depois que ela enviou o e-mail, percebeu que havia um erro nele."
+    options: [had sent, has sent, was sending]
+    answers: [had sent, "'d sent"]
+    explanation: "Enviar veio antes de perceber o erro → past perfect depois de after."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "The film ___ when we got to the cinema, so we missed the beginning."
+    prompt_pt: "O filme já tinha começado quando chegamos ao cinema, então perdemos o começo."
+    options: [had already started, already starts, has already started]
+    answers: [had already started]
+    explanation: "O filme começou antes da nossa chegada → had already started."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "How long ___ you known each other before you got married?"
+    prompt_pt: "Há quanto tempo vocês se conheciam antes de se casarem?"
+    options: [had, have, did]
+    answers: [had]
+    explanation: "Duração até um momento passado (o casamento) → had + particípio."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "By the time I found my phone, the battery ___ (die)."
+    prompt_pt: "Quando eu encontrei meu celular, a bateria já tinha acabado."
+    answers: [had died]
+    explanation: "A bateria acabou antes de eu encontrar o celular → had died."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "When I arrived at the station, the last train has already gone."
+    prompt_pt: "Quando cheguei à estação, o último trem já tinha partido."
+    answers: ["When I arrived at the station, the last train had already gone."]
+    explanation: "A narrativa está no passado (arrived), então o que veio antes usa had, não has."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "I was sure I had saw that film before."
+    prompt_pt: "Eu tinha certeza de que já tinha visto aquele filme antes."
+    answers: ["I was sure I had seen that film before.", "I was sure I'd seen that film before."]
+    explanation: "Depois de had vem o particípio: seen, não saw."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a statement)."
+    prompt_pt: "Coloque as palavras em ordem (uma afirmação)."
+    words: [had, when, the, arrived, already, concert, we, started]
+    answers: ["The concert had already started when we arrived."]
+    explanation: "Ação anterior (had already started) + when + ação posterior no past simple."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: [abroad, that, had, before, you, been, ever, trip]
+    answers: ["Had you ever been abroad before that trip?"]
+    explanation: "Pergunta no past perfect: Had + sujeito + ever + particípio."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "She told me she had already paid the bill."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["She told me she had already paid the bill.", "She told me she'd already paid the bill."]
+    explanation: "Had already paid: o pagamento aconteceu antes de ela me contar."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "When I opened the fridge, I saw that someone ___ my cake!"
+    prompt_pt: "Quando abri a geladeira, vi que alguém tinha comido meu bolo!"
+    options: [had eaten, has eaten, eats]
+    answers: [had eaten]
+    explanation: "Alguém comeu o bolo antes de eu abrir a geladeira → had eaten."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "First I checked in, then I ___ to my room and unpacked."
+    prompt_pt: "Primeiro fiz o check-in, depois fui para o meu quarto e desfiz as malas."
+    glossary: {unpacked: desfiz as malas}
+    options: [went, had gone, have gone]
+    answers: [went]
+    explanation: "Ações contadas na ordem em que aconteceram (first, then) ficam no past simple."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "By the time Diego reached the stadium, the match had already finished, so he went to a bar instead."
+    prompt: "What happened first?"
+    prompt_pt: "O que aconteceu primeiro?"
+    options: [The match finished., Diego reached the stadium., Diego went to a bar.]
+    answers: [The match finished.]
+    explanation: "Had already finished marca a ação que aconteceu antes das outras."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Before the trip, I had never flew in a plane."
+    prompt_pt: "Antes da viagem, eu nunca tinha andado de avião."
+    answers: ["Before the trip, I had never flown in a plane.", "Before the trip, I'd never flown in a plane."]
+    explanation: "Had + particípio: o particípio de fly é flown."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Combine using 'when' and the past perfect: The guests left. Then we arrived at the party."
+    prompt_pt: "Junte usando 'when' e o past perfect: Os convidados foram embora. Depois nós chegamos à festa."
+    answers:
+      - "When we arrived at the party, the guests had left."
+      - "When we arrived at the party, the guests had already left."
+      - "The guests had left when we arrived at the party."
+      - "The guests had already left when we arrived at the party."
+    explanation: "A ação anterior (left) vai para o past perfect; a posterior (arrived) fica no past simple."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using 'never ... before': It was my first time eating sushi."
+    prompt_pt: "Reescreva usando 'never ... before': Era a primeira vez que eu comia sushi."
+    answers: ["I had never eaten sushi before.", "I'd never eaten sushi before.", "I had never eaten sushi before then.", "I'd never eaten sushi before then.", "I had never had sushi before.", "I'd never had sushi before."]
+    explanation: "Experiência que não existia até um momento passado → had never + particípio + before."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Quando eu cheguei, a reunião já tinha começado."
+    answers:
+      - "When I arrived, the meeting had already started."
+      - "When I arrived, the meeting had already begun."
+      - "When I got there, the meeting had already started."
+      - "When I got there, the meeting had already begun."
+      - "The meeting had already started when I arrived."
+      - "The meeting had already begun when I arrived."
+      - "The meeting had already started when I got there."
+      - "The meeting had already begun when I got there."
+    explanation: "Já tinha começado = had already started: aconteceu antes da minha chegada."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Ela nunca tinha visto o mar antes."
+    answers: ["She had never seen the sea before.", "She'd never seen the sea before.", "She had never seen the ocean before.", "She'd never seen the ocean before."]
+    explanation: "Nunca tinha visto = had never seen; before reforça que é antes de um momento passado."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "By the time we got to the beach, it had started raining."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["By the time we got to the beach, it had started raining."]
+    explanation: "By the time + past simple, depois o past perfect para o que já tinha acontecido."

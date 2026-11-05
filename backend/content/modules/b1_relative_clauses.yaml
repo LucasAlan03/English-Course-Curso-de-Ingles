@@ -1,9 +1,11 @@
 id: b1_relative_clauses
 level: B1
 title: Relative clauses
-order: 10
+order: 19
 source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
-theory_md: '# Relative clauses (who, which, that, where)
+theory_md: '# Relative clauses
+
+  - Servem para **identificar** de quem ou do que você está falando, logo depois do substantivo.
 
   - **who / that** para pessoas: *The man **who** lives next door is a doctor.*
 
@@ -13,9 +15,9 @@ theory_md: '# Relative clauses (who, which, that, where)
 
   - **whose** para posse: *She''s the girl **whose** brother is famous.*
 
-  - Se o pronome é objeto, pode omitir: *The movie (that) I saw was funny.*
+  - Se o pronome é **objeto**, pode omitir: *The movie (that) I saw was funny.* Se é **sujeito**, não: *The woman who called you is here.*
 
-  - **Erro comum:** repetir o sujeito: *The man who he lives...* Não use *he* depois de *who*.
+  - **Erro comum:** repetir o sujeito ou o objeto: *The man who he lives...* ou *The book that I bought it...*
 
   '
 scenario:

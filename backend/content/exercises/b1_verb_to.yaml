@@ -1,0 +1,210 @@
+module_id: b1_verb_to
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I want ___ Japanese next year."
+    prompt_pt: "Eu quero aprender japonês no ano que vem."
+    options: ["to learn", "learning", "learn"]
+    answers: ["to learn"]
+    explanation: "Want é seguido de to + verbo."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "We decided ___ at home and watch a film."
+    prompt_pt: "Nós decidimos ficar em casa e ver um filme."
+    options: ["to stay", "staying", "stay"]
+    answers: ["to stay"]
+    explanation: "Decide é seguido de to + verbo."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "They can't afford ___ a new car right now."
+    prompt_pt: "Eles não têm condições de comprar um carro novo agora."
+    options: ["to buy", "buying", "buy"]
+    answers: ["to buy"]
+    explanation: "Afford (ter condições de) é seguido de to + verbo."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "Camila hopes ___ a job in Canada."
+    prompt_pt: "A Camila espera encontrar um emprego no Canadá."
+    options: ["to find", "finding", "find"]
+    answers: ["to find"]
+    explanation: "Hope é seguido de to + verbo."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "I'd like ___ a table for four, please."
+    prompt_pt: "Eu gostaria de reservar uma mesa para quatro, por favor."
+    options: ["to book", "booking", "book"]
+    answers: ["to book"]
+    explanation: "Would like é seguido de to + verbo."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "My manager asked me to prepare the presentation, so I can't go to the gym tonight."
+    prompt: "What did the manager ask the speaker to do?"
+    prompt_pt: "O que o gerente pediu para a pessoa fazer?"
+    options: ["Prepare the presentation", "Go to the gym", "Cancel the meeting"]
+    answers: ["Prepare the presentation"]
+    explanation: "Asked me to prepare = pediu para eu preparar a apresentação."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Igor promised not to be late again, but he arrived at nine thirty."
+    prompt: "What did Igor promise?"
+    prompt_pt: "O que o Igor prometeu?"
+    options: ["Not to be late again", "To arrive at nine thirty", "To call before nine"]
+    answers: ["Not to be late again"]
+    explanation: "Promised not to be late = prometeu não se atrasar (negativa: not to)."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "We're planning ___ to Chile in July. (travel)"
+    prompt_pt: "Estamos planejando viajar para o Chile em julho."
+    answers: ["to travel"]
+    explanation: "Plan é seguido de to + verbo."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "He refused ___ for the broken glass. (pay)"
+    prompt_pt: "Ele se recusou a pagar pelo copo quebrado."
+    answers: ["to pay"]
+    explanation: "Refuse é seguido de to + verbo."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "My parents want ___ to visit them more often."
+    prompt_pt: "Meus pais querem que eu os visite com mais frequência."
+    options: ["me", "that I", "I"]
+    answers: ["me"]
+    explanation: "Want + objeto (me) + to; nunca want that I."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "Did you manage ___ tickets for the show?"
+    prompt_pt: "Você conseguiu comprar ingressos para o show?"
+    options: ["to get", "getting", "get"]
+    answers: ["to get"]
+    explanation: "Manage (conseguir) é seguido de to + verbo."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "This app is really easy ___."
+    prompt_pt: "Este app é muito fácil de usar."
+    options: ["to use", "using", "use"]
+    answers: ["to use"]
+    explanation: "Adjetivo + to + verbo: easy to use."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "The doctor told me ___ more water. (drink)"
+    prompt_pt: "O médico me disse para beber mais água."
+    answers: ["to drink"]
+    explanation: "Tell + pessoa + to + verbo."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I want that you come to my birthday party."
+    prompt_pt: "Eu quero que você venha à minha festa de aniversário."
+    answers: ["I want you to come to my birthday party."]
+    explanation: "Em inglês é want + pessoa + to, não want that."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "She agreed helping me with the move."
+    prompt_pt: "Ela concordou em me ajudar com a mudança."
+    glossary: {move: mudança}
+    answers: ["She agreed to help me with the move."]
+    explanation: "Agree é seguido de to + verbo."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a decision)."
+    prompt_pt: "Coloque as palavras em ordem (uma decisão)."
+    words: ["job", "look", "decided", "a", "I've", "for", "new", "to"]
+    answers: ["I've decided to look for a new job."]
+    explanation: "Decide + to + verbo."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a request)."
+    prompt_pt: "Coloque as palavras em ordem (um pedido)."
+    words: ["file", "me", "send", "she", "again", "the", "asked", "to"]
+    answers: ["She asked me to send the file again."]
+    explanation: "Ask + pessoa + to + verbo."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "I need to finish this before the meeting at three."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I need to finish this before the meeting at three.", "I need to finish this before the meeting at 3."]
+    explanation: "Need é seguido de to + verbo."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I enjoy ___, but I want ___ more often."
+    prompt_pt: "Eu gosto de cozinhar, mas quero cozinhar com mais frequência."
+    options: ["cooking / to cook", "to cook / cooking", "cooking / cooking"]
+    answers: ["cooking / to cook"]
+    explanation: "Enjoy pede -ing; want pede to + verbo."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "On the way home, we stopped ___ some bread."
+    prompt_pt: "No caminho para casa, paramos para comprar pão."
+    options: ["to buy", "buying", "buy"]
+    answers: ["to buy"]
+    explanation: "Stop to + verbo = parar para fazer algo; stop + -ing = parar um hábito."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "I stopped eating meat two years ago, but I still want to try that famous barbecue place."
+    prompt: "What did the speaker stop doing?"
+    prompt_pt: "O que a pessoa parou de fazer?"
+    options: ["Eating meat", "Going to barbecues", "Trying new restaurants"]
+    answers: ["Eating meat"]
+    explanation: "Stopped eating = parou de comer (hábito); want to try = quer experimentar."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Please remember calling your mother tomorrow."
+    prompt_pt: "Por favor, lembre de ligar para sua mãe amanhã."
+    answers: ["Please remember to call your mother tomorrow."]
+    explanation: "Remember to + verbo = lembrar de fazer algo no futuro; remember + -ing é lembrar do passado."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using ask + person + to: The teacher said to us, 'Please speak more slowly.'"
+    prompt_pt: "Reescreva usando ask + pessoa + to: A professora nos disse: 'Por favor, falem mais devagar.'"
+    answers: ["The teacher asked us to speak more slowly."]
+    explanation: "Um pedido vira ask + pessoa + to + verbo."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using decide: Felipe said, 'OK, I'll take the job.'"
+    prompt_pt: "Reescreva usando decide: O Felipe disse: 'Ok, vou aceitar o emprego.'"
+    answers: ["Felipe decided to take the job.", "Felipe has decided to take the job.", "Felipe decided to accept the job.", "Felipe has decided to accept the job."]
+    explanation: "Decide + to + verbo: decided to take the job."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Ele prometeu me ligar."
+    answers: ["He promised to call me.", "He promised to phone me.", "He promised he would call me.", "He promised he'd call me."]
+    explanation: "Promise é seguido de to + verbo."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu gosto de correr, mas hoje quero descansar."
+    answers: ["I like running, but today I want to rest.", "I like to run, but today I want to rest.", "I like running, but I want to rest today.", "I like to run, but I want to rest today.", "I enjoy running, but today I want to rest.", "I enjoy running, but I want to rest today."]
+    explanation: "Like aceita -ing ou to, enjoy pede -ing, e want pede to + verbo."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "We hope to see you at the wedding in June."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We hope to see you at the wedding in June."]
+    explanation: "Hope é seguido de to + verbo."

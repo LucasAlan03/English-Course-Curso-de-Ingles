@@ -1,0 +1,24 @@
+id: b2_reported_questions
+level: B2
+title: 'Reported speech: perguntas e pedidos'
+order: 8
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Reported speech: perguntas e pedidos
+
+  - Perguntas de sim/não: **asked (+ pessoa) + if / whether**: *"Are you ready?"* → *She asked me if I was ready.*
+  - Perguntas com wh-: **asked + where / what / why...** + ordem de afirmação, sem *do/did*: *"Where do you live?"* → *He asked me where I lived.*
+  - O tempo verbal recua como nas afirmações: *"Have you ever been to Chile?"* → *She asked if I had ever been to Chile.*
+  - Pedidos e ordens: **asked / told + pessoa + to + verbo**: *"Please close the door."* → *She asked me to close the door.*
+  - Negativo: **not to + verbo**: *"Don't touch the screen."* → *He told us not to touch the screen.*
+  - **Contraste com afirmações:** afirmações usam *said / told + that* (*She told me that she was tired*); perguntas usam *asked + if / wh-* (*She asked me if I was tired*).
+  - **Erro comum:** manter a inversão da pergunta: *She asked me where was the station* → *She asked me where the station was.*
+scenario:
+  title: Telling a friend about a strange job interview
+  character: A curious friend who wants every detail
+  goal: Report the questions the interviewer asked you and what you were asked to do
+target_structures:
+- asked if / whether
+- asked + wh- word + statement word order
+- asked / told + person + to + verb
+- told + person + not to + verb

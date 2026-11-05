@@ -1,0 +1,247 @@
+module_id: b2_reported_statements
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "“I'm exhausted.” → She said that she ___ exhausted."
+    prompt_pt: "“Estou exausta.” → Ela disse que estava exausta."
+    glossary: {exhausted: exausta}
+    options: [was, were, be]
+    answers: [was]
+    explanation: "Am → was: o presente recua para o passado no reported speech."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "“I will call you.” → He said he ___ call me."
+    prompt_pt: "“Eu vou te ligar.” → Ele disse que me ligaria."
+    options: [would, was, did]
+    answers: [would]
+    explanation: "Will recua para would."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Mariana ___ me that the meeting was cancelled."
+    prompt_pt: "A Mariana me disse que a reunião foi cancelada."
+    options: [told, said, spoke]
+    answers: [told]
+    explanation: "Com a pessoa logo depois (me), usamos told, não said."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "Kenji ___ that he loved Brazilian food."
+    prompt_pt: "O Kenji disse que adorava comida brasileira."
+    options: [said, told, asked]
+    answers: [said]
+    explanation: "Sem a pessoa que ouviu, usamos said (that)."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "“We saw the film.” → They said they ___ the film."
+    prompt_pt: "“Nós vimos o filme.” → Eles disseram que tinham visto o filme."
+    options: [had seen, has seen, seeing]
+    answers: [had seen]
+    explanation: "Past simple recua para past perfect: saw → had seen."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "My manager told me she couldn't approve my holiday because the team was too busy."
+    prompt: "Why couldn't the manager approve the holiday?"
+    prompt_pt: "Por que a gerente não pôde aprovar as férias?"
+    glossary: {approve: aprovar}
+    options: [The team was too busy., The speaker had no days left., The manager was on holiday.]
+    answers: [The team was too busy.]
+    explanation: "Told me she couldn't ... because the team was too busy: o motivo é a equipe ocupada."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Rodrigo said he had already sent the slides and that he would join the call at three."
+    prompt: "What time will Rodrigo join the call?"
+    prompt_pt: "A que horas o Rodrigo vai entrar na chamada?"
+    answers: ["at three", "three", "3", "at 3", "three o'clock", "at three o'clock", "3 pm", "at 3 pm"]
+    explanation: "He would join the call at three: would é o will recuado."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "“I can help you.” → Lucía said she ___ help me."
+    prompt_pt: "“Eu posso te ajudar.” → A Lucía disse que podia me ajudar."
+    answers: [could]
+    explanation: "Can recua para could."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "“I'm working from home today.” → Pedro said he ___ from home that day."
+    prompt_pt: "“Estou trabalhando de casa hoje.” → O Pedro disse que estava trabalhando de casa naquele dia."
+    answers: [was working]
+    explanation: "Present continuous recua para past continuous: am working → was working."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "“I'll see you tomorrow.” (said last week) → She said she would see me ___."
+    prompt_pt: "“Te vejo amanhã.” (dito na semana passada) → Ela disse que me veria no dia seguinte."
+    options: [the next day, the day before, last week]
+    answers: [the next day, the following day]
+    explanation: "Quando o relato é feito depois, tomorrow vira the next day."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "He told ___ that the deadline had changed."
+    prompt_pt: "Ele nos disse que o prazo tinha mudado."
+    glossary: {deadline: prazo}
+    options: [us, to us, that us]
+    answers: [us]
+    explanation: "Tell é seguido direto da pessoa, sem to: told us."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "“I've lost my keys.” → Ana said she ___ her keys."
+    prompt_pt: "“Perdi minhas chaves.” → A Ana disse que tinha perdido as chaves."
+    options: [had lost, have lost, was losing]
+    answers: [had lost]
+    explanation: "Present perfect recua para past perfect: have lost → had lost."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "“I don't like horror films.” → Theo said he ___ like horror films."
+    prompt_pt: "“Eu não gosto de filmes de terror.” → O Theo disse que não gostava de filmes de terror."
+    answers: [didn't, did not]
+    explanation: "Don't recua para didn't."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "She said me that she was leaving the company."
+    prompt_pt: "Ela me disse que ia sair da empresa."
+    answers:
+      - "She told me that she was leaving the company."
+      - "She told me she was leaving the company."
+      - "She said that she was leaving the company."
+      - "She said she was leaving the company."
+    explanation: "Say não leva a pessoa direto: use told me ou só said."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "He told that he had finished the report."
+    prompt_pt: "Ele disse que tinha terminado o relatório."
+    answers:
+      - "He said that he had finished the report."
+      - "He said he had finished the report."
+      - "He said that he'd finished the report."
+      - "He said he'd finished the report."
+      - "He told me that he had finished the report."
+      - "He told me he had finished the report."
+      - "He told us that he had finished the report."
+      - "He told us he had finished the report."
+    explanation: "Tell precisa da pessoa (told me); sem pessoa, use said."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (with 'told')."
+    prompt_pt: "Coloque as palavras em ordem (com 'told')."
+    words: [moving, me, Recife, she, to, was, told, she]
+    answers: ["She told me she was moving to Recife."]
+    explanation: "Sujeito + told + pessoa + frase com o tempo recuado."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (with 'said')."
+    prompt_pt: "Coloque as palavras em ordem (com 'said')."
+    words: [bus, they, missed, said, the, had, they]
+    answers: ["They said they had missed the bus."]
+    explanation: "Sujeito + said + frase no past perfect (missed → had missed)."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "He said he would send the contract the next day."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["He said he would send the contract the next day.", "He said he'd send the contract the next day."]
+    explanation: "Will → would e tomorrow → the next day."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "“We're going to move to Porto.” → They said they ___ going to move to Porto."
+    prompt_pt: "“Vamos nos mudar para o Porto.” → Eles disseram que iam se mudar para o Porto."
+    options: [were, be, was]
+    answers: [were]
+    explanation: "Are going to recua para were going to (sujeito they)."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "“I must leave early.” → She said she ___ leave early."
+    prompt_pt: "“Eu preciso sair cedo.” → Ela disse que precisava sair cedo."
+    options: [had to, must to, has]
+    answers: [had to, must]
+    explanation: "Must geralmente vira had to no reported speech."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Yesterday Helena told me she had been offered a job in Berlin, but she wasn't sure she would accept it."
+    prompt: "Has Helena accepted the job?"
+    prompt_pt: "A Helena aceitou o emprego?"
+    options: ["She hasn't decided yet.", "Yes, she has.", "No, she has refused it."]
+    answers: ["She hasn't decided yet."]
+    explanation: "She wasn't sure she would accept it: ela ainda não tinha decidido."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Paula said that she will call me later, but she never did."
+    prompt_pt: "A Paula disse que me ligaria mais tarde, mas nunca ligou."
+    answers:
+      - "Paula said that she would call me later, but she never did."
+      - "Paula said she would call me later, but she never did."
+      - "Paula said that she'd call me later, but she never did."
+      - "Paula said she'd call me later, but she never did."
+    explanation: "A promessa já passou (she never did), então will recua para would."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Report this using 'said': Ricardo: “I don't have time for lunch today.”"
+    prompt_pt: "Relate usando 'said': Ricardo: “Não tenho tempo para almoçar hoje.”"
+    answers:
+      - "Ricardo said he didn't have time for lunch that day."
+      - "Ricardo said that he didn't have time for lunch that day."
+      - "Ricardo said he didn't have time for lunch today."
+      - "Ricardo said that he didn't have time for lunch today."
+    explanation: "Don't have → didn't have; today vira that day se o relato for em outro dia."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Report this using 'told me': Fernanda: “I have finished the project.”"
+    prompt_pt: "Relate usando 'told me': Fernanda: “Eu terminei o projeto.”"
+    answers:
+      - "Fernanda told me she had finished the project."
+      - "Fernanda told me that she had finished the project."
+      - "Fernanda told me she'd finished the project."
+      - "Fernanda told me that she'd finished the project."
+    explanation: "Have finished recua para had finished; I vira she."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Ela disse que estava cansada."
+    answers: ["She said she was tired.", "She said that she was tired."]
+    explanation: "Disse que estava = said (that) + was: o tempo fica no passado."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Ele me disse que ia chegar atrasado."
+    answers:
+      - "He told me he was going to be late."
+      - "He told me that he was going to be late."
+      - "He told me he would be late."
+      - "He told me that he would be late."
+      - "He told me he'd be late."
+      - "He told me that he'd be late."
+      - "He told me he was going to arrive late."
+      - "He told me that he was going to arrive late."
+      - "He told me he would arrive late."
+      - "He told me that he would arrive late."
+      - "He told me he'd arrive late."
+      - "He told me that he'd arrive late."
+    explanation: "Me disse = told me; ia chegar = was going to / would."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "My sister told me she had found a cheaper flight."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["My sister told me she had found a cheaper flight.", "My sister told me she'd found a cheaper flight."]
+    explanation: "Told me + had found: o past simple recuou para o past perfect."

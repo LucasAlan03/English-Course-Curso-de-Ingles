@@ -1,0 +1,24 @@
+id: c1_it_cleft
+level: C1
+title: It-cleft sentences
+order: 3
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # It-cleft sentences
+
+  - **Forma:** *It is / It was* + parte destacada + *who / that* + resto da frase: *It was Ana who solved the problem.*
+  - Destaca uma pessoa (*who* ou *that*): *It was the CFO who approved the budget.*
+  - Destaca uma coisa, um lugar ou um momento (*that*): *It was in Lisbon that we signed the deal.*
+  - Serve para corrigir alguém: *It wasn't Pedro who called, it was Lia.*
+  - **It wasn't until ... that** = só quando: *It wasn't until Friday that the client replied.*
+  - O verbo *be* fica no singular, mesmo com sujeito plural: *It was the interns who found the bug.*
+  - **Erro comum:** usar *which* para pessoas ou *when* depois de tempo: *It was Pedro which...* → *It was Pedro who...*; *It was in 2019 when...* → *It was in 2019 that...*
+scenario:
+  title: Clearing up a misunderstanding about a project
+  character: A department head who got the facts wrong
+  goal: Correct who did what, when and where on the project, with emphasis
+target_structures:
+- It was ... who ...
+- It was ... that ...
+- It wasn't ... it was ...
+- It wasn't until ... that ...

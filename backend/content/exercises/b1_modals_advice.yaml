@@ -1,0 +1,211 @@
+module_id: b1_modals_advice
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "You look tired. You ___ go to bed earlier."
+    prompt_pt: "Você parece cansado. Você deveria ir dormir mais cedo."
+    options: ["should", "shouldn't", "should to"]
+    answers: ["should"]
+    explanation: "Conselho positivo → should + verbo base (sem to)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "You ___ eat so much sugar. It's bad for your teeth."
+    prompt_pt: "Você não deveria comer tanto açúcar. Faz mal para os dentes."
+    options: ["shouldn't", "should", "ought"]
+    answers: ["shouldn't"]
+    explanation: "Conselho para não fazer algo ruim → shouldn't."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "My advice? You should take a break from social media for a week and spend more time outside."
+    prompt: "What does the speaker recommend?"
+    prompt_pt: "O que a pessoa recomenda?"
+    options: ["a break from social media", "a new phone", "more time online"]
+    answers: ["a break from social media"]
+    explanation: "\"You should take a break from social media\": should = conselho."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "___ I bring a gift to the dinner?"
+    prompt_pt: "Devo levar um presente para o jantar?"
+    options: ["Should", "Ought", "Have"]
+    answers: ["Should"]
+    explanation: "Pedir conselho: Should I + verbo base?"
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "I think you ___ (should / talk) to your manager about it."
+    prompt_pt: "Eu acho que você deveria conversar com seu gerente sobre isso."
+    answers: ["should talk"]
+    explanation: "Conselho suavizado: I think you should + verbo base."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "You ought ___ save some money every month."
+    prompt_pt: "Você deveria guardar um pouco de dinheiro todo mês."
+    options: ["to", "for", "at"]
+    answers: ["to"]
+    explanation: "Ought sempre vem com to: ought to save."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "It's going to rain all afternoon, so you'd better take an umbrella with you."
+    prompt: "What should the listener take?"
+    prompt_pt: "O que o ouvinte deveria levar?"
+    answers: ["an umbrella", "umbrella"]
+    explanation: "\"You'd better take an umbrella\": had better = conselho forte."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "You ___ (should / not) drive when you're this tired."
+    prompt_pt: "Você não deveria dirigir quando está tão cansado assim."
+    answers: ["shouldn't", "should not"]
+    explanation: "Conselho negativo → shouldn't + verbo base."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "You'd better ___ now, or you'll miss the bus."
+    prompt_pt: "É melhor você sair agora, ou vai perder o ônibus."
+    options: ["leave", "to leave", "leaving"]
+    answers: ["leave"]
+    explanation: "Depois de 'd better vem o verbo base: you'd better leave."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "My back hurts. What ___ I do?"
+    prompt_pt: "Minhas costas doem. O que eu devo fazer?"
+    options: ["should", "ought", "should to"]
+    answers: ["should"]
+    explanation: "Pedir conselho: What should I do?"
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "You ___ to drink more water during the day."
+    prompt_pt: "Você deveria beber mais água durante o dia."
+    answers: ["ought"]
+    explanation: "Antes de to, o modal de conselho é ought: ought to drink."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "You should to see a doctor about that cough."
+    prompt_pt: "Você deveria ir ao médico por causa dessa tosse."
+    glossary: {cough: tosse}
+    answers: ["You should see a doctor about that cough.", "You ought to see a doctor about that cough."]
+    explanation: "Depois de should vem o verbo sem to: should see."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["shouldn't", "you", "so", "much", "coffee", "drink"]
+    answers: ["You shouldn't drink so much coffee."]
+    explanation: "Sujeito + shouldn't + verbo base + complemento."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "I don't think you ___ buy that car. It's too expensive."
+    prompt_pt: "Eu acho que você não deveria comprar esse carro. É caro demais."
+    options: ["should", "shouldn't", "ought"]
+    answers: ["should"]
+    explanation: "Com I don't think a negação já está no início: I don't think you should."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "She shoulds study for the test this weekend."
+    prompt_pt: "Ela deveria estudar para a prova neste fim de semana."
+    answers: ["She should study for the test this weekend."]
+    explanation: "Should não recebe -s: she should study."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["should", "I", "what", "wear", "to", "the", "interview"]
+    answers: ["What should I wear to the interview?"]
+    explanation: "Pedir conselho: What + should + I + verbo base."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "You should try the new Japanese restaurant downtown."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["You should try the new Japanese restaurant downtown."]
+    explanation: "Recomendação → should + verbo base."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "You'd better ___ late for the exam."
+    prompt_pt: "É melhor você não se atrasar para a prova."
+    options: ["not be", "not to be", "don't be"]
+    answers: ["not be"]
+    explanation: "Negativa de had better: 'd better not + verbo base."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "It's not a rule, but I think you ___ bring a jacket. It gets cold at night."
+    prompt_pt: "Não é uma regra, mas acho que você deveria levar uma jaqueta. Esfria à noite."
+    options: ["should", "mustn't", "don't have to"]
+    answers: ["should"]
+    explanation: "Não é obrigação, é recomendação → should."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Passengers ___ show their boarding pass at the gate. It's a rule, not just advice."
+    prompt_pt: "Os passageiros têm que mostrar o cartão de embarque no portão. É uma regra, não só um conselho."
+    glossary: {"boarding pass": cartão de embarque, gate: portão}
+    options: ["have to", "should", "shouldn't"]
+    answers: ["have to", "must"]
+    explanation: "É regra (obrigação), não conselho → have to, não should."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "You have to show your ID at the door. You should also arrive early because the line gets long."
+    prompt: "Which one is only advice?"
+    prompt_pt: "Qual delas é só um conselho?"
+    options: ["arriving early", "showing your ID", "buying a ticket"]
+    answers: ["arriving early"]
+    explanation: "Have to = obrigação (mostrar o documento); should = conselho (chegar cedo)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "You ought see a dentist twice a year."
+    prompt_pt: "Você deveria ir ao dentista duas vezes por ano."
+    answers: ["You ought to see a dentist twice a year.", "You should see a dentist twice a year."]
+    explanation: "Ought precisa de to: ought to see."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using should: It's a good idea for you to stretch before running."
+    prompt_pt: "Reescreva usando should: É uma boa ideia você alongar antes de correr."
+    glossary: {stretch: alongar}
+    answers: ["You should stretch before running.", "You should stretch before you run."]
+    explanation: "Uma boa ideia para você = you should + verbo base."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite with shouldn't, starting with 'You': It's a bad idea to check your phone in bed."
+    prompt_pt: "Reescreva com shouldn't, começando com 'You': É uma má ideia olhar o celular na cama."
+    answers: ["You shouldn't check your phone in bed.", "You should not check your phone in bed."]
+    explanation: "Uma má ideia = you shouldn't + verbo base."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Você deveria ligar para ela."
+    answers: ["You should call her.", "You ought to call her.", "You should phone her.", "You should give her a call.", "You ought to phone her."]
+    explanation: "Conselho: you should + verbo base."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu acho que você não deveria aceitar a oferta."
+    answers: ["I don't think you should accept the offer.", "I think you shouldn't accept the offer.", "I don't think you should take the offer.", "I think you shouldn't take the offer."]
+    explanation: "Em inglês a negação costuma ir para o think: I don't think you should..."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Maybe you should ask your manager for a day off."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Maybe you should ask your manager for a day off."]
+    explanation: "Conselho suavizado com maybe + you should."

@@ -1,0 +1,24 @@
+id: b2_argumentation
+level: B2
+title: Conectivos de argumentação
+order: 16
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Conectivos de argumentação
+
+  - **Adicionar:** *in addition*, *moreover*, *furthermore*, *what's more* (no início da frase, com vírgula); *as well as* + substantivo: *It's cheap. In addition, it saves time.*
+  - **Organizar:** *firstly*, *secondly*, *finally*; *on the one hand ... on the other hand* para apresentar os dois lados.
+  - **Causa:** *due to / because of* + substantivo; *since / as / because* + oração: *Due to the strike, the metro was closed.*
+  - **Consequência:** *as a result*, *therefore*, *consequently* ligam duas frases: *Rents went up. As a result, many people moved.*
+  - **Concluir:** *all in all*, *to sum up*, *overall*: *All in all, it was a good decision.*
+  - **Argumentação × contraste:** *on the other hand* apresenta o outro lado de um argumento; *however* e *although* (módulo anterior) marcam um contraste direto.
+  - **Erro comum:** *Due to it was raining.* → *Due to the rain* / *Because it was raining.*
+scenario:
+  title: Debating the pros and cons of remote work
+  character: A colleague with a different opinion
+  goal: Build a clear argument, add points, give causes and consequences and draw a conclusion
+target_structures:
+- in addition / moreover / what's more
+- on the one hand ... on the other hand
+- as a result / therefore
+- due to / because of + noun

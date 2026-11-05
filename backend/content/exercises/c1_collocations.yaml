@@ -1,0 +1,228 @@
+module_id: c1_collocations
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "We need to ___ a decision about the new office by Friday."
+    prompt_pt: "Precisamos tomar uma decisão sobre o novo escritório até sexta."
+    options: [make, do, give]
+    answers: [make]
+    explanation: "A collocation é make a decision (nunca do a decision)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Could you ___ me a favour and check this report?"
+    prompt_pt: "Você poderia me fazer um favor e conferir este relatório?"
+    options: [do, make, take]
+    answers: [do]
+    explanation: "Em inglês se diz do someone a favour."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "There was ___ traffic on the way to the airport."
+    prompt_pt: "Havia trânsito pesado no caminho para o aeroporto."
+    options: [heavy, strong, big]
+    answers: [heavy]
+    explanation: "Trânsito intenso é heavy traffic."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "This sushi place comes ___ recommended by all my colleagues."
+    prompt_pt: "Este lugar de sushi é altamente recomendado por todos os meus colegas."
+    options: [highly, deeply, heavily]
+    answers: [highly]
+    explanation: "A combinação natural é highly recommended."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "We worked late every night to ___ the deadline."
+    prompt_pt: "Trabalhamos até tarde todas as noites para cumprir o prazo."
+    glossary: {deadline: prazo}
+    options: [meet, reach, do]
+    answers: [meet]
+    explanation: "Cumprir um prazo = meet a deadline."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "We finally reached an agreement after three hours of tough negotiations."
+    prompt: "What did they finally do?"
+    prompt_pt: "O que eles finalmente fizeram?"
+    options: ["They agreed on a deal.", "They cancelled the meeting.", "They lost the client."]
+    answers: ["They agreed on a deal."]
+    explanation: "Reach an agreement = chegar a um acordo."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Before we move on, I'd like to raise a concern about the marketing budget."
+    prompt: "What does the speaker want to do?"
+    prompt_pt: "O que o falante quer fazer?"
+    options: ["Mention a problem with the budget", "Increase the budget", "End the meeting"]
+    answers: ["Mention a problem with the budget"]
+    explanation: "Raise a concern = levantar uma preocupação, apontar um problema."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Let's ___ a short break and come back at three."
+    prompt_pt: "Vamos fazer uma pausa curta e voltar às três."
+    answers: ["take", "have"]
+    explanation: "Fazer uma pausa = take (ou have) a break, nunca make a break."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Please ___ attention to the safety instructions."
+    prompt_pt: "Por favor, prestem atenção às instruções de segurança."
+    glossary: {safety: segurança}
+    answers: ["pay"]
+    explanation: "Prestar atenção = pay attention."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "My boss has a ___ opinion about everything."
+    prompt_pt: "O meu chefe tem uma opinião forte sobre tudo."
+    options: [strong, heavy, hard]
+    answers: [strong]
+    explanation: "Opinião forte = strong opinion."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "I'm ___ concerned about the drop in sales this quarter."
+    prompt_pt: "Estou profundamente preocupado com a queda nas vendas neste trimestre."
+    glossary: {drop: queda, quarter: trimestre}
+    options: [deeply, heavily, widely]
+    answers: [deeply]
+    explanation: "A combinação natural é deeply concerned."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Our team ___ a lot of progress this quarter."
+    prompt_pt: "A nossa equipe fez muito progresso neste trimestre."
+    glossary: {quarter: trimestre}
+    options: [made, did, took]
+    answers: [made]
+    explanation: "Fazer progresso = make progress."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Starting your own business means ___ a lot of risks."
+    prompt_pt: "Abrir o próprio negócio significa correr muitos riscos."
+    answers: ["taking"]
+    explanation: "Correr riscos = take risks."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I always try to do my best and not to do the same mistake twice."
+    prompt_pt: "Eu sempre tento fazer o meu melhor e não cometer o mesmo erro duas vezes."
+    answers: ["I always try to do my best and not to make the same mistake twice."]
+    explanation: "Do your best está certo, mas erro é make a mistake."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "It was raining strongly when we left the office."
+    prompt_pt: "Estava chovendo forte quando saímos do escritório."
+    answers: ["It was raining heavily when we left the office."]
+    explanation: "Chuva forte é heavy rain; o advérbio é heavily."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a business collocation)."
+    prompt_pt: "Coloque as palavras na ordem (uma collocation de negócios)."
+    words: [compromise, need, We, reach, to, a]
+    answers: ["We need to reach a compromise."]
+    explanation: "Chegar a um meio-termo = reach a compromise."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a polite request)."
+    prompt_pt: "Coloque as palavras na ordem (um pedido educado)."
+    words: [me, you, favour, Could, a, do]
+    answers: ["Could you do me a favour?"]
+    explanation: "Pedido educado com a collocation do someone a favour."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Let's take a step back and look at the bigger picture."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Let's take a step back and look at the bigger picture."]
+    explanation: "Take a step back e the bigger picture são combinações fixas comuns em reuniões."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Prices have risen ___ over the last year."
+    prompt_pt: "Os preços subiram drasticamente no último ano."
+    options: [sharply, heavily, strongly]
+    answers: [sharply]
+    explanation: "Para subidas e quedas rápidas usamos rise/fall sharply."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "The CEO ___ a speech at the annual conference."
+    prompt_pt: "O CEO fez um discurso na conferência anual."
+    options: [gave, did, took]
+    answers: [gave]
+    explanation: "Fazer um discurso = give a speech (do e take não combinam com speech)."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Marina is fully aware of the risks, but she wants to launch the product anyway."
+    prompt: "Does Marina know about the risks?"
+    prompt_pt: "A Marina sabe dos riscos?"
+    options: ["Yes, she knows them well.", "No, she has no idea.", "She is still checking."]
+    answers: ["Yes, she knows them well."]
+    explanation: "Fully aware = totalmente ciente."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "We need to make more research before launching the product."
+    prompt_pt: "Precisamos fazer mais pesquisa antes de lançar o produto."
+    answers: ["We need to do more research before launching the product."]
+    explanation: "Pesquisa usa do: do research."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite with a collocation using 'make': We decided quickly."
+    prompt_pt: "Reescreva com uma collocation usando 'make': Decidimos rapidamente."
+    answers: ["We made a quick decision.", "We made a decision quickly.", "We made the decision quickly."]
+    explanation: "Decide vira make a decision; quickly vira o adjetivo quick."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite with a collocation using 'pay': Can you visit us next week?"
+    prompt_pt: "Reescreva com uma collocation usando 'pay': Você pode nos visitar semana que vem?"
+    answers: ["Can you pay us a visit next week?"]
+    explanation: "Visitar alguém = pay someone a visit."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Precisamos tomar uma decisão hoje."
+    answers:
+      - "We need to make a decision today."
+      - "We have to make a decision today."
+      - "We must make a decision today."
+      - "We need to take a decision today."
+      - "We have to take a decision today."
+    explanation: "Tomar uma decisão = make a decision (take a decision também é usado no inglês britânico)."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Ela fez um grande esforço para chegar a tempo."
+    answers:
+      - "She made a big effort to arrive on time."
+      - "She made a great effort to arrive on time."
+      - "She made a huge effort to arrive on time."
+      - "She made a big effort to get there on time."
+      - "She made a great effort to get there on time."
+      - "She made a huge effort to get there on time."
+      - "She made a big effort to arrive in time."
+      - "She made a great effort to arrive in time."
+      - "She made a big effort to get there in time."
+      - "She made a great effort to get there in time."
+    explanation: "Fazer um esforço = make an effort (nunca do an effort)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "We have to meet the deadline, whatever it takes."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We have to meet the deadline, whatever it takes."]
+    explanation: "Meet the deadline = cumprir o prazo."

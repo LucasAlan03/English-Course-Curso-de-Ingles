@@ -1,28 +1,25 @@
 id: c1_participle_clauses
 level: C1
 title: Participle clauses
-order: 6
+order: 9
 source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
-theory_md: '# Participle clauses
+theory_md: |
+  # Participle clauses
 
-  Encurtam frases e deixam o texto mais fluido:
-
-  - **-ing** (ação simultânea ou causa): *Walking home, I met an old friend.* (= While I was walking...)
-
-  - **particípio passado** (passiva): *Written in 1990, the book is still popular.*
-
+  - **O que são:** orações curtas sem sujeito nem conjunção, que deixam o texto mais fluido.
+  - **-ing** (ação ao mesmo tempo ou causa): *Walking home, I met an old friend.* (= While I was walking...) / *Feeling tired, I went to bed.*
+  - **Particípio passado** (sentido passivo): *Written in 1990, the book is still popular.* / *Shocked by the price, he left.*
   - **Having + particípio** (ação anterior): *Having finished the report, she went home.*
-
+  - **Negativa:** *not* vem antes: *Not knowing what to say, I smiled.*
+  - Também substituem orações relativas: *The woman sitting next to me...* (= who was sitting)
   - O sujeito das duas partes deve ser o mesmo.
-
-  - **Erro comum:** *Walking down the street, the rain started.* (quem caminhava? tem de ser a mesma pessoa)
-
-  '
+  - **Erro comum:** *Walking down the street, the rain started.* (a chuva não caminha!) → *Walking down the street, I got caught in the rain.*
 scenario:
   title: Telling a vivid story at a dinner
-  character: A dinner guest who loves stories
-  goal: Tell a story smoothly using concise, fluid sentences
+  character: A dinner guest who loves a good story
+  goal: Tell a story smoothly, using concise and fluid sentences
 target_structures:
 - -ing clauses
 - past participle clauses
-- having + participle
+- having + past participle
+- not + -ing

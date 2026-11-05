@@ -1,0 +1,212 @@
+module_id: b1_past_simple
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Last summer we ___ to Salvador by bus."
+    prompt_pt: "No verão passado nós fomos a Salvador de ônibus."
+    options: ["went", "go", "have gone"]
+    answers: ["went"]
+    explanation: "Ação terminada num tempo passado definido (last summer) → past simple: go → went."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "I ___ my keys at the gym yesterday."
+    prompt_pt: "Eu perdi minhas chaves na academia ontem."
+    glossary: {keys: chaves}
+    options: ["lost", "lose", "losed"]
+    answers: ["lost"]
+    explanation: "Lose é irregular: o passado é lost, e yesterday pede past simple."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "Marina called me on Sunday and we talked for two hours about her new job."
+    prompt: "How long did they talk?"
+    prompt_pt: "Por quanto tempo elas conversaram?"
+    options: ["two hours", "ten minutes", "all day"]
+    answers: ["two hours"]
+    explanation: "O áudio diz \"we talked for two hours\" — talked é o past simple de talk."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "___ you watch the game last night?"
+    prompt_pt: "Você assistiu ao jogo ontem à noite?"
+    options: ["Did", "Do", "Were"]
+    answers: ["Did"]
+    explanation: "Pergunta no past simple usa did + verbo base (watch)."
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "Rafael ___ (buy) a new phone two weeks ago."
+    prompt_pt: "O Rafael comprou um celular novo duas semanas atrás."
+    answers: ["bought"]
+    explanation: "Ago indica passado terminado; buy é irregular → bought."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "She didn't ___ the email until Monday."
+    prompt_pt: "Ela não viu o e-mail até segunda."
+    options: ["see", "saw", "seen"]
+    answers: ["see"]
+    explanation: "Depois de didn't o verbo fica na forma base: didn't see."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "We arrived at the hotel at midnight, so we went straight to bed."
+    prompt: "What did they do when they arrived?"
+    prompt_pt: "O que eles fizeram quando chegaram?"
+    options: ["They went to bed.", "They had dinner.", "They went out."]
+    answers: ["They went to bed."]
+    explanation: "O áudio diz \"we went straight to bed\" — went é o passado de go."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "We ___ (not / like) the restaurant, so we left early."
+    prompt_pt: "Nós não gostamos do restaurante, então saímos cedo."
+    answers: ["didn't like", "did not like"]
+    explanation: "Negativa no past simple: didn't + verbo base (like)."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "My grandparents ___ to São Paulo in 1975."
+    prompt_pt: "Meus avós se mudaram para São Paulo em 1975."
+    options: ["moved", "move", "have moved", "moving"]
+    answers: ["moved"]
+    explanation: "Ano definido no passado (in 1975) → past simple de verbo regular: moved."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "Where ___ you stay in Lisbon last year?"
+    prompt_pt: "Onde você ficou em Lisboa no ano passado?"
+    options: ["did", "were", "do"]
+    answers: ["did"]
+    explanation: "Pergunta com wh- no past simple: Where + did + sujeito + verbo base."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "Carla ___ (forget) her password again this morning."
+    prompt_pt: "A Carla esqueceu a senha de novo hoje de manhã."
+    glossary: {password: senha}
+    answers: ["forgot"]
+    explanation: "Forget é irregular: o passado é forgot."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "Did you saw the new episode yesterday?"
+    prompt_pt: "Você viu o episódio novo ontem?"
+    glossary: {episode: episódio}
+    answers: ["Did you see the new episode yesterday?"]
+    explanation: "Depois de did o verbo volta à forma base: Did you see, não Did you saw."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["last", "I", "Friday", "my", "boss", "an", "sent", "email"]
+    answers: ["I sent my boss an email last Friday.", "Last Friday I sent my boss an email."]
+    explanation: "Sujeito + verbo no passado (sent) + objetos + expressão de tempo."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "We ___ a great time at the concert last night."
+    prompt_pt: "Nós nos divertimos muito no show ontem à noite."
+    options: ["had", "have", "haved"]
+    answers: ["had"]
+    explanation: "Have é irregular: o passado é had; last night pede past simple."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "I didn't went to the gym on Monday."
+    prompt_pt: "Eu não fui à academia na segunda."
+    answers: ["I didn't go to the gym on Monday.", "I did not go to the gym on Monday."]
+    explanation: "Depois de didn't o verbo fica na forma base: didn't go."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["did", "what", "time", "you", "get", "home"]
+    answers: ["What time did you get home?"]
+    explanation: "Pergunta no passado: What time + did + sujeito + verbo base."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "I studied English for an hour after dinner."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I studied English for an hour after dinner."]
+    explanation: "Study no passado: o y vira i + -ed → studied."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "The movie ___ at eight, but we arrived late."
+    prompt_pt: "O filme começou às oito, mas nós chegamos atrasados."
+    options: ["started", "starts", "has started"]
+    answers: ["started"]
+    explanation: "A história está no passado (we arrived) → started, no past simple."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Lucas ___ his first marathon three years ago."
+    prompt_pt: "O Lucas correu a primeira maratona dele três anos atrás."
+    glossary: {marathon: maratona}
+    options: ["ran", "has run", "runs"]
+    answers: ["ran"]
+    explanation: "Ago marca um momento terminado → past simple: run → ran."
+  - id: e20
+    block: 3
+    type: transform
+    prompt: "Rewrite in the negative: We ordered pizza last night."
+    prompt_pt: "Reescreva na negativa: Nós pedimos pizza ontem à noite."
+    answers: ["We didn't order pizza last night.", "We did not order pizza last night."]
+    explanation: "Negativa no past simple: didn't + verbo base (order), sem -ed."
+  - id: e21
+    block: 3
+    type: transform
+    prompt: "Make a question about the place: Ana went to Chile on holiday."
+    prompt_pt: "Faça uma pergunta sobre o lugar: A Ana foi para o Chile nas férias."
+    answers: ["Where did Ana go on holiday?", "Where did Ana go?", "Where did Ana go on vacation?"]
+    explanation: "Where + did + sujeito + verbo base: went volta para go."
+  - id: e22
+    block: 3
+    type: translate
+    prompt: "Eu conheci minha esposa em 2015."
+    answers: ["I met my wife in 2015."]
+    explanation: "Conhecer alguém pela primeira vez = meet; o passado é met, e o ano definido pede past simple."
+  - id: e23
+    block: 3
+    type: translate
+    prompt: "Você ligou para o seu irmão ontem?"
+    answers: ["Did you call your brother yesterday?", "Did you phone your brother yesterday?", "Did you ring your brother yesterday?"]
+    explanation: "Pergunta no passado: Did + sujeito + verbo base (call)."
+  - id: e24
+    block: 3
+    type: listen
+    audio_text: "Yesterday I woke up late, missed the bus and took a taxi to work."
+    prompt: "How did the speaker get to work?"
+    prompt_pt: "Como a pessoa foi para o trabalho?"
+    answers: ["by taxi", "taxi", "a taxi", "took a taxi", "in a taxi", "by cab"]
+    explanation: "O áudio diz \"took a taxi\" — took é o passado irregular de take."
+  - id: e25
+    block: 3
+    type: fix
+    prompt: "We visit Rio last year and loved it."
+    prompt_pt: "Nós visitamos o Rio no ano passado e adoramos."
+    answers: ["We visited Rio last year and loved it."]
+    explanation: "Last year pede past simple: visit → visited."
+  - id: e26
+    block: 3
+    type: choice
+    prompt: "When ___ you start working here?"
+    prompt_pt: "Quando você começou a trabalhar aqui?"
+    options: ["did", "have", "are"]
+    answers: ["did"]
+    explanation: "Pergunta com when sobre um momento passado → did + verbo base."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "She bought the tickets online and paid with her card."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["She bought the tickets online and paid with her card."]
+    explanation: "Dois passados irregulares: buy → bought, pay → paid."

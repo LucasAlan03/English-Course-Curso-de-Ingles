@@ -1,0 +1,215 @@
+module_id: b1_comparatives
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "This flat is ___ than the one we saw yesterday."
+    prompt_pt: "Este apartamento é maior do que o que vimos ontem."
+    glossary: {flat: apartamento}
+    options: ["bigger", "biggest", "more big"]
+    answers: ["bigger"]
+    explanation: "Adjetivo curto (big) + -er, com a consoante dobrada, antes de than."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "The metro is ___ than the bus at rush hour."
+    prompt_pt: "O metrô é mais rápido do que o ônibus na hora do rush."
+    glossary: {rush hour: hora do rush}
+    options: ["faster", "more fast", "fastest"]
+    answers: ["faster"]
+    explanation: "Fast é curto, então o comparativo é fast + -er (faster)."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "For me, Portuguese grammar is ___ than English grammar."
+    prompt_pt: "Para mim, a gramática do português é mais difícil do que a do inglês."
+    options: ["more difficult", "difficulter", "most difficult"]
+    answers: ["more difficult"]
+    explanation: "Difficult é um adjetivo longo, então usamos more + adjetivo."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "Lucas's new phone is ___ than his old one."
+    prompt_pt: "O celular novo do Lucas é melhor do que o antigo."
+    options: ["better", "more good", "gooder"]
+    answers: ["better"]
+    explanation: "Good é irregular: o comparativo é better."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "The traffic today is ___ than yesterday."
+    prompt_pt: "O trânsito hoje está pior do que ontem."
+    glossary: {traffic: trânsito}
+    options: ["worse", "badder", "more bad"]
+    answers: ["worse"]
+    explanation: "Bad é irregular: o comparativo é worse."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Ana's new job is closer to home, but the salary is lower than before."
+    prompt: "What is better about Ana's new job?"
+    prompt_pt: "O que é melhor no novo emprego da Ana?"
+    options: ["It's closer to home.", "The salary is higher.", "It's farther from home."]
+    answers: ["It's closer to home."]
+    explanation: "Ela diz closer to home (mais perto de casa); o salário é lower (mais baixo)."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "This gym is cheaper than the one downtown, but it isn't as big."
+    prompt: "Which gym is bigger?"
+    prompt_pt: "Qual academia é maior?"
+    options: ["The one downtown", "This gym", "They are the same size"]
+    answers: ["The one downtown"]
+    explanation: "Isn't as big = não é tão grande, então a do centro é maior."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "My sister is ___ than me. (young)"
+    prompt_pt: "Minha irmã é mais nova do que eu."
+    answers: ["younger"]
+    explanation: "Young é curto: young + -er = younger."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "This sofa is ___ than the old one. (comfortable)"
+    prompt_pt: "Este sofá é mais confortável do que o antigo."
+    answers: ["more comfortable"]
+    explanation: "Comfortable é longo, então usamos more comfortable."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "Today is ___ than Monday. I have five meetings!"
+    prompt_pt: "Hoje está mais corrido do que segunda. Tenho cinco reuniões!"
+    glossary: {meetings: reuniões}
+    options: ["busier", "busyer", "busiest"]
+    answers: ["busier"]
+    explanation: "Adjetivos terminados em -y trocam o y por -ier: busy → busier."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "The new season isn't as good ___ the first one."
+    prompt_pt: "A temporada nova não é tão boa quanto a primeira."
+    glossary: {season: temporada}
+    options: ["as", "than", "that"]
+    answers: ["as"]
+    explanation: "A estrutura de igualdade é as ... as, sem than."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Rafael's flat is ___ from the office than mine."
+    prompt_pt: "O apartamento do Rafael é mais longe do escritório do que o meu."
+    glossary: {flat: apartamento}
+    options: ["farther", "farer", "farthest"]
+    answers: ["farther", "further"]
+    explanation: "Far é irregular: o comparativo é farther (ou further)."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Flying is ___ than taking the bus, but it's much quicker. (expensive)"
+    prompt_pt: "Ir de avião é mais caro do que ir de ônibus, mas é bem mais rápido."
+    answers: ["more expensive"]
+    explanation: "Expensive é longo, então usamos more expensive."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "My new laptop is more faster than my old one."
+    prompt_pt: "Meu notebook novo é mais rápido do que o antigo."
+    answers: ["My new laptop is faster than my old one."]
+    explanation: "Faster já é comparativo; não se usa more junto com -er."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Salvador is bigger that Recife."
+    prompt_pt: "Salvador é maior do que Recife."
+    answers: ["Salvador is bigger than Recife."]
+    explanation: "Depois do comparativo, usamos than, não that."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a comparison of prices)."
+    prompt_pt: "Coloque as palavras em ordem (uma comparação de preços)."
+    words: ["cheaper", "the", "supermarket", "is", "the", "than", "market"]
+    answers: ["The market is cheaper than the supermarket."]
+    explanation: "Sujeito + is + comparativo + than + o segundo termo."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a negative comparison)."
+    prompt_pt: "Coloque as palavras em ordem (uma comparação negativa)."
+    words: ["as", "Recife", "isn't", "the", "hot", "in", "here", "as", "weather"]
+    answers: ["The weather here isn't as hot as in Recife."]
+    explanation: "A negativa de igualdade é not as + adjetivo + as."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Running is harder than cycling, but I enjoy it more."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Running is harder than cycling, but I enjoy it more."]
+    explanation: "Hard é curto (harder); more aqui é advérbio de quantidade."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Which sentence is correct?"
+    prompt_pt: "Qual frase está correta?"
+    options: ["Her English is better than mine.", "Her English is more good than mine.", "Her English is best than mine."]
+    answers: ["Her English is better than mine."]
+    explanation: "O comparativo de good é better, seguido de than."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "The hotel was nice, but the beach was even ___."
+    prompt_pt: "O hotel era legal, mas a praia era ainda mais legal."
+    options: ["nicer", "more nice", "nicest"]
+    answers: ["nicer"]
+    explanation: "Nice é curto (nicer); even reforça o comparativo."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "I used to pay more for my old plan. The new one is cheaper and the internet is faster."
+    prompt: "How is the new plan different?"
+    prompt_pt: "Em que o plano novo é diferente?"
+    options: ["It's cheaper and faster.", "It's more expensive but faster.", "It's cheaper but slower."]
+    answers: ["It's cheaper and faster."]
+    explanation: "A pessoa diz cheaper (mais barato) e faster (mais rápido)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "This restaurant is not as expensive than the other one."
+    prompt_pt: "Este restaurante não é tão caro quanto o outro."
+    answers: ["This restaurant is not as expensive as the other one.", "This restaurant isn't as expensive as the other one."]
+    explanation: "Com not as ... as, o segundo termo também é as, não than."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using a comparative with than: My car is not as new as Julia's car."
+    prompt_pt: "Reescreva usando um comparativo com than: Meu carro não é tão novo quanto o carro da Julia."
+    answers: ["Julia's car is newer than my car.", "Julia's car is newer than mine.", "My car is older than Julia's car.", "My car is older than Julia's."]
+    explanation: "Not as new as = o outro é newer (ou o meu é older)."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using not as ... as: The bus is slower than the train."
+    prompt_pt: "Reescreva usando not as ... as: O ônibus é mais lento do que o trem."
+    answers: ["The bus is not as fast as the train.", "The bus isn't as fast as the train.", "The bus is not as quick as the train.", "The bus isn't as quick as the train.", "The train is not as slow as the bus.", "The train isn't as slow as the bus."]
+    explanation: "Slower than = not as fast as (não tão rápido quanto)."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Este celular é mais barato do que aquele."
+    answers: ["This phone is cheaper than that one.", "This phone is cheaper than that.", "This cell phone is cheaper than that one.", "This cellphone is cheaper than that one.", "This mobile is cheaper than that one.", "This mobile phone is cheaper than that one.", "This smartphone is cheaper than that one."]
+    explanation: "Cheap é curto: cheaper than."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Minha cidade é mais tranquila do que o Rio."
+    answers: ["My city is quieter than Rio.", "My city is calmer than Rio.", "My town is quieter than Rio.", "My town is calmer than Rio.", "My city is more peaceful than Rio.", "My town is more peaceful than Rio."]
+    explanation: "Quiet e calm são curtos (+ -er); peaceful é longo (more peaceful)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "The new office is bigger but farther from my house."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["The new office is bigger but farther from my house.", "The new office is bigger but further from my house."]
+    explanation: "Dois comparativos: big → bigger e far → farther."

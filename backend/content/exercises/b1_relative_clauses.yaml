@@ -1,0 +1,212 @@
+module_id: b1_relative_clauses
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "The woman ___ lives upstairs is a nurse."
+    prompt_pt: "A mulher que mora no andar de cima é enfermeira."
+    glossary: {upstairs: no andar de cima, nurse: enfermeira}
+    options: ["who", "which", "where"]
+    answers: ["who", "that"]
+    explanation: "Para pessoas usamos who (ou that)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "This is the app ___ helps me save money."
+    prompt_pt: "Este é o app que me ajuda a economizar dinheiro."
+    options: ["which", "who", "where"]
+    answers: ["which", "that"]
+    explanation: "Para coisas usamos which (ou that)."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "That's the restaurant ___ we had our first date."
+    prompt_pt: "Aquele é o restaurante onde tivemos nosso primeiro encontro."
+    options: ["where", "which", "who"]
+    answers: ["where"]
+    explanation: "Para lugares, quando a frase diz o que aconteceu lá, usamos where."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "I have a friend ___ sister works at a big tech company."
+    prompt_pt: "Eu tenho uma amiga cuja irmã trabalha numa grande empresa de tecnologia."
+    options: ["whose", "who", "who's"]
+    answers: ["whose"]
+    explanation: "Para posse (a irmã dela) usamos whose."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "The series ___ I'm watching now is from Korea."
+    prompt_pt: "A série que estou assistindo agora é da Coreia."
+    options: ["that", "who", "where"]
+    answers: ["that", "which"]
+    explanation: "Para coisas usamos that ou which."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "The guy who fixed my laptop is the brother of a woman who works with me."
+    prompt: "Who fixed the speaker's laptop?"
+    prompt_pt: "Quem consertou o notebook da pessoa?"
+    options: ["The brother of a colleague", "A colleague", "The speaker's brother"]
+    answers: ["The brother of a colleague"]
+    explanation: "Foi o irmão de uma mulher who works with me (uma colega)."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "The hotel where we stayed in Paraty had a pool which was open all night."
+    prompt: "What was open all night?"
+    prompt_pt: "O que ficava aberto a noite toda?"
+    options: ["The pool", "The hotel restaurant", "The beach bar"]
+    answers: ["The pool"]
+    explanation: "A pool which was open all night = a piscina que ficava aberta a noite toda."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "The people ___ live next door are very friendly."
+    prompt_pt: "As pessoas que moram ao lado são muito simpáticas."
+    answers: ["who", "that"]
+    explanation: "Para pessoas usamos who ou that."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Is this the city ___ you were born?"
+    prompt_pt: "Esta é a cidade onde você nasceu?"
+    answers: ["where"]
+    explanation: "Lugar onde algo aconteceu = where."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "The man ___ car was stolen called the police."
+    prompt_pt: "O homem cujo carro foi roubado chamou a polícia."
+    glossary: {stolen: roubado}
+    options: ["whose", "who", "which"]
+    answers: ["whose"]
+    explanation: "O carro do homem → posse → whose."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "Which sentence is correct?"
+    prompt_pt: "Qual frase está correta?"
+    options: ["The jacket I bought is too small.", "The jacket I bought it is too small.", "The jacket who I bought is too small."]
+    answers: ["The jacket I bought is too small."]
+    explanation: "O pronome objeto pode ser omitido, mas não se repete o objeto (it)."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "The gym ___ I go to is open 24 hours."
+    prompt_pt: "A academia que eu frequento fica aberta 24 horas."
+    options: ["that", "where", "who"]
+    answers: ["that", "which"]
+    explanation: "Com go to no fim, o pronome é objeto da preposição: that ou which (where já incluiria o to)."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "My grandmother is the person ___ taught me to cook."
+    prompt_pt: "Minha avó é a pessoa que me ensinou a cozinhar."
+    answers: ["who", "that"]
+    explanation: "Para pessoas usamos who ou that; aqui é sujeito, então não pode omitir."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "The girl which won the competition is from Manaus."
+    prompt_pt: "A garota que ganhou a competição é de Manaus."
+    answers: ["The girl who won the competition is from Manaus.", "The girl that won the competition is from Manaus."]
+    explanation: "Para pessoas usamos who ou that, não which."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "The man who he called you is my boss."
+    prompt_pt: "O homem que te ligou é meu chefe."
+    answers: ["The man who called you is my boss.", "The man that called you is my boss."]
+    explanation: "Who já é o sujeito; não repita he."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (about a song)."
+    prompt_pt: "Coloque as palavras em ordem (sobre uma música)."
+    words: ["about", "song", "I", "the", "talking", "is", "this", "was"]
+    answers: ["This is the song I was talking about."]
+    explanation: "O pronome objeto (that) foi omitido e a preposição fica no fim."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question about a place)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta sobre um lugar)."
+    words: ["met", "the", "where", "Lara", "is", "bar", "you", "that"]
+    answers: ["Is that the bar where you met Lara?"]
+    explanation: "Where introduz o que aconteceu no lugar (the bar)."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "The teacher who helped me most was very patient."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["The teacher who helped me most was very patient."]
+    explanation: "Who se refere à pessoa (the teacher)."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Can you recommend a book ___ is easy to read in English?"
+    prompt_pt: "Você pode recomendar um livro que seja fácil de ler em inglês?"
+    options: ["that", "who", "where"]
+    answers: ["that", "which"]
+    explanation: "Para coisas usamos that ou which."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "In which sentence can you remove the relative pronoun?"
+    prompt_pt: "Em qual frase você pode tirar o pronome relativo?"
+    options: ["The film that we watched was boring.", "The film that won the prize was boring.", "The woman who called you was angry."]
+    answers: ["The film that we watched was boring."]
+    explanation: "Só dá para omitir quando o pronome é objeto (we watched the film)."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Do you remember the shop where we bought the blue sofa? It closed last week."
+    prompt: "What happened to the shop?"
+    prompt_pt: "O que aconteceu com a loja?"
+    options: ["It closed.", "It moved.", "It sold the sofa."]
+    answers: ["It closed."]
+    explanation: "A loja where we bought the sofa fechou (closed) semana passada."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "That's the house where my parents live there."
+    prompt_pt: "Aquela é a casa onde meus pais moram."
+    answers: ["That's the house where my parents live.", "That is the house where my parents live."]
+    explanation: "Where já indica o lugar; não repita there."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Join the sentences with who: I met a woman. She speaks five languages."
+    prompt_pt: "Junte as frases com who: Eu conheci uma mulher. Ela fala cinco línguas."
+    answers: ["I met a woman who speaks five languages.", "I met a woman that speaks five languages."]
+    explanation: "Who substitui she e liga as duas frases."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Join the sentences with whose: I have a neighbour. His dog barks all night."
+    prompt_pt: "Junte as frases com whose: Eu tenho um vizinho. O cachorro dele late a noite toda."
+    glossary: {barks: late}
+    answers: ["I have a neighbour whose dog barks all night.", "I have a neighbor whose dog barks all night."]
+    explanation: "Whose substitui his (posse)."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "O vestido que ela comprou é lindo."
+    answers: ["The dress she bought is beautiful.", "The dress that she bought is beautiful.", "The dress which she bought is beautiful.", "The dress she bought is lovely.", "The dress that she bought is lovely.", "The dress which she bought is lovely.", "The dress she bought is gorgeous.", "The dress that she bought is gorgeous."]
+    explanation: "That/which é objeto (ela comprou o vestido), então pode ser omitido."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Esse é o lugar onde eu trabalho."
+    answers: ["This is the place where I work.", "That is the place where I work.", "That's the place where I work.", "This is where I work.", "That is where I work.", "That's where I work."]
+    explanation: "Lugar + where + frase."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "The phone that I bought last month already has a problem."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["The phone that I bought last month already has a problem."]
+    explanation: "That se refere à coisa (the phone) e é objeto de bought."

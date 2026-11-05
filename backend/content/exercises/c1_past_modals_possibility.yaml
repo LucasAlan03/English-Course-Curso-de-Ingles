@@ -1,0 +1,223 @@
+module_id: c1_past_modals_possibility
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "We ___ the match if our best player hadn't been injured."
+    prompt_pt: "Poderíamos ter ganhado a partida se o nosso melhor jogador não tivesse se machucado."
+    glossary: {injured: machucado}
+    options: [could have won, could won, could have win]
+    answers: [could have won]
+    explanation: "Possibilidade que não aconteceu: could + have + particípio (won)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "I ___ you a lift if I'd known you were at the airport."
+    prompt_pt: "Eu teria te dado uma carona se soubesse que você estava no aeroporto."
+    glossary: {lift: carona}
+    options: [would have given, would give, will have given]
+    answers: [would have given]
+    explanation: "Resultado hipotético no passado (3ª condicional): would have + particípio."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Where's Bruno? He ___ missed the train — it's not like him to be late."
+    prompt_pt: "Cadê o Bruno? Ele pode ter perdido o trem; não é do feitio dele se atrasar."
+    options: [might have, should have, would have]
+    answers: [might have]
+    explanation: "Uma suposição sobre o passado (talvez tenha acontecido): might have."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "That was dangerous! You ___ been seriously hurt."
+    prompt_pt: "Isso foi perigoso! Você poderia ter se machucado seriamente."
+    options: [could have, should have, needn't have]
+    answers: [could have]
+    explanation: "Algo era possível, mas felizmente não aconteceu: could have been hurt."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "I ___ finished the report without your help. Thanks a lot!"
+    prompt_pt: "Eu não teria conseguido terminar o relatório sem a sua ajuda. Muito obrigado!"
+    options: [couldn't have, shouldn't have, needn't have]
+    answers: [couldn't have]
+    explanation: "Couldn't have = teria sido impossível."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "I could have studied medicine, but in the end I chose design, and I don't regret it."
+    prompt: "Did the speaker study medicine?"
+    prompt_pt: "O falante estudou medicina?"
+    options: ["No, they chose design.", "Yes, and they regret it.", "Yes, after studying design."]
+    answers: ["No, they chose design."]
+    explanation: "Could have studied = era uma possibilidade, mas não aconteceu."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "If the meeting had started on time, we would have caught the last train home."
+    prompt: "What happened?"
+    prompt_pt: "O que aconteceu?"
+    options: ["They missed the last train.", "They caught the last train.", "The meeting started on time."]
+    answers: ["They missed the last train."]
+    explanation: "Would have caught é hipotético: na realidade, eles perderam o trem."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "With a better pitch, we ___ (could / get) the investment."
+    prompt_pt: "Com uma apresentação melhor, poderíamos ter conseguido o investimento."
+    glossary: {pitch: apresentação de vendas}
+    answers: ["could have got", "could have gotten", "could've got", "could've gotten"]
+    explanation: "Possibilidade não realizada: could have + particípio (got/gotten)."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Maybe Sara didn't see your message. She ___ (might / be) busy."
+    prompt_pt: "Talvez a Sara não tenha visto a sua mensagem. Ela pode ter estado ocupada."
+    answers: ["might have been", "might've been"]
+    explanation: "Suposição sobre o passado: might have been."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "I ___ taken that job in Dubai, but I didn't want to move."
+    prompt_pt: "Eu poderia ter aceitado aquele emprego em Dubai, mas não quis me mudar."
+    options: [could have, must have, can't have]
+    answers: [could have]
+    explanation: "Era uma opção possível que a pessoa não escolheu: could have."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "The fire ___ much worse if the alarm hadn't gone off."
+    prompt_pt: "O incêndio teria sido muito pior se o alarme não tivesse disparado."
+    glossary: {gone off: disparado}
+    options: [would have been, would be, will have been]
+    answers: [would have been]
+    explanation: "Resultado hipotético no passado: would have been."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Kenji isn't answering. He ___ gone to the gym after work."
+    prompt_pt: "O Kenji não está atendendo. Ele pode ter ido à academia depois do trabalho."
+    options: [may have, should have, would have]
+    answers: [may have]
+    explanation: "Uma hipótese sobre o passado: may/might have gone."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Without the GPS, we ___ (would / get) completely lost."
+    prompt_pt: "Sem o GPS, teríamos nos perdido completamente."
+    answers: ["would have got", "would have gotten", "would've got", "would've gotten"]
+    explanation: "Resultado hipotético: would have + particípio."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "We could have win the contract with a lower price."
+    prompt_pt: "Poderíamos ter ganhado o contrato com um preço mais baixo."
+    answers: ["We could have won the contract with a lower price."]
+    explanation: "Depois de have vem o particípio: won, não win."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "I would helped you if you had asked."
+    prompt_pt: "Eu teria te ajudado se você tivesse pedido."
+    answers: ["I would have helped you if you had asked.", "I'd have helped you if you had asked.", "I would have helped you if you'd asked."]
+    explanation: "Falta o have: would have + particípio."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (an unrealised possibility)."
+    prompt_pt: "Coloque as palavras na ordem (uma possibilidade não realizada)."
+    words: [saved, of, We, a, have, money, could, lot]
+    answers: ["We could have saved a lot of money."]
+    explanation: "Sujeito + could have + particípio + objeto."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a guess about the past)."
+    prompt_pt: "Coloque as palavras na ordem (uma suposição sobre o passado)."
+    words: [bus, She, missed, might, the, have]
+    answers: ["She might have missed the bus."]
+    explanation: "Sujeito + might have + particípio."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "You could have been a great lawyer, you know."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["You could have been a great lawyer, you know."]
+    explanation: "Could have been = era possível, mas não aconteceu."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "It was a mistake not to back up the files. We ___ backed them up."
+    prompt_pt: "Foi um erro não fazer backup dos arquivos. Devíamos ter feito backup deles."
+    options: [should have, might have, would have]
+    answers: [should have]
+    explanation: "Aqui há crítica (foi um erro), então usamos should have, e não um modal de possibilidade."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "I'm not sure why Laura left early. She ___ felt ill."
+    prompt_pt: "Não sei por que a Laura saiu cedo. Ela pode ter se sentido mal."
+    options: [might have, should have, needn't have]
+    answers: [might have]
+    explanation: "Hipótese sobre o passado (não há certeza): might have."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Honestly, the presentation could have gone much worse. At least the client laughed at our jokes."
+    prompt: "How did the presentation go?"
+    prompt_pt: "Como foi a apresentação?"
+    options: ["Reasonably well", "Terribly", "It was cancelled"]
+    answers: ["Reasonably well"]
+    explanation: "Could have gone much worse = poderia ter sido bem pior, ou seja, foi razoável."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "She might has left her phone in the taxi."
+    prompt_pt: "Ela pode ter deixado o celular no táxi."
+    answers: ["She might have left her phone in the taxi."]
+    explanation: "Depois de um modal vem sempre have (nunca has)."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite with 'could have': It was possible for us to win, but we didn't."
+    prompt_pt: "Reescreva com 'could have': Era possível ganharmos, mas não ganhamos."
+    answers: ["We could have won.", "We could have won, but we didn't."]
+    explanation: "Possibilidade que não aconteceu: could have + particípio."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite with 'might have': Perhaps Paulo forgot about the meeting."
+    prompt_pt: "Reescreva com 'might have': Talvez o Paulo tenha esquecido a reunião."
+    answers: ["Paulo might have forgotten about the meeting.", "Paulo might have forgotten the meeting."]
+    explanation: "Perhaps + passado vira might have + particípio (forgotten)."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "A gente podia ter perdido o voo."
+    answers: ["We could have missed the flight.", "We could have missed our flight."]
+    explanation: "Podia ter + particípio (possibilidade não realizada) = could have + particípio."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu teria ajudado se você tivesse pedido."
+    answers:
+      - "I would have helped if you had asked."
+      - "I would have helped if you'd asked."
+      - "I'd have helped if you had asked."
+      - "I'd have helped if you'd asked."
+      - "I would have helped you if you had asked."
+      - "I would have helped you if you'd asked."
+      - "I'd have helped you if you had asked."
+      - "I'd have helped you if you'd asked."
+      - "I would have helped if you had asked me."
+      - "I would have helped if you'd asked me."
+    explanation: "Teria + particípio = would have + particípio; tivesse pedido = had asked."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "If we had left earlier, we would have caught the train."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["If we had left earlier, we would have caught the train.", "If we'd left earlier, we'd have caught the train."]
+    explanation: "Would have caught = resultado hipotético; na realidade, perderam o trem."

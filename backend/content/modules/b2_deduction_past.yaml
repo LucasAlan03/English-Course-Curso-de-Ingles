@@ -1,0 +1,24 @@
+id: b2_deduction_past
+level: B2
+title: Modais de dedução no passado
+order: 10
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Modais de dedução no passado
+
+  - **Forma:** modal + **have** + particípio: *must have left*, *might have forgotten*, *can't have seen*.
+  - **must have + particípio**: quase certeza sobre o passado: *The streets are wet. It must have rained.*
+  - **might / may / could have + particípio**: possibilidade no passado: *She might have missed the bus.*
+  - **can't / couldn't have + particípio**: impossível no passado: *He can't have finished already. He only started at ten.*
+  - Forma contínua: modal + **have been** + -ing: *You must have been sleeping when I called.*
+  - **Presente × passado:** *She must be tired* (dedução sobre agora) × *She must have been tired* (dedução sobre aquele momento).
+  - **Erro comum:** *He must have went.* → *He must have gone.* (use o particípio, não o past simple).
+scenario:
+  title: Reconstructing a strange night out
+  character: A friend who can't remember the details of last night
+  goal: Work out what probably happened using clues and past deductions
+target_structures:
+- must have + participle
+- might / may / could have + participle
+- can't / couldn't have + participle
+- must have been + -ing

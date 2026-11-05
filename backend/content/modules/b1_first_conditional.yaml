@@ -1,0 +1,23 @@
+id: b1_first_conditional
+level: B1
+title: 1º condicional
+order: 7
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # 1º condicional
+
+  - **Forma:** *If* + presente simples, *will* + verbo base: *If it rains, I'll stay home.*
+  - A ordem pode inverter (sem vírgula): *I'll stay home if it rains.*
+  - **Uso:** situações **reais e possíveis** no futuro e o que vai acontecer: *If you study, you'll pass.*
+  - **unless** = *if not*: *I won't go unless you come.*
+  - Na consequência também cabem *can*, *may* ou imperativo: *If you see Ana, tell her to call me.* / *If it's sunny, we can go to the beach.*
+  - **Erro comum:** *If I will see him, I tell him.* Não use *will* logo depois do *if*: *If I see him, I'll tell him.*
+scenario:
+  title: Making weekend plans with an indecisive friend
+  character: A friend who keeps changing plans
+  goal: Decide what you will do depending on the weather, money and time
+target_structures:
+- if + present simple, will + base verb
+- unless
+- imperative / can in the result clause
+- clause order (result + if)

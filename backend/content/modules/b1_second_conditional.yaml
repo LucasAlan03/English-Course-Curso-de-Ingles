@@ -1,0 +1,24 @@
+id: b1_second_conditional
+level: B1
+title: 2º condicional
+order: 8
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # 2º condicional
+
+  - **Forma:** *If* + past simple, *would* + verbo base: *If I had more time, I would learn piano.*
+  - Contrações: *I'd*, *you'd*; negativa: *wouldn't*.
+  - **Uso:** situações **imaginárias, improváveis ou irreais** no presente ou futuro: *If I won the lottery, I'd travel the world.*
+  - Em *If I were you* usa-se **were** para dar conselhos: *If I were you, I'd talk to her.*
+  - *could* ou *might* podem substituir *would*: *If we had a car, we could go to the mountains.*
+  - **Contraste com o 1º condicional:** o 1º fala do que é real e possível (*If I get the job, I'll move*); o 2º fala do imaginado ou improvável (*If I got a job in Canada, I'd move*).
+  - **Erro comum:** *If I would have money, I would buy it.* Não use *would* depois do *if*: *If I had money, I'd buy it.*
+scenario:
+  title: Talking about dreams over coffee
+  character: A friend who loves "what if" questions
+  goal: Answer imaginary questions about your life and give advice with "If I were you"
+target_structures:
+- if + past simple, would + base verb
+- If I were you, I'd...
+- could / might in the result clause
+- first vs second conditional

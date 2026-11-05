@@ -1,0 +1,23 @@
+id: b2_contrast
+level: B2
+title: Conectivos de contraste
+order: 15
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Conectivos de contraste
+
+  - **although / even though / though + oração** (sujeito + verbo): *Although it was late, we kept working.* (*even though* é mais forte).
+  - **despite / in spite of + substantivo ou -ing**: *Despite the rain, we went out.* / *In spite of feeling tired, she went to the gym.*
+  - **despite the fact that + oração**, quando você quer usar despite com sujeito + verbo: *Despite the fact that it was expensive, we bought it.*
+  - **however / nevertheless** ligam duas frases; ficam no início da segunda, seguidos de vírgula: *The hotel was nice. However, the food was terrible.*
+  - **while / whereas** comparam duas coisas diferentes: *I love the beach, whereas my wife prefers the mountains.*
+  - **Erro comum:** *Despite of the rain* ou *Despite it was raining.* → *Despite the rain* / *Although it was raining.*
+scenario:
+  title: Reviewing a hotel stay with mixed feelings
+  character: A friend who is thinking of booking the same hotel
+  goal: Explain the good and the bad points of your stay, contrasting them clearly
+target_structures:
+- although / even though + clause
+- despite / in spite of + noun / -ing
+- however / nevertheless
+- whereas / while

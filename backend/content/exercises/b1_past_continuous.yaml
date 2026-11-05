@@ -1,0 +1,216 @@
+module_id: b1_past_continuous
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "At 8 p.m. last night I ___ dinner with my family."
+    prompt_pt: "Às 8 da noite de ontem eu estava jantando com minha família."
+    options: ["was having", "were having", "am having"]
+    answers: ["was having"]
+    explanation: "Ação em andamento num momento do passado → was + -ing (I was)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "The kids ___ video games when the power went out."
+    prompt_pt: "As crianças estavam jogando videogame quando a luz acabou."
+    glossary: {power: energia elétrica}
+    options: ["were playing", "was playing", "are playing"]
+    answers: ["were playing"]
+    explanation: "Sujeito no plural (the kids) → were + -ing; a ação foi interrompida."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "I was jogging in the park when it started to rain, so I ran home."
+    prompt: "What was the speaker doing when it started to rain?"
+    prompt_pt: "O que a pessoa estava fazendo quando começou a chover?"
+    options: ["jogging", "sleeping", "cooking"]
+    answers: ["jogging"]
+    explanation: "O áudio diz \"I was jogging... when it started to rain\": ação em andamento interrompida."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "___ you working when I sent the message?"
+    prompt_pt: "Você estava trabalhando quando eu mandei a mensagem?"
+    options: ["Were", "Was", "Did"]
+    answers: ["Were"]
+    explanation: "Pergunta no past continuous: Were + you + -ing."
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "Julia ___ (read) on the sofa when the doorbell rang."
+    prompt_pt: "A Julia estava lendo no sofá quando a campainha tocou."
+    glossary: {doorbell: campainha}
+    answers: ["was reading"]
+    explanation: "Ação longa (was reading) interrompida por uma curta (rang)."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "We ___ TV, so we didn't hear the phone."
+    prompt_pt: "Nós estávamos vendo TV, então não ouvimos o telefone."
+    options: ["were watching", "was watching", "are watching"]
+    answers: ["were watching"]
+    explanation: "We pede were; a ação estava em andamento quando o telefone tocou."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "While Pedro was cooking, his wife was setting the table and the kids were doing homework."
+    prompt: "What was Pedro doing?"
+    prompt_pt: "O que o Pedro estava fazendo?"
+    options: ["cooking", "setting the table", "doing homework"]
+    answers: ["cooking"]
+    explanation: "O áudio diz \"Pedro was cooking\": várias ações ao mesmo tempo com while."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "They ___ (not / listen) when the teacher explained the task."
+    prompt_pt: "Eles não estavam prestando atenção quando a professora explicou a tarefa."
+    glossary: {task: tarefa}
+    answers: ["weren't listening", "were not listening"]
+    explanation: "Negativa no past continuous: weren't + -ing (they)."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "It ___ heavily when we left the office."
+    prompt_pt: "Estava chovendo forte quando saímos do escritório."
+    glossary: {heavily: forte}
+    options: ["was raining", "were raining", "is raining"]
+    answers: ["was raining"]
+    explanation: "It pede was; a chuva estava em andamento quando saímos."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "What ___ you doing at 10 o'clock last night?"
+    prompt_pt: "O que você estava fazendo às 10 horas ontem à noite?"
+    options: ["were", "was", "did"]
+    answers: ["were"]
+    explanation: "Pergunta sobre ação em andamento num horário do passado: What + were + you + -ing."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "I cut my finger while I ___ (chop) onions."
+    prompt_pt: "Eu cortei o dedo enquanto picava cebolas."
+    glossary: {chop: picar, onions: cebolas}
+    answers: ["was chopping"]
+    explanation: "Depois de while vem a ação longa: was chopping (dobra o p)."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "My friends was waiting for me outside the cinema."
+    prompt_pt: "Meus amigos estavam me esperando na frente do cinema."
+    answers: ["My friends were waiting for me outside the cinema."]
+    explanation: "Sujeito plural (my friends) → were, não was."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["was", "she", "a", "shower", "taking", "when", "called", "I"]
+    answers: ["She was taking a shower when I called.", "When I called she was taking a shower."]
+    explanation: "Ação longa (was taking) + when + ação curta (called)."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "I ___ when my alarm went off."
+    prompt_pt: "Eu estava dormindo quando o despertador tocou."
+    glossary: {alarm: despertador}
+    options: ["was sleeping", "were sleeping", "am sleeping"]
+    answers: ["was sleeping"]
+    explanation: "I pede was; dormir era a ação em andamento interrompida pelo alarme."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "I was walk home when I saw the accident."
+    prompt_pt: "Eu estava indo a pé para casa quando vi o acidente."
+    answers: ["I was walking home when I saw the accident."]
+    explanation: "Past continuous precisa do -ing: was walking."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["you", "were", "where", "going", "so", "fast"]
+    answers: ["Where were you going so fast?"]
+    explanation: "Pergunta: Where + were + sujeito + -ing."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "We were having lunch when the boss came in."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We were having lunch when the boss came in."]
+    explanation: "Were having (em andamento) + when + came in (ação curta)."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "While Bruno was studying, his roommate ___ loud music."
+    prompt_pt: "Enquanto o Bruno estudava, o colega de quarto dele estava ouvindo música alta."
+    glossary: {roommate: colega de quarto, loud: alta}
+    options: ["was playing", "were playing", "is playing"]
+    answers: ["was playing"]
+    explanation: "Duas ações simultâneas com while; his roommate (singular) → was playing."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I ___ the whole series last weekend. It was amazing!"
+    prompt_pt: "Eu assisti à série inteira no fim de semana passado. Foi incrível!"
+    options: ["watched", "was watching", "were watching"]
+    answers: ["watched"]
+    explanation: "A ação foi completa (the whole series) → past simple, não continuous."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "She ___ her phone when she was getting off the bus."
+    prompt_pt: "Ela deixou o celular cair quando estava descendo do ônibus."
+    options: ["dropped", "was dropping", "were dropping"]
+    answers: ["dropped"]
+    explanation: "Ação curta que interrompe a longa (was getting off) → past simple."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "I was waiting for the train when I saw my old teacher. We talked all the way to the city."
+    prompt: "What was the speaker doing when the teacher appeared?"
+    prompt_pt: "O que a pessoa estava fazendo quando o professor apareceu?"
+    options: ["waiting for the train", "talking to the teacher", "driving to the city"]
+    answers: ["waiting for the train"]
+    explanation: "\"I was waiting for the train when I saw...\": a espera estava em andamento."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "When the phone rang, I was take a shower."
+    prompt_pt: "Quando o telefone tocou, eu estava tomando banho."
+    answers: ["When the phone rang, I was taking a shower."]
+    explanation: "Ação em andamento → was + -ing: was taking."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Join the sentences with 'when': I was driving. My phone rang."
+    prompt_pt: "Junte as frases com 'when': Eu estava dirigindo. Meu celular tocou."
+    answers: ["I was driving when my phone rang.", "When my phone rang, I was driving.", "My phone rang when I was driving.", "When I was driving, my phone rang."]
+    explanation: "When liga a ação longa (was driving) à curta (rang)."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Join the sentences with 'while': Tom was cooking. Lia was setting the table."
+    prompt_pt: "Junte as frases com 'while': O Tom estava cozinhando. A Lia estava pondo a mesa."
+    answers: ["While Tom was cooking, Lia was setting the table.", "Lia was setting the table while Tom was cooking.", "Tom was cooking while Lia was setting the table.", "While Lia was setting the table, Tom was cooking."]
+    explanation: "While liga duas ações longas acontecendo ao mesmo tempo."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu estava dormindo quando você ligou."
+    answers: ["I was sleeping when you called.", "I was asleep when you called.", "When you called, I was sleeping.", "When you called, I was asleep.", "I was sleeping when you phoned.", "I was sleeping when you rang."]
+    explanation: "Ação longa (was sleeping) interrompida por uma curta (called)."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "O que vocês estavam fazendo às seis horas?"
+    answers: ["What were you doing at six o'clock?", "What were you doing at six?", "What were you doing at 6?", "What were you doing at 6 o'clock?", "What were you guys doing at six o'clock?", "What were you guys doing at six?"]
+    explanation: "Pergunta sobre ação em andamento num horário: What + were + you + doing."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "It was snowing when we landed in Toronto."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["It was snowing when we landed in Toronto."]
+    explanation: "Cena em andamento (was snowing) + ação curta (landed)."

@@ -1,17 +1,21 @@
 id: b1_phrasal_verbs
 level: B1
-title: Phrasal verbs do dia a dia
-order: 9
+title: Phrasal verbs
+order: 18
 source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
-theory_md: '# Phrasal verbs do dia a dia
+theory_md: '# Phrasal verbs
 
-  Verbo + partícula muda o sentido. Alguns muito usados:
+  - Forma: **verbo + partícula** (*up, off, on, out, back, for*), e o sentido muda: *give* (dar) × *give up* (desistir).
 
-  - **wake up** (acordar), **get up** (levantar), **turn on / off** (ligar, desligar), **pick up** (pegar, buscar)
+  - Rotina: **wake up** (acordar), **get up** (levantar), **turn on / off** (ligar / desligar), **put on / take off** (vestir / tirar).
 
-  - **look for** (procurar), **give up** (desistir), **find out** (descobrir), **come back** (voltar)
+  - Resolver coisas: **look for** (procurar), **find out** (descobrir), **pick up** (pegar, buscar), **give up** (desistir), **come back** (voltar).
 
-  - Alguns se separam: *turn **the TV** off* / *turn **it** off* (com pronome, sempre no meio).
+  - Muitos se separam: *turn **the TV** off* = *turn off **the TV***.
+
+  - Com pronome (*it, them, her, me*), o pronome fica **sempre no meio**: *turn **it** off*, *pick **her** up*.
+
+  - Alguns não se separam: *look **for** my keys* (nunca *look my keys for*).
 
   - **Erro comum:** *turn off it.* O correto é *turn it off.*
 
@@ -22,6 +26,6 @@ scenario:
   goal: Talk about your routine and solve a small household problem using phrasal verbs
 target_structures:
 - wake up / get up
-- turn on / off
-- look for
-- find out
+- turn on / turn off
+- look for / find out / give up
+- pronoun in the middle (turn it off)

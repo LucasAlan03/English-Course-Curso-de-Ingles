@@ -1,0 +1,24 @@
+id: c1_past_modals_possibility
+level: C1
+title: 'Modais no passado: possibilidades não realizadas'
+order: 6
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Modais no passado: possibilidades não realizadas
+
+  - **Forma:** modal + *have* + particípio: *could have won*, *would have helped*, *might have missed*.
+  - **could have**: era possível, mas não aconteceu: *We could have won the match.* / *You could have been hurt!*
+  - **would have**: resultado hipotético (muitas vezes com *if* + past perfect): *I would have helped if you had asked.*
+  - **might / may have**: talvez tenha acontecido (não sabemos): *He might have missed the train.*
+  - **couldn't have**: era impossível: *I couldn't have finished without you.*
+  - **Contraste com crítica:** *should have* julga (era o certo); *could have* só diz que era possível: *I could have taken the job* (escolhi não aceitar) × *I should have taken the job* (me arrependo).
+  - **Erro comum:** usar o passado em vez do particípio: *We could have win* → *We could have won.*
+scenario:
+  title: Talking about missed opportunities over coffee
+  character: An old university friend you haven't seen in years
+  goal: Talk about paths you could have taken and guess what happened to old friends
+target_structures:
+- could have + past participle
+- would have + past participle
+- might / may have
+- couldn't have

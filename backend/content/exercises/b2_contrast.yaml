@@ -1,0 +1,215 @@
+module_id: b2_contrast
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "___ the traffic, we arrived on time."
+    prompt_pt: "Apesar do trânsito, chegamos na hora."
+    options: [Despite, Although, However]
+    answers: [Despite]
+    explanation: "The traffic é um substantivo, então usamos despite (although precisa de sujeito + verbo)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "___ it was raining, we went to the beach."
+    prompt_pt: "Embora estivesse chovendo, fomos à praia."
+    options: [Although, Despite, In spite of]
+    answers: [Although]
+    explanation: "It was raining é uma oração (sujeito + verbo), então usamos although."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "The flat is small. ___, it's in a great location."
+    prompt_pt: "O apartamento é pequeno. No entanto, fica num ótimo lugar."
+    options: [However, Although, Despite]
+    answers: [However]
+    explanation: "However liga duas frases separadas e vem seguido de vírgula."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "Clara loves horror films, ___ her husband can't watch them."
+    prompt_pt: "A Clara adora filmes de terror, enquanto o marido dela não consegue assistir."
+    options: [whereas, despite, however]
+    answers: [whereas]
+    explanation: "Whereas compara duas pessoas com gostos diferentes na mesma frase."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "In spite ___ the bad reviews, the series was a huge hit."
+    prompt_pt: "Apesar das críticas ruins, a série foi um grande sucesso."
+    glossary: {reviews: críticas, hit: sucesso}
+    options: [of, that, to]
+    answers: [of]
+    explanation: "A expressão completa é in spite of."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Although the hotel was a bit old, the staff were so friendly that we'd definitely stay there again."
+    prompt: "Would the speaker stay at the hotel again?"
+    prompt_pt: "Quem fala ficaria no hotel de novo?"
+    options: ["Yes, definitely.", "No, never.", "Only if it's renovated."]
+    answers: ["Yes, definitely."]
+    explanation: "Although introduz o ponto negativo; a ideia principal é que ficariam de novo."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Despite having a cold, Marcelo ran the half marathon and finished in under two hours."
+    prompt: "What did Marcelo do?"
+    prompt_pt: "O que o Marcelo fez?"
+    options: ["He ran the race.", "He stayed in bed.", "He watched the race."]
+    answers: ["He ran the race."]
+    explanation: "Despite having a cold = apesar de estar resfriado, ele correu."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "___ feeling tired, Jéssica went to her spinning class. (despite / although)"
+    prompt_pt: "Apesar de estar cansada, a Jéssica foi para a aula de spinning."
+    answers: ["Despite", "In spite of"]
+    explanation: "Feeling é uma forma -ing, então usamos despite."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "My brother is very outgoing, ___ I'm quite shy. (whereas / despite)"
+    prompt_pt: "Meu irmão é muito extrovertido, enquanto eu sou bem tímido."
+    glossary: {outgoing: extrovertido}
+    answers: ["whereas", "while"]
+    explanation: "Para comparar duas pessoas diferentes, usamos whereas."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "We enjoyed the trip ___ the fact that it rained every day."
+    prompt_pt: "Curtimos a viagem apesar de ter chovido todos os dias."
+    options: [despite, although, however]
+    answers: [despite]
+    explanation: "Despite the fact that + oração; although não combina com the fact that."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "___ he's lived in Brazil for ten years, Mark still doesn't like feijoada."
+    prompt_pt: "Mesmo morando no Brasil há dez anos, o Mark ainda não gosta de feijoada."
+    options: [Even though, Despite, In spite of]
+    answers: [Even though]
+    explanation: "Depois vem uma oração (he's lived), então usamos even though."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "The new phone has an amazing camera. The battery, ___, is disappointing."
+    prompt_pt: "O celular novo tem uma câmera incrível. A bateria, no entanto, é decepcionante."
+    glossary: {disappointing: decepcionante}
+    options: [however, although, despite]
+    answers: [however]
+    explanation: "However pode aparecer no meio da frase, entre vírgulas, ligando duas ideias."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "___ it was expensive, the course was worth every penny. (although / despite)"
+    prompt_pt: "Embora tenha sido caro, o curso valeu cada centavo."
+    glossary: {penny: centavo}
+    answers: ["Although", "Even though", "Though"]
+    explanation: "It was expensive é uma oração, então usamos although."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "Despite of the delay, the meeting started on time."
+    prompt_pt: "Apesar do atraso, a reunião começou na hora."
+    glossary: {delay: atraso}
+    answers: ["Despite the delay, the meeting started on time.", "In spite of the delay, the meeting started on time."]
+    explanation: "Despite não leva of; ou use in spite of."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Although the bad weather, we had a great time."
+    prompt_pt: "Apesar do tempo ruim, nos divertimos muito."
+    answers: ["Despite the bad weather, we had a great time.", "In spite of the bad weather, we had a great time.", "Although the weather was bad, we had a great time."]
+    explanation: "Although precisa de oração; com substantivo (the bad weather) use despite."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: [despite, the, cost, we, booked, it]
+    answers: ["Despite the cost, we booked it.", "We booked it despite the cost."]
+    explanation: "Despite + substantivo, depois a oração principal."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order. (start with Although)"
+    prompt_pt: "Coloque as palavras em ordem. (comece com Although)"
+    words: [although, was, it, late, stayed, we]
+    answers: ["Although it was late, we stayed."]
+    explanation: "Although + oração, vírgula, oração principal."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Even though I was nervous, the interview went really well."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Even though I was nervous, the interview went really well."]
+    explanation: "Even though + oração para um contraste forte."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "___ working twelve hours a day, Ivan always finds time for his kids."
+    prompt_pt: "Apesar de trabalhar doze horas por dia, o Ivan sempre arranja tempo para os filhos."
+    options: [In spite of, Although, However]
+    answers: [In spite of]
+    explanation: "Working é forma -ing, então usamos in spite of."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Online courses are flexible. ___, they require a lot of discipline."
+    prompt_pt: "Cursos online são flexíveis. Mesmo assim, exigem muita disciplina."
+    options: [Nevertheless, Despite, Although]
+    answers: [Nevertheless]
+    explanation: "Nevertheless liga duas frases separadas, como however."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "The concert was amazing. However, the tickets cost a fortune and we waited two hours to get in."
+    prompt: "What was the problem with the concert?"
+    prompt_pt: "Qual foi o problema do show?"
+    options: ["It was expensive and there was a long wait.", "The band was bad.", "It was cancelled."]
+    answers: ["It was expensive and there was a long wait."]
+    explanation: "However introduz os pontos negativos: preço alto e espera longa."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Despite she studied a lot, she failed the driving test."
+    prompt_pt: "Embora tenha estudado muito, ela foi reprovada na prova de direção."
+    glossary: {failed: foi reprovada}
+    answers: ["Although she studied a lot, she failed the driving test.", "Even though she studied a lot, she failed the driving test.", "Despite studying a lot, she failed the driving test.", "In spite of studying a lot, she failed the driving test.", "Despite the fact that she studied a lot, she failed the driving test."]
+    explanation: "Despite não aceita oração; use although + oração ou despite + -ing."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using despite: Although it was cold, we swam in the sea."
+    prompt_pt: "Reescreva usando despite: Embora estivesse frio, nadamos no mar."
+    answers: ["Despite the cold, we swam in the sea.", "Despite the cold weather, we swam in the sea.", "Despite it being cold, we swam in the sea.", "Despite the fact that it was cold, we swam in the sea.", "We swam in the sea despite the cold.", "We swam in the sea despite the cold weather."]
+    explanation: "Despite + substantivo (the cold) ou despite the fact that + oração."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using although: Despite her fear of flying, Bruna took the plane to Manaus."
+    prompt_pt: "Reescreva usando although: Apesar do medo de avião, a Bruna pegou o voo para Manaus."
+    answers: ["Although she was afraid of flying, Bruna took the plane to Manaus.", "Although she is afraid of flying, Bruna took the plane to Manaus.", "Although she's afraid of flying, Bruna took the plane to Manaus.", "Although Bruna was afraid of flying, she took the plane to Manaus.", "Although Bruna is afraid of flying, she took the plane to Manaus.", "Although Bruna's afraid of flying, she took the plane to Manaus.", "Although she had a fear of flying, Bruna took the plane to Manaus.", "Although she has a fear of flying, Bruna took the plane to Manaus."]
+    explanation: "Although precisa de sujeito + verbo: although she was afraid of flying."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Apesar da chuva, o show continuou."
+    answers: ["Despite the rain, the show continued.", "Despite the rain, the concert continued.", "In spite of the rain, the show continued.", "In spite of the rain, the concert continued.", "Despite the rain, the show went on.", "Despite the rain, the concert went on.", "In spite of the rain, the show went on.", "In spite of the rain, the concert went on."]
+    explanation: "Apesar de + substantivo = despite / in spite of."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu gosto de café, enquanto a minha irmã prefere chá."
+    answers: ["I like coffee, whereas my sister prefers tea.", "I like coffee, while my sister prefers tea.", "I like coffee whereas my sister prefers tea.", "I like coffee while my sister prefers tea."]
+    explanation: "Enquanto, comparando duas pessoas = whereas / while."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "We stayed until the end despite the terrible weather."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We stayed until the end despite the terrible weather."]
+    explanation: "Despite + substantivo também pode vir no fim da frase."

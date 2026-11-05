@@ -1,0 +1,31 @@
+id: b1_comparatives
+level: B1
+title: Comparativos
+order: 11
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Comparativos
+
+  - Adjetivos curtos (uma sílaba): **adjetivo + -er** → *cheap → cheaper, tall → taller*; consoante-vogal-consoante dobra: *big → bigger*.
+
+  - Terminados em **-y**: troque por **-ier** → *easy → easier, busy → busier*.
+
+  - Adjetivos longos (duas sílabas ou mais): **more + adjetivo** → *more expensive, more comfortable*.
+
+  - Irregulares: *good → better*, *bad → worse*, *far → farther / further*.
+
+  - Para comparar duas coisas, use **than**: *This flat is bigger than mine.*
+
+  - Igualdade com **as ... as**, e a negativa com **not as ... as**: *The bus isn''t as fast as the metro.*
+
+  - **Erro comum:** *more cheaper* ou *bigger that*. Use só uma forma (*cheaper*) e sempre **than**.
+
+  '
+scenario:
+  title: Choosing between two flats to rent
+  character: A real estate agent
+  goal: Compare two flats (price, size, location) and decide which one to rent
+target_structures:
+- adjective + -er + than
+- more + adjective + than
+- irregular comparatives (better / worse)
+- as ... as / not as ... as

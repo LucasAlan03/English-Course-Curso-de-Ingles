@@ -1,0 +1,401 @@
+level: C1
+questions:
+  - id: q01
+    module_id: c1_inversion_negative
+    type: choice
+    prompt: "Seldom ___ a junior analyst challenge the board so openly."
+    prompt_pt: "Raramente vi um analista júnior desafiar a diretoria tão abertamente."
+    glossary: {challenge: desafiar, board: diretoria}
+    options: [have I seen, I have seen, I had seen, did I saw]
+    answers: [have I seen]
+    explanation: "Advérbio negativo (seldom) no início da frase pede inversão: auxiliar + sujeito (have I seen)."
+
+  - id: q02
+    module_id: c1_inversion_negative
+    type: choice
+    prompt: "Not until the auditors arrived ___ how much money had gone missing."
+    prompt_pt: "Só quando os auditores chegaram percebemos quanto dinheiro tinha sumido."
+    glossary: {auditors: auditores, missing: sumido}
+    options: [did we realise, we realised, realised we, we did realise]
+    answers: [did we realise, did we realize]
+    explanation: "Com 'Not until...' a inversão vem na oração principal: did + sujeito + verbo base."
+
+  - id: q03
+    module_id: c1_inversion_negative
+    type: fix
+    prompt: "Only by cutting the marketing budget we managed to break even this year."
+    prompt_pt: "Só cortando o orçamento de marketing conseguimos fechar as contas sem prejuízo este ano."
+    glossary: {budget: orçamento, break even: "fechar sem lucro nem prejuízo"}
+    answers: ["Only by cutting the marketing budget did we manage to break even this year."]
+    explanation: "'Only by...' no início exige inversão: did we manage, não we managed."
+
+  - id: q04
+    module_id: c1_inversion_negative
+    type: transform
+    prompt: "Rewrite starting with 'No sooner': As soon as Rita accepted the offer, a better one arrived."
+    prompt_pt: "Reescreva começando com 'No sooner': Assim que a Rita aceitou a oferta, chegou uma melhor."
+    answers:
+      - "No sooner had Rita accepted the offer than a better one arrived."
+      - "No sooner did Rita accept the offer than a better one arrived."
+    explanation: "No sooner + had + sujeito + particípio ... than: a primeira ação mal terminou quando veio a segunda."
+
+  - id: q05
+    module_id: c1_inversion_conditional
+    type: choice
+    prompt: "___ the merger go ahead, around 200 jobs would be at risk."
+    prompt_pt: "Caso a fusão aconteça, cerca de 200 empregos estariam em risco."
+    glossary: {merger: fusão, go ahead: "seguir adiante"}
+    options: [Should, Were, Had, If]
+    answers: [Should]
+    explanation: "Should + sujeito + verbo base substitui 'if' (go ahead está na forma base, então If/Were/Had não encaixam)."
+
+  - id: q06
+    module_id: c1_inversion_conditional
+    type: gap
+    prompt: "___ (be) it not for the subtitles, I wouldn't understand half of this Scottish series."
+    prompt_pt: "Se não fossem as legendas, eu não entenderia metade desta série escocesa."
+    glossary: {subtitles: legendas}
+    answers: [Were]
+    explanation: "Situação hipotética no presente: 'Were it not for...' = 'If it weren't for...'."
+
+  - id: q07
+    module_id: c1_inversion_conditional
+    type: transform
+    prompt: "Rewrite without 'if': If the airline had warned us, we wouldn't have paid for an extra night."
+    prompt_pt: "Reescreva sem 'if': Se a companhia aérea tivesse nos avisado, não teríamos pagado uma noite extra."
+    glossary: {airline: companhia aérea}
+    answers:
+      - "Had the airline warned us, we wouldn't have paid for an extra night."
+      - "Had the airline warned us, we would not have paid for an extra night."
+    explanation: "No 3º condicional, tira-se o 'if' e inverte-se: Had + sujeito + particípio."
+
+  - id: q08
+    module_id: c1_inversion_conditional
+    type: translate
+    prompt: "Se tivéssemos reservado antes, teríamos pagado menos. (use inversão)"
+    answers:
+      - "Had we booked earlier, we would have paid less."
+      - "Had we booked earlier, we'd have paid less."
+      - "Had we booked sooner, we would have paid less."
+      - "Had we booked sooner, we'd have paid less."
+      - "Had we booked in advance, we would have paid less."
+      - "Had we booked in advance, we'd have paid less."
+    explanation: "Condição irreal no passado sem 'if': Had + sujeito + particípio, would have + particípio."
+
+  - id: q09
+    module_id: c1_it_cleft
+    type: choice
+    prompt: "It's not what you say ___ annoys people; it's how you say it."
+    prompt_pt: "Não é o que você diz que irrita as pessoas; é como você diz."
+    glossary: {annoys: irrita}
+    options: [that, what, who, when]
+    answers: [that]
+    explanation: "It-cleft: It + be + parte enfatizada + that; 'what' já está dentro da parte enfatizada."
+
+  - id: q10
+    module_id: c1_it_cleft
+    type: order
+    prompt: "Put the words in order (emphasize what impressed the recruiters)."
+    prompt_pt: "Coloque as palavras em ordem (dê ênfase ao que impressionou os recrutadores)."
+    glossary: {recruiters: recrutadores}
+    words: [most, honesty, impressed, It, the, her, that, was, recruiters]
+    answers: ["It was her honesty that impressed the recruiters most."]
+    explanation: "It + was + elemento enfatizado (her honesty) + that + resto da frase."
+
+  - id: q11
+    module_id: c1_it_cleft
+    type: fix
+    prompt: "It is the managers who is responsible for the delay, not the developers."
+    prompt_pt: "São os gerentes que são responsáveis pelo atraso, não os desenvolvedores."
+    glossary: {delay: atraso}
+    answers:
+      - "It is the managers who are responsible for the delay, not the developers."
+      - "It's the managers who are responsible for the delay, not the developers."
+      - "It is the managers that are responsible for the delay, not the developers."
+      - "It's the managers that are responsible for the delay, not the developers."
+    explanation: "O 'It is' fica no singular, mas o verbo depois de 'who' concorda com 'the managers' (plural): are."
+
+  - id: q12
+    module_id: c1_wh_cleft
+    type: choice
+    prompt: "The thing ___ I love most about this neighbourhood is the street food."
+    prompt_pt: "O que eu mais adoro neste bairro é a comida de rua."
+    glossary: {neighbourhood: bairro}
+    options: [that, what, it, whose]
+    answers: [that]
+    explanation: "Com 'The thing' já existe um substantivo, então vem 'that' (não 'what', que já significa 'the thing that')."
+
+  - id: q13
+    module_id: c1_wh_cleft
+    type: gap
+    prompt: "What you should do is ___ (call) the bank before travelling abroad."
+    prompt_pt: "O que você deveria fazer é ligar para o banco antes de viajar para o exterior."
+    glossary: {abroad: exterior}
+    answers: [call, to call]
+    explanation: "Depois de 'What + sujeito + do + is' usa-se o verbo base (ou to + verbo)."
+
+  - id: q14
+    module_id: c1_wh_cleft
+    type: transform
+    prompt: "Rewrite starting with 'What': The way he ignored the customers shocked me."
+    prompt_pt: "Reescreva começando com 'What': O jeito como ele ignorou os clientes me chocou."
+    answers:
+      - "What shocked me was the way he ignored the customers."
+      - "What shocked me was how he ignored the customers."
+    explanation: "Wh-cleft: What + verbo + objeto + was + a informação enfatizada."
+
+  - id: q15
+    module_id: c1_wh_cleft
+    type: order
+    prompt: "Put the words in order (start with 'The reason')."
+    prompt_pt: "Coloque as palavras em ordem (comece com 'The reason')."
+    words: [was, quality, I, The, life, why, to, of, reason, Porto, the, moved]
+    answers: ["The reason why I moved to Porto was the quality of life."]
+    explanation: "The reason why + oração + was + a informação enfatizada."
+
+  - id: q16
+    module_id: c1_past_modals_criticism
+    type: choice
+    prompt: "We ___ queued for two hours; it turned out we could book online and skip the line."
+    prompt_pt: "Não precisávamos ter ficado duas horas na fila; no fim dava para reservar on-line e pular a fila."
+    glossary: {queued: "fizemos fila", skip: pular}
+    options: [needn't have, shouldn't, mustn't have, couldn't have]
+    answers: [needn't have]
+    explanation: "Needn't have + particípio: fizemos algo que não era necessário."
+
+  - id: q17
+    module_id: c1_past_modals_criticism
+    type: gap
+    prompt: "Sorry, I ___ (ought / tell) you sooner that I couldn't make it to the wedding."
+    prompt_pt: "Desculpe, eu deveria ter te avisado antes que não ia conseguir ir ao casamento."
+    glossary: {make it: "conseguir ir"}
+    answers: [ought to have told]
+    explanation: "Ought to have + particípio expressa arrependimento, como 'should have'."
+
+  - id: q18
+    module_id: c1_past_modals_criticism
+    type: fix
+    prompt: "She must have told us about the layoffs earlier, but she kept it secret."
+    prompt_pt: "Ela deveria ter nos contado sobre as demissões antes, mas manteve segredo."
+    glossary: {layoffs: demissões}
+    answers:
+      - "She should have told us about the layoffs earlier, but she kept it secret."
+      - "She ought to have told us about the layoffs earlier, but she kept it secret."
+    explanation: "Must have é dedução; para criticar algo que não foi feito usa-se should have (ou ought to have)."
+
+  - id: q19
+    module_id: c1_past_modals_criticism
+    type: translate
+    prompt: "Você não precisava ter pagado o jantar. (use needn't)"
+    answers:
+      - "You needn't have paid for dinner."
+      - "You needn't have paid for the dinner."
+    explanation: "Needn't have + particípio: a pessoa pagou, mas não era necessário."
+
+  - id: q20
+    module_id: c1_past_modals_possibility
+    type: choice
+    prompt: "Don't blame the driver; with all that ice on the road, anyone ___ crashed."
+    prompt_pt: "Não culpe o motorista; com todo aquele gelo na estrada, qualquer um poderia ter batido."
+    glossary: {blame: culpar, ice: gelo}
+    options: [could have, should have, must have, needn't have]
+    answers: [could have]
+    explanation: "Could have + particípio: algo era possível no passado (não é dever, dedução certa nem desnecessidade)."
+
+  - id: q21
+    module_id: c1_past_modals_possibility
+    type: choice
+    prompt: "If you'd told me you were stuck, I ___ to the airport."
+    prompt_pt: "Se você tivesse me dito que estava sem carona, eu poderia ter te levado ao aeroporto."
+    glossary: {stuck: "sem saída"}
+    options: [could have driven you, could drive you, must have driven you, should drive you]
+    answers: [could have driven you]
+    explanation: "Possibilidade não realizada no passado (3º condicional): could have + particípio."
+
+  - id: q22
+    module_id: c1_past_modals_possibility
+    type: gap
+    prompt: "Without the spellchecker, I ___ (would / send) a CV full of typos."
+    prompt_pt: "Sem o corretor ortográfico, eu teria mandado um currículo cheio de erros de digitação."
+    glossary: {spellchecker: corretor ortográfico, typos: erros de digitação}
+    answers: [would have sent]
+    explanation: "Resultado imaginado no passado: would have + particípio (sent)."
+
+  - id: q23
+    module_id: c1_past_modals_possibility
+    type: transform
+    prompt: "Rewrite with 'might have': It's possible that the courier left the parcel with a neighbour."
+    prompt_pt: "Reescreva com 'might have': É possível que o entregador tenha deixado o pacote com um vizinho."
+    glossary: {courier: entregador, parcel: pacote}
+    answers:
+      - "The courier might have left the parcel with a neighbour."
+      - "The courier might have left the parcel with a neighbor."
+    explanation: "Might have + particípio: suposição sobre o passado sem certeza."
+
+  - id: q24
+    module_id: c1_causative
+    type: choice
+    prompt: "We're getting the whole office ___ next weekend, so please clear your desks."
+    prompt_pt: "Vamos mandar pintar o escritório inteiro no próximo fim de semana, então, por favor, esvaziem suas mesas."
+    glossary: {clear: esvaziar}
+    options: [repainted, repaint, to repaint, repainting]
+    answers: [repainted]
+    explanation: "Get + objeto + particípio: outra pessoa faz o serviço para nós."
+
+  - id: q25
+    module_id: c1_causative
+    type: gap
+    prompt: "Our manager had everyone ___ (sign) a confidentiality agreement before the launch."
+    prompt_pt: "Nosso gerente fez todo mundo assinar um acordo de confidencialidade antes do lançamento."
+    glossary: {confidentiality: confidencialidade, launch: lançamento}
+    answers: [sign]
+    explanation: "Have + pessoa + verbo base (sem 'to'): mandar alguém fazer algo."
+
+  - id: q26
+    module_id: c1_causative
+    type: order
+    prompt: "Put the words in order (something that happened to us)."
+    prompt_pt: "Coloque as palavras em ordem (algo que aconteceu com a gente)."
+    words: [our, We, flight, twice, had, cancelled, last, month]
+    answers:
+      - "We had our flight cancelled twice last month."
+      - "Last month we had our flight cancelled twice."
+    explanation: "Have + objeto + particípio também descreve algo ruim que nos aconteceu."
+
+  - id: q27
+    module_id: c1_hedging
+    type: choice
+    prompt: "The figures ___ to suggest that the campaign has worked, although it is too early to be sure."
+    prompt_pt: "Os números parecem indicar que a campanha funcionou, embora seja cedo demais para ter certeza."
+    glossary: {figures: números}
+    options: [would seem, must seem, are seeming, seems]
+    answers: [would seem]
+    explanation: "'Would seem to' suaviza a afirmação; 'seems' não concorda com 'figures' e 'must' contradiz a cautela."
+
+  - id: q28
+    module_id: c1_hedging
+    type: fix
+    prompt: "There seems being a misunderstanding about who is paying for the trip."
+    prompt_pt: "Parece haver um mal-entendido sobre quem vai pagar a viagem."
+    glossary: {misunderstanding: mal-entendido}
+    answers: ["There seems to be a misunderstanding about who is paying for the trip."]
+    explanation: "Seem é seguido de to + infinitivo: there seems to be."
+
+  - id: q29
+    module_id: c1_hedging
+    type: transform
+    prompt: "Make it more cautious using 'It would appear that': The supplier has gone out of business."
+    prompt_pt: "Deixe mais cauteloso usando 'It would appear that': O fornecedor fechou as portas."
+    glossary: {supplier: fornecedor}
+    answers: ["It would appear that the supplier has gone out of business."]
+    explanation: "'It would appear that' apresenta a informação como impressão, não como fato."
+
+  - id: q30
+    module_id: c1_hedging
+    type: translate
+    prompt: "A reunião parece ter sido adiada. (use 'seem')"
+    answers:
+      - "The meeting seems to have been postponed."
+      - "It seems that the meeting has been postponed."
+      - "It seems the meeting has been postponed."
+      - "It seems that the meeting was postponed."
+      - "It seems the meeting was postponed."
+    explanation: "Seem + to have been + particípio: suposição cautelosa sobre algo passivo no passado."
+
+  - id: q31
+    module_id: c1_participle_clauses
+    type: choice
+    prompt: "___ only three weeks ago, the app already has a million users."
+    prompt_pt: "Lançado há apenas três semanas, o aplicativo já tem um milhão de usuários."
+    options: [Launched, Launching, Having launched, To launch]
+    answers: [Launched]
+    explanation: "O app foi lançado (sentido passivo), então usa-se o particípio passado: Launched."
+
+  - id: q32
+    module_id: c1_participle_clauses
+    type: choice
+    prompt: "___ the instructions carefully, Bruno still couldn't assemble the wardrobe."
+    prompt_pt: "Mesmo tendo lido as instruções com atenção, o Bruno ainda não conseguiu montar o guarda-roupa."
+    glossary: {assemble: montar, wardrobe: guarda-roupa}
+    options: [Having read, Being read, Having been read, To be read]
+    answers: [Having read]
+    explanation: "Having + particípio: ação ativa concluída antes da ação principal, com o mesmo sujeito (Bruno)."
+
+  - id: q33
+    module_id: c1_participle_clauses
+    type: fix
+    prompt: "Knowing not anyone at the party, Lara stayed close to the host all night."
+    prompt_pt: "Sem conhecer ninguém na festa, a Lara ficou perto do anfitrião a noite toda."
+    glossary: {host: anfitrião}
+    answers: ["Not knowing anyone at the party, Lara stayed close to the host all night."]
+    explanation: "Na participle clause negativa, 'not' vem antes do -ing: Not knowing."
+
+  - id: q34
+    module_id: c1_participle_clauses
+    type: gap
+    prompt: "The passengers ___ (wait) at gate 12 were told to board immediately."
+    prompt_pt: "Os passageiros que estavam esperando no portão 12 foram avisados para embarcar imediatamente."
+    glossary: {gate: portão, board: embarcar}
+    answers: [waiting]
+    explanation: "-ing substitui a oração relativa ativa (who were waiting)."
+
+  - id: q35
+    module_id: c1_collocations
+    type: choice
+    prompt: "During the meeting, Helena ___ a valid concern about the budget."
+    prompt_pt: "Durante a reunião, a Helena levantou uma preocupação válida sobre o orçamento."
+    glossary: {budget: orçamento}
+    options: [raised, rose, did, put]
+    answers: [raised]
+    explanation: "A collocation é 'raise a concern' (levantar uma preocupação); 'rose' é intransitivo."
+
+  - id: q36
+    module_id: c1_collocations
+    type: gap
+    prompt: "If you'd ___ closer attention to the brief, you wouldn't have had to redo the whole design."
+    prompt_pt: "Se você tivesse prestado mais atenção ao briefing, não teria precisado refazer o design inteiro."
+    glossary: {brief: briefing, redo: refazer}
+    answers: [paid]
+    explanation: "A collocation é 'pay attention'; no 3º condicional vem no particípio: had paid."
+
+  - id: q37
+    module_id: c1_collocations
+    type: fix
+    prompt: "Before the trip, she made a lot of research on local customs."
+    prompt_pt: "Antes da viagem, ela fez muita pesquisa sobre os costumes locais."
+    glossary: {customs: costumes}
+    answers: ["Before the trip, she did a lot of research on local customs."]
+    explanation: "Em inglês se diz 'do research', não 'make research'."
+
+  - id: q38
+    module_id: c1_idioms
+    type: choice
+    prompt: "I've sent them our final offer, so now the ball is in ___."
+    prompt_pt: "Mandei a nossa proposta final, então agora a decisão é deles."
+    options: [their court, their pitch, their goal, their net]
+    answers: [their court]
+    explanation: "O idiom fixo é 'the ball is in your/their court': agora a decisão é do outro lado."
+
+  - id: q39
+    module_id: c1_idioms
+    type: order
+    prompt: "Put the words in order (suggest stopping work for today)."
+    prompt_pt: "Coloque as palavras em ordem (sugira parar de trabalhar por hoje)."
+    words: [it, a, Let's, call, day, and, finish, the, slides, tomorrow]
+    answers:
+      - "Let's call it a day and finish the slides tomorrow."
+      - "Let's finish the slides tomorrow and call it a day."
+    explanation: "'Call it a day' significa encerrar o trabalho por hoje; a expressão não muda."
+
+  - id: q40
+    module_id: c1_idioms
+    type: translate
+    prompt: "Ele amarelou na véspera do casamento. (use um idiom)"
+    answers:
+      - "He got cold feet the day before the wedding."
+      - "He got cold feet the night before the wedding."
+      - "He got cold feet on the eve of the wedding."
+      - "He got cold feet the day before his wedding."
+      - "He got cold feet the night before his wedding."
+      - "He got cold feet on the eve of his wedding."
+    explanation: "'Get cold feet' = amarelar, perder a coragem na hora H."

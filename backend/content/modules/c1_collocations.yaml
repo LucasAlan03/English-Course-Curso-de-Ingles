@@ -1,0 +1,25 @@
+id: c1_collocations
+level: C1
+title: Collocations
+order: 10
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Collocations
+
+  - **O que são:** palavras que combinam naturalmente. Trocar uma delas soa estranho, mesmo com o mesmo sentido.
+  - **make / do:** *make a decision, make a mistake, make an effort, make progress* × *do business, do research, do someone a favour, do your best*
+  - **take / pay / give:** *take a risk, take a break* · *pay attention, pay a visit* · *give a speech, give feedback*
+  - **Adjetivo + substantivo:** *heavy traffic, heavy rain, strong opinion, strong coffee*
+  - **Advérbio + adjetivo:** *highly recommended, deeply concerned, fully aware*
+  - **Negócios:** *meet a deadline, reach an agreement, raise a concern*
+  - **Dica:** aprenda a combinação inteira, não a palavra solta.
+  - **Erro comum:** traduzir do português: *do a mistake* → *make a mistake*; *strong rain* → *heavy rain*.
+scenario:
+  title: Networking at a conference
+  character: A friendly fellow attendee from another company
+  goal: Make small talk about work and the event, sounding natural with common collocations
+target_structures:
+- make / do / take collocations
+- adjective + noun collocations
+- adverb + adjective collocations
+- meet a deadline / reach an agreement

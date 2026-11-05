@@ -1,0 +1,230 @@
+module_id: b2_passive_basic
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Portuguese ___ in Brazil, Portugal and Angola."
+    prompt_pt: "O português é falado no Brasil, em Portugal e em Angola."
+    options: [is spoken, speaks, is speaking]
+    answers: [is spoken]
+    explanation: "A língua não fala; ela é falada → is + particípio."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "My bike ___ last night, right outside my building."
+    prompt_pt: "Minha bicicleta foi roubada ontem à noite, bem na frente do meu prédio."
+    options: [was stolen, stole, is stolen]
+    answers: [was stolen]
+    explanation: "Ação passada (last night) sofrida pela bicicleta → was + particípio."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "These sneakers ___ in Vietnam."
+    prompt_pt: "Estes tênis são fabricados no Vietnã."
+    glossary: {sneakers: tênis}
+    options: [are made, make, are making]
+    answers: [are made]
+    explanation: "Fato geral no presente, sujeito plural que recebe a ação → are made."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "The Christ the Redeemer statue ___ in 1931."
+    prompt_pt: "A estátua do Cristo Redentor foi concluída em 1931."
+    glossary: {statue: estátua}
+    options: [was completed, completed, is completed]
+    answers: [was completed]
+    explanation: "Data passada e a estátua recebe a ação → was completed."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Which sentence is in the passive?"
+    prompt_pt: "Qual frase está na voz passiva?"
+    options: ["The emails are checked every morning.", "Lena checks the emails every morning.", "Lena is checking the emails."]
+    answers: ["The emails are checked every morning."]
+    explanation: "Are checked = to be + particípio, com foco nos e-mails."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "All our bread is baked by hand every morning, and the coffee beans are roasted here in the shop."
+    prompt: "Where are the coffee beans roasted?"
+    prompt_pt: "Onde os grãos de café são torrados?"
+    glossary: {beans: grãos, roasted: torrados}
+    options: [In the shop., On a farm., In another city.]
+    answers: [In the shop.]
+    explanation: "Are roasted here in the shop: os grãos são torrados na própria loja."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "The meeting was cancelled because the manager was called to an emergency in the warehouse."
+    prompt: "Why was the meeting cancelled?"
+    prompt_pt: "Por que a reunião foi cancelada?"
+    options: ["The manager was called to an emergency.", "The room was booked by another team.", "Nobody was invited."]
+    answers: ["The manager was called to an emergency."]
+    explanation: "Was called to an emergency: o gerente foi chamado para uma emergência."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Thousands of photos ___ (upload) to this app every minute."
+    prompt_pt: "Milhares de fotos são enviadas para este app a cada minuto."
+    answers: [are uploaded]
+    explanation: "Fato no presente, sujeito plural → are + particípio."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "The winners ___ (announce) yesterday on the radio."
+    prompt_pt: "Os vencedores foram anunciados ontem no rádio."
+    answers: [were announced]
+    explanation: "Yesterday + sujeito plural → were + particípio."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "When ___ this building built?"
+    prompt_pt: "Quando este prédio foi construído?"
+    options: [was, is, did]
+    answers: [was]
+    explanation: "Pergunta na passiva do passado: When + was + sujeito + particípio."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "The package ___ to the wrong address last week."
+    prompt_pt: "O pacote foi entregue no endereço errado na semana passada."
+    options: [was delivered, delivered, is delivered]
+    answers: [was delivered]
+    explanation: "O pacote recebe a ação, e last week pede passado → was delivered."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Our office ___ by a team of three people every evening."
+    prompt_pt: "Nosso escritório é limpo por uma equipe de três pessoas todas as noites."
+    options: [is cleaned, cleans, is cleaning]
+    answers: [is cleaned]
+    explanation: "Rotina (every evening) e o escritório recebe a ação → is cleaned."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "The contract ___ (not / sign) because the lawyer was ill."
+    prompt_pt: "O contrato não foi assinado porque o advogado estava doente."
+    glossary: {lawyer: advogado}
+    answers: [wasn't signed, was not signed]
+    explanation: "Negativa da passiva no passado: wasn't + particípio."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "The museum visited by thousands of tourists every year."
+    prompt_pt: "O museu é visitado por milhares de turistas todos os anos."
+    answers: ["The museum is visited by thousands of tourists every year."]
+    explanation: "Falta o to be: is visited."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "My car was repair by a mechanic in my neighbourhood."
+    prompt_pt: "Meu carro foi consertado por um mecânico do meu bairro."
+    glossary: {neighbourhood: bairro}
+    answers: ["My car was repaired by a mechanic in my neighbourhood.", "My car was repaired by a mechanic in my neighborhood."]
+    explanation: "Depois de was vem o particípio: repaired."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a statement)."
+    prompt_pt: "Coloque as palavras em ordem (uma afirmação)."
+    words: [Brazilian, was, by, film, a, the, directed, woman]
+    answers: ["The film was directed by a Brazilian woman."]
+    explanation: "Sujeito + was + particípio + by + agente."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: [these, taken, where, photos, were]
+    answers: ["Where were these photos taken?"]
+    explanation: "Pergunta: Where + were + sujeito + particípio."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "The new stadium was opened by the mayor in May."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["The new stadium was opened by the mayor in May."]
+    explanation: "Was opened by the mayor: passiva no passado com agente."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Someone ___ my wallet on the bus, but I got it back."
+    prompt_pt: "Alguém encontrou minha carteira no ônibus, mas eu a recuperei."
+    glossary: {wallet: carteira}
+    options: [found, was found, is found]
+    answers: [found]
+    explanation: "O sujeito (someone) faz a ação, então a voz é ativa: found."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Breakfast ___ from 7 to 10 a.m. in the lobby."
+    prompt_pt: "O café da manhã é servido das 7 às 10 da manhã no saguão."
+    glossary: {lobby: saguão}
+    options: [is served, serves, is serving]
+    answers: [is served]
+    explanation: "O café da manhã não serve; ele é servido → is served."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "The thief was caught by a security guard two hours after the painting was stolen."
+    prompt: "Who caught the thief?"
+    prompt_pt: "Quem pegou o ladrão?"
+    glossary: {thief: ladrão}
+    options: [A security guard., A police officer., The museum director.]
+    answers: [A security guard.]
+    explanation: "By a security guard indica o agente da ação."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "These cookies are make with oats and honey."
+    prompt_pt: "Estes biscoitos são feitos com aveia e mel."
+    glossary: {oats: aveia, honey: mel}
+    answers: ["These cookies are made with oats and honey."]
+    explanation: "A passiva usa o particípio: are made."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite in the passive: They grow coffee in Minas Gerais."
+    prompt_pt: "Reescreva na voz passiva: Eles cultivam café em Minas Gerais."
+    answers: ["Coffee is grown in Minas Gerais."]
+    explanation: "O objeto (coffee) vira sujeito; they não é útil, então sai o agente."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite in the passive, keeping the agent: Machado de Assis wrote Dom Casmurro."
+    prompt_pt: "Reescreva na voz passiva, mantendo o agente: Machado de Assis escreveu Dom Casmurro."
+    answers: ["Dom Casmurro was written by Machado de Assis."]
+    explanation: "Wrote → was written; o autor entra com by."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Meu celular foi roubado ontem."
+    answers:
+      - "My phone was stolen yesterday."
+      - "My cell phone was stolen yesterday."
+      - "My cellphone was stolen yesterday."
+      - "My mobile was stolen yesterday."
+      - "My mobile phone was stolen yesterday."
+      - "Yesterday my phone was stolen."
+    explanation: "Foi roubado = was stolen: passiva no passado."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "O inglês é falado no mundo todo."
+    answers:
+      - "English is spoken all over the world."
+      - "English is spoken around the world."
+      - "English is spoken all around the world."
+      - "English is spoken worldwide."
+      - "English is spoken throughout the world."
+      - "English is spoken in the whole world."
+    explanation: "É falado = is spoken: passiva no presente."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Most of our furniture is made from recycled wood."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Most of our furniture is made from recycled wood."]
+    explanation: "Is made from: passiva no presente para falar de material."

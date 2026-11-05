@@ -1,0 +1,222 @@
+module_id: b2_reported_questions
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "“Are you free tonight?” → He asked me ___ free that night."
+    prompt_pt: "“Você está livre hoje à noite?” → Ele me perguntou se eu estava livre naquela noite."
+    options: [if I was, was I, if was I]
+    answers: [if I was, whether I was]
+    explanation: "Pergunta de sim/não vira if + ordem de afirmação (I was)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "“Where do you live?” → She asked me where ___."
+    prompt_pt: "“Onde você mora?” → Ela me perguntou onde eu morava."
+    options: [I lived, did I live, I do live]
+    answers: [I lived]
+    explanation: "Sem do/did e com ordem de afirmação: where I lived."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "“Please close the door.” → My boss asked me ___ the door."
+    prompt_pt: "“Por favor, feche a porta.” → Meu chefe me pediu para fechar a porta."
+    options: [to close, close, closing]
+    answers: [to close]
+    explanation: "Pedido: asked + pessoa + to + verbo."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "“Don't touch the screen.” → The technician told us ___ the screen."
+    prompt_pt: "“Não toquem na tela.” → O técnico nos disse para não tocar na tela."
+    options: [not to touch, don't touch, to not touching]
+    answers: [not to touch]
+    explanation: "Ordem negativa: told + pessoa + not to + verbo."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "“Have you ever been to Chile?” → The interviewer asked ___ I had ever been to Chile."
+    prompt_pt: "“Você já foi ao Chile?” → O entrevistador perguntou se eu já tinha ido ao Chile."
+    options: [whether, that, what]
+    answers: [whether, if]
+    explanation: "Pergunta de sim/não relatada usa whether ou if."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "The receptionist asked me what time I wanted to check out and whether I needed a taxi."
+    prompt: "What did the receptionist want to know?"
+    prompt_pt: "O que a recepcionista queria saber?"
+    options: ["The check-out time and if the speaker needed a taxi.", "The speaker's name and room number.", "If the speaker had enjoyed the stay."]
+    answers: ["The check-out time and if the speaker needed a taxi."]
+    explanation: "Asked what time ... and whether ...: duas perguntas relatadas."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Dr Lima told me to drink more water and asked me not to skip breakfast."
+    prompt: "What did the doctor tell the speaker to do?"
+    prompt_pt: "O que o médico disse para a pessoa que fala fazer?"
+    options: [Drink more water., Skip breakfast., Drink less coffee.]
+    answers: [Drink more water.]
+    explanation: "Told me to drink more water: ordem relatada com to + verbo."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "“Can you help me with the bags?” → Lia asked me ___ help her with the bags."
+    prompt_pt: "“Você pode me ajudar com as malas?” → A Lia me perguntou se eu podia ajudá-la com as malas."
+    answers: [if I could, whether I could]
+    explanation: "Pergunta de sim/não: if + sujeito + verbo, com can recuado para could."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "“Why are you late?” → The teacher asked us why we ___ late."
+    prompt_pt: "“Por que vocês estão atrasados?” → A professora nos perguntou por que estávamos atrasados."
+    answers: [were]
+    explanation: "Ordem de afirmação (we were) e are recuado para were."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "“How much does the course cost?” → I asked how much the course ___."
+    prompt_pt: "“Quanto custa o curso?” → Eu perguntei quanto o curso custava."
+    options: [cost, did cost, does it cost]
+    answers: [cost, costs]
+    explanation: "Sem does/did na pergunta relatada: how much the course cost."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "The flight attendant ___ us to fasten our seatbelts."
+    prompt_pt: "A comissária de bordo nos disse para apertar os cintos."
+    glossary: {fasten: apertar, seatbelts: cintos de segurança}
+    options: [told, said, asked that]
+    answers: [told]
+    explanation: "Ordem relatada: told + pessoa + to + verbo; said não leva pessoa nem to."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "“Did you enjoy the show?” → My friend asked me ___ the show."
+    prompt_pt: "“Você gostou do show?” → Meu amigo me perguntou se eu tinha gostado do show."
+    options: [if I had enjoyed, did I enjoy, if had I enjoyed]
+    answers: [if I had enjoyed, whether I had enjoyed]
+    explanation: "If + ordem de afirmação, com did enjoy recuado para had enjoyed."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "“Please don't call after 10 p.m.” → My neighbour asked me ___ (not / call) after 10 p.m."
+    prompt_pt: "“Por favor, não ligue depois das 22h.” → Meu vizinho me pediu para não ligar depois das 22h."
+    glossary: {neighbour: vizinho}
+    answers: [not to call]
+    explanation: "Pedido negativo: asked + pessoa + not to + verbo."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "She asked me where was the station."
+    prompt_pt: "Ela me perguntou onde ficava a estação."
+    answers: ["She asked me where the station was."]
+    explanation: "Na pergunta relatada não há inversão: where the station was."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "They asked us if did we want to join them."
+    prompt_pt: "Eles nos perguntaram se queríamos ir com eles."
+    answers: ["They asked us if we wanted to join them.", "They asked us whether we wanted to join them."]
+    explanation: "Sem did e sem inversão: if we wanted."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a reported question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta relatada)."
+    words: [doing, me, I, asked, was, he, what]
+    answers: ["He asked me what I was doing."]
+    explanation: "Asked + pessoa + wh- + sujeito + verbo."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a reported request)."
+    prompt_pt: "Coloque as palavras em ordem (um pedido relatado)."
+    words: [file, me, her, she, to, the, asked, send]
+    answers: ["She asked me to send her the file."]
+    explanation: "Pedido relatado: asked + pessoa + to + verbo."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "The guide asked us not to take photos inside the church."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["The guide asked us not to take photos inside the church."]
+    explanation: "Asked us not to take: pedido negativo relatado."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "“Do you speak Italian?” → He ___ me if I spoke Italian."
+    prompt_pt: "“Você fala italiano?” → Ele me perguntou se eu falava italiano."
+    options: [asked, said, told]
+    answers: [asked]
+    explanation: "Para relatar perguntas usamos asked + if; said e told são para afirmações."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "“I'll be there at eight.” → She ___ me she would be there at eight."
+    prompt_pt: "“Estarei lá às oito.” → Ela me disse que estaria lá às oito."
+    options: [told, asked, said]
+    answers: [told]
+    explanation: "É uma afirmação com a pessoa (me), então usamos told, não asked."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "At the interview, they asked me why I wanted to leave my current job and told me to send two references."
+    prompt: "What did they ask the speaker to send?"
+    prompt_pt: "O que pediram para a pessoa que fala enviar?"
+    options: [Two references., A portfolio., A cover letter.]
+    answers: [Two references.]
+    explanation: "Told me to send two references: pedido relatado com to + verbo."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "My mum told me don't forget my umbrella."
+    prompt_pt: "Minha mãe me disse para não esquecer o guarda-chuva."
+    answers: ["My mum told me not to forget my umbrella.", "My mom told me not to forget my umbrella."]
+    explanation: "Ordem negativa relatada: told + pessoa + not to + verbo."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Report this question: The landlord: “When can you pay the rent?”"
+    prompt_pt: "Relate esta pergunta: O proprietário: “Quando você pode pagar o aluguel?”"
+    glossary: {landlord: proprietário, rent: aluguel}
+    answers:
+      - "The landlord asked when I could pay the rent."
+      - "The landlord asked me when I could pay the rent."
+    explanation: "Wh- + ordem de afirmação (I could), com can recuado para could."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Report this request using 'asked': Sofia to Max: “Please turn down the music.”"
+    prompt_pt: "Relate este pedido usando 'asked': Sofia para o Max: “Por favor, abaixe a música.”"
+    answers: ["Sofia asked Max to turn down the music.", "Sofia asked Max to turn the music down."]
+    explanation: "Pedido relatado: asked + pessoa + to + verbo, sem please."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Ela me perguntou se eu estava com fome."
+    answers:
+      - "She asked me if I was hungry."
+      - "She asked me whether I was hungry."
+      - "She asked if I was hungry."
+      - "She asked whether I was hungry."
+    explanation: "Perguntou se = asked if/whether, com ordem de afirmação (I was)."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "O médico me disse para descansar."
+    answers:
+      - "The doctor told me to rest."
+      - "The doctor told me to get some rest."
+      - "My doctor told me to rest."
+      - "My doctor told me to get some rest."
+    explanation: "Disse para + verbo = told + pessoa + to + verbo."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "He asked me where I had bought my jacket."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["He asked me where I had bought my jacket.", "He asked me where I'd bought my jacket."]
+    explanation: "Where + sujeito + had bought: sem inversão e com o tempo recuado."

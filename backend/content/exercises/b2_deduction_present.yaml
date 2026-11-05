@@ -1,0 +1,217 @@
+module_id: b2_deduction_present
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Lucas has been working for twelve hours straight. He ___ be exhausted."
+    prompt_pt: "Lucas está trabalhando há doze horas seguidas. Ele deve estar exausto."
+    glossary: {exhausted: exausto, straight: seguidas}
+    options: [must, can't, mustn't]
+    answers: [must]
+    explanation: "Há uma evidência forte (doze horas de trabalho), então usamos must para quase certeza."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "That ___ be Marina at the door. She's on a flight to Tokyo right now."
+    prompt_pt: "Não pode ser a Marina na porta. Ela está num voo para Tóquio agora."
+    glossary: {flight: voo}
+    options: [can't, must, might]
+    answers: [can't]
+    explanation: "Ela está num avião, então é impossível: can't be."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "I'm not sure where Diego is. He ___ be at the gym, or maybe he's still at work."
+    prompt_pt: "Não sei onde o Diego está. Ele pode estar na academia, ou talvez ainda esteja no trabalho."
+    options: [might, must, can't]
+    answers: [might]
+    explanation: "O falante não tem certeza (I'm not sure, or maybe), então usamos might para possibilidade."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "The lights are on and I can hear music. They ___ be home."
+    prompt_pt: "As luzes estão acesas e eu consigo ouvir música. Eles devem estar em casa."
+    options: [must, can't, shouldn't]
+    answers: [must]
+    explanation: "Luzes acesas e música são evidências fortes, então must expressa quase certeza."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Don't call Paula right now. She ___ be driving to the office."
+    prompt_pt: "Não ligue para a Paula agora. Ela pode estar dirigindo para o escritório."
+    options: [could, can't, mustn't]
+    answers: [could]
+    explanation: "É uma possibilidade (could be + -ing); can't contradiz o conselho e mustn't é proibição, não dedução."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Carla isn't answering. She can't be asleep, it's noon. Her phone must be dead."
+    prompt: "Why does the speaker think Carla isn't answering?"
+    prompt_pt: "Por que quem fala acha que a Carla não está atendendo?"
+    options: ["Her phone has no battery.", "She is sleeping.", "She is angry."]
+    answers: ["Her phone has no battery."]
+    explanation: "Her phone must be dead = o celular deve estar sem bateria; can't be asleep descarta o sono."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Look at that queue! The new burger place must be really good."
+    prompt: "What does the speaker think about the new burger place?"
+    prompt_pt: "O que quem fala acha da nova hamburgueria?"
+    options: ["It's really good.", "It's too expensive.", "It's closed."]
+    answers: ["It's really good."]
+    explanation: "A fila longa leva à dedução must be really good."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Rafael ___ a millionaire. He takes the bus everywhere and shares a tiny flat. (be – impossível)"
+    prompt_pt: "O Rafael não pode ser milionário. Ele pega ônibus para todo lado e divide um apartamento minúsculo."
+    glossary: {tiny: minúsculo, flat: apartamento}
+    answers: ["can't be", "cannot be", "couldn't be"]
+    explanation: "Para dizer que algo é impossível no presente, usamos can't be."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Everyone is wearing coats and scarves. It ___ freezing outside. (be – quase certeza)"
+    prompt_pt: "Todo mundo está de casaco e cachecol. Deve estar congelando lá fora."
+    glossary: {scarves: cachecóis, freezing: congelando}
+    answers: ["must be"]
+    explanation: "Casacos e cachecóis são evidência forte, então must be."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "Why is Bruno smiling so much? He ___ have some good news."
+    prompt_pt: "Por que o Bruno está sorrindo tanto? Ele pode ter alguma boa notícia."
+    options: [may, can't, mustn't]
+    answers: [may]
+    explanation: "É uma hipótese possível, então may; can't contradiz o sorriso e mustn't é proibição."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "The restaurant is empty on a Saturday night. The food ___ be very good."
+    prompt_pt: "O restaurante está vazio num sábado à noite. A comida não deve ser muito boa."
+    options: [can't, must, should]
+    answers: [can't]
+    explanation: "Restaurante vazio no sábado leva à dedução negativa: can't be very good."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Listen! Someone ___ be practising the piano upstairs."
+    prompt_pt: "Escuta! Alguém deve estar treinando piano lá em cima."
+    glossary: {upstairs: lá em cima}
+    options: [must, can't, mustn't]
+    answers: [must]
+    explanation: "Você está ouvindo o piano, então tem quase certeza: must be + -ing."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Don't ring the bell. The baby ___ (sleep). (modal + be + -ing)"
+    prompt_pt: "Não toque a campainha. O bebê deve estar dormindo."
+    glossary: {bell: campainha}
+    answers: ["must be sleeping", "might be sleeping", "may be sleeping", "could be sleeping"]
+    explanation: "Para uma ação acontecendo agora, usamos modal + be + -ing."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "He mustn't be hungry because he had a huge lunch."
+    prompt_pt: "Ele não pode estar com fome, porque almoçou muito."
+    answers: ["He can't be hungry because he had a huge lunch.", "He cannot be hungry because he had a huge lunch.", "He couldn't be hungry because he had a huge lunch."]
+    explanation: "Mustn't é proibição; para dedução negativa usamos can't."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Julia must to be tired after her night shift."
+    prompt_pt: "A Julia deve estar cansada depois do plantão noturno."
+    glossary: {shift: turno}
+    answers: ["Julia must be tired after her night shift."]
+    explanation: "Depois de must vem o verbo sem to: must be."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: [be, must, she, joking]
+    answers: ["She must be joking."]
+    explanation: "Sujeito + must + be + -ing para dedução sobre o que acontece agora."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order. (a negative deduction)"
+    prompt_pt: "Coloque as palavras em ordem. (uma dedução negativa)"
+    words: [can't, that, right, be]
+    answers: ["That can't be right."]
+    explanation: "Sujeito + can't + be: algo que você acha impossível."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "They might be stuck in traffic on the way here."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["They might be stuck in traffic on the way here."]
+    explanation: "Might be expressa uma possibilidade sobre o presente."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Is that your phone ringing? No, it ___ be mine. Mine is on silent."
+    prompt_pt: "É o seu celular tocando? Não, não pode ser o meu. O meu está no silencioso."
+    options: [can't, must, might]
+    answers: [can't]
+    explanation: "O celular está no silencioso, então é impossível: can't be."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "I have no idea why Leo is late. His train ___ be delayed."
+    prompt_pt: "Não faço ideia de por que o Leo está atrasado. O trem dele pode estar atrasado."
+    glossary: {delayed: atrasado}
+    options: [might, must, can't]
+    answers: [might]
+    explanation: "Sem evidência (I have no idea), só cabe possibilidade: might."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Pedro says he's flying to Rome tomorrow, but his passport expired last month. He can't be serious."
+    prompt: "What does the speaker believe?"
+    prompt_pt: "No que quem fala acredita?"
+    options: ["Pedro is not being serious.", "Pedro is definitely travelling.", "Pedro has a new passport."]
+    answers: ["Pedro is not being serious."]
+    explanation: "He can't be serious = ele não pode estar falando sério."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "She might is working from home today."
+    prompt_pt: "Ela pode estar trabalhando de casa hoje."
+    answers: ["She might be working from home today."]
+    explanation: "Depois do modal vem o verbo base: might be working."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using must: I'm sure Fernanda is tired."
+    prompt_pt: "Reescreva usando must: Tenho certeza de que a Fernanda está cansada."
+    answers: ["Fernanda must be tired."]
+    explanation: "Certeza baseada em evidência vira must be."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using can't: I'm sure that isn't the right address."
+    prompt_pt: "Reescreva usando can't: Tenho certeza de que esse não é o endereço certo."
+    answers: ["That can't be the right address.", "That cannot be the right address."]
+    explanation: "Certeza de que algo não é verdade vira can't be."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Ela pode estar dormindo agora."
+    answers: ["She might be sleeping now.", "She may be sleeping now.", "She could be sleeping now.", "She might be asleep now.", "She may be asleep now.", "She could be asleep now.", "She might be sleeping right now.", "She may be sleeping right now.", "She could be sleeping right now."]
+    explanation: "Possibilidade sobre algo acontecendo agora: might/may/could be + -ing."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Isso não pode ser verdade."
+    answers: ["That can't be true.", "This can't be true.", "It can't be true.", "That cannot be true.", "This cannot be true.", "That couldn't be true.", "This couldn't be true."]
+    explanation: "Não pode ser = can't be (nunca mustn't be)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "You must be the new designer everyone is talking about."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["You must be the new designer everyone is talking about.", "You must be the new designer everyone's talking about."]
+    explanation: "Must be para identificar alguém com quase certeza."

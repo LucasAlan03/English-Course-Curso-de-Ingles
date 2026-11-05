@@ -1,0 +1,23 @@
+id: b2_be_used_to
+level: B2
+title: Be used to e get used to
+order: 12
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Be used to e get used to
+
+  - **Forma:** *be used to* / *get used to* + substantivo, pronome ou verbo com **-ing**: *I'm used to the noise.* / *I'm used to working at night.*
+  - **be used to**: estar acostumado (já é normal para você): *She's used to driving on the left.*
+  - **get used to**: acostumar-se (o processo de mudança): *I'm getting used to my new job.* / *You'll get used to it.*
+  - Funcionam em todos os tempos: *I wasn't used to...*, *I've got used to...*, *I'll never get used to...*
+  - **Used to × be used to:** *I used to work at night* (antes eu trabalhava à noite, não trabalho mais) × *I'm used to working at night* (estou acostumado).
+  - **Erro comum:** *I'm used to wake up early.* → *I'm used to waking up early.* (aqui o *to* é preposição, então vem -ing).
+scenario:
+  title: First month in a new job abroad
+  character: A coworker in Dublin who is helping you settle in
+  goal: Talk about what you're used to, what is still strange and what you're getting used to
+target_structures:
+- be used to + -ing
+- be used to + noun
+- get used to
+- getting used to

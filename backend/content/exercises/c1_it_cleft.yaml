@@ -1,0 +1,238 @@
+module_id: c1_it_cleft
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "It was Carla ___ found the mistake in the quarterly report."
+    prompt_pt: "Foi a Carla que encontrou o erro no relatório trimestral."
+    glossary: {quarterly: trimestral}
+    options: [who, which, what]
+    answers: [who]
+    explanation: "Para destacar uma pessoa no it-cleft usamos who (ou that), nunca which ou what."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "It ___ the marketing team that proposed the new slogan."
+    prompt_pt: "Foi a equipe de marketing que propôs o novo slogan."
+    options: [was, did, had]
+    answers: [was]
+    explanation: "O it-cleft é sempre It + be (is/was) + parte destacada."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "It was in Lisbon ___ we signed the agreement."
+    prompt_pt: "Foi em Lisboa que assinamos o acordo."
+    glossary: {agreement: acordo}
+    options: [that, which, what]
+    answers: [that]
+    explanation: "Quando destacamos um lugar ou um momento, usamos that."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "It wasn't until Friday ___ the client finally replied."
+    prompt_pt: "Só na sexta-feira o cliente finalmente respondeu."
+    options: [that, what, which]
+    answers: [that]
+    explanation: "A estrutura fixa é It wasn't until ... that (= só quando / só em)."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "It's not the salary ___ bothers me; it's the long commute."
+    prompt_pt: "Não é o salário que me incomoda; é o longo trajeto até o trabalho."
+    glossary: {bothers: incomoda, commute: trajeto até o trabalho}
+    options: [that, what, who]
+    answers: [that]
+    explanation: "Para destacar uma coisa (the salary) usamos that; what não entra no it-cleft."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "It was the CFO, not the CEO, who approved the extra budget."
+    prompt: "Who approved the extra budget?"
+    prompt_pt: "Quem aprovou o orçamento extra?"
+    glossary: {budget: orçamento}
+    options: ["The CFO", "The CEO", "The board"]
+    answers: ["The CFO"]
+    explanation: "It was the CFO ... who approved: o it-cleft destaca o CFO e corrige a ideia de que foi o CEO."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "It wasn't until I moved to London that I really understood British humour."
+    prompt: "When did the speaker really understand British humour?"
+    prompt_pt: "Quando o falante realmente entendeu o humor britânico?"
+    options: ["After moving to London", "Before moving to London", "During a short holiday"]
+    answers: ["After moving to London"]
+    explanation: "It wasn't until I moved ... that = só depois de se mudar para Londres."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "It ___ (be) my sister who recommended this restaurant last week."
+    prompt_pt: "Foi a minha irmã que recomendou este restaurante semana passada."
+    answers: ["was"]
+    explanation: "O fato é passado (last week), então usamos It was."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "It's the deadline, not the workload, ___ worries me."
+    prompt_pt: "É o prazo, e não o volume de trabalho, que me preocupa."
+    glossary: {deadline: prazo, workload: volume de trabalho}
+    answers: ["that", "which"]
+    explanation: "Destacando uma coisa, a oração continua com that (which também é aceito)."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "Was it you ___ left the projector on all night?"
+    prompt_pt: "Foi você que deixou o projetor ligado a noite toda?"
+    glossary: {projector: projetor}
+    options: [who, which, what]
+    answers: [who]
+    explanation: "Na pergunta o it-cleft fica Was it ... who; para pessoa usamos who."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "It is because of the price ___ we chose this supplier."
+    prompt_pt: "É por causa do preço que escolhemos este fornecedor."
+    glossary: {supplier: fornecedor}
+    options: [that, why, which]
+    answers: [that]
+    explanation: "Destacando um motivo (because of ...), o it-cleft continua com that."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "It was only when I read the contract ___ I saw the hidden fees."
+    prompt_pt: "Foi só quando li o contrato que vi as taxas escondidas."
+    glossary: {hidden: escondidas, fees: taxas}
+    options: [that, what, which]
+    answers: [that]
+    explanation: "It was only when ... that é a forma fixa para destacar o momento."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "It was in 2019 ___ the company opened its first office abroad."
+    prompt_pt: "Foi em 2019 que a empresa abriu o seu primeiro escritório no exterior."
+    glossary: {abroad: no exterior}
+    answers: ["that"]
+    explanation: "Para destacar um momento usamos that (não when)."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "It was Pedro which organized the team dinner."
+    prompt_pt: "Foi o Pedro que organizou o jantar da equipe."
+    answers:
+      - "It was Pedro who organized the team dinner."
+      - "It was Pedro that organized the team dinner."
+      - "It was Pedro who organised the team dinner."
+      - "It was Pedro that organised the team dinner."
+    explanation: "Which é para coisas; para uma pessoa use who (ou that)."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "It were the interns who found the bug in the app."
+    prompt_pt: "Foram os estagiários que encontraram o bug no aplicativo."
+    glossary: {interns: estagiários}
+    answers: ["It was the interns who found the bug in the app.", "It was the interns that found the bug in the app."]
+    explanation: "No it-cleft o verbo be concorda com it, então fica no singular: It was."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (emphasize the person)."
+    prompt_pt: "Coloque as palavras na ordem (destaque a pessoa)."
+    words: [deal, Julia, closed, was, who, the, It]
+    answers: ["It was Julia who closed the deal."]
+    explanation: "It was + pessoa + who + resto da frase."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (emphasize the time)."
+    prompt_pt: "Coloque as palavras na ordem (destaque o momento)."
+    words: [we, until, It, that, midnight, finished, wasn't]
+    answers: ["It wasn't until midnight that we finished."]
+    explanation: "It wasn't until + momento + that + oração = só à meia-noite terminamos."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "It was the tone of the email that upset the client."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["It was the tone of the email that upset the client."]
+    explanation: "It was + coisa destacada + that + resto: o tom do e-mail é o que importa."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "It was my manager ___ I spoke to, not someone from HR."
+    prompt_pt: "Foi com o meu gerente que eu falei, não com alguém do RH."
+    options: [who, which, what]
+    answers: [who]
+    explanation: "A parte destacada é uma pessoa (my manager), então usamos who."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "It ___ be the battery that is causing the problem."
+    prompt_pt: "Pode ser a bateria que está causando o problema."
+    options: [might, did, has]
+    answers: [might]
+    explanation: "O it-cleft aceita modais antes de be: It might be ... that."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "It's not the money that matters to Rafael; it's the chance to travel."
+    prompt: "What matters most to Rafael?"
+    prompt_pt: "O que mais importa para o Rafael?"
+    options: ["The chance to travel", "The money", "His job title"]
+    answers: ["The chance to travel"]
+    explanation: "It's not X that ...; it's Y corrige a ideia: o que importa é viajar."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "It was at the conference when I met my business partner."
+    prompt_pt: "Foi na conferência que conheci o meu sócio."
+    glossary: {business partner: sócio}
+    answers: ["It was at the conference that I met my business partner.", "It was at the conference where I met my business partner."]
+    explanation: "Depois da parte destacada usamos that, não when (a conferência é um lugar/evento)."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite emphasizing 'Lucas': Lucas booked the hotel."
+    prompt_pt: "Reescreva destacando 'Lucas': O Lucas reservou o hotel."
+    answers: ["It was Lucas who booked the hotel.", "It was Lucas that booked the hotel."]
+    explanation: "It was + pessoa + who/that + resto da frase."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite emphasizing 'last March': We launched the app last March."
+    prompt_pt: "Reescreva destacando 'last March': Lançamos o aplicativo em março do ano passado."
+    answers: ["It was last March that we launched the app."]
+    explanation: "Para destacar o momento: It was + last March + that + oração."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Foi a Ana que resolveu o problema."
+    answers:
+      - "It was Ana who solved the problem."
+      - "It was Ana that solved the problem."
+      - "It was Ana who fixed the problem."
+      - "It was Ana that fixed the problem."
+      - "It was Ana who sorted out the problem."
+      - "It was Ana who resolved the problem."
+      - "It was Ana that resolved the problem."
+    explanation: "Foi ... que vira It was ... who/that em inglês."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Foi só quando li o e-mail que entendi o problema."
+    answers:
+      - "It was only when I read the email that I understood the problem."
+      - "It was only when I read the e-mail that I understood the problem."
+      - "It was only when I read the email that I realized the problem."
+      - "It was only when I read the email that I realised the problem."
+      - "It wasn't until I read the email that I understood the problem."
+      - "It was not until I read the email that I understood the problem."
+      - "It wasn't until I read the e-mail that I understood the problem."
+    explanation: "Foi só quando ... que = It was only when ... that (ou It wasn't until ... that)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "It was the delay, not the price, that made us change suppliers."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["It was the delay, not the price, that made us change suppliers."]
+    explanation: "O it-cleft destaca o atraso e descarta o preço como motivo."

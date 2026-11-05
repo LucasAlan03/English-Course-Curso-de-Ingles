@@ -1,24 +1,23 @@
 id: b2_used_to_would
 level: B2
-title: Used to / would / be used to
-order: 7
+title: Used to e would
+order: 11
 source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
-theory_md: '# Used to, would e be used to
+theory_md: |
+  # Used to e would
 
-  - **used to + verbo**: hábito ou estado do passado que não existe mais: *I used to play football.* / *She used to be shy.*
-
-  - **would + verbo**: hábito repetido no passado (não serve para estados): *Every summer we would visit my grandma.*
-
-  - **be / get used to + -ing**: estar acostumado: *I''m used to getting up early.* / *I''m getting used to the cold.*
-
-  - **Erro comum:** *I''m used to live here.* → *I''m used to living here.*
-
-  '
+  - **Forma:** *used to* + verbo base; negativa *didn't use to*; pergunta *Did you use to...?*
+  - **used to**: hábitos e estados do passado que não existem mais: *I used to live in Recife.* / *She used to be shy.*
+  - **would** + verbo base: só para ações repetidas no passado, comum em lembranças e histórias: *Every Sunday my dad would make feijoada.*
+  - **would não serve para estados** (*be, have, live, like, know*): *I used to have long hair*, nunca *I would have long hair*.
+  - Para algo que aconteceu uma vez só, use o past simple: *I went to Chile in 2015.*
+  - **Erro comum:** *I didn't used to like coffee.* → *I didn't use to like coffee.* (depois de *did*, o verbo fica na forma base).
 scenario:
-  title: Comparing life in two different cities
-  character: A friend who moved abroad
-  goal: Describe how life used to be and what you are getting used to
+  title: Remembering childhood with an old friend
+  character: A childhood friend you met again after many years
+  goal: Share memories of how life used to be and what you would do back then
 target_structures:
-- used to
-- would for past habits
-- be used to + -ing
+- used to + verb
+- didn't use to
+- would for repeated past actions
+- Did you use to...?

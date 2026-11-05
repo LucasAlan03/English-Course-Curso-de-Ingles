@@ -1,0 +1,31 @@
+id: b1_prepositions_time
+level: B1
+title: Preposições de tempo
+order: 13
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: '# Preposições de tempo
+
+  - **at** + horários e momentos exatos: *at 7 o''clock, at noon, at night, at lunchtime*.
+
+  - **on** + dias e datas: *on Monday, on 15 May, on my birthday, on Friday night*.
+
+  - **in** + meses, anos, estações e partes do dia: *in May, in 2024, in summer, in the morning*.
+
+  - Sem preposição antes de **this, next, last, every**: *next Friday, last year, every morning*.
+
+  - **for** + duração (*for two hours*), **since** + ponto de início (*since 2020*), **during** + evento (*during the meeting*).
+
+  - **until** = até (algo continua até aquele momento): *The shop is open until 10 p.m.* **by** = no máximo até (prazo): *Send it by Friday.*
+
+  - **Erro comum:** *in Monday* ou *on next week*. Diga *on Monday* e *next week*.
+
+  '
+scenario:
+  title: Booking an appointment at a clinic
+  character: A clinic receptionist
+  goal: Find a day and time for an appointment and confirm the details
+target_structures:
+- at + time
+- on + day / date
+- in + month / year / part of the day
+- for / since / until / by

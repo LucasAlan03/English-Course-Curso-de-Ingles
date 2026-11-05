@@ -1,0 +1,215 @@
+module_id: b1_future_will
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "It's cold in here. I ___ close the window."
+    prompt_pt: "Está frio aqui. Vou fechar a janela."
+    options: ["will", "am", "does"]
+    answers: ["will"]
+    explanation: "Decisão tomada na hora da fala → will + verbo base."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Don't worry, I ___ tell anyone your secret."
+    prompt_pt: "Não se preocupe, eu não vou contar seu segredo para ninguém."
+    options: ["won't", "don't", "am not"]
+    answers: ["won't"]
+    explanation: "Promessa negativa → won't (will not) + verbo base."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "I'm sure you'll love the new restaurant. The chef is amazing and the prices are fair."
+    prompt: "What does the speaker predict?"
+    prompt_pt: "O que a pessoa prevê?"
+    options: ["You'll love the restaurant.", "The restaurant will close.", "The prices will go up."]
+    answers: ["You'll love the restaurant."]
+    explanation: "\"I'm sure you'll love...\": will para previsão com opinião."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "I think Brazil ___ the next World Cup."
+    prompt_pt: "Eu acho que o Brasil vai ganhar a próxima Copa do Mundo."
+    options: ["will win", "wins", "is win"]
+    answers: ["will win"]
+    explanation: "Previsão com I think → will + verbo base."
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "Those bags look heavy. I ___ (help) you."
+    prompt_pt: "Essas sacolas parecem pesadas. Eu te ajudo."
+    glossary: {heavy: pesadas}
+    answers: ["will help"]
+    explanation: "Oferta de ajuda na hora → will help (I'll help)."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "___ you send me the file later, please?"
+    prompt_pt: "Você pode me mandar o arquivo mais tarde, por favor?"
+    options: ["Will", "Do", "Are"]
+    answers: ["Will"]
+    explanation: "Pedido educado → Will you + verbo base...?"
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Waiter: Are you ready to order? Customer: Yes, I'll have the chicken and a glass of orange juice."
+    prompt: "What will the customer drink?"
+    prompt_pt: "O que o cliente vai beber?"
+    options: ["orange juice", "water", "wine"]
+    answers: ["orange juice"]
+    explanation: "\"I'll have...\": will para decidir na hora ao fazer o pedido."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Take an umbrella. It ___ (probably / rain) later."
+    prompt_pt: "Leve um guarda-chuva. Provavelmente vai chover mais tarde."
+    glossary: {umbrella: guarda-chuva}
+    answers: ["will probably rain"]
+    explanation: "Previsão com probably: will + probably + verbo base."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "I promise I ___ late again."
+    prompt_pt: "Prometo que não vou me atrasar de novo."
+    options: ["won't be", "don't be", "am not being"]
+    answers: ["won't be"]
+    explanation: "Promessa → won't be."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "A: We've run out of milk. B: OK, I ___ some on my way home."
+    prompt_pt: "A: Acabou o leite. B: Tá bom, eu compro no caminho de casa."
+    glossary: {"run out of": acabar}
+    options: ["will buy", "buy", "am buy"]
+    answers: ["will buy"]
+    explanation: "B decide na hora, ao ouvir o problema → will buy."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "I'm sure you ___ (pass) your driving test."
+    prompt_pt: "Tenho certeza de que você vai passar na prova de direção."
+    glossary: {"driving test": prova de direção}
+    answers: ["will pass"]
+    explanation: "Previsão com I'm sure → will pass."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "I will to call you after the meeting."
+    prompt_pt: "Eu te ligo depois da reunião."
+    answers: ["I will call you after the meeting.", "I'll call you after the meeting."]
+    explanation: "Depois de will vem o verbo sem to: will call."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["think", "I", "be", "it", "will", "sunny", "tomorrow"]
+    answers: ["I think it will be sunny tomorrow."]
+    explanation: "I think + sujeito + will + verbo base: previsão."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "Prices ___ go up next year, according to the news."
+    prompt_pt: "Os preços vão subir no ano que vem, segundo o noticiário."
+    glossary: {"according to": segundo}
+    options: ["will", "wills", "are"]
+    answers: ["will"]
+    explanation: "Will não muda com a pessoa e vem com o verbo base: will go up."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "She wills start her new job in March."
+    prompt_pt: "Ela vai começar no emprego novo em março."
+    answers: ["She will start her new job in March.", "She'll start her new job in March."]
+    explanation: "Will nunca recebe -s: she will start."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["you", "will", "me", "help", "with", "this", "box"]
+    answers: ["Will you help me with this box?"]
+    explanation: "Pedido: Will + you + verbo base...?"
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "Don't worry, I'll pick you up at the airport."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Don't worry, I'll pick you up at the airport.", "Don't worry, I will pick you up at the airport."]
+    explanation: "Oferta/promessa → I'll (I will) + verbo base."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "A: The printer isn't working. B: Don't worry, I ___ at it."
+    prompt_pt: "A: A impressora não está funcionando. B: Não se preocupe, eu dou uma olhada."
+    glossary: {printer: impressora}
+    options: ["will look", "look", "am look"]
+    answers: ["will look"]
+    explanation: "Oferta feita na hora → will look."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I don't think they ___ the deadline."
+    prompt_pt: "Eu não acho que eles vão cumprir o prazo."
+    glossary: {deadline: prazo}
+    options: ["will meet", "meets", "are meet"]
+    answers: ["will meet"]
+    explanation: "Previsão com I don't think → will + verbo base."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "It's late. I think I ___ a taxi home."
+    prompt_pt: "Está tarde. Acho que vou pegar um táxi para casa."
+    options: ["will take", "takes", "am take"]
+    answers: ["will take"]
+    explanation: "Decisão na hora com I think → will take."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Thanks for lending me the money. I'll pay you back on Friday, I promise."
+    prompt: "When will the speaker pay the money back?"
+    prompt_pt: "Quando a pessoa vai devolver o dinheiro?"
+    answers: ["on Friday", "Friday"]
+    explanation: "\"I'll pay you back on Friday, I promise\": will para promessa."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "I promise I don't forget your birthday this year."
+    prompt_pt: "Prometo que não vou esquecer seu aniversário este ano."
+    answers: ["I promise I won't forget your birthday this year.", "I promise I will not forget your birthday this year."]
+    explanation: "Promessa sobre o futuro → won't forget, não don't forget."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Make it negative: We will finish the project this week."
+    prompt_pt: "Coloque na negativa: Nós vamos terminar o projeto esta semana."
+    answers: ["We won't finish the project this week.", "We will not finish the project this week."]
+    explanation: "Negativa de will: won't (will not) + verbo base."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Turn into a question: Carlos will be at the party."
+    prompt_pt: "Transforme em pergunta: O Carlos vai estar na festa."
+    answers: ["Will Carlos be at the party?"]
+    explanation: "Na pergunta, will vem antes do sujeito: Will Carlos be...?"
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu acho que vai chover amanhã."
+    answers: ["I think it will rain tomorrow.", "I think it'll rain tomorrow.", "I think it's going to rain tomorrow.", "I think it is going to rain tomorrow."]
+    explanation: "Previsão com I think → it will rain."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu prometo que vou te ligar amanhã."
+    answers: ["I promise I'll call you tomorrow.", "I promise I will call you tomorrow.", "I promise that I'll call you tomorrow.", "I promise that I will call you tomorrow.", "I promise I'll phone you tomorrow.", "I promise I'll ring you tomorrow."]
+    explanation: "Promessa → I'll (I will) + verbo base."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "I think you'll really enjoy the trip to Bahia."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I think you'll really enjoy the trip to Bahia.", "I think you will really enjoy the trip to Bahia."]
+    explanation: "Previsão com I think → you'll (you will) + verbo base."

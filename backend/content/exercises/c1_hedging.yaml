@@ -1,0 +1,254 @@
+module_id: c1_hedging
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "It ___ that the new policy has reduced staff turnover."
+    prompt_pt: "Parece que a nova política reduziu a rotatividade de funcionários."
+    glossary: {policy: política, turnover: rotatividade}
+    options: [seems, is seeming, seem]
+    answers: [seems]
+    explanation: "It seems that ... suaviza a afirmação; seem não se usa no contínuo e com it leva -s."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "I ___ to think that remote work suits our team better."
+    prompt_pt: "Eu tendo a achar que o trabalho remoto combina mais com a nossa equipe."
+    glossary: {suits: combina com}
+    options: [tend, am tending, tends]
+    answers: [tend]
+    explanation: "I tend to think ... apresenta a opinião de forma menos absoluta (tend no presente simples)."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "This is ___ the best campaign we've ever run."
+    prompt_pt: "Esta é, possivelmente, a melhor campanha que já fizemos."
+    glossary: {campaign: campanha}
+    options: [arguably, argue, argued]
+    answers: [arguably]
+    explanation: "O advérbio arguably (= pode-se dizer que) suaviza o superlativo."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "It could ___ argued that the budget is too optimistic."
+    prompt_pt: "Pode-se argumentar que o orçamento é otimista demais."
+    glossary: {budget: orçamento}
+    options: [be, been, being]
+    answers: [be]
+    explanation: "Passiva impessoal com modal: It could be argued that..."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Which sentence sounds more diplomatic in a meeting?"
+    prompt_pt: "Qual frase soa mais diplomática numa reunião?"
+    options: ["I'm not sure that's the best approach.", "That's a terrible idea.", "Your idea is definitely wrong."]
+    answers: ["I'm not sure that's the best approach."]
+    explanation: "I'm not sure that's... suaviza a crítica; as outras são diretas e absolutas."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "The figures would appear to suggest that the campaign was less successful than we hoped."
+    prompt: "How does the speaker present the conclusion?"
+    prompt_pt: "Como o falante apresenta a conclusão?"
+    options: ["Cautiously", "Aggressively", "As a joke"]
+    answers: ["Cautiously"]
+    explanation: "Would appear to suggest acumula marcadores de cautela: a conclusão vem suavizada."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "To some extent, I agree with you, but I think we need more data before deciding."
+    prompt: "Does the speaker fully agree?"
+    prompt_pt: "O falante concorda totalmente?"
+    options: ["Only partly", "Yes, completely", "No, not at all"]
+    answers: ["Only partly"]
+    explanation: "To some extent = até certo ponto: a concordância é parcial."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "The delay ___ (appear) to be caused by a problem with the supplier."
+    prompt_pt: "O atraso parece ser causado por um problema com o fornecedor."
+    glossary: {delay: atraso, supplier: fornecedor}
+    answers: ["appears"]
+    explanation: "Appear to be suaviza a causa; com the delay (singular) o verbo leva -s."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "It ___ (think) that the merger will create 500 new jobs."
+    prompt_pt: "Acredita-se que a fusão vai criar 500 novos empregos."
+    glossary: {merger: fusão}
+    answers: ["is thought"]
+    explanation: "A passiva impessoal It is thought that... distancia o falante da afirmação."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "The quarterly results are ___ disappointing, but not a disaster."
+    prompt_pt: "Os resultados do trimestre são um tanto decepcionantes, mas não um desastre."
+    glossary: {quarterly: do trimestre}
+    options: [somewhat, some, something]
+    answers: [somewhat]
+    explanation: "Somewhat (= um tanto) é o advérbio que suaviza adjetivos."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "Choose the hedged version: It ___ be a good idea to postpone the launch."
+    prompt_pt: "Escolha a versão suavizada: Talvez seja uma boa ideia adiar o lançamento."
+    glossary: {postpone: adiar, launch: lançamento}
+    options: [might, must, will]
+    answers: [might]
+    explanation: "Might indica possibilidade e soa como sugestão; must e will soam categóricos."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "There ___ to be some confusion about the new procedure."
+    prompt_pt: "Parece haver alguma confusão sobre o novo procedimento."
+    glossary: {procedure: procedimento}
+    options: [seems, seem, is seeming]
+    answers: [seems]
+    explanation: "There seems to be ... é a forma suavizada de there is."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "The new design is, ___ (argue), less user-friendly than the old one."
+    prompt_pt: "O novo design é, possivelmente, menos fácil de usar que o antigo."
+    glossary: {user-friendly: fácil de usar}
+    answers: ["arguably"]
+    explanation: "O advérbio arguably suaviza a crítica ao design."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "It is seemed that the client is not happy with the proposal."
+    prompt_pt: "Parece que o cliente não está satisfeito com a proposta."
+    answers: ["It seems that the client is not happy with the proposal.", "It seems that the client isn't happy with the proposal."]
+    explanation: "Seem não vai para a passiva: It seems that..."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "I tend think that smaller teams work faster."
+    prompt_pt: "Eu tendo a achar que equipes menores trabalham mais rápido."
+    answers: ["I tend to think that smaller teams work faster.", "I tend to think smaller teams work faster."]
+    explanation: "Tend é sempre seguido de to + verbo: I tend to think."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a cautious claim)."
+    prompt_pt: "Coloque as palavras na ordem (uma afirmação cautelosa)."
+    words: [plan, would, the, It, that, worked, seem]
+    answers: ["It would seem that the plan worked."]
+    explanation: "It would seem that ... é ainda mais cauteloso que It seems that."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (partial agreement)."
+    prompt_pt: "Coloque as palavras na ordem (concordância parcial)."
+    words: [agree, extent, I, some, you, To, with]
+    answers: ["To some extent, I agree with you."]
+    explanation: "To some extent no início limita a concordância."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "It could be argued that the price is a little high."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["It could be argued that the price is a little high."]
+    explanation: "It could be argued that + a little: duas formas de suavizar a crítica ao preço."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "Choose the most hedged sentence."
+    prompt_pt: "Escolha a frase mais suavizada."
+    options: ["The new app may not be ready in time.", "The new app won't be ready in time.", "The new app will never be ready."]
+    answers: ["The new app may not be ready in time."]
+    explanation: "May not indica possibilidade; won't e will never são afirmações categóricas."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "The project is ___ to cost more than we expected."
+    prompt_pt: "É provável que o projeto custe mais do que esperávamos."
+    options: [likely, probable, possibly]
+    answers: [likely]
+    explanation: "Só likely aceita a estrutura be + adjetivo + to + verbo (is likely to cost)."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "I'd say the proposal is broadly sensible, although the timeline seems a little ambitious."
+    prompt: "What is the speaker's concern?"
+    prompt_pt: "Qual é a preocupação do falante?"
+    options: ["The timeline", "The budget", "The team"]
+    answers: ["The timeline"]
+    explanation: "A crítica vem suavizada em seems a little ambitious, sobre o cronograma."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "The market appears slowing down this year."
+    prompt_pt: "O mercado parece estar desacelerando este ano."
+    glossary: {slowing down: desacelerando}
+    answers: ["The market appears to be slowing down this year."]
+    explanation: "Appear é seguido de to + verbo: appears to be slowing down."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Make it more tentative using 'seem': The client is unhappy."
+    prompt_pt: "Deixe a frase mais cautelosa usando 'seem': O cliente está insatisfeito."
+    answers:
+      - "The client seems unhappy."
+      - "The client seems to be unhappy."
+      - "It seems that the client is unhappy."
+      - "It seems the client is unhappy."
+      - "It seems that the client's unhappy."
+      - "It seems the client's unhappy."
+    explanation: "Seem transforma o fato em impressão: The client seems (to be) unhappy."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Make it more tentative using 'It could be argued that': This strategy is too risky."
+    prompt_pt: "Deixe a frase mais cautelosa usando 'It could be argued that': Esta estratégia é arriscada demais."
+    glossary: {risky: arriscada}
+    answers: ["It could be argued that this strategy is too risky.", "It could be argued this strategy is too risky."]
+    explanation: "It could be argued that + frase original distancia o falante da crítica."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Parece que o projeto está atrasado."
+    answers:
+      - "It seems that the project is delayed."
+      - "It seems the project is delayed."
+      - "It seems that the project is behind schedule."
+      - "It seems the project is behind schedule."
+      - "It seems that the project is late."
+      - "It seems the project is late."
+      - "The project seems to be delayed."
+      - "The project seems to be behind schedule."
+      - "The project seems to be late."
+      - "It appears that the project is delayed."
+      - "It appears the project is delayed."
+      - "The project appears to be delayed."
+      - "The project appears to be behind schedule."
+      - "It looks like the project is delayed."
+      - "It looks like the project is behind schedule."
+    explanation: "Parece que ... = It seems (that) ... ou The project seems to be ..."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Eu diria que a proposta é um pouco cara."
+    answers:
+      - "I'd say the proposal is a bit expensive."
+      - "I would say the proposal is a bit expensive."
+      - "I'd say that the proposal is a bit expensive."
+      - "I would say that the proposal is a bit expensive."
+      - "I'd say the proposal is a little expensive."
+      - "I would say the proposal is a little expensive."
+      - "I'd say that the proposal is a little expensive."
+      - "I would say that the proposal is a little expensive."
+      - "I'd say the proposal is slightly expensive."
+      - "I would say the proposal is slightly expensive."
+      - "I'd say the proposal is a bit pricey."
+      - "I would say the proposal is a bit pricey."
+    explanation: "Eu diria = I'd say; um pouco = a bit / a little: duas formas de suavizar."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "I tend to think that we need a little more time."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I tend to think that we need a little more time."]
+    explanation: "I tend to think + a little: a opinião vem suavizada."

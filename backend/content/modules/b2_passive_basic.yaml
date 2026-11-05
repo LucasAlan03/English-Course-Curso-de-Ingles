@@ -1,0 +1,24 @@
+id: b2_passive_basic
+level: B2
+title: Voz passiva no presente e passado
+order: 5
+source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Voz passiva no presente e passado
+
+  - Forma: **to be + particípio**. O foco está em quem recebe a ação, não em quem faz.
+  - Presente: **am / is / are + particípio**: *English is spoken here.* / *These shoes are made in Vietnam.*
+  - Passado: **was / were + particípio**: *My bike was stolen last night.* / *The houses were built in 1950.*
+  - Use quando quem fez não importa, é óbvio ou é desconhecido: *The streets are cleaned every morning.*
+  - **by + agente** só quando essa informação é útil: *Dom Casmurro was written by Machado de Assis.*
+  - Perguntas e negativas mexem só no *to be*: *Where was this photo taken?* / *The contract wasn't signed.*
+  - **Erro comum:** esquecer o *to be* ou o particípio: *The car repaired yesterday* → *The car was repaired yesterday.*
+scenario:
+  title: A tour of a coffee roastery
+  character: A curious visitor on a company tour
+  goal: Explain how your product is made and how the company started, using the passive
+target_structures:
+- am / is / are + past participle
+- was / were + past participle
+- by + agent
+- passive questions (Where was it made?)

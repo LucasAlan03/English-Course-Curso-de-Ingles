@@ -1,0 +1,212 @@
+module_id: b1_second_conditional
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "If I ___ the lottery, I'd buy a house by the beach."
+    prompt_pt: "Se eu ganhasse na loteria, compraria uma casa na praia."
+    glossary: {lottery: loteria}
+    options: ["won", "win", "would win"]
+    answers: ["won"]
+    explanation: "Situação imaginária: if + past simple (won), would + verbo base."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "If I were you, I ___ that job offer."
+    prompt_pt: "Se eu fosse você, aceitaria essa oferta de emprego."
+    options: ["would accept", "will accept", "accepted"]
+    answers: ["would accept"]
+    explanation: "Conselho com If I were you → would + verbo base."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "If I didn't have to work tomorrow, I'd stay at the party until three in the morning."
+    prompt: "Why is the speaker leaving the party early?"
+    prompt_pt: "Por que a pessoa vai sair cedo da festa?"
+    options: ["The speaker has to work tomorrow.", "The speaker feels sick.", "The party is boring."]
+    answers: ["The speaker has to work tomorrow."]
+    explanation: "\"If I didn't have to work...\" é imaginário: na realidade, a pessoa tem que trabalhar."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "If she ___ more time, she would learn to play the guitar."
+    prompt_pt: "Se ela tivesse mais tempo, aprenderia a tocar violão."
+    options: ["had", "has", "would have"]
+    answers: ["had"]
+    explanation: "Na parte do if vai o past simple: if she had."
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "If we ___ (live) closer, we'd see each other more often."
+    prompt_pt: "Se nós morássemos mais perto, nos veríamos com mais frequência."
+    answers: ["lived"]
+    explanation: "Situação irreal no presente: if + past simple (lived)."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "He would travel more if he ___ afraid of flying."
+    prompt_pt: "Ele viajaria mais se não tivesse medo de voar."
+    glossary: {"afraid of": com medo de}
+    options: ["weren't", "isn't", "wouldn't be"]
+    answers: ["weren't", "wasn't"]
+    explanation: "If + past simple negativo: if he weren't (ou wasn't, informal)."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "If I could live anywhere, I'd choose Lisbon. The food is great and the people are friendly."
+    prompt: "Where would the speaker live?"
+    prompt_pt: "Onde a pessoa moraria?"
+    answers: ["Lisbon", "in Lisbon"]
+    explanation: "\"If I could live anywhere, I'd choose Lisbon\": situação imaginária com would."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "If they had a car, they ___ (not / need) to take two buses to work."
+    prompt_pt: "Se eles tivessem carro, não precisariam pegar dois ônibus para o trabalho."
+    answers: ["wouldn't need", "would not need"]
+    explanation: "Consequência imaginária negativa: wouldn't + verbo base."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "We could go to Japan if flights ___ cheaper."
+    prompt_pt: "Nós poderíamos ir ao Japão se as passagens fossem mais baratas."
+    options: ["were", "are", "would be"]
+    answers: ["were"]
+    explanation: "Situação improvável: if + past simple (were); could no lugar de would."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "What would you do if you ___ a famous singer on the street?"
+    prompt_pt: "O que você faria se encontrasse um cantor famoso na rua?"
+    options: ["met", "meet", "would meet"]
+    answers: ["met"]
+    explanation: "Pergunta imaginária: would + if + past simple (met)."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "If I spoke English fluently, I ___ (apply) for a job abroad."
+    prompt_pt: "Se eu falasse inglês fluentemente, me candidataria a uma vaga no exterior."
+    glossary: {fluently: fluentemente, abroad: no exterior}
+    answers: ["would apply", "could apply", "might apply"]
+    explanation: "Consequência imaginária → would + verbo base."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "If I would have more money, I would buy a new bike."
+    prompt_pt: "Se eu tivesse mais dinheiro, compraria uma bicicleta nova."
+    answers: ["If I had more money, I would buy a new bike.", "If I had more money, I'd buy a new bike."]
+    explanation: "Não se usa would depois de if: If I had."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["I'd", "if", "I", "were", "you", "call", "her"]
+    answers: ["If I were you, I'd call her.", "I'd call her if I were you."]
+    explanation: "If I were you + I'd (I would) + verbo: forma de dar conselho."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "If my phone ___ so old, I wouldn't need a new one."
+    prompt_pt: "Se meu celular não fosse tão velho, eu não precisaria de um novo."
+    options: ["weren't", "isn't", "won't be"]
+    answers: ["weren't", "wasn't"]
+    explanation: "Situação irreal: if + past simple (weren't/wasn't)."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "If I knew the answer, I will tell you."
+    prompt_pt: "Se eu soubesse a resposta, eu te diria."
+    answers: ["If I knew the answer, I would tell you.", "If I knew the answer, I'd tell you."]
+    explanation: "Com if + past simple, a consequência leva would, não will."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["would", "where", "you", "go", "if", "could", "you", "travel", "anywhere"]
+    answers: ["Where would you go if you could travel anywhere?"]
+    explanation: "Pergunta imaginária: Where would you go + if + past (could)."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "If I had a dog, I'd walk it every morning."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["If I had a dog, I'd walk it every morning.", "If I had a dog, I would walk it every morning."]
+    explanation: "If + past simple (had), I'd (I would) + verbo base."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "If Lia didn't live so far away, we ___ more often."
+    prompt_pt: "Se a Lia não morasse tão longe, a gente se encontraria com mais frequência."
+    options: ["would meet", "will meet", "met"]
+    answers: ["would meet"]
+    explanation: "If + past simple → would + verbo base."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "The forecast says rain is very likely. If it rains tomorrow, we ___ at home."
+    prompt_pt: "A previsão diz que a chuva é bem provável. Se chover amanhã, vamos ficar em casa."
+    glossary: {forecast: previsão do tempo, likely: provável}
+    options: ["will stay", "would stay", "stayed"]
+    answers: ["will stay"]
+    explanation: "Situação real e provável → 1º condicional (if + presente, will), não o 2º."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "I'm 30 now, but if I ___ 18 again, I'd study music."
+    prompt_pt: "Eu tenho 30 anos agora, mas se tivesse 18 de novo, estudaria música."
+    options: ["were", "am", "will be"]
+    answers: ["were", "was"]
+    explanation: "Situação impossível → 2º condicional: if + were."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "If I get the job in São Paulo, I'll move in March. But if I could choose, I'd live by the sea."
+    prompt: "Which situation is imaginary for the speaker?"
+    prompt_pt: "Qual situação é imaginária para a pessoa?"
+    options: ["living by the sea", "getting the job", "moving in March"]
+    answers: ["living by the sea"]
+    explanation: "\"If I could choose, I'd live...\" é 2º condicional (imaginário); \"If I get..., I'll move\" é real."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "If we have more space, we would get a dog."
+    prompt_pt: "Se nós tivéssemos mais espaço, teríamos um cachorro."
+    answers: ["If we had more space, we would get a dog.", "If we had more space, we'd get a dog.", "If we have more space, we'll get a dog.", "If we have more space, we will get a dog."]
+    explanation: "Would pede if + past simple: If we had more space."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite as an imaginary situation (second conditional): If I have time, I'll learn French."
+    prompt_pt: "Reescreva como situação imaginária (2º condicional): Se eu tiver tempo, vou aprender francês."
+    answers: ["If I had time, I would learn French.", "If I had time, I'd learn French.", "I would learn French if I had time.", "I'd learn French if I had time."]
+    explanation: "Do 1º para o 2º: have → had, will → would."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using 'If I were you': You should sell your old car."
+    prompt_pt: "Reescreva usando 'If I were you': Você deveria vender seu carro velho."
+    answers: ["If I were you, I would sell my old car.", "If I were you, I'd sell my old car.", "If I were you, I would sell your old car.", "If I were you, I'd sell your old car.", "I would sell my old car if I were you.", "I'd sell my old car if I were you."]
+    explanation: "Conselho: If I were you + I'd (I would) + verbo base."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Se eu fosse você, não compraria esse celular."
+    answers: ["If I were you, I wouldn't buy that phone.", "If I were you, I wouldn't buy this phone.", "If I was you, I wouldn't buy that phone.", "If I was you, I wouldn't buy this phone.", "If I were you, I wouldn't buy that cell phone.", "If I were you, I wouldn't buy that cellphone.", "I wouldn't buy that phone if I were you."]
+    explanation: "Conselho com If I were you + wouldn't + verbo base."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "O que você faria se ganhasse um milhão de reais?"
+    answers: ["What would you do if you won a million reais?", "What would you do if you won one million reais?", "What would you do if you won 1 million reais?", "What would you do if you won a million reals?"]
+    explanation: "Pergunta imaginária: What would you do + if + past simple (won)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "We would travel more if we had more vacation days."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We would travel more if we had more vacation days.", "We'd travel more if we had more vacation days."]
+    explanation: "Would + verbo base + if + past simple (had)."

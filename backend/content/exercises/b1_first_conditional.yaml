@@ -1,0 +1,215 @@
+module_id: b1_first_conditional
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "If it rains tomorrow, we ___ the barbecue."
+    prompt_pt: "Se chover amanhã, nós vamos cancelar o churrasco."
+    glossary: {barbecue: churrasco}
+    options: ["will cancel", "cancelled", "are cancel"]
+    answers: ["will cancel"]
+    explanation: "1º condicional: if + presente (rains), will + verbo base (will cancel)."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "If you ___ the 7:30 bus, you'll be late."
+    prompt_pt: "Se você perder o ônibus das 7h30, vai se atrasar."
+    options: ["miss", "will miss", "missed"]
+    answers: ["miss"]
+    explanation: "Depois de if vem o presente simples, não will: If you miss."
+  - id: e03
+    block: 1
+    type: listen
+    audio_text: "If I get the promotion, I'll take the whole team out for dinner."
+    prompt: "What will happen if the speaker gets the promotion?"
+    prompt_pt: "O que vai acontecer se a pessoa for promovida?"
+    glossary: {promotion: promoção}
+    options: ["The team will go out for dinner.", "The speaker will quit.", "The team will get a bonus."]
+    answers: ["The team will go out for dinner."]
+    explanation: "\"If I get..., I'll take the whole team out for dinner\": consequência real com will."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "I'll lend you my car if you ___ careful."
+    prompt_pt: "Eu te empresto meu carro se você tomar cuidado."
+    glossary: {lend: emprestar}
+    options: ["are", "will be", "were"]
+    answers: ["are"]
+    explanation: "Na parte do if usa-se o presente: if you are careful."
+  - id: e05
+    block: 1
+    type: gap
+    prompt: "If Marcos ___ (call), tell him I'm in a meeting."
+    prompt_pt: "Se o Marcos ligar, diga que estou numa reunião."
+    answers: ["calls"]
+    explanation: "If + presente simples (Marcos = he → calls); a consequência pode ser imperativo."
+  - id: e06
+    block: 1
+    type: choice
+    prompt: "We ___ miss the flight unless we leave now."
+    prompt_pt: "Nós vamos perder o voo se não sairmos agora."
+    options: ["will", "would", "are"]
+    answers: ["will"]
+    explanation: "Situação real: unless + presente, will + verbo base."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "If you sign up this week, you'll get your first month at the gym for free."
+    prompt: "What will people get if they sign up this week?"
+    prompt_pt: "O que as pessoas vão ganhar se se inscreverem esta semana?"
+    glossary: {"sign up": inscrever-se}
+    options: ["a free month", "a free T-shirt", "a discount on drinks"]
+    answers: ["a free month"]
+    explanation: "\"If you sign up..., you'll get your first month for free\": condição real + will."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "If you don't hurry, you ___ (not / catch) the train."
+    prompt_pt: "Se você não se apressar, não vai pegar o trem."
+    glossary: {hurry: se apressar}
+    answers: ["won't catch", "will not catch"]
+    explanation: "Consequência negativa: won't + verbo base."
+  - id: e09
+    block: 1
+    type: choice
+    prompt: "If I finish work early, I ___ you at the café."
+    prompt_pt: "Se eu sair cedo do trabalho, te encontro no café."
+    options: ["will meet", "met", "meeting"]
+    answers: ["will meet"]
+    explanation: "Consequência de uma condição real → will meet."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "What will you do if the bank ___ your loan?"
+    prompt_pt: "O que você vai fazer se o banco não aprovar seu empréstimo?"
+    glossary: {loan: empréstimo}
+    options: ["doesn't approve", "won't approve", "didn't approve"]
+    answers: ["doesn't approve"]
+    explanation: "Depois de if usa-se o presente: doesn't approve, não won't."
+  - id: e11
+    block: 2
+    type: gap
+    prompt: "If it ___ (be) sunny on Sunday, we can go to the beach."
+    prompt_pt: "Se fizer sol no domingo, podemos ir à praia."
+    answers: ["is"]
+    explanation: "If + presente (it is); a consequência pode usar can."
+  - id: e12
+    block: 2
+    type: fix
+    prompt: "If I will see Paula, I'll give her your message."
+    prompt_pt: "Se eu vir a Paula, dou o seu recado para ela."
+    answers: ["If I see Paula, I'll give her your message.", "If I see Paula, I will give her your message."]
+    explanation: "Não se usa will depois de if: If I see Paula."
+  - id: e13
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: ["you'll", "if", "you", "pass", "study", "hard"]
+    answers: ["If you study hard, you'll pass.", "You'll pass if you study hard."]
+    explanation: "If + presente, will + verbo; a ordem das partes pode inverter."
+  - id: e14
+    block: 2
+    type: choice
+    prompt: "Call me if you ___ any problems with the app."
+    prompt_pt: "Me ligue se tiver algum problema com o app."
+    options: ["have", "will have", "had"]
+    answers: ["have"]
+    explanation: "Depois de if vem o presente: if you have."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "If he don't come, we'll start without him."
+    prompt_pt: "Se ele não vier, vamos começar sem ele."
+    answers: ["If he doesn't come, we'll start without him.", "If he does not come, we will start without him."]
+    explanation: "Com he o presente negativo é doesn't: If he doesn't come."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: ["will", "what", "do", "you", "if", "rains", "it"]
+    answers: ["What will you do if it rains?"]
+    explanation: "Pergunta: What will you do + if + presente."
+  - id: e17
+    block: 2
+    type: dictation
+    audio_text: "If you need help, just send me a message."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["If you need help, just send me a message."]
+    explanation: "If + presente (need) e consequência no imperativo (send)."
+  - id: e18
+    block: 2
+    type: choice
+    prompt: "I won't go to the party unless Bia ___."
+    prompt_pt: "Eu não vou à festa a menos que a Bia vá."
+    options: ["goes", "will go", "go"]
+    answers: ["goes"]
+    explanation: "Unless funciona como if: vem com presente (Bia → goes)."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "If we ___ a taxi, we'll get there faster."
+    prompt_pt: "Se a gente pegar um táxi, vamos chegar mais rápido."
+    options: ["take", "will take", "took"]
+    answers: ["take"]
+    explanation: "Condição real no futuro: if + presente (take)."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "If you eat all that cake, you ___ sick."
+    prompt_pt: "Se você comer esse bolo todo, vai passar mal."
+    options: ["will feel", "felt", "would felt"]
+    answers: ["will feel"]
+    explanation: "Consequência provável → will + verbo base."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "I'll buy the concert tickets if they're not too expensive. If they cost more than 300 reais, I'll stay home."
+    prompt: "When will the speaker stay home?"
+    prompt_pt: "Em que caso a pessoa vai ficar em casa?"
+    options: ["if the tickets cost more than 300 reais", "if it rains", "if the concert is sold out"]
+    answers: ["if the tickets cost more than 300 reais"]
+    explanation: "\"If they cost more than 300 reais, I'll stay home\": if + presente, will + verbo."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Unless you don't book now, there won't be any rooms left."
+    prompt_pt: "Se você não reservar agora, não vai sobrar nenhum quarto."
+    answers: ["Unless you book now, there won't be any rooms left.", "If you don't book now, there won't be any rooms left."]
+    explanation: "Unless já significa \"se não\": Unless you book, sem don't."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using unless: If you don't practice, you won't improve."
+    prompt_pt: "Reescreva usando unless: Se você não praticar, não vai melhorar."
+    answers: ["Unless you practice, you won't improve.", "Unless you practise, you won't improve.", "You won't improve unless you practice.", "You won't improve unless you practise."]
+    explanation: "If you don't = unless you: Unless you practice."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Join the sentences with if: Maybe I'll have time. Then I'll call you."
+    prompt_pt: "Junte as frases com if: Talvez eu tenha tempo. Então eu te ligo."
+    answers: ["If I have time, I'll call you.", "If I have time, I will call you.", "I'll call you if I have time.", "I will call you if I have time."]
+    explanation: "A condição vai para o presente (If I have time) e a consequência fica com will."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Se fizer sol, nós vamos à praia."
+    answers: ["If it's sunny, we'll go to the beach.", "If it is sunny, we'll go to the beach.", "We'll go to the beach if it's sunny.", "We'll go to the beach if it is sunny.", "If it's sunny, we're going to the beach.", "If it is sunny, we're going to go to the beach.", "If it's sunny, we're going to go to the beach."]
+    explanation: "If + presente (it's sunny), will + verbo base (we'll go)."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Se eu não conseguir o emprego, vou continuar procurando."
+    answers: ["If I don't get the job, I'll keep looking.", "If I don't get the job, I'll keep on looking.", "If I don't get the job, I'll continue looking.", "If I don't get the job, I'll keep searching.", "If I don't get the job, I'm going to keep looking.", "I'll keep looking if I don't get the job."]
+    explanation: "If + presente negativo (don't get), will + verbo base (I'll keep)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "We'll miss the start of the movie if we don't leave now."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We'll miss the start of the movie if we don't leave now.", "We will miss the start of the movie if we do not leave now."]
+    explanation: "Consequência com will + if + presente negativo."

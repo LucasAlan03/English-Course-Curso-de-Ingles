@@ -1,0 +1,228 @@
+module_id: b2_passive_advanced
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Good news: your visa application ___."
+    prompt_pt: "Boa notícia: seu pedido de visto foi aprovado."
+    glossary: {application: pedido}
+    options: [has been approved, has approved, have been approved]
+    answers: [has been approved]
+    explanation: "Resultado recente, sujeito singular que recebe a ação → has been + particípio."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "The results ___ next Monday."
+    prompt_pt: "Os resultados serão publicados na próxima segunda-feira."
+    options: [will be published, will publish, will be publish]
+    answers: [will be published]
+    explanation: "Passiva no futuro: will be + particípio."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Phones must ___ off during the exam."
+    prompt_pt: "Os celulares devem ser desligados durante a prova."
+    options: [be switched, switched, switch]
+    answers: [be switched]
+    explanation: "Passiva com modal: must + be + particípio."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "My room ___ yet: there are still towels on the floor."
+    prompt_pt: "Meu quarto ainda não foi limpo: ainda há toalhas no chão."
+    glossary: {towels: toalhas}
+    options: [hasn't been cleaned, hasn't cleaned, wasn't been cleaned]
+    answers: [hasn't been cleaned, has not been cleaned]
+    explanation: "Yet + resultado presente → present perfect passivo: hasn't been cleaned."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Which sentence is a passive with a modal verb?"
+    prompt_pt: "Qual frase é uma passiva com verbo modal?"
+    options: ["The form can be downloaded from our website.", "You can download the form from our website.", "The form has been downloaded."]
+    answers: ["The form can be downloaded from our website."]
+    explanation: "Can + be + particípio é a passiva com modal."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Your order has been shipped and will be delivered on Thursday between nine and twelve."
+    prompt: "When will the order be delivered?"
+    prompt_pt: "Quando o pedido será entregue?"
+    options: [On Thursday morning., On Tuesday afternoon., It has already been delivered.]
+    answers: [On Thursday morning.]
+    explanation: "Will be delivered on Thursday between nine and twelve = quinta de manhã."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Sorry, the lift is out of order. It should be repaired by tomorrow afternoon."
+    prompt: "What is the problem?"
+    prompt_pt: "Qual é o problema?"
+    options: ["The lift isn't working.", "The room isn't ready.", "The air conditioning is broken."]
+    answers: ["The lift isn't working."]
+    explanation: "Out of order = quebrado; should be repaired indica quando será consertado."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Our flight ___ (cancel). Let's check the board for more information."
+    prompt_pt: "Nosso voo foi cancelado. Vamos olhar o painel para mais informações."
+    glossary: {board: painel}
+    answers: [has been cancelled, has been canceled, "'s been cancelled", "'s been canceled"]
+    explanation: "Notícia recente com efeito agora → has been + particípio."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Don't worry: all the invitations ___ (send) by Friday, I promise."
+    prompt_pt: "Não se preocupe: todos os convites serão enviados até sexta, eu prometo."
+    answers: [will be sent, will have been sent]
+    explanation: "Promessa sobre o futuro, e os convites recebem a ação → will be sent."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "When I got to the party, all the food ___."
+    prompt_pt: "Quando cheguei à festa, toda a comida já tinha sido consumida."
+    options: [had been eaten, has been eaten, was eating]
+    answers: [had been eaten]
+    explanation: "Antes de outro momento passado → past perfect passivo: had been eaten."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "This medicine should ___ with food."
+    prompt_pt: "Este remédio deve ser tomado com comida."
+    options: [be taken, taken, be take]
+    answers: [be taken]
+    explanation: "Modal + be + particípio: should be taken."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "A new metro line ___ next year."
+    prompt_pt: "Uma nova linha de metrô vai ser construída no ano que vem."
+    options: [is going to be built, is going to build, is building]
+    answers: [is going to be built]
+    explanation: "A linha recebe a ação no futuro → is going to be + particípio."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "The meeting room can't ___ (use) today because it's being painted."
+    prompt_pt: "A sala de reunião não pode ser usada hoje porque está sendo pintada."
+    answers: [be used]
+    explanation: "Depois do modal (can't) vem be + particípio."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "The new hospital will built next to the station."
+    prompt_pt: "O novo hospital será construído ao lado da estação."
+    answers: ["The new hospital will be built next to the station."]
+    explanation: "Falta o be: will be + particípio."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Our passwords has been changed for security reasons."
+    prompt_pt: "Nossas senhas foram alteradas por motivos de segurança."
+    answers: ["Our passwords have been changed for security reasons."]
+    explanation: "Sujeito plural (passwords) pede have been, não has been."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a statement)."
+    prompt_pt: "Coloque as palavras em ordem (uma afirmação)."
+    words: [sold, the, been, already, have, tickets]
+    answers: ["The tickets have already been sold."]
+    explanation: "Sujeito + have + already + been + particípio."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a rule)."
+    prompt_pt: "Coloque as palavras em ordem (uma regra)."
+    words: [left, entrance, must, the, bags, at, be]
+    answers: ["Bags must be left at the entrance."]
+    explanation: "Regra com modal na passiva: must + be + particípio."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "The broken window has been replaced, and the room is ready."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["The broken window has been replaced, and the room is ready."]
+    explanation: "Has been replaced: present perfect passivo com resultado presente."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "This bridge ___ in 1974."
+    prompt_pt: "Esta ponte foi construída em 1974."
+    options: [was built, has been built, will be built]
+    answers: [was built]
+    explanation: "Data passada definida (1974) pede a passiva no past simple, não no present perfect."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Look! The streets ___. They look so clean now."
+    prompt_pt: "Olha! As ruas foram limpas. Estão tão limpinhas agora."
+    options: [have been cleaned, are cleaned, have cleaned]
+    answers: [have been cleaned]
+    explanation: "Sem data e com resultado visível agora → have been + particípio."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "The concert has been postponed. All tickets will be refunded, and new dates will be announced next week."
+    prompt: "What will happen to the tickets?"
+    prompt_pt: "O que vai acontecer com os ingressos?"
+    options: [They will be refunded., They will be used for the new dates., They have been cancelled without a refund.]
+    answers: [They will be refunded.]
+    explanation: "Will be refunded: o dinheiro dos ingressos será devolvido."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "The package should have deliver yesterday."
+    prompt_pt: "O pacote deveria ter sido entregue ontem."
+    answers: ["The package should have been delivered yesterday."]
+    explanation: "Modal no passado na passiva: should have been + particípio."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite in the passive: Someone has stolen my bike."
+    prompt_pt: "Reescreva na voz passiva: Alguém roubou minha bicicleta."
+    answers: ["My bike has been stolen.", "My bicycle has been stolen."]
+    explanation: "Has stolen → has been stolen; someone não é útil, então sai."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite in the passive: They will announce the winners tomorrow."
+    prompt_pt: "Reescreva na voz passiva: Eles vão anunciar os vencedores amanhã."
+    answers: ["The winners will be announced tomorrow.", "Tomorrow the winners will be announced."]
+    explanation: "Will announce → will be announced, com the winners como sujeito."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "O relatório já foi enviado."
+    answers:
+      - "The report has already been sent."
+      - "The report has been sent already."
+      - "The report's already been sent."
+      - "The report was already sent."
+    explanation: "Já foi enviado (resultado agora) = has already been sent."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Esse problema precisa ser resolvido hoje."
+    answers:
+      - "This problem needs to be solved today."
+      - "This problem must be solved today."
+      - "This problem has to be solved today."
+      - "That problem needs to be solved today."
+      - "That problem must be solved today."
+      - "That problem has to be solved today."
+      - "This problem needs to be resolved today."
+      - "This problem must be resolved today."
+      - "This problem has to be resolved today."
+      - "That problem needs to be resolved today."
+      - "That problem must be resolved today."
+      - "That problem has to be resolved today."
+    explanation: "Precisa ser resolvido = needs to / must / has to + be + particípio."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "All the rooms will be cleaned before the guests arrive."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["All the rooms will be cleaned before the guests arrive."]
+    explanation: "Will be cleaned: passiva no futuro."

@@ -1,0 +1,24 @@
+id: b1_past_continuous
+level: B1
+title: Past continuous
+order: 2
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Past continuous
+
+  - **Forma:** *was/were* + verbo com -ing: *I was working*, *they were sleeping*.
+  - **Negativa e pergunta:** *I wasn't listening.* / *Were you driving?*
+  - **Uso:** ação em andamento num momento do passado: *At 9 p.m. I was watching a series.*
+  - Ação longa **interrompida** por uma curta (no past simple), com *when*: *I was cooking when you called.*
+  - Duas ações acontecendo ao mesmo tempo, com *while*: *While she was studying, he was cooking.*
+  - **Contraste com o past simple:** o past simple conta a ação completa (*I watched a movie last night*); o past continuous mostra a cena em andamento (*I was watching a movie when the lights went out*).
+  - **Erro comum:** *I was go* ou *They was playing*. O certo é *I was going* / *They were playing*.
+scenario:
+  title: Explaining why you missed a call
+  character: A coworker who tried to reach you all afternoon
+  goal: Explain what you were doing at different moments yesterday and what happened in the middle of it
+target_structures:
+- was / were + -ing
+- interrupted action (past continuous + when + past simple)
+- while for simultaneous actions
+- past simple vs past continuous

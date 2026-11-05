@@ -1,0 +1,222 @@
+module_id: c1_wh_cleft
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "What I need right now ___ a week off."
+    prompt_pt: "O que eu preciso agora é de uma semana de folga."
+    options: [is, are, has]
+    answers: [is]
+    explanation: "No wh-cleft, a oração com What é tratada como singular: What I need is..."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "___ surprised me was the price of the hotel."
+    prompt_pt: "O que me surpreendeu foi o preço do hotel."
+    options: [What, That, Which]
+    answers: [What]
+    explanation: "O wh-cleft começa com What (= o que), não com That ou Which."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "All I want after this project ___ a bit of peace and quiet."
+    prompt_pt: "Tudo o que eu quero depois deste projeto é um pouco de paz e sossego."
+    options: [is, are, it]
+    answers: [is]
+    explanation: "All I want (= a única coisa que eu quero) + is + parte destacada."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "What we did ___ call the client immediately."
+    prompt_pt: "O que fizemos foi ligar para o cliente imediatamente."
+    options: [was, did, had]
+    answers: [was]
+    explanation: "Para destacar uma ação: What + sujeito + did + was + verbo base."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "The reason why I left the company ___ that the commute was exhausting."
+    prompt_pt: "O motivo pelo qual saí da empresa é que o trajeto era exaustivo."
+    glossary: {commute: trajeto até o trabalho, exhausting: exaustivo}
+    options: [is, has, it is]
+    answers: [is]
+    explanation: "The reason why ... is that ...: o verbo be liga a oração ao que é destacado."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "What really impressed the investors was how calm the founder stayed under pressure."
+    prompt: "What impressed the investors?"
+    prompt_pt: "O que impressionou os investidores?"
+    glossary: {investors: investidores}
+    options: ["The founder's calm attitude", "The low price", "The new office"]
+    answers: ["The founder's calm attitude"]
+    explanation: "A informação destacada vem depois de was: how calm the founder stayed."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "All we need now is the client's signature, and then we can start."
+    prompt: "What do they still need?"
+    prompt_pt: "Do que eles ainda precisam?"
+    options: ["The client's signature", "More money", "A new team"]
+    answers: ["The client's signature"]
+    explanation: "All we need is = a única coisa que falta é a assinatura do cliente."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "What annoys me ___ (be) the noise in the open-plan office."
+    prompt_pt: "O que me incomoda é o barulho no escritório aberto."
+    glossary: {annoys: incomoda, open-plan: aberto (sem divisórias)}
+    answers: ["is"]
+    explanation: "Situação atual (annoys) → What annoys me is..."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "What happened ___ (be) that the server crashed during the demo."
+    prompt_pt: "O que aconteceu foi que o servidor caiu durante a demonstração."
+    glossary: {crashed: caiu}
+    answers: ["was"]
+    explanation: "What happened was that ... é a forma típica de contar um problema no passado."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "What I'd like to do ___ restructure the sales team."
+    prompt_pt: "O que eu gostaria de fazer é reestruturar a equipe de vendas."
+    glossary: {restructure: reestruturar}
+    options: [is, it's, are]
+    answers: [is]
+    explanation: "What I'd like to do + is + verbo: a oração com What funciona como sujeito singular."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "___ I don't understand is why nobody told me about the change."
+    prompt_pt: "O que eu não entendo é por que ninguém me contou sobre a mudança."
+    options: [What, Which, That]
+    answers: [What]
+    explanation: "Para dizer o que (= the thing that) usamos What no início."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "The thing that worries me ___ the lack of communication."
+    prompt_pt: "O que me preocupa é a falta de comunicação."
+    glossary: {lack: falta}
+    options: [is, it, has]
+    answers: [is]
+    explanation: "The thing that ... + is + parte destacada, igual ao What."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "All I did ___ (be) ask a simple question."
+    prompt_pt: "Tudo o que eu fiz foi fazer uma pergunta simples."
+    answers: ["was"]
+    explanation: "All I did (passado) + was + verbo base: All I did was ask."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "What I need a strong coffee."
+    prompt_pt: "O que eu preciso é de um café forte."
+    answers: ["What I need is a strong coffee."]
+    explanation: "Falta o verbo be entre as duas partes: What I need is..."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Which surprised me was his reaction to the news."
+    prompt_pt: "O que me surpreendeu foi a reação dele à notícia."
+    answers: ["What surprised me was his reaction to the news."]
+    explanation: "O wh-cleft começa com What, não Which."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (start with 'What')."
+    prompt_pt: "Coloque as palavras na ordem (comece com 'What')."
+    words: [a, need, What, clear, is, we, plan]
+    answers: ["What we need is a clear plan."]
+    explanation: "What + sujeito + verbo + is + parte destacada."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (start with 'All')."
+    prompt_pt: "Coloque as palavras na ordem (comece com 'All')."
+    words: [want, an, All, honest, I, is, answer]
+    answers: ["All I want is an honest answer."]
+    explanation: "All I want is ... = tudo o que eu quero é..."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "What I love about this job is the freedom to travel."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["What I love about this job is the freedom to travel."]
+    explanation: "What I love ... is ... deixa a informação principal (the freedom) para o fim."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "___ stressed everyone out was the deadline."
+    prompt_pt: "O que estressou todo mundo foi o prazo."
+    glossary: {deadline: prazo}
+    options: [What, It, That]
+    answers: [What]
+    explanation: "Começando pela oração e terminando com was the deadline, é um wh-cleft: What."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "It was the deadline ___ stressed everyone out."
+    prompt_pt: "Foi o prazo que estressou todo mundo."
+    glossary: {deadline: prazo}
+    options: [that, what, is]
+    answers: [that]
+    explanation: "No it-cleft a parte destacada vem primeiro e a oração continua com that, não what."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "What Tomás suggested was moving the weekly meeting to Thursday afternoon."
+    prompt: "What did Tomás suggest?"
+    prompt_pt: "O que o Tomás sugeriu?"
+    options: ["Moving the meeting to Thursday", "Cancelling the meeting", "Having the meeting online"]
+    answers: ["Moving the meeting to Thursday"]
+    explanation: "A sugestão vem depois de was: moving the weekly meeting to Thursday."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "What I want are a quiet weekend at home."
+    prompt_pt: "O que eu quero é um fim de semana tranquilo em casa."
+    answers: ["What I want is a quiet weekend at home."]
+    explanation: "O wh-cleft com um complemento singular usa is: What I want is..."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite starting with 'What': The lack of feedback frustrates me."
+    prompt_pt: "Reescreva começando com 'What': A falta de feedback me frustra."
+    glossary: {lack: falta}
+    answers: ["What frustrates me is the lack of feedback."]
+    explanation: "What + verbo + me + is + a parte destacada (the lack of feedback)."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite starting with 'All': I only need ten minutes."
+    prompt_pt: "Reescreva começando com 'All': Eu só preciso de dez minutos."
+    answers: ["All I need is ten minutes.", "All I need is 10 minutes."]
+    explanation: "Only need vira All I need is ... (= tudo de que eu preciso é)."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "O que eu preciso é de mais tempo."
+    answers: ["What I need is more time."]
+    explanation: "O que eu preciso é... = What I need is..."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "O que me surpreendeu foi a reação do cliente."
+    answers:
+      - "What surprised me was the client's reaction."
+      - "What surprised me was the reaction of the client."
+      - "What surprised me was the customer's reaction."
+      - "What surprised me was the reaction of the customer."
+    explanation: "O que me surpreendeu foi... = What surprised me was..."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "What we really need is someone who can lead the team."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["What we really need is someone who can lead the team."]
+    explanation: "What we really need is ... destaca a pessoa de que a equipe precisa."

@@ -1,26 +1,24 @@
 id: b2_past_perfect_narrative
 level: B2
-title: Past perfect e narrativas
+title: Past perfect em narrativas
 order: 2
 source: CEFR B2 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
-theory_md: '# Past perfect e narrativas
+theory_md: |
+  # Past perfect em narrativas
 
-  - Forma: **had + particípio**. Mostra o que aconteceu ANTES de outro momento no passado.
-
-  - *When I arrived, the film had already started.*
-
-  - Ajuda a contar histórias na ordem certa: past simple para a linha principal, past perfect para o que veio antes.
-
-  - Palavras úteis: **already, just, by the time, after, before, never ... before**.
-
-  - **Erro comum:** usar past simple para os dois: *When I arrived the film started* muda o sentido.
-
-  '
+  - Forma: **had + particípio** para todas as pessoas: *I had left*, *she had seen*. Contração: *I'd left*. Negativa: *hadn't seen*.
+  - Mostra o que aconteceu ANTES de outro momento no passado: *When I arrived, the film had already started.*
+  - Numa história, o past simple conta a sequência principal e o past perfect "volta no tempo": *I got to the gate, but the plane had left.*
+  - Palavras que costumam acompanhar: **already, just, by the time, never ... before**: *By the time the police arrived, the thieves had escaped.* / *I had never flown before.*
+  - Para explicar causas no passado: *I was nervous because I had never given a talk in English.*
+  - Se as ações estão em ordem e ligadas por *then/after*, o past simple basta: *I checked in, then I went to my room.*
+  - **Erro comum:** usar past simple para as duas ações: *When I arrived, the film started* significa que o filme começou quando você chegou, não antes.
 scenario:
   title: Telling a friend about a trip that went wrong
-  character: A sympathetic friend
-  goal: Tell a story in the right order, explaining what had already happened
+  character: A sympathetic friend who loves a good story
+  goal: Tell a story in the right order, explaining what had already happened at each moment
 target_structures:
-- past perfect
-- past simple
-- by the time / already
+- had + past participle
+- past simple for the main events
+- by the time / already / just
+- never ... before

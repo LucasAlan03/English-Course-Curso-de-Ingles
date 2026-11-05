@@ -1,0 +1,248 @@
+module_id: c1_inversion_negative
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "Never ___ such a well-prepared negotiation."
+    prompt_pt: "Nunca vi uma negociação tão bem preparada."
+    glossary: {well-prepared: bem preparada}
+    options: [have I seen, I have seen, I saw]
+    answers: [have I seen]
+    explanation: "Com Never no início da frase, o auxiliar vem antes do sujeito: have I seen."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Not only ___ the deadline, but she also cut the budget by ten percent."
+    prompt_pt: "Ela não só cumpriu o prazo, como também cortou o orçamento em dez por cento."
+    glossary: {deadline: prazo, budget: orçamento}
+    options: [did she meet, she met, she did meet]
+    answers: [did she meet]
+    explanation: "Not only no início pede inversão; sem auxiliar na frase, usamos did + sujeito + verbo base."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Hardly had the meeting started ___ the fire alarm went off."
+    prompt_pt: "Mal a reunião tinha começado quando o alarme de incêndio disparou."
+    glossary: {went off: disparou}
+    options: [when, than, that]
+    answers: [when]
+    explanation: "Hardly ... when é a combinação fixa; than vai com No sooner."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "Rarely ___ our CEO admit that she was wrong."
+    prompt_pt: "Raramente a nossa CEO admite que estava errada."
+    glossary: {admit: admitir}
+    options: [does, is, has]
+    answers: [does]
+    explanation: "Rarely no início pede inversão; no presente simples com she, o auxiliar é does + verbo base (admit)."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Only after the contract was signed ___ the real costs."
+    prompt_pt: "Só depois que o contrato foi assinado nós descobrimos os custos reais."
+    options: [did we discover, we discovered, we did discover]
+    answers: [did we discover]
+    explanation: "Com Only after + oração, a inversão acontece na oração principal: did we discover."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Seldom have I heard such a persuasive argument in a board meeting."
+    prompt: "What does the speaker say about the argument?"
+    prompt_pt: "O que o falante diz sobre o argumento?"
+    options: ["It was unusually persuasive.", "It was weak.", "The speaker hears arguments like this all the time."]
+    answers: ["It was unusually persuasive."]
+    explanation: "Seldom have I heard = raramente ouvi, ou seja, o argumento foi excepcionalmente persuasivo."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "No sooner had Marta sent the email than she noticed a typo in the client's name."
+    prompt: "When did Marta notice the typo?"
+    prompt_pt: "Quando a Marta percebeu o erro de digitação?"
+    glossary: {typo: erro de digitação}
+    options: ["Right after sending the email", "Before writing the email", "The next day"]
+    answers: ["Right after sending the email"]
+    explanation: "No sooner had ... than indica que a segunda ação veio logo depois da primeira."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "Little ___ (he / know) that the investor was sitting in the audience."
+    prompt_pt: "Mal sabia ele que o investidor estava sentado na plateia."
+    glossary: {investor: investidor, audience: plateia}
+    answers: ["did he know"]
+    explanation: "Little no início (= mal sabia) pede did + sujeito + verbo base."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "Under no circumstances ___ (should / you / share) these figures with the press."
+    prompt_pt: "Em hipótese alguma você deve compartilhar esses números com a imprensa."
+    glossary: {figures: números, press: imprensa}
+    answers: ["should you share"]
+    explanation: "Under no circumstances é uma expressão negativa: o modal should vem antes do sujeito."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "No sooner had we sat down ___ the client started complaining."
+    prompt_pt: "Mal tínhamos nos sentado e o cliente começou a reclamar."
+    glossary: {complaining: reclamar}
+    options: [than, when, that]
+    answers: [than]
+    explanation: "No sooner é um comparativo, por isso combina com than (Hardly e Scarcely usam when)."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "At no time ___ that the project was in trouble."
+    prompt_pt: "Em nenhum momento alguém mencionou que o projeto estava com problemas."
+    options: [did anyone mention, anyone mentioned, anyone did mention]
+    answers: [did anyone mention]
+    explanation: "At no time é negativo e vem no início, então invertemos com did + sujeito + verbo base."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "Not until the sales figures came in ___ how serious the problem was."
+    prompt_pt: "Só quando os números de vendas chegaram percebemos como o problema era sério."
+    options: [did we realize, we realized, we did realize]
+    answers: [did we realize, did we realise]
+    explanation: "Com Not until + oração, a inversão vai para a oração principal: did we realize."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "Scarcely ___ (I / finish) my presentation when the questions started."
+    prompt_pt: "Eu mal tinha terminado a minha apresentação quando as perguntas começaram."
+    answers: ["had I finished"]
+    explanation: "Scarcely ... when usa past perfect invertido: had + sujeito + particípio."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "Never I have worked with such a talented team."
+    prompt_pt: "Nunca trabalhei com uma equipe tão talentosa."
+    glossary: {talented: talentosa}
+    answers: ["Never have I worked with such a talented team."]
+    explanation: "Depois de Never no início, o auxiliar vem antes do sujeito: have I worked."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "Not only she speaks four languages, but she also negotiates brilliantly."
+    prompt_pt: "Ela não só fala quatro idiomas, como também negocia de forma brilhante."
+    glossary: {brilliantly: de forma brilhante}
+    answers: ["Not only does she speak four languages, but she also negotiates brilliantly."]
+    explanation: "Not only no início exige inversão com does: does she speak (verbo na forma base)."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (start with 'Rarely')."
+    prompt_pt: "Coloque as palavras na ordem (comece com 'Rarely')."
+    words: [we, receive, Rarely, such, do, positive, feedback]
+    answers: ["Rarely do we receive such positive feedback."]
+    explanation: "Rarely + do + sujeito + verbo base: Rarely do we receive..."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (start with 'Only then')."
+    prompt_pt: "Coloque as palavras na ordem (comece com 'Only then')."
+    words: [the, did, then, understand, I, Only, risk]
+    answers: ["Only then did I understand the risk."]
+    explanation: "Only then no início pede inversão: did I understand."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "Seldom do we get a second chance to make a first impression."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Seldom do we get a second chance to make a first impression."]
+    explanation: "Seldom (raramente) no início pede do + sujeito + verbo base."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "We ___ such chaos at an airport."
+    prompt_pt: "Raramente vimos tanto caos num aeroporto."
+    glossary: {chaos: caos}
+    options: [have rarely seen, have we rarely seen, did rarely see]
+    answers: [have rarely seen]
+    explanation: "Quando o advérbio não está no início da frase, não há inversão: We have rarely seen."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Only when the CEO arrived ___."
+    prompt_pt: "Só quando o CEO chegou a reunião começou."
+    options: [did the meeting begin, the meeting began, began the meeting]
+    answers: [did the meeting begin]
+    explanation: "Only when + oração no início: a oração principal fica invertida com did."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Not once did the supplier apologize for the delay, which really annoyed our team."
+    prompt: "Did the supplier apologize?"
+    prompt_pt: "O fornecedor pediu desculpas?"
+    glossary: {supplier: fornecedor, apologize: pedir desculpas}
+    options: ["No, not once.", "Yes, once.", "Yes, several times."]
+    answers: ["No, not once."]
+    explanation: "Not once did the supplier apologize = nem uma vez o fornecedor pediu desculpas."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "Hardly had I opened my laptop than the power went out."
+    prompt_pt: "Mal eu tinha aberto o meu notebook quando a luz acabou."
+    glossary: {power: energia elétrica}
+    answers: ["Hardly had I opened my laptop when the power went out.", "Hardly had I opened my laptop before the power went out."]
+    explanation: "Hardly combina com when (than só vai com No sooner)."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite starting with 'Never': I have never felt so nervous before a pitch."
+    prompt_pt: "Reescreva começando com 'Never': Eu nunca me senti tão nervoso antes de uma apresentação de vendas."
+    glossary: {pitch: apresentação de vendas}
+    answers: ["Never have I felt so nervous before a pitch."]
+    explanation: "Never vai para o início e o auxiliar have passa para antes do sujeito."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite starting with 'Not only': The new manager cut costs and she also improved morale."
+    prompt_pt: "Reescreva começando com 'Not only': A nova gerente cortou custos e também melhorou o moral da equipe."
+    glossary: {morale: moral da equipe}
+    answers:
+      - "Not only did the new manager cut costs, but she also improved morale."
+      - "Not only did the new manager cut costs, she also improved morale."
+      - "Not only did the new manager cut costs, but also improved morale."
+      - "Not only did the new manager cut costs, but she improved morale too."
+      - "Not only did the new manager cut costs, but she improved morale as well."
+    explanation: "Not only + did + sujeito + verbo base; a segunda parte vem com but (she) also."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Nunca vi um cliente tão exigente. (use inversão)"
+    answers:
+      - "Never have I seen such a demanding client."
+      - "Never have I seen such a demanding customer."
+      - "Never have I seen a client so demanding."
+      - "Never have I seen a customer so demanding."
+      - "Never have I seen a more demanding client."
+      - "Never have I seen a more demanding customer."
+    explanation: "Never no início + have I seen: inversão com o auxiliar do present perfect."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Mal tínhamos começado a reunião quando a internet caiu. (use inversão)"
+    answers:
+      - "Hardly had we started the meeting when the internet went down."
+      - "Hardly had we begun the meeting when the internet went down."
+      - "Scarcely had we started the meeting when the internet went down."
+      - "Scarcely had we begun the meeting when the internet went down."
+      - "No sooner had we started the meeting than the internet went down."
+      - "No sooner had we begun the meeting than the internet went down."
+      - "Hardly had we started the meeting when the internet went out."
+      - "Hardly had we started the meeting when the internet crashed."
+      - "Hardly had we started the meeting when the internet dropped."
+      - "Scarcely had we started the meeting when the internet went out."
+      - "Scarcely had we started the meeting when the internet crashed."
+      - "No sooner had we started the meeting than the internet went out."
+      - "No sooner had we started the meeting than the internet crashed."
+    explanation: "Hardly/Scarcely had + sujeito + particípio + when (ou No sooner ... than)."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Little did they know that the deal had already been signed."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Little did they know that the deal had already been signed."]
+    explanation: "Little did they know = mal sabiam eles: Little + did + sujeito + verbo base."

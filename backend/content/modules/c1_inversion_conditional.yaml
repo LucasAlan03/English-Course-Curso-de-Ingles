@@ -1,0 +1,25 @@
+id: c1_inversion_conditional
+level: C1
+title: Condicional invertida
+order: 2
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Condicional invertida
+
+  - **Forma:** tire o *if* e coloque o auxiliar antes do sujeito. É mais formal que a condicional com *if*.
+  - **Had + sujeito + particípio** (3º condicional): *Had I known, I would have come.* (= If I had known...)
+  - **Should + sujeito + verbo base** (possibilidade remota no futuro): *Should you need help, call me.* (= If you need help...)
+  - **Were + sujeito + to + verbo / Were + sujeito** (2º condicional): *Were I in your position, I would accept.* / *Were the CEO to resign, shares would fall.*
+  - **Had it not been for / Were it not for**: = se não fosse (por): *Had it not been for your help, we would have failed.*
+  - **Negativa:** use *not* depois do sujeito, sem contração: *Had we not checked...* (nunca *Hadn't we checked...*)
+  - **Contraste com advérbios negativos:** em *Never have I seen...* a inversão vem depois de um advérbio; aqui ela substitui o *if*.
+  - **Erro comum:** manter o *if*: *If had I known...* → *Had I known...*
+scenario:
+  title: Negotiating a contract with a supplier
+  character: A formal sales director from a supplier company
+  goal: Set conditions, discuss past problems and agree on terms in formal language
+target_structures:
+- Had I known ..., I would have ...
+- Should you need ...
+- Were I to / Were it not for
+- Had it not been for

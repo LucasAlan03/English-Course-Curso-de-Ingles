@@ -1,0 +1,211 @@
+module_id: b2_wish_past
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I wish I ___ harder for the exam last month."
+    prompt_pt: "Eu queria ter estudado mais para a prova do mês passado."
+    options: [had studied, studied, have studied]
+    answers: [had studied]
+    explanation: "Arrependimento sobre o passado: wish + past perfect."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "If only we ___ the earlier flight yesterday!"
+    prompt_pt: "Se ao menos a gente tivesse pegado o voo mais cedo ontem!"
+    options: [had taken, took, take]
+    answers: [had taken]
+    explanation: "If only + past perfect para o passado (yesterday)."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "I wish I ___ that message to my ex last night."
+    prompt_pt: "Eu queria não ter mandado aquela mensagem para o meu ex ontem à noite."
+    options: [hadn't sent, didn't send, don't send]
+    answers: [hadn't sent]
+    explanation: "Arrependimento de algo que você fez: wish + hadn't + particípio."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "She wishes she ___ to the party. It was really boring."
+    prompt_pt: "Ela queria não ter ido à festa. Foi muito chata."
+    options: [hadn't gone, didn't go, doesn't go]
+    answers: [hadn't gone]
+    explanation: "Ela foi e se arrepende: wish + hadn't gone."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "I wish you ___ me about the meeting. I missed it."
+    prompt_pt: "Eu queria que você tivesse me avisado da reunião. Eu perdi."
+    options: [had told, told, tell]
+    answers: [had told]
+    explanation: "Lamentar algo que outra pessoa não fez no passado: wish + had + particípio."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "I wish I had bought tickets earlier. Now the show is sold out and the resale prices are crazy."
+    prompt: "What does the speaker regret?"
+    prompt_pt: "Do que quem fala se arrepende?"
+    options: ["Not buying tickets earlier.", "Going to the show.", "Selling the tickets."]
+    answers: ["Not buying tickets earlier."]
+    explanation: "I wish I had bought = queria ter comprado (mas não comprei)."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "If only I hadn't eaten that seafood at the beach. I was sick for the whole weekend."
+    prompt: "Why was the speaker sick?"
+    prompt_pt: "Por que quem fala ficou doente?"
+    options: ["Because of the seafood.", "Because of the sun.", "Because of the long trip."]
+    answers: ["Because of the seafood."]
+    explanation: "If only I hadn't eaten = se ao menos eu não tivesse comido (mas comi)."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "I wish I ___ (bring) a jacket. It's freezing!"
+    prompt_pt: "Eu queria ter trazido uma jaqueta. Está congelando!"
+    glossary: {freezing: congelando}
+    answers: ["had brought", "'d brought"]
+    explanation: "Arrependimento sobre uma decisão passada: had + particípio (brought)."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "If only Mateus ___ (not / quit) his job before finding a new one."
+    prompt_pt: "Se ao menos o Mateus não tivesse largado o emprego antes de achar outro."
+    answers: ["hadn't quit", "had not quit"]
+    explanation: "If only + hadn't + particípio para lamentar o que aconteceu."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "Lara wishes she ___ the job offer in Canada two years ago."
+    prompt_pt: "A Lara queria ter aceitado a proposta de emprego no Canadá dois anos atrás."
+    options: [had accepted, accepted, would accept]
+    answers: [had accepted]
+    explanation: "Two years ago indica passado: wish + past perfect."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "I wish I ___ so rude to the waiter yesterday."
+    prompt_pt: "Eu queria não ter sido tão grosso com o garçom ontem."
+    glossary: {rude: grosso, waiter: garçom}
+    options: [hadn't been, wasn't, weren't]
+    answers: [hadn't been]
+    explanation: "Arrependimento sobre ontem: hadn't been."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "If only they ___ us that the road was closed!"
+    prompt_pt: "Se ao menos eles tivessem nos avisado que a estrada estava fechada!"
+    options: [had warned, warned, would warn]
+    answers: [had warned]
+    explanation: "Lamentar o que não aconteceu no passado: if only + had + particípio."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "I wish I ___ (listen) to your advice."
+    prompt_pt: "Eu queria ter ouvido o seu conselho."
+    answers: ["had listened", "'d listened"]
+    explanation: "Arrependimento: wish + had + particípio (listened)."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I wish I didn't spend so much money last weekend."
+    prompt_pt: "Eu queria não ter gastado tanto dinheiro no fim de semana passado."
+    answers: ["I wish I hadn't spent so much money last weekend.", "I wish I had not spent so much money last weekend."]
+    explanation: "Last weekend é passado, então usamos past perfect: hadn't spent."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "If only I had went to bed earlier last night."
+    prompt_pt: "Se ao menos eu tivesse ido dormir mais cedo ontem à noite."
+    answers: ["If only I had gone to bed earlier last night.", "If only I'd gone to bed earlier last night."]
+    explanation: "Past perfect usa o particípio: had gone."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order."
+    prompt_pt: "Coloque as palavras em ordem."
+    words: [wish, I, I, had, known, earlier]
+    answers: ["I wish I had known earlier."]
+    explanation: "I wish + sujeito + had + particípio."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order. (a regret with if only)"
+    prompt_pt: "Coloque as palavras em ordem. (um arrependimento com if only)"
+    words: [if, only, hadn't, we, missed, the, train]
+    answers: ["If only we hadn't missed the train."]
+    explanation: "If only + sujeito + hadn't + particípio."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "I wish I had taken more photos on that trip."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["I wish I had taken more photos on that trip.", "I wish I'd taken more photos on that trip."]
+    explanation: "Wish + past perfect: arrependimento sobre a viagem."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I wish I ___ the answer now, but I don't."
+    prompt_pt: "Eu queria saber a resposta agora, mas não sei."
+    options: [knew, had known, know]
+    answers: [knew]
+    explanation: "Desejo sobre o presente (now): wish + past simple."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "I wish I ___ the answer during yesterday's test."
+    prompt_pt: "Eu queria ter sabido a resposta na prova de ontem."
+    options: [had known, knew, know]
+    answers: [had known]
+    explanation: "Arrependimento sobre o passado (yesterday): wish + past perfect."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Looking back, Jorge wishes he had learned English as a teenager. Now he's studying at forty and it feels harder."
+    prompt: "What does Jorge regret?"
+    prompt_pt: "Do que o Jorge se arrepende?"
+    options: ["Not learning English earlier.", "Studying at forty.", "Moving abroad."]
+    answers: ["Not learning English earlier."]
+    explanation: "He wishes he had learned = queria ter aprendido (e não aprendeu)."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "She wishes she hadn't say that to her boss."
+    prompt_pt: "Ela queria não ter dito aquilo para o chefe."
+    answers: ["She wishes she hadn't said that to her boss.", "She wishes she had not said that to her boss."]
+    explanation: "Depois de hadn't vem o particípio: said."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using I wish: I regret not saving money last year."
+    prompt_pt: "Reescreva usando I wish: Eu me arrependo de não ter guardado dinheiro no ano passado."
+    answers: ["I wish I had saved money last year.", "I wish I'd saved money last year.", "I wish I had saved some money last year.", "I wish I'd saved some money last year."]
+    explanation: "Arrependimento sobre o passado: I wish + had + particípio."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using If only: I'm sorry I forgot your birthday."
+    prompt_pt: "Reescreva usando If only: Desculpa ter esquecido o seu aniversário."
+    answers: ["If only I hadn't forgotten your birthday.", "If only I had not forgotten your birthday.", "If only I had remembered your birthday.", "If only I'd remembered your birthday."]
+    explanation: "If only + past perfect para algo que já aconteceu."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Eu queria ter estudado mais."
+    answers: ["I wish I had studied more.", "I wish I'd studied more.", "I wish I had studied harder.", "I wish I'd studied harder."]
+    explanation: "Queria ter + particípio = I wish I had + particípio."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Se ao menos eu não tivesse dito isso!"
+    answers: ["If only I hadn't said that!", "If only I had not said that!", "If only I hadn't said this!", "If only I had not said this!"]
+    explanation: "Se ao menos eu não tivesse = If only I hadn't + particípio."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "If only you had called me before you left."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["If only you had called me before you left.", "If only you'd called me before you left."]
+    explanation: "If only + past perfect: lamentar algo que não aconteceu."

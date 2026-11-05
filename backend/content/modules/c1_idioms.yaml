@@ -1,0 +1,25 @@
+id: c1_idioms
+level: C1
+title: Idioms
+order: 11
+source: CEFR C1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Idioms
+
+  - **O que são:** expressões fixas cujo sentido não é literal. Não dá para trocar as palavras.
+  - **Começar e facilitar:** *break the ice* (quebrar o gelo), *a piece of cake* (moleza)
+  - **Acertar e concordar:** *hit the nail on the head* (acertar em cheio), *on the same page* (alinhados)
+  - **Decidir e recomeçar:** *the ball is in your court* (a decisão é sua), *back to the drawing board* (voltar à estaca zero)
+  - **Saúde e emoções:** *under the weather* (indisposto), *get cold feet* (amarelar)
+  - **Trabalho:** *cut corners* (fazer de qualquer jeito para economizar), *call it a day* (encerrar por hoje)
+  - **Contraste com collocations:** em *make a decision* o sentido é literal; em *spill the beans* (dar com a língua nos dentes) não é.
+  - **Erro comum:** mudar uma palavra: *under weather* ou *in the same boot* → *under the weather*, *in the same boat*.
+scenario:
+  title: Chatting with a colleague after a stressful week
+  character: A chatty coworker who loves idioms
+  goal: Talk about your week, problems and plans in a relaxed, idiomatic way
+target_structures:
+- break the ice / a piece of cake
+- hit the nail on the head / on the same page
+- the ball is in your court / back to the drawing board
+- under the weather / cut corners

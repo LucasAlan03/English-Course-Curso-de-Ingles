@@ -1,0 +1,23 @@
+id: b1_past_simple
+level: B1
+title: Past simple
+order: 1
+source: CEFR B1 - British Council/EAQUALS Core Inventory; Cambridge English Grammar Profile
+theory_md: |
+  # Past simple
+
+  - **Forma:** verbos regulares ganham -ed (*work → worked*, *study → studied*); os irregulares têm forma própria (*go → went*, *see → saw*, *buy → bought*).
+  - **Negativa e pergunta** com *did* + verbo base: *I didn't go.* / *Did you see the game?*
+  - **Uso:** ação terminada num momento definido do passado: *I visited my parents last weekend.*
+  - Sequência de ações no passado: *I got up, had a coffee and left for work.*
+  - Palavras típicas: *yesterday, last week, two days ago, in 2020, when I was a kid*.
+  - **Erro comum:** *Did you went?* ou *I didn't saw it.* Depois de *did/didn't* o verbo volta à forma base: *Did you go?* / *I didn't see it.*
+scenario:
+  title: Telling a friend about your weekend trip
+  character: A curious friend who wants all the details
+  goal: Tell the story of your weekend trip in order, saying where you went, what you did and when
+target_structures:
+- past simple of regular verbs (-ed)
+- irregular past forms (went, saw, bought)
+- did / didn't + base verb
+- time expressions (yesterday, last, ago)

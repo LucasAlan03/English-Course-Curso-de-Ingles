@@ -1,0 +1,215 @@
+module_id: b2_present_perfect_continuous
+exercises:
+  - id: e01
+    block: 1
+    type: choice
+    prompt: "I ___ for this company since 2021, and I still love it."
+    prompt_pt: "Eu trabalho nesta empresa desde 2021 e ainda adoro."
+    options: [have been working, am working, was working]
+    answers: [have been working]
+    explanation: "Ação que começou no passado (since 2021) e continua até agora → have been + -ing."
+  - id: e02
+    block: 1
+    type: choice
+    prompt: "Your eyes are red. ___ you been crying?"
+    prompt_pt: "Seus olhos estão vermelhos. Você estava chorando?"
+    options: [Have, Has, Are]
+    answers: [Have]
+    explanation: "Na pergunta, have/has vem antes do sujeito; com you usamos have."
+  - id: e03
+    block: 1
+    type: choice
+    prompt: "Marina has been training for the marathon ___ six months."
+    prompt_pt: "A Marina está treinando para a maratona há seis meses."
+    glossary: {marathon: maratona}
+    options: [for, since, ago]
+    answers: [for]
+    explanation: "Six months é uma duração, então usamos for."
+  - id: e04
+    block: 1
+    type: choice
+    prompt: "We've been waiting for the delivery ___ ten o'clock this morning."
+    prompt_pt: "Estamos esperando a entrega desde as dez da manhã."
+    glossary: {delivery: entrega}
+    options: [since, for, during]
+    answers: [since]
+    explanation: "Ten o'clock é o ponto de partida da ação, então usamos since."
+  - id: e05
+    block: 1
+    type: choice
+    prompt: "Which sentence shows an activity that is still going on?"
+    prompt_pt: "Qual frase mostra uma atividade que ainda está acontecendo?"
+    options: ["I've been reading the report you sent.", "I've read the report you sent.", "I read the report you sent."]
+    answers: ["I've been reading the report you sent."]
+    explanation: "O continuous (have been reading) mostra que a leitura ainda não terminou; I've read indica leitura concluída."
+  - id: e06
+    block: 1
+    type: listen
+    audio_text: "Sorry I'm so sweaty. I've been cycling to work since the metro strike started."
+    prompt: "Why is the speaker sweaty?"
+    prompt_pt: "Por que a pessoa está suada?"
+    glossary: {sweaty: suado}
+    options: ["The speaker has been cycling to work.", "The speaker has been running in the park.", "The speaker has been playing football."]
+    answers: ["The speaker has been cycling to work."]
+    explanation: "I've been cycling explica o resultado visível agora (estar suado)."
+  - id: e07
+    block: 1
+    type: listen
+    audio_text: "Lucas has been learning the guitar for eight months, but he still can't play a full song."
+    prompt: "How long has Lucas been learning the guitar?"
+    prompt_pt: "Há quanto tempo o Lucas está aprendendo violão?"
+    answers: ["eight months", "for eight months", "8 months", "for 8 months"]
+    explanation: "Has been learning ... for eight months indica a duração da atividade até agora."
+  - id: e08
+    block: 1
+    type: gap
+    prompt: "She ___ (look) for a new apartment since January."
+    prompt_pt: "Ela está procurando um apartamento novo desde janeiro."
+    answers: [has been looking, "'s been looking"]
+    explanation: "Ação que começou em janeiro e continua → has been + -ing."
+  - id: e09
+    block: 1
+    type: gap
+    prompt: "How long have you ___ (study) for the certification exam?"
+    prompt_pt: "Há quanto tempo você está estudando para a prova de certificação?"
+    answers: [been studying]
+    explanation: "How long have you + been + -ing pergunta a duração de uma atividade que continua."
+  - id: e10
+    block: 2
+    type: choice
+    prompt: "The kitchen smells amazing. What ___ you been cooking?"
+    prompt_pt: "A cozinha está com um cheiro incrível. O que você andou cozinhando?"
+    options: [have, has, did]
+    answers: [have]
+    explanation: "Atividade recente com resultado presente (o cheiro) → have you been cooking."
+  - id: e11
+    block: 2
+    type: choice
+    prompt: "I ___ three chapters of the book so far."
+    prompt_pt: "Eu li três capítulos do livro até agora."
+    glossary: {chapters: capítulos}
+    options: [have read, have been reading, am reading]
+    answers: [have read, "'ve read"]
+    explanation: "Quando falamos de quantidade concluída (three chapters), usamos o present perfect simples."
+  - id: e12
+    block: 2
+    type: choice
+    prompt: "They ___ about the budget all morning, and they still haven't agreed."
+    prompt_pt: "Eles estão discutindo o orçamento a manhã toda e ainda não chegaram a um acordo."
+    glossary: {budget: orçamento}
+    options: [have been arguing, are arguing, argue]
+    answers: [have been arguing]
+    explanation: "Atividade que dura a manhã toda até agora → have been + -ing."
+  - id: e13
+    block: 2
+    type: gap
+    prompt: "It ___ (rain) since lunchtime, so the streets are flooded."
+    prompt_pt: "Está chovendo desde a hora do almoço, então as ruas estão alagadas."
+    glossary: {flooded: alagadas}
+    answers: [has been raining, "'s been raining"]
+    explanation: "Chuva que começou no almoço e continua, com resultado visível → has been raining."
+  - id: e14
+    block: 2
+    type: fix
+    prompt: "I am living in São Paulo since 2019."
+    prompt_pt: "Eu moro em São Paulo desde 2019."
+    answers: ["I have been living in São Paulo since 2019.", "I have lived in São Paulo since 2019."]
+    explanation: "Com since, o presente simples ou contínuo não serve: use have been living (ou have lived)."
+  - id: e15
+    block: 2
+    type: fix
+    prompt: "He has been knowing Carla for ten years."
+    prompt_pt: "Ele conhece a Carla há dez anos."
+    answers: ["He has known Carla for ten years.", "He's known Carla for ten years."]
+    explanation: "Know é verbo de estado e não vai para o continuous: has known."
+  - id: e16
+    block: 2
+    type: order
+    prompt: "Put the words in order (a question)."
+    prompt_pt: "Coloque as palavras em ordem (uma pergunta)."
+    words: [waiting, have, long, you, been, how]
+    answers: ["How long have you been waiting?"]
+    explanation: "Pergunta: How long + have + sujeito + been + -ing."
+  - id: e17
+    block: 2
+    type: order
+    prompt: "Put the words in order (a statement)."
+    prompt_pt: "Coloque as palavras em ordem (uma afirmação)."
+    words: [since, she, working, has, the, out, been, gym, at, six]
+    answers: ["She has been working out at the gym since six."]
+    explanation: "Sujeito + has been + -ing + complemento + since + ponto de partida."
+  - id: e18
+    block: 2
+    type: dictation
+    audio_text: "We've been planning this trip for almost a year."
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["We've been planning this trip for almost a year.", "We have been planning this trip for almost a year."]
+    explanation: "We've been planning: atividade que começou há quase um ano e continua."
+  - id: e19
+    block: 3
+    type: choice
+    prompt: "I ___ this series for weeks, but I'm only on episode four."
+    prompt_pt: "Estou assistindo a esta série há semanas, mas ainda estou só no episódio quatro."
+    options: [have been watching, watched, am watching]
+    answers: [have been watching, "'ve been watching"]
+    explanation: "Atividade em andamento há semanas e ainda não terminada → have been watching."
+  - id: e20
+    block: 3
+    type: choice
+    prompt: "Look! I ___ my thesis! It's finally done."
+    prompt_pt: "Olha! Eu terminei minha tese! Finalmente está pronta."
+    glossary: {thesis: tese}
+    options: [have finished, have been finishing, am finishing]
+    answers: [have finished, "'ve finished"]
+    explanation: "Resultado concluído (it's finally done) → present perfect simples, não continuous."
+  - id: e21
+    block: 3
+    type: listen
+    audio_text: "Julia has been fixing her bike all afternoon, and she has already replaced both tyres."
+    prompt: "What has Julia already done?"
+    prompt_pt: "O que a Julia já fez?"
+    options: ["She has replaced both tyres.", "She has bought a new bike.", "She has been riding all afternoon."]
+    answers: ["She has replaced both tyres."]
+    explanation: "Has been fixing é a atividade em andamento; has replaced é o resultado já concluído."
+  - id: e22
+    block: 3
+    type: fix
+    prompt: "How long are you waiting for the bus?"
+    prompt_pt: "Há quanto tempo você está esperando o ônibus?"
+    answers: ["How long have you been waiting for the bus?"]
+    explanation: "Para perguntar a duração até agora, use How long have you been + -ing."
+  - id: e23
+    block: 3
+    type: transform
+    prompt: "Rewrite using the present perfect continuous and 'for': I started learning Spanish two years ago, and I'm still learning it."
+    prompt_pt: "Reescreva usando o present perfect continuous e 'for': Comecei a aprender espanhol há dois anos e ainda estou aprendendo."
+    answers: ["I have been learning Spanish for two years.", "I've been learning Spanish for two years.", "I have been learning Spanish for 2 years."]
+    explanation: "Começou há dois anos e continua → have been learning + for + duração."
+  - id: e24
+    block: 3
+    type: transform
+    prompt: "Rewrite using the present perfect continuous and 'since': Rafael started working from home in March. He still works from home."
+    prompt_pt: "Reescreva usando o present perfect continuous e 'since': O Rafael começou a trabalhar de casa em março. Ele ainda trabalha de casa."
+    answers: ["Rafael has been working from home since March.", "Rafael's been working from home since March."]
+    explanation: "Ponto de partida (March) + ação que continua → has been working since March."
+  - id: e25
+    block: 3
+    type: translate
+    prompt: "Há quanto tempo você está esperando?"
+    answers: ["How long have you been waiting?", "How long have you been waiting for?"]
+    explanation: "Há quanto tempo ... está + gerúndio → How long have you been + -ing."
+  - id: e26
+    block: 3
+    type: translate
+    prompt: "Ela está estudando inglês desde 2022."
+    answers: ["She has been studying English since 2022.", "She's been studying English since 2022.", "She has been learning English since 2022.", "She's been learning English since 2022."]
+    explanation: "Em inglês, ação que vem de um ponto do passado até agora usa has been + -ing, não o presente."
+  - id: e27
+    block: 3
+    type: dictation
+    audio_text: "Have you been sleeping well since you changed jobs?"
+    prompt: "Write what you hear."
+    prompt_pt: "Escreva o que você ouvir."
+    answers: ["Have you been sleeping well since you changed jobs?"]
+    explanation: "Pergunta no present perfect continuous: Have you been + -ing + since."
