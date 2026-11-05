@@ -1,4 +1,3 @@
-from datetime import date
 
 from app.db import insert
 from builders import make_session, writing_json
