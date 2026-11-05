@@ -1,11 +1,11 @@
 from app.db import insert
-from builders import make_session
+from builders import complete_module, make_session
 
 B1_A, B1_B, B2_A = "b1_past_simple_continuous", "b1_futures", "b2_passive_voice"
 
 
 def complete_lesson(deps, module_id):
-    make_session(deps, kind="lesson", module_id=module_id, is_finished=1, day="2026-11-03")
+    complete_module(deps, module_id)
 
 
 def add_review(deps, module_id, next_due):

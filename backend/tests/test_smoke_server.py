@@ -43,5 +43,5 @@ def test_server_factory_builds_a_working_app(monkeypatch, tmp_path):
     client = TestClient(app_factory(), headers={"X-API-Token": "secret"})
     assert client.get("/health").json() == {"status": "ok"}
     body = client.get("/modules").json()
-    assert sum(level["total"] for level in body["levels"]) == 26
-    assert client.get("/home").json()["next_module"]["id"] == "b1_past_simple_continuous"
+    assert sum(level["total"] for level in body["levels"]) == 46
+    assert client.get("/home").json()["next_module"]["id"] == "b1_past_simple"

@@ -66,7 +66,7 @@ def test_a_module_session_keeps_its_own_spaced_repetition_schedule(app_client, d
     providers.report.responses.append(report_json(90, mistakes))
     body = app_client.post(f"/sessions/{sid}/finish").json()
     stored = deps.conn.execute("SELECT next_due FROM reviews WHERE module_id = ?", (MODULE,)).fetchone()[0]
-    assert body["next_due"] == stored == "2026-11-11"  # 3 days * ease 2.5, rounded up to 8
+    assert body["next_due"] is None and stored == "2026-11-03"  # reviews are scheduled by the exercise bank
 
 
 # 4. Provider failures ----------------------------------------------------------------------
@@ -135,9 +135,7 @@ def test_overlapping_finish_requests_do_the_work_once(app_client, deps, provider
     deps.providers.report = providers.report
     assert app_client.post(f"/sessions/{sid}/finish").status_code == 200
     assert outcomes == ["finish_in_progress"]
-    assert count(deps, "reviews") == 1 and len(providers.report.calls) == 1
-    row = deps.conn.execute("SELECT repetitions, interval_days FROM reviews").fetchone()
-    assert (row["repetitions"], row["interval_days"]) == (0, 1)
+    assert len(providers.report.calls) == 1 and count(deps, "reviews") == 0
 
 
 def test_a_failed_finish_can_be_retried(app_client, deps, providers):
@@ -148,7 +146,7 @@ def test_a_failed_finish_can_be_retried(app_client, deps, providers):
     providers.report.responses.append(report_json(80))
     retry = app_client.post(f"/sessions/{sid}/finish")
     assert retry.status_code == 200 and retry.json()["conversation_score"] == 80
-    assert count(deps, "reviews") == 1
+    assert deps.conn.execute("SELECT is_finished FROM sessions WHERE id = ?", (sid,)).fetchone()[0] == 1
 
 
 # 6. A failed turn must not leave the learner's line behind ---------------------------------

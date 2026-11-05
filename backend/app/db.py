@@ -57,9 +57,26 @@ CREATE TABLE IF NOT EXISTS listening_items (
     user_answer TEXT,
     correct INTEGER
 );
-CREATE TABLE IF NOT EXISTS lesson_bank (
-    module_id TEXT PRIMARY KEY,
-    items TEXT NOT NULL,
+DROP TABLE IF EXISTS lesson_bank;
+CREATE TABLE IF NOT EXISTS exercise_attempts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    module_id TEXT NOT NULL,
+    exercise_id TEXT NOT NULL,
+    kind TEXT NOT NULL CHECK (kind IN ('lesson', 'review')),
+    run_id INTEGER,
+    answer TEXT NOT NULL,
+    correct INTEGER NOT NULL,
+    seconds INTEGER NOT NULL DEFAULT 0,
+    day TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
+CREATE UNIQUE INDEX IF NOT EXISTS ux_lesson_attempt ON exercise_attempts (module_id, exercise_id) WHERE kind = 'lesson';
+CREATE UNIQUE INDEX IF NOT EXISTS ux_review_attempt ON exercise_attempts (run_id, exercise_id) WHERE kind = 'review';
+CREATE TABLE IF NOT EXISTS exercise_reports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    module_id TEXT NOT NULL,
+    exercise_id TEXT NOT NULL,
+    note TEXT NOT NULL,
     created_at TEXT NOT NULL
 );
 CREATE TABLE IF NOT EXISTS media_logs (

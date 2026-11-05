@@ -4,8 +4,6 @@ from pathlib import Path
 # Variables each shipped prompt expects (checked by tests against the files).
 PROMPT_VARS: dict[str, set[str]] = {
     "chat_persona": {"level", "scenario_title", "character", "goal", "target_structures"},
-    "listening": {"level", "module_title", "target_structures", "recent_mistakes",
-                  "count", "choice_count", "gap_count"},
     "report": {"level", "module_context", "known_module_ids", "transcript"},
     "summary": {"previous_summary", "transcript"},
     "writing_prompt": {"level", "recent_topics"},

@@ -103,3 +103,10 @@ def correct_answers() -> dict[str, str]:
 def write_exercises(directory, module_id, exercises=None):
     data = {"module_id": module_id, "exercises": exercises if exercises is not None else valid_exercises()}
     (directory / f"{module_id}.yaml").write_text(yaml.safe_dump(data, allow_unicode=True), encoding="utf-8")
+
+
+def complete_module(deps, module_id, day="2026-11-03", correct=1):
+    """Insert the 27 lesson attempts that mark a module as completed."""
+    for i in range(1, 28):
+        insert(deps.conn, "exercise_attempts", module_id=module_id, exercise_id=f"e{i:02d}", kind="lesson",
+               answer="x", correct=correct, seconds=10, day=day, created_at=f"{day}T12:00:00+00:00")

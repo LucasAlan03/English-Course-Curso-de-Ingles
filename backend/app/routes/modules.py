@@ -2,6 +2,7 @@ from datetime import date
 
 from fastapi import APIRouter, Depends
 
+from app.content import EXERCISE_COUNT
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
 from app.goals import pillars_for_day, streak
@@ -10,9 +11,10 @@ router = APIRouter()
 
 
 def completed_module_ids(deps: AppDeps) -> set[str]:
-    """A module is completed once one of its lessons has been finished."""
+    """A module is completed once all its lesson exercises have been answered."""
     rows = deps.conn.execute(
-        "SELECT DISTINCT module_id FROM sessions WHERE kind = 'lesson' AND is_finished = 1 AND module_id IS NOT NULL"
+        "SELECT module_id FROM exercise_attempts WHERE kind = 'lesson' GROUP BY module_id HAVING COUNT(*) >= ?",
+        (EXERCISE_COUNT,),
     ).fetchall()
     return {r["module_id"] for r in rows}
 

@@ -152,27 +152,21 @@ def test_turn_summarizes_long_history_and_uses_it(app_client, deps, providers):
 
 # ---------- finishing ----------
 
-def finished_lesson(app_client, deps, providers, score=90, mistakes=None, listening=(4, 5)):
+def finished_lesson(app_client, deps, providers, score=90, mistakes=None):
     sid = make_session(deps)
     add_user_message(deps, sid)
     add_user_message(deps, sid, "She was cooking when I arrived.")
-    right, total = listening
-    for i in range(total):
-        insert(deps.conn, "listening_items", session_id=sid, kind="gap", prompt="p", audio_text="a",
-               answer="went", explanation="e", correct=1 if i < right else 0)
     providers.report.responses.append(report_json(score, mistakes))
     return sid, app_client.post(f"/sessions/{sid}/finish")
 
 
-def test_finish_creates_review_and_returns_scores(app_client, deps, providers):
+def test_finish_returns_scores_and_records_mistakes(app_client, deps, providers):
     mistakes = [{"said": "I goed", "corrected": "I went", "explanation": "irregular", "module_id": "b2_passive_voice"}]
     sid, r = finished_lesson(app_client, deps, providers, mistakes=mistakes)
     body = r.json()
     assert r.status_code == 200
-    assert (body["listening_score"], body["conversation_score"], body["final_score"]) == (80, 90, 86)
-    assert body["next_due"] == "2026-11-04" and body["report"]["score"] == 90
-    review = deps.conn.execute("SELECT * FROM reviews WHERE module_id = ?", (MODULE,)).fetchone()
-    assert (review["interval_days"], review["ease"], review["repetitions"]) == (1, 2.5, 0)
+    assert (body["conversation_score"], body["final_score"]) == (90, 90)
+    assert body["next_due"] is None and body["report"]["score"] == 90 and count(deps, "reviews") == 0
     saved = deps.conn.execute("SELECT module_id, said FROM mistakes").fetchall()
     assert [(x["module_id"], x["said"]) for x in saved] == [(MODULE, "I goed")]  # session module wins
     assert pillars_for_day(deps.conn, date(2026, 11, 3))["grammar"] is True
@@ -182,9 +176,7 @@ def test_finish_twice_is_idempotent(app_client, deps, providers):
     sid, first = finished_lesson(app_client, deps, providers)
     again = app_client.post(f"/sessions/{sid}/finish")
     assert again.status_code == 200 and again.json() == first.json()
-    assert count(deps, "reviews") == 1 and len(providers.report.calls) == 1
-    review = deps.conn.execute("SELECT repetitions, interval_days FROM reviews").fetchone()
-    assert (review["repetitions"], review["interval_days"]) == (0, 1)
+    assert count(deps, "reviews") == 0 and len(providers.report.calls) == 1
 
 
 def test_finish_without_user_messages_changes_nothing(app_client, deps, providers):
@@ -206,15 +198,6 @@ def test_finish_with_invalid_report_saves_nothing(app_client, deps, providers):
 def test_finish_writing_session_is_rejected(app_client, deps):
     sid = make_session(deps, kind="writing", module_id=None)
     assert app_client.post(f"/sessions/{sid}/finish").status_code == 400
-
-
-def test_second_review_moves_the_schedule_forward(app_client, deps, providers):
-    insert(deps.conn, "reviews", module_id=MODULE, next_due="2026-11-03", interval_days=1, ease=2.5, repetitions=0)
-    sid = make_session(deps, kind="review")
-    add_user_message(deps, sid)
-    providers.report.responses.append(report_json(90))
-    body = app_client.post(f"/sessions/{sid}/finish").json()
-    assert body["next_due"] == "2026-11-06"  # first review: 3 days
 
 
 def test_free_session_pulls_review_forward_after_3_mistakes(app_client, deps, providers):
