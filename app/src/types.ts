@@ -14,7 +14,21 @@ export type Home = {
 };
 
 export type ModuleSummary = { id: string; title: string; order: number; completed: boolean };
-export type LevelSummary = { level: string; total: number; completed: number; modules: ModuleSummary[] };
+export type ExamStatus = {
+  available: boolean;
+  missing_modules: number;
+  passed: boolean;
+  best_score: number | null;
+  open_run_id: number | null;
+};
+export type LevelSummary = {
+  level: string;
+  total: number;
+  completed: number;
+  modules: ModuleSummary[];
+  unlocked?: boolean;
+  exam?: ExamStatus;
+};
 export type Modules = { levels: LevelSummary[] };
 
 export type ModuleDetail = {
@@ -77,3 +91,23 @@ export type MediaItem = {
 };
 export type MediaTotals = { total_minutes: number; by_type: Record<string, number>; by_category: Record<string, number> };
 export type MediaSummary = { day: MediaTotals; week: MediaTotals; month: MediaTotals };
+
+export type ExamResultItem = {
+  id: string;
+  prompt: string;
+  module_id: string;
+  module_title: string;
+  user_answer: string | null;
+  correct: boolean;
+  correct_answer: string;
+  explanation: string;
+};
+export type ExamRun = {
+  run_id: number;
+  level: string;
+  finished: boolean;
+  score: number | null;
+  passed: boolean | null;
+  pass_percent: number;
+  results: ExamResultItem[] | null;
+};

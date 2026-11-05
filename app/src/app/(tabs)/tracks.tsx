@@ -9,7 +9,10 @@ import { useApi } from '@/useApi';
 export default function TracksScreen() {
   const theme = useTheme();
   const { data, error } = useApi<Modules>('/modules');
-  const suggestedId = data?.levels.flatMap((l) => l.modules).find((m) => !m.completed)?.id;
+  const suggestedId = data?.levels
+    .filter((l) => l.unlocked !== false)
+    .flatMap((l) => l.modules)
+    .find((m) => !m.completed)?.id;
 
   return (
     <Screen gap={16}>
@@ -18,7 +21,8 @@ export default function TracksScreen() {
       </Text>
       {error ? <ErrorText>{error}</ErrorText> : null}
       {data?.levels.length === 0 ? <Muted>Nenhum módulo encontrado.</Muted> : null}
-      {data ? <TrailMap levels={data.levels} suggestedId={suggestedId} onOpen={(id) => router.push(`/lesson/${id}`)} /> : null}
+      {data ? <TrailMap levels={data.levels} suggestedId={suggestedId} onOpen={(id) => router.push(`/lesson/${id}`)}
+        onExam={(level) => router.push(`/exam/${level}`)} /> : null}
     </Screen>
   );
 }

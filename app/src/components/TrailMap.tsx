@@ -5,7 +5,7 @@ import { useTheme } from '@/theme';
 import { LevelSummary, ModuleSummary } from '@/types';
 
 import Ridge from './Ridge';
-import { Text } from './ui';
+import { Button, Text } from './ui';
 
 const ROW = 96;
 const NODE = 58;
@@ -79,18 +79,41 @@ function Node({ module, suggested }: { module: ModuleSummary; suggested: boolean
   );
 }
 
+function ExamCard({ level, onExam }: { level: LevelSummary; onExam?: (level: string) => void }) {
+  const theme = useTheme();
+  const exam = level.exam;
+  if (!exam || level.unlocked === false) return null;
+  const action = exam.passed ? null : exam.open_run_id ? 'Continuar prova' : exam.available ? 'Fazer prova' : null;
+  const status = exam.passed ? `Aprovado · ${exam.best_score ?? 0}%` : `Faltam ${exam.missing_modules} módulos`;
+  return (
+    <View testID={`exam-${level.level}`} style={[styles.exam, { backgroundColor: theme.card, borderColor: theme.border }]}>
+      <Text style={{ color: theme.text, fontWeight: '800', fontSize: 18 }}>{`Prova de ${level.level}`}</Text>
+      {action && onExam ? (
+        <Button label={action} kind="sun" onPress={() => onExam(level.level)} />
+      ) : (
+        <Text style={{ color: exam.passed ? theme.good : theme.muted, fontSize: 15 }}>{status}</Text>
+      )}
+    </View>
+  );
+}
+
 function Level({
   level,
+  previous,
   suggestedId,
   onOpen,
+  onExam,
   width,
 }: {
   level: LevelSummary;
+  previous?: string;
   suggestedId?: string;
   onOpen: (id: string) => void;
+  onExam?: (level: string) => void;
   width: number;
 }) {
   const theme = useTheme();
+  const locked = level.unlocked === false;
   const amp = Math.min(width * 0.24, 96);
   const xs = level.modules.map((_, i) => width / 2 + Math.sin(i * 1.15) * amp);
   const dots: { x: number; y: number; done: boolean }[] = [];
@@ -120,6 +143,11 @@ function Level({
           </View>
           <Text style={{ color: theme.onPine, fontWeight: '600', fontSize: 14 }}>{`${level.completed}/${level.total}`}</Text>
         </View>
+        {locked ? (
+          <Text style={{ color: theme.sun, fontWeight: '700', fontSize: 14, marginTop: 6 }}>
+            {`🔒 Passe na prova de ${previous ?? 'nível anterior'}`}
+          </Text>
+        ) : null}
       </View>
 
       <View style={{ height: level.modules.length * ROW, width }}>
@@ -171,8 +199,9 @@ function Level({
               key={module.id}
               testID={`module-${module.id}`}
               accessibilityRole="button"
-              onPress={() => onOpen(module.id)}
-              style={[styles.row, { top: i * ROW, width }]}
+              onPress={() => (locked ? undefined : onOpen(module.id))}
+              accessibilityState={{ disabled: locked }}
+              style={[styles.row, { top: i * ROW, width }, locked && { opacity: 0.45 }]}
             >
               {labelOnRight ? (
                 <>
@@ -190,6 +219,7 @@ function Level({
           );
         })}
       </View>
+      <ExamCard level={level} onExam={onExam} />
     </View>
   );
 }
@@ -198,17 +228,20 @@ export default function TrailMap({
   levels,
   suggestedId,
   onOpen,
+  onExam,
 }: {
   levels: LevelSummary[];
   suggestedId?: string;
   onOpen: (id: string) => void;
+  onExam?: (level: string) => void;
 }) {
   const [width, setWidth] = useState(0);
   const onLayout = (e: LayoutChangeEvent) => setWidth(Math.floor(e.nativeEvent.layout.width));
   return (
     <View onLayout={onLayout} style={{ gap: 28 }}>
-      {levels.map((level) => (
-        <Level key={level.level} level={level} suggestedId={suggestedId} onOpen={onOpen} width={width || 340} />
+      {levels.map((level, i) => (
+        <Level key={level.level} level={level} previous={levels[i - 1]?.level} suggestedId={suggestedId}
+          onOpen={onOpen} onExam={onExam} width={width || 340} />
       ))}
     </View>
   );
@@ -220,5 +253,6 @@ const styles = StyleSheet.create({
   track: { flex: 1, height: 8, borderRadius: 4, overflow: 'hidden' },
   row: { position: 'absolute', left: 0, height: ROW, flexDirection: 'row', alignItems: 'center' },
   label: { flex: 1, gap: 6 },
+  exam: { borderWidth: 2, borderRadius: 20, padding: 16, gap: 8 },
   badge: { alignSelf: 'flex-start', borderRadius: 999, paddingVertical: 2, paddingHorizontal: 10 },
 });
