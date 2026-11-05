@@ -32,7 +32,7 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
         clock=clock,
         conn=conn,
         providers=providers or build_providers(settings),
-        content=ContentRepo.load(settings.content_dir),
+        content=ContentRepo.load(settings.content_dir, settings.exercises_dir),
         tracker=UsageTracker(conn, settings, clock),
     )
 

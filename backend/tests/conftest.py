@@ -25,11 +25,22 @@ def module_dir(tmp_path):
 
 
 @pytest.fixture
-def settings(tmp_path, module_dir) -> Settings:
+def exercises_dir(tmp_path):
+    from builders import write_exercises
+
+    directory = tmp_path / "exercises"
+    directory.mkdir()
+    write_exercises(directory, "b1_past_simple_continuous")
+    return directory
+
+
+@pytest.fixture
+def settings(tmp_path, module_dir, exercises_dir) -> Settings:
     return Settings(
         api_token=TEST_TOKEN,
         data_dir=str(tmp_path / "data"),
         content_dir=str(module_dir),
+        exercises_dir=str(exercises_dir),
         _env_file=None,
     )
 

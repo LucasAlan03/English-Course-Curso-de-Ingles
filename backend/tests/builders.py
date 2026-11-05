@@ -55,3 +55,51 @@ def writing_json(score=75, mistakes=None):
              "explanation": "Passado irregular.", "module_id": "b1_past_simple_continuous"}],
         "score": score,
     })
+
+
+_ITEM_TEMPLATES = {
+    "choice": lambda n: {"prompt": f"Yesterday I ___ to the park ({n}).", "prompt_pt": f"Ontem eu fui ao parque ({n}).",
+                         "options": ["went", "go", "gone"], "answers": ["went"], "glossary": {"park": "parque"}},
+    "listen": lambda n: {"prompt": f"Where did she go? ({n})", "prompt_pt": f"Aonde ela foi? ({n})",
+                         "audio_text": f"She went to the market {n}.", "options": ["market", "school", "bank"],
+                         "answers": ["market"]},
+    "gap": lambda n: {"prompt": f"She ___ (watch) a series last night ({n}).",
+                      "prompt_pt": f"Ela assistiu a uma série ontem à noite ({n}).", "answers": ["watched"]},
+    "fix": lambda n: {"prompt": f"I goed home early ({n}).", "prompt_pt": f"Eu fui para casa cedo ({n}).",
+                      "answers": [f"I went home early ({n})", f"I went home early {n}"]},
+    "order": lambda n: {"prompt": f"Put the words in order ({n}).", "prompt_pt": f"Coloque as palavras em ordem ({n}).",
+                        "words": ["cooking", "she", "was"], "answers": ["she was cooking"]},
+    "dictation": lambda n: {"prompt": f"Write what you hear ({n}).", "prompt_pt": f"Escreva o que ouvir ({n}).",
+                            "audio_text": f"We were watching a movie at {n} o'clock",
+                            "answers": [f"We were watching a movie at {n} o'clock"]},
+    "transform": lambda n: {"prompt": f"Rewrite in the past: I eat pizza ({n}).",
+                            "prompt_pt": f"Reescreva no passado: eu como pizza ({n}).",
+                            "answers": ["I ate pizza"]},
+    "translate": lambda n: {"prompt": f"Eu estava dormindo quando você ligou ({n}).",
+                            "answers": ["I was sleeping when you called"]},
+}
+
+
+def valid_exercises() -> list[dict]:
+    """27 exercise dicts that satisfy every validator rule."""
+    from app.content import BLOCK_PLAN
+
+    items, n = [], 0
+    for block, plan in BLOCK_PLAN.items():
+        for kind, count in plan.items():
+            for _ in range(count):
+                n += 1
+                item = {"id": f"e{n:02d}", "block": block, "type": kind,
+                        "explanation": "Past simple para ação terminada."}
+                item.update(_ITEM_TEMPLATES[kind](n))
+                items.append(item)
+    return items
+
+
+def correct_answers() -> dict[str, str]:
+    return {e["id"]: e["answers"][0] for e in valid_exercises()}
+
+
+def write_exercises(directory, module_id, exercises=None):
+    data = {"module_id": module_id, "exercises": exercises if exercises is not None else valid_exercises()}
+    (directory / f"{module_id}.yaml").write_text(yaml.safe_dump(data, allow_unicode=True), encoding="utf-8")
