@@ -1,4 +1,5 @@
 import hashlib
+import json
 import random
 from datetime import timezone
 
@@ -10,7 +11,7 @@ from app.audio import find_audio
 from app.content import EXERCISE_COUNT, Exercise
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
-from app.exercises import is_correct
+from app.exercises import is_correct, pick_review
 from app.reviews import exercise_audio_name, schedule_review
 
 router = APIRouter()
@@ -101,6 +102,8 @@ def answer_exercise(module_id: str, exercise_id: str, body: AnswerBody, deps: Ap
     e = find_exercise(deps, module_id, exercise_id)
     response = {"correct_answer": e.answers[0], "explanation": e.explanation,
                 "module_completed": False, "score": None, "next_due": None}
+    if body.run_id is not None:
+        return answer_review(deps, module_id, e, body, response)
     was_complete = len(lesson_attempts(deps, module_id)) >= EXERCISE_COUNT
     response["correct"] = save_attempt(deps, module_id, e, body.answer, body.seconds)
     attempts = lesson_attempts(deps, module_id)
@@ -108,6 +111,41 @@ def answer_exercise(module_id: str, exercise_id: str, body: AnswerBody, deps: Ap
         score = round(100 * sum(r["correct"] for r in attempts.values()) / len(attempts))
         response.update(module_completed=True, score=score, next_due=schedule_review(deps, module_id, score))
     return response
+
+
+def answer_review(deps: AppDeps, module_id: str, e: Exercise, body: AnswerBody, response: dict) -> dict:
+    run = deps.conn.execute("SELECT * FROM review_runs WHERE id = ? AND module_id = ?",
+                            (body.run_id, module_id)).fetchone()
+    if run is None:
+        raise AppError("review_not_found", 404, "Revisão não encontrada.")
+    ids = json.loads(run["exercise_ids"])
+    if e.id not in ids:
+        raise AppError("exercise_not_found", 404, "Exercício não está nesta revisão.")
+    response["correct"] = save_attempt(deps, module_id, e, body.answer, body.seconds, "review", run["id"])
+    rows = deps.conn.execute("SELECT correct FROM exercise_attempts WHERE kind = 'review' AND run_id = ?",
+                             (run["id"],)).fetchall()
+    if run["finished_at"] is None and len(rows) >= len(ids):
+        score = round(100 * sum(r["correct"] for r in rows) / len(ids))
+        claimed = deps.conn.execute(
+            "UPDATE review_runs SET finished_at = ?, score = ? WHERE id = ? AND finished_at IS NULL",
+            (deps.clock.now().astimezone(timezone.utc).isoformat(), score, run["id"])).rowcount
+        deps.conn.commit()
+        if claimed:
+            response.update(module_completed=True, score=score, next_due=schedule_review(deps, module_id, score))
+    return response
+
+
+@router.post("/reviews/{module_id}/start")
+def start_review(module_id: str, deps: AppDeps = Depends(get_deps)):
+    exercises = module_exercises(deps, module_id)
+    if not exercises:
+        raise AppError("no_exercises", 404, "Este módulo ainda não tem exercícios.")
+    picked = pick_review(deps.conn, module_id, exercises)
+    cur = deps.conn.execute(
+        "INSERT INTO review_runs (module_id, exercise_ids, started_at) VALUES (?, ?, ?)",
+        (module_id, json.dumps([e.id for e in picked]), deps.clock.now().astimezone(timezone.utc).isoformat()))
+    deps.conn.commit()
+    return {"run_id": cur.lastrowid, "exercises": [item_view(module_id, e) for e in picked]}
 
 
 @router.post("/exercises/{module_id}/{exercise_id}/report")

@@ -72,6 +72,14 @@ CREATE TABLE IF NOT EXISTS exercise_attempts (
 );
 CREATE UNIQUE INDEX IF NOT EXISTS ux_lesson_attempt ON exercise_attempts (module_id, exercise_id) WHERE kind = 'lesson';
 CREATE UNIQUE INDEX IF NOT EXISTS ux_review_attempt ON exercise_attempts (run_id, exercise_id) WHERE kind = 'review';
+CREATE TABLE IF NOT EXISTS review_runs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    module_id TEXT NOT NULL,
+    exercise_ids TEXT NOT NULL,
+    started_at TEXT NOT NULL,
+    finished_at TEXT,
+    score INTEGER
+);
 CREATE TABLE IF NOT EXISTS exercise_reports (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     module_id TEXT NOT NULL,

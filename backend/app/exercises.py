@@ -29,3 +29,20 @@ def normalize(text: str) -> str:
 def is_correct(exercise, answer: str) -> bool:
     given = normalize(answer)
     return any(given == normalize(a) for a in exercise.answers)
+
+
+def pick_review(conn, module_id: str, exercises: list, size: int = 9) -> list:
+    """Missed exercises first (newest mistake first), then the ones seen longest ago."""
+    latest: dict[str, tuple[str, int]] = {}
+    rows = conn.execute(
+        "SELECT exercise_id, correct, created_at FROM exercise_attempts WHERE module_id = ? ORDER BY created_at, id",
+        (module_id,),
+    ).fetchall()
+    for r in rows:
+        latest[r["exercise_id"]] = (r["created_at"], r["correct"])
+    missed = [e for e in exercises if e.id in latest and not latest[e.id][1]]
+    missed.sort(key=lambda e: e.id)
+    missed.sort(key=lambda e: latest[e.id][0], reverse=True)  # stable: ties keep id order
+    rest = [e for e in exercises if not (e.id in latest and not latest[e.id][1])]
+    rest.sort(key=lambda e: (latest[e.id][0] if e.id in latest else "", e.id))
+    return (missed + rest)[:size]
