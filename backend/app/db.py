@@ -171,6 +171,12 @@ CREATE TABLE IF NOT EXISTS day_state (
     checked INTEGER NOT NULL DEFAULT 0,
     PRIMARY KEY (date, block)
 );
+CREATE TABLE IF NOT EXISTS translations (
+    key TEXT PRIMARY KEY,
+    translation TEXT NOT NULL,
+    note TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS api_usage (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     provider TEXT NOT NULL,

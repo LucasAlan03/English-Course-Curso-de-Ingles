@@ -77,3 +77,8 @@ class ChunkGrammar(BaseModel):
 
 class SongGrammar(BaseModel):
     chunks: list[ChunkGrammar]
+
+
+class Translation(BaseModel):
+    translation: str
+    note: str = ""

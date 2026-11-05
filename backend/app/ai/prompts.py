@@ -10,6 +10,7 @@ PROMPT_VARS: dict[str, set[str]] = {
     "writing_feedback": {"level", "prompt", "known_module_ids", "text"},
     "module_content": {"level", "title", "source"},
     "song_grammar": {"modules", "chunks"},
+    "translate": {"word", "sentence"},
 }
 
 
