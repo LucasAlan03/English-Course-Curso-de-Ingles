@@ -63,3 +63,17 @@ class WritingFeedback(BaseModel):
     improved_text: str
     mistakes: list[MistakeOut]
     score: int = Field(ge=0, le=100)
+
+
+class Highlight(BaseModel):
+    phrase: str
+    module_id: str
+
+
+class ChunkGrammar(BaseModel):
+    index: int
+    highlights: list[Highlight] = []
+
+
+class SongGrammar(BaseModel):
+    chunks: list[ChunkGrammar]

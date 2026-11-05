@@ -136,6 +136,34 @@ CREATE TABLE IF NOT EXISTS call_logs (
     note TEXT,
     created_at TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    artist TEXT NOT NULL,
+    link TEXT,
+    lyrics TEXT NOT NULL,
+    is_current INTEGER NOT NULL DEFAULT 0,
+    grammar_status TEXT NOT NULL DEFAULT 'pending' CHECK (grammar_status IN ('pending', 'done')),
+    created_at TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS song_chunks (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    song_id INTEGER NOT NULL REFERENCES songs(id) ON DELETE CASCADE,
+    idx INTEGER NOT NULL,
+    text TEXT NOT NULL,
+    repeat_of INTEGER,
+    highlights TEXT NOT NULL DEFAULT '[]'
+);
+CREATE TABLE IF NOT EXISTS song_practice (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chunk_id INTEGER REFERENCES song_chunks(id) ON DELETE CASCADE,
+    song_id INTEGER NOT NULL REFERENCES songs(id) ON DELETE CASCADE,
+    kind TEXT NOT NULL CHECK (kind IN ('dictation', 'shadow', 'final')),
+    text TEXT NOT NULL,
+    score INTEGER NOT NULL,
+    day TEXT NOT NULL,
+    created_at TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS api_usage (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     provider TEXT NOT NULL,
