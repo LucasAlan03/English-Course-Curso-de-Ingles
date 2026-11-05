@@ -8,6 +8,7 @@ import logging
 import os
 
 from app.content import ContentRepo
+from app.migrations import migrate_module_ids
 from app.db import connect, init_schema
 from app.deps import AppDeps, token_is_valid
 from app.errors import AppError
@@ -27,6 +28,7 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
     clock = clock or SystemClock(settings.tz)
     conn = connect(os.path.join(settings.data_dir, "app.db"))
     init_schema(conn)
+    migrate_module_ids(conn)
     app.state.deps = AppDeps(
         settings=settings,
         clock=clock,
