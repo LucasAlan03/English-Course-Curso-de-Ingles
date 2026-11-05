@@ -128,6 +128,14 @@ CREATE TABLE IF NOT EXISTS words (
     created_at TEXT NOT NULL,
     UNIQUE (word, sentence)
 );
+CREATE TABLE IF NOT EXISTS call_logs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    date TEXT NOT NULL,
+    source TEXT NOT NULL,
+    minutes INTEGER NOT NULL,
+    note TEXT,
+    created_at TEXT NOT NULL
+);
 CREATE TABLE IF NOT EXISTS api_usage (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     provider TEXT NOT NULL,
