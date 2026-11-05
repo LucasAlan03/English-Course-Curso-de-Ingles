@@ -11,6 +11,7 @@ Deixar o app **mais ativo e mais divertido**, sem virar um curso extenso. Hoje c
 3. Cada dia tem um **trecho de uma música** que você escolheu, do começo ao fim, até conseguir cantá-la.
 4. O tempo de **ligação**, de **séries/vídeos** e de **leitura** é registrado em minutos e soma em barras de progresso.
 5. Qualquer palavra em inglês pode ser **tocada para traduzir**, com o contexto da frase.
+6. Cada nível (B1, B2, C1) termina com uma **prova de nível**: o próximo nível só abre se você passar.
 
 O app é o **mediador** do dia: mostra o que fazer agora e mede o tempo. Análise de desempenho e sugestões automáticas ficam para depois. Por enquanto, você baixa o relatório da conversa e traz para análise.
 
@@ -26,7 +27,8 @@ O app é o **mediador** do dia: mostra o que fazer agora e mede o tempo. Anális
 3. Uma música colada é dividida em trechos; ditado e shadowing de um trecho funcionam e a barra da música avança.
 4. Ligação, séries/vídeos e leitura somam minutos corretamente (app e lançamento manual).
 5. Tocar numa palavra traduz considerando a frase, e a segunda vez não chama a IA.
-6. Abrir um bloco de exercícios não chama nenhuma IA.
+6. Abrir um bloco de exercícios não chama nenhuma IA, nem para traduzir.
+7. Os módulos de B2 só abrem depois de passar na prova de B1 (e C1 depois da de B2), e a prova não usa IA.
 
 ### Fora do escopo
 - Cálculo de desempenho e sugestões automáticas ("você está fraco em X").
@@ -38,7 +40,7 @@ O app é o **mediador** do dia: mostra o que fazer agora e mede o tempo. Anális
 
 | # | Bloco | Meta | Conta como feito quando |
 |---|---|---|---|
-| 1 | Gramática | 10–20 min | Concluiu um módulo hoje (respondeu o último exercício do bloco 3) **ou** somou 20 min de exercícios no dia |
+| 1 | Gramática | 10–20 min | Concluiu um módulo hoje (respondeu o último exercício do bloco 3) ou terminou uma prova de nível **ou** somou 20 min de exercícios no dia |
 | 2 | Música | 10–20 min | Fez o ditado **e** o shadowing do trecho do dia |
 | 3 | Ligação 1 | 10 min | Os minutos de ligação do dia chegaram a 10 |
 | 4 | Assistir | 45 min | Séries + filmes + vídeos do dia somam 45 min |
@@ -101,7 +103,9 @@ Escritos à mão por Claude, versionados no repositório em `backend/content/exe
 
 Totais por módulo: 10 múltipla escolha, 3 lacunas, 3 ouvir, 2 ditados, 3 corrigir, 2 transformar, 2 ordenar, 2 traduzir.
 
-**Formato de cada exercício:** `id`, `block` (1–3), `type`, `prompt` (enunciado), `options` (só múltipla escolha e ouvir com opções), `words` (só ordenar), `audio_text` (só ouvir e ditado), `answers` (lista de respostas aceitas), `explanation` (pt-BR, curta).
+**Formato de cada exercício:** `id`, `block` (1–3), `type`, `prompt` (enunciado), `options` (só múltipla escolha e ouvir com opções), `words` (só ordenar), `audio_text` (só ouvir e ditado), `answers` (lista de respostas aceitas), `explanation` (pt-BR, curta), `prompt_pt` (tradução pronta do enunciado; não existe em traduzir PT→EN, cujo enunciado já é em português) e `glossary` (0 a 4 palavras de vocabulário do enunciado com a tradução pronta, nunca a resposta nem uma das opções).
+
+**Tradução pronta nos exercícios.** Um botão "ver tradução" mostra o `prompt_pt` a qualquer momento. Tocar numa palavra do glossário mostra a tradução dela; tocar em outra palavra do enunciado mostra o `prompt_pt`. Nada disso chama a IA. Nos exercícios de ouvir e ditado, o texto do áudio só aparece depois da resposta.
 
 **Correção sem IA.** A resposta é normalizada (minúsculas, sem pontuação nas pontas, espaços e apóstrofos uniformes, contrações equivalentes como *I'm* = *I am*) e comparada com `answers`. Em traduzir e transformar, a lista traz as variações aceitáveis. A primeira resposta é a que conta, como hoje.
 
@@ -123,6 +127,16 @@ Teoria (pode pular) → bloco 1 → bloco 2 → bloco 3 → tela de resultado do
 
 ### 3.5 Migração dos dados atuais
 Uma tabela de equivalência (módulo antigo → primeiro módulo novo) atualiza `reviews` e `sessions.module_id`. O `lesson_bank` é apagado. Os relatórios e os erros antigos continuam no histórico.
+
+### 3.6 Provas de nível
+- **Quando:** a prova de um nível libera quando todos os módulos do nível estão concluídos. Antes disso, aparece trancada com "faltam N módulos".
+- **Trava:** os módulos do nível seguinte ficam trancados até você passar na prova do nível anterior. As revisões dos módulos já feitos continuam normais.
+- **Conteúdo:** banco de **40 questões novas por nível** (não repetem os exercícios), escritas à mão em `backend/content/exams/<nível>.yaml`, com o mesmo formato dos exercícios (incluindo `prompt_pt` e `glossary`) e um campo `module_id` dizendo qual módulo cada questão cobre. Tipos: múltipla escolha, lacuna, corrigir, transformar, ordenar e traduzir (sem áudio). Todo módulo do nível aparece em pelo menos uma questão do banco.
+- **Prova:** **30 questões sorteadas** do banco, em ordem aleatória. Corrigida sem IA, com o mesmo `normalize`. As respostas só são mostradas no fim, para não ensinar durante a prova.
+- **Nota de corte:** **75%** (23 de 30). Passou → próximo nível aberto e cartão de comemoração. A prova de C1 é o "certificado" do app.
+- **Reprovou:** a tela de resultado mostra as erradas com explicação e quais módulos elas cobrem. Você pode refazer na hora, com um novo sorteio.
+- **Interrompida:** a prova fica salva e você continua de onde parou. Uma prova nova só começa depois de terminar a anterior.
+- **Plano do dia:** os segundos gastos na prova contam como tempo de gramática, e terminar a prova conta como "concluiu um módulo hoje".
 
 ## 4. Músicas
 
@@ -162,7 +176,7 @@ O registro de mídia atual (`media_logs`) é ampliado. **Todo tempo é em minuto
 
 ## 7. Palavras: tocar para traduzir
 
-**Onde:** mensagens da conversa, exercícios (depois de respondidos), teoria e letras das músicas.
+**Onde:** mensagens da conversa, teoria e letras das músicas. Nos exercícios e nas provas, a tradução já vem pronta no conteúdo (seção 3.2) e não chama a IA.
 
 **Como:** tocar numa palavra abre um balão com a tradução **considerando a frase** e uma nota curta quando for gíria, phrasal verb ou expressão (ex.: *done* em *"How many people done doubted you"* → "já (informal, rap)"). A tradução vem da IA de chat (modelo leve) e fica guardada por palavra + frase: tocar de novo não chama a IA. Se a IA falhar, o balão mostra o erro e um "tentar de novo".
 
@@ -177,6 +191,7 @@ Tudo continua no app Expo + backend FastAPI + SQLite atuais. Nenhuma dependênci
 |---|---|---|
 | `content.py` (ampliado) | Carrega módulos e exercícios dos YAML, valida o formato | YAML |
 | `exercises.py` | Normaliza e corrige respostas, escolhe os exercícios da revisão | conteúdo, banco |
+| `exams.py` | Trava de níveis, sorteio, correção e nota das provas de nível | conteúdo, banco |
 | `daily_plan.py` | Calcula o estado dos 7 blocos e o próximo bloco | registros do dia, relógio |
 | `call_time.py` | Calcula os minutos de uma ligação pelos horários das mensagens | mensagens |
 | `songs.py` | Divide a letra em trechos, marca repetições, compara palavras | — |
@@ -187,6 +202,7 @@ Tudo continua no app Expo + backend FastAPI + SQLite atuais. Nenhuma dependênci
 ### Tabelas novas ou alteradas
 - `exercise_attempts` (módulo, exercício, sessão, resposta, acerto, segundos, data)
 - `exercise_reports` (módulo, exercício, nota, data)
+- `exam_runs` (nível, questões sorteadas, início, fim, nota, passou) · `exam_attempts` (prova, questão, resposta, acerto, segundos, data)
 - `songs` (título, artista, link, letra, música do momento) · `song_chunks` (música, ordem, texto, repetição de, gramática) · `song_practice` (trecho, tipo ditado/shadowing/final, texto, % acerto, data)
 - `call_logs` (data, origem, minutos, nota)
 - `media_logs` + colunas `unit_minutes`, `count`, `url`, `new_words`
@@ -195,15 +211,16 @@ Tudo continua no app Expo + backend FastAPI + SQLite atuais. Nenhuma dependênci
 - `sessions.kind` aceita `teach`. `lesson_bank` é removida.
 
 ### Rotas novas (principais)
-`GET /today` (plano do dia) · `POST /today/{block}/skip` e `/unskip` · `POST /today/anki` · `GET /modules/{id}/exercises` · `POST /exercises/{module}/{id}/answer` · `POST /exercises/{module}/{id}/report` · `GET /reviews/{module}/exercises` · CRUD `/songs`, `GET /songs/current/today`, `POST /songs/chunks/{id}/dictation`, `POST /songs/chunks/{id}/shadow` (áudio) · `POST /calls/external` · `GET /media/youtube-title?url=` · `POST /translate` · CRUD `/words`, `GET /words/export.csv` · `GET /sessions/{id}/report.md`.
+`GET /today` (plano do dia) · `POST /today/{block}/skip` e `/unskip` · `POST /today/anki` · `GET /modules/{id}/exercises` · `POST /exercises/{module}/{id}/answer` · `POST /exercises/{module}/{id}/report` · `GET /reviews/{module}/exercises` · `POST /exams/{level}/start` · `POST /exams/runs/{id}/{question}/answer` · `GET /exams/runs/{id}` · CRUD `/songs`, `GET /songs/current/today`, `POST /songs/chunks/{id}/dictation`, `POST /songs/chunks/{id}/shadow` (áudio) · `POST /calls/external` · `GET /media/youtube-title?url=` · `POST /translate` · CRUD `/words`, `GET /words/export.csv` · `GET /sessions/{id}/report.md`.
 
 ### App
 - Tela inicial = trilha do dia (7 blocos) + cartão do próximo bloco.
 - Aula = teoria → 3 blocos de exercícios (um componente por tipo) → resultado.
+- Prova de nível = mesma interface dos exercícios, sem correção na hora, tela de resultado com as erradas; níveis trancados com cadeado na lista de módulos.
 - Música = biblioteca, música do momento, tela do trecho (ditado → shadowing → feito).
 - Ligação = a tela de conversa atual com cronômetro; Ensine a IA usa a mesma tela.
 - Registro = séries/filmes, vídeos e leituras com as linhas de **+**, ligações de fora, palavras novas.
-- `TappableText` = componente que torna cada palavra tocável, usado nos quatro lugares da seção 7.
+- `TappableText` = componente que torna cada palavra tocável. Na conversa, teoria e letras ele chama a tradução por IA; nos exercícios e provas usa o glossário e o `prompt_pt` prontos.
 - Configurações = horários dos lembretes, exportar palavras.
 
 ## 9. Erros e casos de borda
@@ -215,15 +232,17 @@ Tudo continua no app Expo + backend FastAPI + SQLite atuais. Nenhuma dependênci
 - **Nenhuma música cadastrada:** o bloco Música mostra "Cadastre sua primeira música" e pode ser pulado.
 - **Música terminada:** depois do desafio final, o bloco pede para escolher a próxima música do momento.
 - **Virada do dia no meio de um bloco:** o registro vale para o dia em que foi salvo.
+- **Abrir um módulo de nível trancado** (link antigo, revisão): a aula responde "nível trancado — passe na prova de <nível>". Revisões de módulos já concluídos nunca são trancadas.
+- **Começar uma prova com outra em andamento:** devolve a prova em andamento em vez de sortear outra.
 
 ## 10. Testes
-- **Backend (pytest, TDD):** validador de conteúdo rodando sobre os 46 módulos reais; normalização e correção; regras de cada bloco e do pular/voltar; cálculo de minutos de ligação; divisão de letras e repetições; comparação palavra por palavra; cache de tradução; migração de módulos; exportação CSV e relatório `.md`. IA sempre falsa nos testes.
+- **Backend (pytest, TDD):** validador de conteúdo rodando sobre os 46 módulos reais e os 3 bancos de prova; trava de níveis, sorteio e nota de corte da prova; normalização e correção; regras de cada bloco e do pular/voltar; cálculo de minutos de ligação; divisão de letras e repetições; comparação palavra por palavra; cache de tradução; migração de módulos; exportação CSV e relatório `.md`. IA sempre falsa nos testes.
 - **App (Jest + RNTL):** trilha do dia, cada tipo de exercício, linhas com **+** e somas de minutos, tela do trecho da música, balão de tradução.
 - **Manual:** um dia completo na web e no Android, incluindo um lembrete local.
 
 ## 11. Ordem de construção sugerida
 1. Conteúdo: novos módulos, exercícios dos 46 módulos e validador. É a maior parte do trabalho e pode avançar em paralelo.
-2. Exercícios na aula e revisões a partir do banco; migração; áudios pelo Piper.
+2. Exercícios na aula e revisões a partir do banco; migração; áudios pelo Piper; provas de nível.
 3. Registros: mídia com **+**, ligações de fora, tempo de ligação.
 4. Plano do dia, tela inicial e alertas.
 5. Músicas.

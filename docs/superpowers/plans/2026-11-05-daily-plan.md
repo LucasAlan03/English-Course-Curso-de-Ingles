@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Turn the English app into a guided 7-block study day: 46 hand-written modules with 27 exercises each, song dictation/shadowing, minute tracking for calls/watching/reading, tap-to-translate, "teach the AI" calls and local reminders.
+**Goal:** Turn the English app into a guided 7-block study day: 46 hand-written modules with 27 exercises each, song dictation/shadowing, minute tracking for calls/watching/reading, tap-to-translate, "teach the AI" calls, local reminders and level exams (B1/B2/C1) that unlock the next level.
 
 **Architecture:** Same stack (Expo app + FastAPI + SQLite). Exercises live as YAML in the repo and are graded without AI. Day-plan state is computed from the day's records; only skips and the Anki check are stored. AI is used only for conversation, reports, translation (cached) and one grammar-tagging call per song.
 
@@ -14,7 +14,7 @@
 
 - All app copy in pt-BR; exercise content in English with pt-BR `explanation`; theory in pt-BR with English examples.
 - Every time shown or entered in the app is in **minutes**.
-- Exercises and reviews never call an AI provider (tests assert `providers.report.calls == []` and `providers.chat.calls == []`).
+- Exercises, reviews and exams never call an AI provider, not even for translation (they use the content's `prompt_pt` and `glossary`) (tests assert `providers.report.calls == []` and `providers.chat.calls == []`).
 - Song lyrics are stored only in SQLite under `backend/data/` (gitignored). Never write lyrics to any tracked file, test fixture included (use invented lines in tests).
 - No new backend dependencies (YouTube title uses `urllib.request`). The only new app dependency is `expo-notifications` (via `npx expo install`).
 - Day targets (minutes): grammar 20, music none (task-based), call1 10, watch 45, read 40, call2 10 (cumulative 20), anki check.
@@ -36,7 +36,7 @@
 
 ## File Map
 
-**Backend — new:** `app/exercises.py` (normalize, grade, review picking), `app/reviews.py` (SRS scheduling moved out of report), `app/migrations.py` (column adds, module id migration), `app/daily_plan.py`, `app/call_time.py`, `app/songs.py` (chunking + word diff), `app/ai/song_grammar.py`, `app/ai/translate.py`, `app/routes/exercises.py`, `app/routes/today.py`, `app/routes/calls.py`, `app/routes/songs.py`, `app/routes/words.py`, `app/report_md.py`, `prompts/song_grammar.md`, `prompts/translate.md`, `prompts/teach_persona.md`, `scripts/prefill_audio.py`, `content/exercises/<module_id>.yaml` ×46, `tests/test_real_content.py`, plus one test file per new unit.
+**Backend — new:** `app/exercises.py` (normalize, grade, review picking), `app/reviews.py` (SRS scheduling moved out of report), `app/migrations.py` (column adds, module id migration), `app/daily_plan.py`, `app/call_time.py`, `app/songs.py` (chunking + word diff), `app/ai/song_grammar.py`, `app/ai/translate.py`, `app/routes/exercises.py`, `app/routes/today.py`, `app/routes/calls.py`, `app/routes/songs.py`, `app/routes/words.py`, `app/report_md.py`, `prompts/song_grammar.md`, `prompts/translate.md`, `prompts/teach_persona.md`, `scripts/prefill_audio.py`, `content/exercises/<module_id>.yaml` ×46, `app/exams.py`, `app/routes/exams.py`, `content/exams/{b1,b2,c1}.yaml`, `tests/test_real_content.py`, plus one test file per new unit.
 
 **Backend — modified:** `app/content.py`, `app/config.py`, `app/db.py`, `app/main.py`, `app/routes/modules.py`, `app/routes/media.py`, `app/routes/sessions.py`, `app/ai/conversation.py`, `app/ai/report.py`, `app/ai/prompts.py`, `content/modules/*.yaml`, `content/curriculum.yaml`, `tests/builders.py`.
 
@@ -88,7 +88,8 @@ def test_curly_quotes_in_accepted_answer_also_normalize():
 **Interfaces:**
 - Produces:
   - `ExerciseType = Literal["choice", "listen", "gap", "dictation", "fix", "transform", "order", "translate"]`
-  - `class Exercise(BaseModel)`: `id: str`, `block: Literal[1,2,3]`, `type: ExerciseType`, `prompt: str`, `answers: list[str]` (min 1), `explanation: str`, `options: list[str] | None = None`, `words: list[str] | None = None`, `audio_text: str | None = None`
+  - `class Exercise(BaseModel)`: `id: str`, `block: Literal[1,2,3]`, `type: ExerciseType`, `prompt: str`, `answers: list[str]` (min 1), `explanation: str`, `options: list[str] | None = None`, `words: list[str] | None = None`, `audio_text: str | None = None`, `prompt_pt: str | None = None`, `glossary: dict[str, str] = {}`
+  - `item_problems(item) -> list[str]` — the per-item rules below (shared with exam questions in Task 10b)
   - `BLOCK_PLAN: dict[int, dict[str, int]] = {1: {"choice": 5, "listen": 2, "gap": 2}, 2: {"choice": 3, "gap": 1, "fix": 2, "order": 2, "dictation": 1}, 3: {"choice": 2, "listen": 1, "fix": 1, "transform": 2, "translate": 2, "dictation": 1}}`
   - `validate_exercises(exercises: list[Exercise]) -> list[str]` — human-readable problems, empty when valid
   - `ContentRepo.load(modules_dir: str, exercises_dir: str | None = None)`; `ContentRepo.exercises(module_id) -> list[Exercise]` (empty list when the module has no file; ordered by `id`)
@@ -96,7 +97,7 @@ def test_curly_quotes_in_accepted_answer_also_normalize():
   - builders: `valid_exercises() -> list[dict]` (27 dicts satisfying every rule), `write_exercises(directory, module_id, exercises=None)`
 - File format `content/exercises/<module_id>.yaml`: `{module_id: str, exercises: [Exercise...]}`
 
-Validation rules for `validate_exercises` (each produces a message naming the exercise id): exactly 27 exercises; ids exactly `e01`…`e27`; per-block type counts equal `BLOCK_PLAN`; `choice` has 3–4 options and exactly one option whose `normalize()` is in the normalized answers (use `normalize` from Task 1); `listen` and `dictation` need `audio_text`; `listen` options, when present, follow the `choice` rule; `dictation` answers contain `audio_text`; `order` has `words` and the sorted normalized tokens of `answers[0]` equal the sorted normalized `words`; no two exercises share the same `(prompt, audio_text)` pair.
+Validation rules for `validate_exercises` (each produces a message naming the exercise id): exactly 27 exercises; ids exactly `e01`…`e27`; per-block type counts equal `BLOCK_PLAN`; `choice` has 3–4 options and exactly one option whose `normalize()` is in the normalized answers (use `normalize` from Task 1); `listen` and `dictation` need `audio_text`; `listen` options, when present, follow the `choice` rule; `dictation` answers contain `audio_text`; `order` has `words` and the sorted normalized tokens of `answers[0]` equal the sorted normalized `words`; no two exercises share the same `(prompt, audio_text)` pair; `prompt_pt` present for every type except `translate` (absent there); `glossary` has ≤ 4 entries, every key appears as a word in `prompt` (case-insensitive) and no normalized key equals a normalized answer or option.
 
 - [ ] **Step 1: Write the failing tests**
 
@@ -118,6 +119,10 @@ def test_order_words_must_match_answer():
     assert any(order["id"] in p for p in validate_exercises([Exercise(**e) for e in data]))
 
 def test_duplicate_prompt_is_reported(): ...  # copy e02's prompt into e03 (both choice) → message names e03
+
+def test_glossary_cannot_give_away_the_answer(): ...  # e01 glossary {"went": "foi"} with answer "went" → message names e01
+
+def test_prompt_pt_required_except_translate(): ...  # drop e01 prompt_pt → reported; translate item with prompt_pt → reported
 
 def test_repo_loads_exercises_and_tolerates_missing_files(tmp_path, module_dir):
     ex_dir = tmp_path / "ex"; ex_dir.mkdir(); write_exercises(ex_dir, "b1_futures")
@@ -194,7 +199,7 @@ Each batch is one task with the same shape; batches touch disjoint files and can
 
 **Interfaces:** Consumes the format and `validate_exercises` (Task 1), `normalize` (Task 2), the module's theory (Task 3).
 
-Authoring rules (beyond the validator): block 1 tests recognition of the form; block 2 builds with support; block 3 produces (the pair contrast lives here for split modules); everyday adult contexts (work, travel, friends, series, music, food); no exercise with two defensible answers unless all are in `answers`; `translate` and `transform` list every natural variant (contracted and full forms, `'s`/`is`); `fix` prompts contain exactly one error; `explanation` one sentence in pt-BR; `listen` `audio_text` ≤ 25 words, `dictation` `audio_text` 6–14 words; use the module's `target_structures`; never quote song lyrics.
+Authoring rules (beyond the validator): block 1 tests recognition of the form; block 2 builds with support; block 3 produces (the pair contrast lives here for split modules); everyday adult contexts (work, travel, friends, series, music, food); no exercise with two defensible answers unless all are in `answers`; `translate` and `transform` list every natural variant (contracted and full forms, `'s`/`is`); `fix` prompts contain exactly one error; `explanation` one sentence in pt-BR; `listen` `audio_text` ≤ 25 words, `dictation` `audio_text` 6–14 words; use the module's `target_structures`; never quote song lyrics; `prompt_pt` is a natural pt-BR translation of the prompt (for `listen`/`dictation` it translates the question/instruction only, never the audio); `glossary` picks 0–4 vocabulary words a B1 learner may not know, never the grammar target.
 
 - [ ] **Step 1: Add the parametrized test (first batch only; later batches just extend coverage automatically)**
 
@@ -210,6 +215,8 @@ def test_real_exercises_are_valid(module_id):
 
 **Task 8 additionally** adds `test_all_46_modules_have_exercises` (`all((EX_DIR / f"{m}.yaml").exists() for m in MODULE_IDS)`) and must be run after Tasks 4–7 are merged.
 
+**Task 8b (exam content):** after Task 10b's schema exists, write `backend/content/exams/{b1,b2,c1}.yaml` (40 new questions each, not copies of exercises; same authoring rules) and add `test_real_exam_banks_are_valid` (parametrized over the 3 levels: `validate_exam(level, questions, module_ids_of_level) == []`). Commit `content: level exam banks`.
+
 ### Task 9: Lesson exercises API, attempts, module score and audio
 
 **Files:**
@@ -224,7 +231,7 @@ def test_real_exercises_are_valid(module_id):
   - `schedule_review(deps, module_id: str, score: int) -> str` in `app/reviews.py` (moved from `report._schedule_review`, uses `deps.clock.today()`, returns next_due iso).
   - `exercise_audio_name(module_id: str, exercise_id: str) -> str` = `f"ex_{module_id}_{exercise_id}.wav"`; `ensure_exercise_audio(deps, module_id, exercise) -> str` (synthesizes with `providers.tts` only when the file is missing; records usage).
   - `completed_module_ids(deps) -> set[str]` now = modules with 27 lesson attempts.
-  - `GET /modules/{id}/exercises` → `[{id, block, type, prompt, options, words (shuffled deterministically by seed module_id+id), audio_url|null, answered: bool, result: null | {correct, user_answer, correct_answer, explanation}}]` — never includes `answers` or `audio_text` for unanswered items.
+  - `GET /modules/{id}/exercises` → `[{id, block, type, prompt, prompt_pt, glossary, options, words (shuffled deterministically by seed module_id+id), audio_url|null, answered: bool, result: null | {correct, user_answer, correct_answer, explanation}}]` — never includes `answers` or `audio_text` for unanswered items.
   - `POST /exercises/{module_id}/{exercise_id}/answer` body `{answer: str, seconds: int ≥0, run_id: int|null}` → `{correct, correct_answer, explanation, module_completed: bool, score: int|null, next_due: str|null}`; `seconds` stored as `min(seconds, 180)`; `day = clock.today()`; lesson repeat → returns the stored result unchanged; when the 27th lesson attempt lands, `score = round(100 * correct / 27)`, `schedule_review` runs and `module_completed=True`.
   - `POST /exercises/{module_id}/{exercise_id}/report` body `{note: str}` → `{ok: true}`.
   - `GET /audio/{name}` (moved here unchanged).
@@ -283,6 +290,24 @@ def test_finish_session_no_longer_schedules(app_client, deps, providers): ...  #
 
 - [ ] **Step 1: Failing tests**: missed exercises come first; a 9/9 review moves `next_due` forward (3 days after first schedule); review answers never call AI; answering with an unknown `run_id` → 404.
 - [ ] **Steps 2–5:** FAIL → implement → PASS → commit `feat: reviews draw from the exercise bank`.
+
+### Task 10b (exams): Level exams and level locks
+
+**Files:** Create `backend/app/exams.py`, `backend/app/routes/exams.py` · Modify `backend/app/content.py`, `backend/app/config.py`, `backend/app/db.py`, `backend/app/main.py`, `backend/app/routes/modules.py`, `backend/app/routes/exercises.py`, `backend/tests/builders.py`, `backend/tests/conftest.py` · Test `backend/tests/test_exams.py`
+
+**Interfaces:**
+- Consumes: `item_problems`, `normalize`, `is_correct` (Tasks 1–2), `completed_module_ids` (Task 9).
+- Content: `ExamType = Literal["choice","gap","fix","transform","order","translate"]`; `class ExamQuestion(BaseModel)`: same fields as `Exercise` minus `block`/`audio_text`, plus `module_id: str`; file `content/exams/<level lowercase>.yaml` = `{level, questions: [...]}`; `Settings.exams_dir = str(BASE_DIR / "content" / "exams")`; `ContentRepo.load(modules_dir, exercises_dir=None, exams_dir=None)`, `ContentRepo.exam(level) -> list[ExamQuestion]` (empty when missing).
+- `validate_exam(level, questions, module_ids) -> list[str]`: exactly 40; ids `q01`–`q40`; `item_problems` per question; every `module_id` belongs to `module_ids`; every id in `module_ids` covered at least once; `choice` ≤ 20; no duplicate prompts.
+- Constants in `exams.py`: `EXAM_SIZE = 30`, `PASS_PERCENT = 75`, `LEVELS = ("B1","B2","C1")`.
+- Tables: `exam_runs(id PK, level TEXT, question_ids TEXT /*json list*/, started_at, finished_at, score INTEGER, passed INTEGER)`; `exam_attempts(id PK, run_id, question_id, answer, correct, seconds, day, created_at, UNIQUE(run_id, question_id))`.
+- `passed_levels(deps) -> set[str]`; `level_unlocked(deps, level) -> bool` (B1 always; others need the previous level in `passed_levels`); `exam_status(deps, level) -> {"available": bool, "missing_modules": int, "passed": bool, "best_score": int|None, "open_run_id": int|None}` (available = all modules of the level completed and unlocked).
+- `start_exam(deps, level) -> run_id` — 409 `exam_locked` when not available; returns the open run when one exists; else samples `EXAM_SIZE` ids with `random.Random()` (tests inject `deps.rng` or monkeypatch `exams.random`), stores order.
+- Routes: `POST /exams/{level}/start` → `{run_id, questions: [{id, type, prompt, prompt_pt, glossary, options, words (shuffled), answered}]}` (never answers); `POST /exams/runs/{run_id}/{question_id}/answer {answer, seconds}` → `{saved: true, finished: bool, score: int|null, passed: bool|null}` (no correctness while running; repeat answer keeps the first; seconds capped 180; 404 for a question outside the run); `GET /exams/runs/{run_id}` → the run with, once finished, `results: [{id, module_id, module_title, user_answer, correct, correct_answer, explanation}]`. Score `round(100*correct/30)`, `passed = score >= 75`.
+- Locks: `GET /modules` levels gain `unlocked: bool` and `exam: exam_status(...)`; `GET /modules/{id}/exercises` and lesson answers for a module whose level is locked → 403 `{"detail": "level_locked"}`; reviews are never locked.
+
+- [ ] **Step 1: Failing tests** (fixture writes a small B1 exam bank via a builder `valid_exam(module_ids)`): `validate_exam` catches a missing module coverage and 41 questions; B2 module exercises → 403 before passing B1; exam start → 409 while a B1 module is incomplete; after completing all fixture B1 modules start returns 30 questions without answers; starting twice returns the same run; 23/30 → passed and B2 unlocked; 22/30 → not passed, results list the 8 wrong with module titles; exam answers never call AI.
+- [ ] **Steps 2–5:** FAIL → implement → PASS → commit `feat: level exams that unlock the next level`.
 
 ## Part B — Records
 
@@ -384,7 +409,7 @@ def test_empty_lyrics_give_no_chunks():
 - Table `day_state(date TEXT, block TEXT, skipped INTEGER, checked INTEGER, PRIMARY KEY(date, block))`.
 - `BLOCKS = ("grammar", "music", "call1", "watch", "read", "call2", "anki")`, `TITLES = {"grammar": "Gramática", "music": "Música", "call1": "Ligação 1", "watch": "Assistir", "read": "Ler", "call2": "Ligação 2", "anki": "Anki"}`, `TARGETS = {"grammar": 20, "call1": 10, "watch": 45, "read": 40, "call2": 10}`.
 - `day_plan(deps, day: date) -> dict` → `{"date", "blocks": [{"key", "title", "status": "done"|"current"|"skipped"|"pending", "minutes": int|None, "target": int|None}], "current": key|None, "complete": bool}`.
-  - grammar done: a module's 27th lesson attempt has `day == day`, or `sum(seconds)` of the day's lesson+review attempts ≥ 1200; `minutes = floor(sum/60)`.
+  - grammar done: a module's 27th lesson attempt has `day == day`, or an exam run finished that day, or `sum(seconds)` of the day's lesson+review+exam attempts ≥ 1200; `minutes = floor(sum/60)`.
   - music done: some chunk's later of its dictation/shadow rows has `day == day`, or a `final` row on that day.
   - calls: `total = call_minutes_for_day`; call1 minutes `min(total,10)` done at ≥10; call2 minutes `min(max(total-10,0),10)` done at ≥20.
   - watch/read: sum of `media_logs.minutes` by type; done at target.
@@ -434,7 +459,7 @@ All app tasks: update `src/types.ts` for the shapes they consume; tests with `je
 
 **Interfaces:**
 - Consumes Task 9 endpoints. `Exercise` / `AnswerResult` types: `{id, block, type, prompt, options, words, audio_url, answered, result}`; `{correct, correct_answer, explanation, module_completed, score, next_due}`.
-- `ExercisePlayer({ items, submit(id, answer, seconds) => Promise<AnswerResult>, play(url), onDone(result: AnswerResult) })` — starts at the first unanswered item; header "Bloco N de 3 · Exercício k de 9"; a block-transition screen between blocks ("Bloco 2 · Praticar"); measures seconds since the item appeared; `choice`/`listen` with options → `ChoiceExercise`; `gap`/`fix`/`transform`/`translate`/`dictation`/`listen` without options → `TypedExercise` (with ▶ button when `audio_url`); `order` → `OrderExercise` (tap words to build the sentence, tap again to remove). After answering: feedback + "Reportar exercício" link (posts the report) + "Próximo".
+- `ExercisePlayer({ items, submit(id, answer, seconds) => Promise<AnswerResult>, play(url), onDone(result: AnswerResult) })` — starts at the first unanswered item; header "Bloco N de 3 · Exercício k de 9"; a block-transition screen between blocks ("Bloco 2 · Praticar"); measures seconds since the item appeared; `choice`/`listen` with options → `ChoiceExercise`; `gap`/`fix`/`transform`/`translate`/`dictation`/`listen` without options → `TypedExercise` (with ▶ button when `audio_url`); `order` → `OrderExercise` (tap words to build the sentence, tap again to remove). After answering: feedback + "Reportar exercício" link (posts the report) + "Próximo". Every item shows "Ver tradução" (toggles `prompt_pt`, hidden for `translate`) and renders the prompt with `TappableText` in glossary mode (Task 24): no network call. Props `instantFeedback = true` (exams pass `false`: no feedback, straight to the next item).
 - Lesson screen: theory (skippable) → player → result card (score %, "Próxima revisão: <date>", button "Voltar para o dia").
 
 - [ ] **Step 1: Failing tests**: resumes at the first unanswered item; choosing an option calls `submit` with the option text; order builds "she was cooking" from taps; block 1→2 shows the transition screen; last answer with `module_completed` shows the score.
@@ -447,6 +472,14 @@ All app tasks: update `src/types.ts` for the shapes they consume; tests with `je
 
 - Starts `POST /reviews/{id}/start`, plays the 9 items with `ExercisePlayer` (single block: hide block header), passes `run_id` in submits, ends on the score and next date.
 - [ ] Tests → implement → PASS → commit `feat(app): reviews with bank exercises`.
+
+### Task 20b (app-exams): Level exam screen and locked levels
+
+**Files:** Create `app/src/app/exam/[level].tsx`, `app/src/components/ExamResult.tsx` · Modify `app/src/app/(tabs)/modules.tsx` (or the screen that lists levels), `app/src/types.ts` · Test `app/src/__tests__/exams.test.tsx`
+
+- Module list: locked levels show a lock and "Passe na prova de <nível anterior>"; each level ends with an exam card: "Faltam N módulos" (disabled), "Fazer prova" / "Continuar prova", or "Aprovado · X%".
+- `exam/[level].tsx`: `POST /exams/{level}/start` → `ExercisePlayer` with `instantFeedback={false}`, single block, header "Prova <nível> · k de 30" → on finish `GET /exams/runs/{id}` → `ExamResult` (score, "Aprovado! <próximo nível> liberado" or "Faltou pouco: precisa de 75%", list of wrong items with module title, correct answer, explanation; button "Refazer prova").
+- [ ] Tests: locked level shows the lock text; exam player shows no feedback between items; failed result lists wrong items and "Refazer prova" starts again. → implement → PASS → commit `feat(app): level exams and locked levels`.
 
 ### Task 21 (app-records): Media rows with +, YouTube, reading, external calls
 
@@ -483,10 +516,10 @@ All app tasks: update `src/types.ts` for the shapes they consume; tests with `je
 
 **Interfaces:**
 - `sentenceAround(text: string, charIndex: number): string` — the sentence (split on `.!?` + newline) containing the index, trimmed.
-- `TappableText({ text, style })` — renders words (`[A-Za-z’']+`) as pressables, other characters as plain text; press → `TranslateSheet` with `word` and `sentenceAround`.
+- `TappableText({ text, style, glossary?, promptPt? })` — renders words (`[A-Za-z’']+`) as pressables, other characters as plain text. Without `glossary`: press → `TranslateSheet` with `word` and `sentenceAround`. With `glossary` (exercises/exams): press → local balloon with `glossary[word lowercased]` when present, else `promptPt` ("Tradução da frase: …"); never calls the API; "Salvar palavra" still posts to `/words` with source `"exercise"`.
 - `TranslateSheet({ word, sentence, onClose })` — calls `POST /translate`, shows translation + note, buttons "Salvar palavra" (`POST /words` with source `"tap"`) and "Fechar"; error → message + "Tentar de novo".
 - Settings: "Palavras novas (N)" list with delete, "Exportar para o Anki" → `apiText('/words/export.csv')` → `saveText('palavras.csv', …, 'text/csv')`.
-- [ ] Tests: `sentenceAround` picks the middle sentence; tapping a word opens the sheet and shows the mocked translation; save posts the word. → implement → PASS → commit `feat(app): tap any word to translate and save it`.
+- [ ] Tests: `sentenceAround` picks the middle sentence; tapping a word opens the sheet and shows the mocked translation; save posts the word; in glossary mode a glossary word shows its translation and another word shows the `promptPt`, with no `/translate` call. → implement → PASS → commit `feat(app): tap any word to translate and save it`.
 
 ### Task 25 (app-day): Day trail, next-block card, reminders
 
@@ -497,7 +530,7 @@ All app tasks: update `src/types.ts` for the shapes they consume; tests with `je
 - `remindersToSchedule(times: string[], now: Date, plan: DayPlan): {at: Date, body: string}[]` — only times later than `now` today, none when `plan.complete`; body lists the titles of blocks not done, e.g. "Faltam: Ler, Ligação 2, Anki".
 - `syncReminders(plan)` — native only: cancel all scheduled, request permission once, schedule each item as a one-shot local notification. Called from the home screen after loading `/home`.
 - `DayTrail({ plan, onOpen(block), onSkip(block), onUnskip(block), onAnki(checked) })` — 7 rows: status icon, title, `minutes / target min` bar when target exists, "Pular" on the current block, "Voltar" on skipped ones, checkbox on Anki.
-- `NextBlockCard({ plan, previous })` — when a block became done since `previous` (kept in a ref across focus reloads) shows "Boa! Agora: <próximo bloco>"; otherwise "Agora: <bloco atual>"; button routes: grammar → `/lesson/<next_module>` (or the first due review), music → `/songs/today`, call1 → lesson-scenario chat for the current module, call2 → `/teach`, watch/read → media tab, anki → toggles the check.
+- `NextBlockCard({ plan, previous })` — when a block became done since `previous` (kept in a ref across focus reloads) shows "Boa! Agora: <próximo bloco>"; otherwise "Agora: <bloco atual>"; button routes: grammar → `/lesson/<next_module>` (or the first due review, or `/exam/<level>` when that level's exam is available and no module is left), music → `/songs/today`, call1 → lesson-scenario chat for the current module, call2 → `/teach`, watch/read → media tab, anki → toggles the check.
 - [ ] Tests: `remindersToSchedule` drops past times and returns nothing for a complete day; home renders 7 blocks with the current one highlighted; pressing "Pular" posts the skip and reloads; card shows "Boa! Agora: Música" when grammar flips to done.
 - [ ] Implement → PASS → commit `feat(app): guided day trail with reminders`.
 
