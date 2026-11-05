@@ -8,7 +8,8 @@ import logging
 import os
 
 from app.content import ContentRepo
-from app.migrations import migrate_module_ids
+from app.migrations import ensure_columns, migrate_module_ids
+from app.routes.media import MEDIA_COLUMNS
 from app.db import connect, init_schema
 from app.deps import AppDeps, token_is_valid
 from app.errors import AppError
@@ -30,6 +31,7 @@ def create_app(settings: Settings, *, providers=None, clock: Clock | None = None
     conn = connect(os.path.join(settings.data_dir, "app.db"))
     init_schema(conn)
     migrate_module_ids(conn)
+    ensure_columns(conn, "media_logs", MEDIA_COLUMNS)
     app.state.deps = AppDeps(
         settings=settings,
         clock=clock,

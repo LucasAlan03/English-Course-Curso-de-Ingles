@@ -1,4 +1,5 @@
 import datetime as dt
+import re
 from typing import Literal
 
 from fastapi import APIRouter, Depends
@@ -7,9 +8,12 @@ from pydantic import BaseModel, Field, field_validator, model_validator
 from app.db import insert
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
+from app.routes.words import add_word
 
 router = APIRouter()
 
+EPISODIC = {"series", "movie"}
+MEDIA_COLUMNS = {"unit_minutes": "INTEGER", "count": "INTEGER", "url": "TEXT", "new_words": "TEXT"}
 CATEGORIES = {
     "watch": {"series", "movie", "video", "podcast"},
     "read": {"hq", "book", "article", "other"},
@@ -22,8 +26,12 @@ class MediaIn(BaseModel):
     category: str
     title: str
     episode: str | None = None
-    minutes: int = Field(ge=1, le=1440)
+    minutes: int | None = Field(default=None, ge=1, le=1440)
     pages: int | None = Field(default=None, ge=1)
+    unit_minutes: int | None = Field(default=None, ge=1, le=600)
+    count: int | None = Field(default=None, ge=1, le=100)
+    url: str | None = None
+    new_words: str | None = None
 
     @field_validator("title")
     @classmethod
@@ -37,11 +45,27 @@ class MediaIn(BaseModel):
     def category_matches_type(self):
         if self.category not in CATEGORIES[self.type]:
             raise ValueError(f"category {self.category!r} is not valid for {self.type}")
+        if self.category in EPISODIC:
+            if self.unit_minutes is None or self.count is None:
+                raise ValueError("series and movies need minutes per episode and a count")
+            self.minutes = self.unit_minutes * self.count
+        elif self.minutes is None:
+            raise ValueError("minutes is required")
         return self
 
 
 def _row(r) -> dict:
-    return {k: r[k] for k in ("id", "date", "type", "category", "title", "episode", "minutes", "pages")}
+    return {k: r[k] for k in ("id", "date", "type", "category", "title", "episode", "minutes", "pages",
+                              "unit_minutes", "count", "url", "new_words")}
+
+
+def _save_new_words(deps: AppDeps, body: "MediaIn") -> None:
+    if not body.new_words:
+        return
+    now = deps.clock.now().isoformat()
+    for word in re.split(r"[,\n]", body.new_words):
+        if word.strip():
+            add_word(deps.conn, word.strip(), "", "", "", f"read:{body.title}", now)
 
 
 def _get(deps: AppDeps, item_id: int):
@@ -56,8 +80,10 @@ def create_media(body: MediaIn, deps: AppDeps = Depends(get_deps)):
     item_id = insert(
         deps.conn, "media_logs", date=body.date.isoformat(), type=body.type, category=body.category,
         title=body.title, episode=body.episode, minutes=body.minutes, pages=body.pages,
+        unit_minutes=body.unit_minutes, count=body.count, url=body.url, new_words=body.new_words,
         created_at=deps.clock.now().isoformat(),
     )
+    _save_new_words(deps, body)
     return _row(_get(deps, item_id))
 
 
@@ -71,11 +97,13 @@ def list_media(date: dt.date, deps: AppDeps = Depends(get_deps)):
 def update_media(item_id: int, body: MediaIn, deps: AppDeps = Depends(get_deps)):
     _get(deps, item_id)
     deps.conn.execute(
-        "UPDATE media_logs SET date = ?, type = ?, category = ?, title = ?, episode = ?, minutes = ?, pages = ? "
-        "WHERE id = ?",
-        (body.date.isoformat(), body.type, body.category, body.title, body.episode, body.minutes, body.pages, item_id),
+        "UPDATE media_logs SET date = ?, type = ?, category = ?, title = ?, episode = ?, minutes = ?, pages = ?, "
+        "unit_minutes = ?, count = ?, url = ?, new_words = ? WHERE id = ?",
+        (body.date.isoformat(), body.type, body.category, body.title, body.episode, body.minutes, body.pages,
+         body.unit_minutes, body.count, body.url, body.new_words, item_id),
     )
     deps.conn.commit()
+    _save_new_words(deps, body)
     return _row(_get(deps, item_id))
 
 

@@ -118,6 +118,16 @@ CREATE TABLE IF NOT EXISTS media_logs (
     pages INTEGER,
     created_at TEXT NOT NULL
 );
+CREATE TABLE IF NOT EXISTS words (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    word TEXT NOT NULL,
+    sentence TEXT NOT NULL DEFAULT '',
+    translation TEXT NOT NULL DEFAULT '',
+    note TEXT NOT NULL DEFAULT '',
+    source TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL,
+    UNIQUE (word, sentence)
+);
 CREATE TABLE IF NOT EXISTS api_usage (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     provider TEXT NOT NULL,

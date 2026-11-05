@@ -1,11 +1,17 @@
 import pytest
 
 BASE = {"date": "2026-11-03", "type": "watch", "category": "series", "title": "Friends",
-        "episode": "S01E02", "minutes": 22}
+        "episode": "S01E02", "unit_minutes": 22, "count": 1}
 
 
 def add(app_client, **overrides):
-    return app_client.post("/media", json={**BASE, **overrides})
+    body = {**BASE, **overrides}
+    if body["category"] not in ("series", "movie"):
+        body.pop("unit_minutes", None)
+        body.pop("count", None)
+    elif "minutes" in overrides:  # series/movie: minutes come from minutes per episode x count
+        body["unit_minutes"] = body.pop("minutes")
+    return app_client.post("/media", json=body)
 
 
 def test_create_and_list_by_date(app_client):
@@ -40,7 +46,7 @@ def test_invalid_fields_rejected(app_client, bad):
 def test_category_must_match_type(app_client):
     assert add(app_client, type="watch", category="hq").status_code == 422
     assert add(app_client, type="read", category="series", episode=None).status_code == 422
-    assert add(app_client, type="read", category="book", episode=None).status_code == 200
+    assert add(app_client, type="read", category="book", episode=None, minutes=10).status_code == 200
 
 
 def seed(app_client):
@@ -69,7 +75,7 @@ def test_summary_defaults_to_today_and_handles_empty(app_client):
 
 def test_update_and_delete_change_totals(app_client):
     item = add(app_client, minutes=20).json()
-    changed = app_client.put(f"/media/{item['id']}", json={**BASE, "minutes": 50, "title": "Friends 2"})
+    changed = app_client.put(f"/media/{item['id']}", json={**BASE, "unit_minutes": 25, "count": 2, "title": "Friends 2"})
     assert changed.status_code == 200 and changed.json()["title"] == "Friends 2"
     assert app_client.get("/media/summary", params={"date": "2026-11-03"}).json()["day"]["total_minutes"] == 50
     assert app_client.delete(f"/media/{item['id']}").status_code == 200
@@ -79,7 +85,7 @@ def test_update_and_delete_change_totals(app_client):
 
 def test_update_with_invalid_data_keeps_the_old_values(app_client):
     item = add(app_client, minutes=20).json()
-    assert app_client.put(f"/media/{item['id']}", json={**BASE, "minutes": 0}).status_code == 422
+    assert app_client.put(f"/media/{item['id']}", json={**BASE, "unit_minutes": 0}).status_code == 422
     assert app_client.get("/media", params={"date": "2026-11-03"}).json()[0]["minutes"] == 20
 
 
@@ -92,3 +98,56 @@ def test_media_marks_the_daily_pillars(app_client):
     assert app_client.get("/home").json()["pillars"]["watch"] is False
     add(app_client)
     assert app_client.get("/home").json()["pillars"]["watch"] is True
+
+
+# ---------- episode counts, links and new words ----------
+
+def test_series_minutes_are_episode_minutes_times_count(app_client):
+    r = app_client.post("/media", json={**BASE, "unit_minutes": 22, "count": 3, "minutes": 999})
+    assert r.status_code == 200
+    body = r.json()
+    assert (body["minutes"], body["unit_minutes"], body["count"]) == (66, 22, 3)
+
+
+def test_series_without_count_is_rejected(app_client):
+    body = {**BASE}
+    body.pop("count")
+    assert app_client.post("/media", json=body).status_code == 422
+
+
+def test_video_needs_minutes(app_client):
+    r = app_client.post("/media", json={"date": "2026-11-03", "type": "watch", "category": "video", "title": "V"})
+    assert r.status_code == 422
+
+
+def test_summary_sums_two_series_and_a_video(app_client):
+    add(app_client, unit_minutes=22, count=2)
+    add(app_client, title="Dark", unit_minutes=50, count=1)
+    add(app_client, category="video", title="YT", episode=None, minutes=12, url="https://youtu.be/abc")
+    day = app_client.get("/media/summary", params={"date": "2026-11-03"}).json()["day"]
+    assert day["total_minutes"] == 106
+    listed = app_client.get("/media", params={"date": "2026-11-03"}).json()
+    assert listed[2]["url"] == "https://youtu.be/abc"
+
+
+def test_reading_new_words_go_to_the_word_list(app_client, deps):
+    r = add(app_client, type="read", category="hq", title="Batman", episode=None, minutes=20, pages=8,
+            new_words="grim, vigilante\nrooftop")
+    assert r.status_code == 200 and r.json()["new_words"] == "grim, vigilante\nrooftop"
+    rows = deps.conn.execute("SELECT word, source FROM words ORDER BY id").fetchall()
+    assert [tuple(x) for x in rows] == [("grim", "read:Batman"), ("vigilante", "read:Batman"),
+                                         ("rooftop", "read:Batman")]
+
+
+def test_same_new_word_twice_is_kept_once(app_client, deps):
+    add(app_client, type="read", category="book", title="B", episode=None, minutes=10, new_words="grim")
+    add(app_client, type="read", category="book", title="B", episode=None, minutes=10, new_words="grim")
+    assert deps.conn.execute("SELECT COUNT(*) FROM words").fetchone()[0] == 1
+
+
+def test_old_rows_without_new_columns_still_list(app_client, deps):
+    deps.conn.execute("INSERT INTO media_logs (date, type, category, title, minutes, created_at) "
+                      "VALUES ('2026-11-03', 'watch', 'series', 'Old', 30, 'x')")
+    deps.conn.commit()
+    listed = app_client.get("/media", params={"date": "2026-11-03"}).json()
+    assert listed[0]["title"] == "Old" and listed[0]["count"] is None and listed[0]["new_words"] is None
