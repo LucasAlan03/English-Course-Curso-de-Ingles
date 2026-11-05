@@ -6,11 +6,11 @@ import { useTheme } from '@/theme';
 
 import { Text } from './ui';
 
-export type LessonStage = 'theory' | 'listening' | 'chat';
+export type LessonStage = 'theory' | 'exercises' | 'result';
 const STAGES: { key: LessonStage; label: string }[] = [
   { key: 'theory', label: 'Teoria' },
-  { key: 'listening', label: 'Listening' },
-  { key: 'chat', label: 'Conversa' },
+  { key: 'exercises', label: 'Exercícios' },
+  { key: 'result', label: 'Resultado' },
 ];
 
 export function leave() {

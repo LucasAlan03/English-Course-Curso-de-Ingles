@@ -6,7 +6,6 @@ import ReportView from '../components/ReportView';
 import ChatScreen from '../app/chat/[sessionId]';
 import FreeScreen from '../app/free';
 import ReportScreen from '../app/report/[sessionId]';
-import ReviewScreen from '../app/review/[id]';
 
 let mockParams: Record<string, string> = { sessionId: '5' };
 
@@ -156,19 +155,6 @@ test('FreeScreen creates a free session and opens the chat', async () => {
   await userEvent.press(screen.getByText('Começar conversa'));
   await waitFor(() => expect(router.replace).toHaveBeenCalledWith('/chat/9'));
   expect(apiMock).toHaveBeenCalledWith('/sessions', expect.objectContaining({ json: { kind: 'free', topic: 'football' } }));
-});
-
-test('ReviewScreen starts a review session and its short listening', async () => {
-  mockParams = { id: 'b1_a' };
-  apiMock.mockImplementation(async (path: string) => {
-    if (path === '/sessions') return { id: 11 };
-    if (path === '/sessions/11/listening')
-      return [{ id: 1, kind: 'choice', prompt: 'Pick one', options: ['a', 'b', 'c'], audio_url: '/audio/a.wav' }];
-    throw new Error(`unexpected ${path}`);
-  });
-  await render(<ReviewScreen />);
-  expect(await screen.findByText('Pick one')).toBeTruthy();
-  expect(apiMock).toHaveBeenCalledWith('/sessions', expect.objectContaining({ json: { kind: 'review', module_id: 'b1_a' } }));
 });
 
 test('ReportScreen offers a retry after an error and then shows the report', async () => {

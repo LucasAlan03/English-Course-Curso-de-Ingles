@@ -27,15 +27,29 @@ export type ModuleDetail = {
   completed: boolean;
 };
 
-export type ListeningItem = {
-  id: number;
-  kind: 'choice' | 'gap';
+export type ExerciseType = 'choice' | 'listen' | 'gap' | 'dictation' | 'fix' | 'transform' | 'order' | 'translate';
+
+export type Feedback = { correct: boolean; correct_answer: string; explanation: string };
+
+export type Exercise = {
+  id: string;
+  block: 1 | 2 | 3;
+  type: ExerciseType;
   prompt: string;
+  prompt_pt: string | null;
+  glossary: Record<string, string>;
   options: string[] | null;
-  audio_url: string;
+  words: string[] | null;
+  audio_url: string | null;
+  answered: boolean;
+  result: (Feedback & { user_answer: string }) | null;
 };
 
-export type AnswerResult = { correct: boolean; correct_answer: string; explanation: string };
+export type AnswerResult = Feedback & {
+  module_completed: boolean;
+  score: number | null;
+  next_due: string | null;
+};
 
 export type Mistake = { said: string; corrected: string; explanation: string; module_id: string | null };
 export type Report = { mistakes: Mistake[]; natural_expressions: string[]; strengths: string[]; score: number };
