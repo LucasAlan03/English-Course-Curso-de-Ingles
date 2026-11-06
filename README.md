@@ -1,55 +1,73 @@
-# English — app de inglês B1 → C1 com IA
+# English: a B1 → C1 English course with AI
 
-App Android (e versão web em localhost) para treinar inglês do B1 ao C1, no estilo do Be Confident: um **dia de estudo guiado em 7 blocos**, **1.242 exercícios feitos à mão** corrigidos sem IA, **repetição espaçada**, **provas de nível**, **músicas com ditado e shadowing**, **conversa ilimitada com IA** e **registro de minutos** de ligações, séries e leitura.
+**English** · [Português](README.pt-BR.md)
 
-Projeto de portfólio de GenAI: toda a IA fica em um backend Python, atrás de interfaces de provedor que se trocam por configuração.
+An Android app, with a web version on localhost, for training English from B1 to C1. It has:
+- a **guided study day in 7 blocks**;
+- **1,242 hand-written exercises**, graded without AI;
+- **spaced repetition** and **level exams**;
+- **songs with dictation and shadowing**;
+- **unlimited conversation with AI**;
+- **minute tracking** for calls, TV series and reading.
 
-- Especificação: [docs/superpowers/specs/2026-11-03-english-app-design.md](docs/superpowers/specs/2026-11-03-english-app-design.md)
-- Plano de implementação: [docs/superpowers/plans/2026-11-03-english-app.md](docs/superpowers/plans/2026-11-03-english-app.md)
-- Plano do dia, exercícios, provas e músicas: [spec](docs/superpowers/specs/2026-11-05-daily-plan-design.md) · [plano](docs/superpowers/plans/2026-11-05-daily-plan.md)
+This is a GenAI portfolio project. All the AI lives in a Python backend, behind provider interfaces that can be swapped through configuration.
 
-## O que o app faz
+- Design spec: [docs/superpowers/specs/2026-11-03-english-app-design.md](docs/superpowers/specs/2026-11-03-english-app-design.md)
+- Implementation plan: [docs/superpowers/plans/2026-11-03-english-app.md](docs/superpowers/plans/2026-11-03-english-app.md)
+- Daily plan, exercises, exams and songs: [spec](docs/superpowers/specs/2026-11-05-daily-plan-design.md) · [plan](docs/superpowers/plans/2026-11-05-daily-plan.md)
 
-- **O dia em 7 blocos**, um liberando o próximo: Gramática (10–20 min) → Música → Ligação 1 (10 min) → Assistir (45 min) → Ler (40 min) → Ligação 2 (10 min) → Anki. Dá para pular e voltar. A sequência conta dias com os 7 blocos feitos. No Android, lembretes locais nos horários escolhidos.
-- **46 módulos** (B1: 19, B2: 16, C1: 11), cada um com teoria curta e **27 exercícios** em 3 blocos (reconhecer → praticar → produzir): múltipla escolha, ouvir, lacuna, ditado, corrigir o erro, ordenar, transformar e traduzir. Corrigidos **sem IA**, com tradução pronta do enunciado e glossário.
-- **Revisão espaçada**: a nota do módulo decide quando ele volta; a revisão traz 9 exercícios do próprio banco, primeiro os que você errou.
-- **Provas de nível**: 30 questões sorteadas de um banco de 40 por nível. Precisa de 75% para abrir o nível seguinte.
-- **Músicas**: você cola a letra (fica só no seu banco local); o app divide em trechos e, a cada dia, faz ditado e shadowing de um trecho até o desafio final de cantar a música inteira. A IA aponta, uma vez por música, onde aparece a gramática do curso.
-- **Ligações**: a conversa do cenário do módulo (Ligação 1) e o **Ensine a IA** (Ligação 2, você explica o assunto para uma aluna confusa). O tempo é contado pelo app e você pode lançar ligações de fora (ex.: Be Confident). O relatório pode ser baixado em Markdown.
-- **Tocar para traduzir**: qualquer palavra em inglês na conversa, na teoria e nas letras; palavras salvas viram CSV para o Anki.
-- **Registro em minutos**: séries (episódios × minutos, com **+**), vídeos do YouTube (título automático pelo link) e leitura (páginas e palavras novas).
+## What the app does
 
-## Arquitetura
+- **The day in 7 blocks**, each one unlocking the next: Grammar (10–20 min) → Song → Call 1 (10 min) → Watch (45 min) → Read (40 min) → Call 2 (10 min) → Anki. You can skip a block and come back to it. The streak counts the days with all 7 blocks done. On Android, local reminders arrive at the times you choose.
+- **46 modules** (B1: 19, B2: 16, C1: 11). Each has short theory and **27 exercises** in 3 blocks: recognize → practice → produce.
+  - **Exercise types:** multiple choice, listening, fill in the gap, dictation, fix the mistake, word order, transformation and translation.
+  - They are **graded without AI** and come with a translation of the instructions and a glossary.
+- **Spaced repetition:** the module grade decides when it comes back. A review brings 9 exercises from the module's own bank, starting with the ones you got wrong.
+- **Level exams:** 30 questions drawn from a bank of 40 per level. You need 75% to unlock the next level.
+- **Songs:** you paste the lyrics, which stay only in your local database. Every day, the app gives you dictation and shadowing on one section, until the final challenge of singing the whole song. Once per song, the AI points out where the course grammar appears in it.
+- **Calls:**
+  - **Call 1** is a conversation set in the module's scenario.
+  - **Call 2** is **Teach the AI**: you explain the topic to a confused student.
+  - The app tracks the time, and you can also log calls made elsewhere. The report can be downloaded as Markdown.
+- **Tap to translate:** works on any English word in the conversation, the theory and the lyrics. Saved words become a CSV for Anki.
+- **Minute tracking:** TV series (episodes × minutes), YouTube videos (the title is fetched from the link) and reading (pages and new words).
+
+## Architecture
 
 ```
-App (Expo / TypeScript)  ──HTTP/JSON──►  Backend (Python / FastAPI)  ──►  Gemini · Claude · OpenAI · Whisper/Piper local
-  Android + Web (localhost)                SQLite · currículo · repetição espaçada · controle de custo
+App (Expo / TypeScript)  ──HTTP/JSON──►  Backend (Python / FastAPI)  ──►  Gemini · Claude · OpenAI · local Whisper/Piper
+  Android + Web (localhost)                SQLite · curriculum · spaced repetition · cost control
 ```
 
-- **App** (`app/`): só interface. Não guarda chaves nem regras.
-- **Backend** (`backend/`): progresso (SQLite), currículo (`content/modules`), prompts (`prompts/`), repetição espaçada, custos e toda a IA.
-- **Provedores** (`backend/app/providers/`): `chat`, `report`, `stt` (voz → texto) e `tts` (texto → voz), cada um com implementação gratuita e paga.
+- **App** (`app/`): interface only. It holds no keys and no business rules.
+- **Backend** (`backend/`): progress (SQLite), curriculum (`content/modules`), prompts (`prompts/`), spaced repetition, costs and all the AI.
+- **Providers** (`backend/app/providers/`): `chat`, `report`, `stt` (speech → text) and `tts` (text → speech). Each has a free and a paid implementation.
 
-### Perfis de IA
+### AI profiles
 
-| Função | Perfil `free` (padrão) | Perfil `paid` |
+| Role | `free` profile (default) | `paid` profile |
 |---|---|---|
-| Conversa | Gemini (plano gratuito) | Claude Haiku |
-| Relatórios e exercícios | Gemini (plano gratuito) | Claude Sonnet |
-| Voz → texto | Whisper local (`faster-whisper`) | OpenAI |
-| Texto → voz | Piper local | OpenAI |
+| Conversation | Gemini (free tier) | Claude Haiku |
+| Reports and exercises | Gemini (free tier) | Claude Sonnet |
+| Speech → text | Local Whisper (`faster-whisper`) | OpenAI |
+| Text → speech | Local Piper | OpenAI |
 
-Troque com `PROVIDER_PROFILE=free|paid` no `.env` do backend e reinicie. Dá para misturar com `CHAT_PROVIDER`, `REPORT_PROVIDER`, `STT_PROVIDER` e `TTS_PROVIDER` (`gemini`, `local`, `anthropic`, `openai`). Os IDs dos modelos também são configuráveis (veja `.env.example`).
+Switch with `PROVIDER_PROFILE=free|paid` in the backend `.env` and restart. You can mix providers with `CHAT_PROVIDER`, `REPORT_PROVIDER`, `STT_PROVIDER` and `TTS_PROVIDER` (`gemini`, `local`, `anthropic`, `openai`). Model IDs are configurable too (see `.env.example`).
 
-Observações do perfil gratuito: a voz local soa mais robótica, o Gemini gratuito tem limite de requisições (o app avisa), e no plano gratuito o Google pode usar os dados enviados para melhorar os modelos.
+Notes on the free profile:
+- The local voice sounds more robotic.
+- Free Gemini has a request limit, and the app warns you when you reach it.
+- On the free tier, Google may use the data sent to improve its models.
 
-### Custos (perfil pago)
+### Costs (paid profile)
 
-Os provedores pagos cobram por **créditos pré-pagos**. Compre créditos no console de cada um (Anthropic e OpenAI), deixe a **recarga automática desligada** e defina um **limite mensal** lá. O app mantém uma **estimativa** do gasto do mês (não é o saldo real): avisa em `MONTHLY_WARN_BRL` (R$ 45) e bloqueia chamadas pagas em `MONTHLY_CAP_BRL` (R$ 50). Se um provedor ficar sem crédito, o app mostra qual precisa de recarga.
+The paid providers use **prepaid credits**. Buy credits in each provider's console (Anthropic and OpenAI), keep **auto-reload off** and set a **monthly limit** there.
 
-> Preços e modelos mudam. Confira os preços atuais nas páginas oficiais; os valores em `backend/app/pricing.py` são estimativas.
+The app keeps an **estimate** of the month's spending. It is not the real balance. The app warns you at `MONTHLY_WARN_BRL` (R$ 45) and blocks paid calls at `MONTHLY_CAP_BRL` (R$ 50). If a provider runs out of credit, the app shows which one needs a top-up.
 
-## Como rodar
+> Prices and models change, so check the official pricing pages. The values in `backend/app/pricing.py` are estimates.
+
+## How to run
 
 ### Backend
 
@@ -57,46 +75,60 @@ Os provedores pagos cobram por **créditos pré-pagos**. Compre créditos no con
 cd backend
 python -m venv .venv
 .venv\Scripts\activate                       # Windows (Linux/macOS: source .venv/bin/activate)
-pip install -e ".[dev,free]"                 # adicione ,paid para Claude e OpenAI
-copy .env.example .env                       # preencha API_TOKEN e GEMINI_API_KEY
+pip install -e ".[dev,free]"                 # add ,paid for Claude and OpenAI
+copy .env.example .env                       # fill in API_TOKEN and GEMINI_API_KEY
 ```
 
-1. Crie uma chave do Gemini em <https://aistudio.google.com/apikey> e coloque em `GEMINI_API_KEY`.
-2. Baixe a voz do Piper para `backend/data/voices/`:
+1. Create a Gemini key at <https://aistudio.google.com/apikey> and put it in `GEMINI_API_KEY`.
+2. Download the Piper voice into `backend/data/voices/`:
    - <https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx>
    - <https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json>
-3. Confira tudo: `python scripts/smoke.py` (deve mostrar `[OK]` nos quatro provedores).
-4. Suba o servidor: `uvicorn app.server:app_factory --factory --host 0.0.0.0 --port 8000`
+3. Check everything: `python scripts/smoke.py`. It should show `[OK]` for all four providers.
+4. Start the server: `uvicorn app.server:app_factory --factory --host 0.0.0.0 --port 8000`
 
-O modelo do Whisper local (`base`) é baixado sozinho na primeira transcrição.
+The local Whisper model (`base`) downloads itself on the first transcription.
 
 ### App
 
 ```bash
 cd app
-copy .env.example .env     # EXPO_PUBLIC_API_URL e EXPO_PUBLIC_API_TOKEN (o mesmo API_TOKEN do backend)
+copy .env.example .env     # EXPO_PUBLIC_API_URL and EXPO_PUBLIC_API_TOKEN (the same API_TOKEN as the backend)
 npm install
-npm run web                # versão web em http://localhost:8081
-npx expo start             # Android: escaneie o QR code com o Expo Go
+npm run web                # web version at http://localhost:8081
+npx expo start             # Android: scan the QR code with Expo Go
 ```
 
-No celular, use `EXPO_PUBLIC_API_URL=http://<IP-do-seu-PC>:8000` (celular e PC na mesma rede Wi-Fi; libere a porta 8000 no firewall do Windows). Teste o microfone em **Ajustes → Testar microfone**.
+On a phone, use `EXPO_PUBLIC_API_URL=http://<your-PC-IP>:8000`:
+- the phone and the PC must be on the same Wi-Fi network;
+- port 8000 must be open in the Windows firewall.
 
-### Testes
+Test the microphone in **Settings → Test microphone**.
+
+### Tests
 
 ```bash
-cd backend && python -m pytest        # backend, com provedores falsos (não gasta nada)
+cd backend && python -m pytest        # backend, with fake providers (costs nothing)
 cd app && npx jest && npx tsc --noEmit
 ```
 
-Conteúdo: teoria em `backend/content/modules/`, exercícios em `backend/content/exercises/`, provas em `backend/content/exams/`. Os testes validam todo o conteúdo (distribuição dos 27 exercícios, uma única opção certa, glossário que não entrega a resposta etc.). Depois de mudar exercícios de ouvir ou ditado, grave os áudios uma vez com o Piper: `python scripts/prefill_audio.py` (ou `--only <id>`). Pelo botão "Reportar exercício" você marca um exercício suspeito para corrigir depois.
+Course content lives in three folders:
+- theory: `backend/content/modules/`;
+- exercises: `backend/content/exercises/`;
+- exams: `backend/content/exams/`.
 
-## Segurança e privacidade
+The tests validate all of it: the split of the 27 exercises, exactly one correct option, a glossary that doesn't give away the answer, and more.
 
-- Chaves só no `.env` (fora do Git). O app web/Android só conhece o `API_TOKEN`.
-- `backend/data/` (banco, áudios, vozes e as **letras das músicas**) fica fora do Git. Letras nunca vão para arquivos versionados.
-- O token trafega em cabeçalho (`X-API-Token`); nos áudios, na URL (`?token=`), pois players não enviam cabeçalhos. Use só em rede de confiança.
+After changing listening or dictation exercises, record their audio once with Piper: `python scripts/prefill_audio.py` (or `--only <id>`). The "Report exercise" button flags a suspicious exercise to fix later.
 
-## Próximos passos (v2)
+## Security and privacy
 
-Análise de desempenho com sugestões automáticas ("você está fraco em X") e hospedagem do backend para uso fora de casa. Os lembretes funcionam no app Android (na web só existe o cartão do próximo bloco).
+- Keys live only in `.env`, which is outside Git. The web and Android app know only the `API_TOKEN`.
+- `backend/data/` is outside Git. It holds the database, audio files, voices and the **song lyrics**. Lyrics never go into versioned files.
+- The token travels in a header (`X-API-Token`). For audio it goes in the URL (`?token=`), because media players don't send headers. Use it only on a trusted network.
+
+## Next steps (v2)
+
+- Performance analysis with automatic suggestions ("you are weak in X").
+- Hosting the backend for use away from home.
+
+Reminders work in the Android app. On the web there is only the card for the next block.
