@@ -22,12 +22,13 @@ export default function DayTrail({ plan, onOpen, onSkip, onUnskip, onAnki }: Pro
         const current = b.status === 'current';
         const done = b.status === 'done';
         return (
-          <Pressable key={b.key} testID={`block-${b.key}`} accessibilityRole="button" onPress={() => onOpen(b.key)}
+          <View key={b.key}
             style={[styles.row, {
               backgroundColor: current ? theme.pine : theme.card,
               borderColor: current ? theme.pine : theme.border,
               opacity: b.status === 'skipped' ? 0.6 : 1,
             }]}>
+            <Pressable testID={`block-${b.key}`} accessibilityRole="button" onPress={() => onOpen(b.key)} style={styles.main}>
             <View style={[styles.dot, { backgroundColor: done ? theme.good : current ? theme.sun : theme.border }]}>
               <Text style={{ color: done || current ? '#fff' : theme.muted, fontWeight: '800', fontSize: 14 }}>
                 {done ? '✓' : String(i + 1)}
@@ -48,6 +49,7 @@ export default function DayTrail({ plan, onOpen, onSkip, onUnskip, onAnki }: Pro
                 </View>
               ) : null}
             </View>
+            </Pressable>
             {b.key === 'anki' ? (
               <Pressable accessibilityRole="checkbox" accessibilityLabel="Marcar Anki como feito" accessibilityState={{ checked: done }}
                 onPress={() => onAnki(!done)} hitSlop={8}
@@ -63,7 +65,7 @@ export default function DayTrail({ plan, onOpen, onSkip, onUnskip, onAnki }: Pro
                 <Text style={{ color: theme.primary, fontSize: 13, fontWeight: '700' }}>Voltar</Text>
               </Pressable>
             ) : null}
-          </Pressable>
+          </View>
         );
       })}
     </View>
@@ -72,6 +74,7 @@ export default function DayTrail({ plan, onOpen, onSkip, onUnskip, onAnki }: Pro
 
 const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderRadius: 18, padding: 12 },
+  main: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: 12 },
   dot: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center' },
   titleRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   barRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
