@@ -41,6 +41,11 @@ export default function RootLayout() {
       <Stack.Screen name="report/[sessionId]" options={{ title: 'Relatório', headerBackVisible: false }} />
       <Stack.Screen name="free" options={{ title: 'Conversa livre' }} />
       <Stack.Screen name="writing" options={{ title: 'Escrever um texto' }} />
+      <Stack.Screen name="exam/[level]" options={{ headerShown: false }} />
+      <Stack.Screen name="teach" options={{ title: 'Ligação' }} />
+      <Stack.Screen name="songs/index" options={{ title: 'Minhas músicas' }} />
+      <Stack.Screen name="songs/new" options={{ title: 'Nova música' }} />
+      <Stack.Screen name="songs/today" options={{ title: 'Música do dia' }} />
     </Stack>
   );
 }

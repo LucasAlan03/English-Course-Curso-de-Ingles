@@ -116,3 +116,34 @@ export type ExamRun = {
   pass_percent: number;
   results: ExamResultItem[] | null;
 };
+
+export type Song = {
+  id: number;
+  title: string;
+  artist: string;
+  link: string | null;
+  grammar_status: 'pending' | 'done';
+  is_current: boolean;
+  total_chunks: number;
+  done_chunks: number;
+};
+export type SongChunk = {
+  id: number;
+  idx: number;
+  text: string;
+  highlights: { phrase: string; module_id: string }[];
+  module_titles: string[];
+};
+export type SongToday = {
+  song: Song | null;
+  chunk: SongChunk | null;
+  review_chunks: SongChunk[];
+  progress: { done: number; total: number };
+  stage: 'no_song' | 'dictation' | 'shadow' | 'done_today' | 'final' | 'finished';
+};
+export type DiffResult = {
+  score: number;
+  tokens: { word: string; status: 'ok' | 'missing' | 'wrong' | 'extra' }[];
+  expected?: string;
+  heard?: string;
+};
