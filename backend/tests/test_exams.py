@@ -159,3 +159,16 @@ def test_unknown_level_is_404(app_client):
 
 def test_exam_of_locked_level_is_locked(app_client):
     assert app_client.post("/exams/B2/start").status_code == 409
+
+
+def test_home_points_to_the_exam_instead_of_a_locked_module(app_client, deps):
+    for m in B1:
+        complete_module(deps, m)
+    body = app_client.get("/home").json()
+    assert body["next_module"] is None and body["exam_ready"] == "B1"
+
+
+def test_home_suggests_modules_of_unlocked_levels_only(app_client, deps):
+    complete_module(deps, B1[0])
+    body = app_client.get("/home").json()
+    assert body["next_module"]["id"] == B1[1] and body["exam_ready"] is None

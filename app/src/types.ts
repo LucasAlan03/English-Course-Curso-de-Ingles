@@ -1,5 +1,12 @@
-export type PillarKey = 'grammar' | 'speak' | 'write' | 'read' | 'watch';
-export type Pillars = Record<PillarKey, boolean>;
+export type BlockKey = 'grammar' | 'music' | 'call1' | 'watch' | 'read' | 'call2' | 'anki';
+export type DayBlock = {
+  key: BlockKey;
+  title: string;
+  status: 'done' | 'current' | 'skipped' | 'pending';
+  minutes: number | null;
+  target: number | null;
+};
+export type DayPlan = { date: string; blocks: DayBlock[]; current: BlockKey | null; complete: boolean };
 
 export type UsageStatus = { total: number; warn: number; cap: number; level: 'ok' | 'warn' | 'blocked' };
 
@@ -8,7 +15,8 @@ export type ReviewDue = { module_id: string; title: string; next_due: string; ov
 export type Home = {
   reviews_due: ReviewDue[];
   next_module: { id: string; title: string; level: string } | null;
-  pillars: Pillars;
+  today: DayPlan;
+  exam_ready: string | null;
   streak: number;
   usage: UsageStatus;
 };

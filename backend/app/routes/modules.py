@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends
 from app.content import EXERCISE_COUNT
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
-from app.exams import exam_status, level_unlocked, passed_levels
+from app.exams import LEVELS, exam_status, level_unlocked, passed_levels
 from app.daily_plan import day_plan, streak
 
 router = APIRouter()
@@ -68,11 +68,17 @@ def home(deps: AppDeps = Depends(get_deps)):
         for r in rows if r["module_id"] in known
     ]
 
+    passed = passed_levels(deps)
+    open_levels = {lv for lv in LEVELS if level_unlocked(deps, lv, passed)}
     next_module = next(
-        ({"id": m.id, "title": m.title, "level": m.level} for m in deps.content.all() if m.id not in done),
+        ({"id": m.id, "title": m.title, "level": m.level} for m in deps.content.all()
+         if m.id not in done and m.level in open_levels),
         None,
     )
+    exam_ready = next((lv for lv in LEVELS if lv in open_levels and lv not in passed
+                       and exam_status(deps, lv, done, passed)["available"]), None)
     return {
+        "exam_ready": exam_ready,
         "reviews_due": reviews_due,
         "next_module": next_module,
         "today": day_plan(deps, today),

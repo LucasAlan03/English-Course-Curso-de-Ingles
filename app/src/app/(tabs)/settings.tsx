@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet } from 'react-native';
 import { Text } from '@/components/ui';
 
 import { Button, Card, Muted, SectionTitle } from '@/components/ui';
+import RemindersSection from '@/components/RemindersSection';
 import WordsSection from '@/components/WordsSection';
 import ErrorNotice from '@/components/ErrorNotice';
 import { brl } from '@/components/UsageBanner';
@@ -52,6 +53,8 @@ export default function SettingsScreen() {
           </Card>
         </>
       ) : null}
+
+      <RemindersSection />
 
       <WordsSection />
 

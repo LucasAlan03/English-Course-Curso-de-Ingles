@@ -1,13 +1,18 @@
+import { describeError } from '@/errors';
 import { router } from 'expo-router';
+import { useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 
-import PillarBar from '@/components/PillarBar';
+import { api } from '@/api';
+import DayTrail from '@/components/DayTrail';
+import NextBlockCard, { blockRoute } from '@/components/NextBlockCard';
 import ReviewList from '@/components/ReviewList';
 import Ridge from '@/components/Ridge';
 import UsageBanner from '@/components/UsageBanner';
 import { Button, Card, ErrorText, Muted, Screen, SectionTitle, Text } from '@/components/ui';
 import { useTheme } from '@/theme';
-import { Home } from '@/types';
+import { syncReminders } from '@/reminders';
+import { BlockKey, DayPlan, Home } from '@/types';
 import { useApi } from '@/useApi';
 
 const REGION: Record<string, string> = { A1: 'No vale', A2: 'Na trilha', B1: 'Na mata', B2: 'Na serra', C1: 'No cume' };
@@ -31,7 +36,44 @@ function PracticeTile({ title, hint, onPress }: { title: string; hint: string; o
 
 export default function HomeScreen() {
   const theme = useTheme();
-  const { data, error } = useApi<Home>('/home');
+  const { data, error, reload } = useApi<Home>('/home');
+  const [actionError, setActionError] = useState('');
+  const previous = useRef<DayPlan | null>(null);
+  const shown = useRef<DayPlan | null>(null);
+  if (data && data.today !== shown.current) {
+    previous.current = shown.current;
+    shown.current = data.today;
+  }
+
+  useEffect(() => {
+    if (!data) return;
+    api<{ times: string[] }>('/settings/reminders')
+      .then((r) => (Array.isArray(r?.times) ? syncReminders(data.today, r.times) : undefined))
+      .catch(() => undefined);
+  }, [data]);
+
+  async function act(path: string, json?: unknown) {
+    setActionError('');
+    try {
+      await api(path, { method: 'POST', ...(json === undefined ? {} : { json }) });
+      await reload();
+    } catch (e) {
+      setActionError(describeError(e));
+    }
+  }
+
+  const routes = {
+    nextModuleId: data?.next_module?.id ?? null,
+    firstReviewId: data?.reviews_due[0]?.module_id ?? null,
+    examLevel: data?.exam_ready ?? null,
+  };
+  const anki = data?.today.blocks.find((b) => b.key === 'anki');
+  const toggleAnki = () => act('/today/anki', { checked: anki?.status !== 'done' });
+  const open = (block: BlockKey) => {
+    if (block === 'anki') return toggleAnki();
+    const route = blockRoute(block, routes);
+    if (route) router.push(route);
+  };
 
   return (
     <Screen gap={14}>
@@ -48,10 +90,21 @@ export default function HomeScreen() {
         ) : null}
       </View>
 
-      {error ? <ErrorText>{error}</ErrorText> : null}
+      {error || actionError ? <ErrorText>{error || actionError}</ErrorText> : null}
       {data ? (
         <>
           <UsageBanner usage={data.usage} />
+
+          <NextBlockCard plan={data.today} previous={previous.current} onAnki={toggleAnki} {...routes} />
+
+          <SectionTitle>Seu dia</SectionTitle>
+          <DayTrail
+            plan={data.today}
+            onOpen={open}
+            onSkip={(b) => act(`/today/${b}/skip`)}
+            onUnskip={(b) => act(`/today/${b}/unskip`)}
+            onAnki={(checked) => act('/today/anki', { checked })}
+          />
 
           {data.next_module ? (
             <View style={[styles.hero, { backgroundColor: theme.pine }]}>
@@ -73,9 +126,6 @@ export default function HomeScreen() {
               <Muted>Você concluiu todos os módulos. Continue com as revisões.</Muted>
             </Card>
           )}
-
-          <SectionTitle>Hoje</SectionTitle>
-          <PillarBar pillars={data.pillars} />
 
           <SectionTitle>Revisões de hoje</SectionTitle>
           <ReviewList reviews={data.reviews_due} onOpen={(id) => router.push(`/review/${id}`)} />

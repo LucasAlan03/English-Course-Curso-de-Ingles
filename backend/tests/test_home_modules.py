@@ -54,6 +54,8 @@ def test_home_next_module_skips_completed(app_client, deps):
     complete_lesson(deps, B1_A)
     assert app_client.get("/home").json()["next_module"]["id"] == B1_B
     complete_lesson(deps, B1_B)
+    assert app_client.get("/home").json()["next_module"] is None  # B2 waits for the B1 exam
+    insert(deps.conn, "exam_runs", level="B1", question_ids="[]", started_at="x", finished_at="y", score=80, passed=1)
     nxt = app_client.get("/home").json()["next_module"]
     assert (nxt["id"], nxt["level"]) == (B2_A, "B2")
     complete_lesson(deps, B2_A)

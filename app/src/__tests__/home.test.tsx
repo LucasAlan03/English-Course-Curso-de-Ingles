@@ -1,7 +1,6 @@
 import { render, screen, waitFor, within } from '@testing-library/react-native';
 
 import { api } from '../api';
-import PillarBar from '../components/PillarBar';
 import HomeScreen from '../app/(tabs)/index';
 import TracksScreen from '../app/(tabs)/tracks';
 
@@ -20,13 +19,26 @@ function respondWith(routes: Record<string, unknown>) {
   apiMock.mockImplementation(async (path: string) => routes[path]);
 }
 
+const PLAN = {
+  date: '2026-11-03', current: 'music', complete: false,
+  blocks: [
+    { key: 'grammar', title: 'Gramática', status: 'done', minutes: 21, target: 20 },
+    { key: 'music', title: 'Música', status: 'current', minutes: null, target: null },
+    { key: 'call1', title: 'Ligação 1', status: 'pending', minutes: 0, target: 10 },
+    { key: 'watch', title: 'Assistir', status: 'pending', minutes: 12, target: 45 },
+    { key: 'read', title: 'Ler', status: 'pending', minutes: 0, target: 40 },
+    { key: 'call2', title: 'Ligação 2', status: 'pending', minutes: 0, target: 10 },
+    { key: 'anki', title: 'Anki', status: 'pending', minutes: null, target: null },
+  ],
+};
+
 const HOME = {
   reviews_due: [
     { module_id: 'b1_a', title: 'Past simple', next_due: '2026-11-01', overdue_days: 2 },
     { module_id: 'b1_b', title: 'Futuros', next_due: '2026-11-03', overdue_days: 0 },
   ],
   next_module: { id: 'b1_c', title: 'Condicionais', level: 'B1' },
-  pillars: { grammar: true, speak: false, write: false, read: true, watch: false },
+  today: PLAN,
   streak: 3,
   usage: { total: 0, warn: 45, cap: 50, level: 'ok' },
 };
@@ -45,16 +57,6 @@ const MODULES = {
 };
 
 beforeEach(() => apiMock.mockReset());
-
-test('PillarBar renders 5 pillars with done state', async () => {
-  await render(<PillarBar pillars={HOME.pillars} />);
-  for (const key of ['grammar', 'speak', 'write', 'read', 'watch']) {
-    expect(screen.getByTestId(`pillar-${key}`)).toBeTruthy();
-  }
-  expect(screen.getByTestId('pillar-grammar').props.accessibilityState.checked).toBe(true);
-  expect(screen.getByTestId('pillar-speak').props.accessibilityState.checked).toBe(false);
-  expect(screen.getByText(/Gramática/)).toBeTruthy();
-});
 
 test('Home shows overdue reviews first and the next module', async () => {
   respondWith({ '/home': HOME });
