@@ -2,6 +2,8 @@
 
 Data: 2026-11-03 · Prazo da v1: 2026-11-15 · Autor: Lucas (com Claude)
 
+> **Atualização (2026-11-05):** aulas, revisões, plano do dia, provas de nível e músicas agora seguem [2026-11-05-daily-plan-design.md](2026-11-05-daily-plan-design.md), que substitui as partes de listening por IA, pilares do dia e fluxo da aula deste documento.
+
 ## 1. Objetivo
 
 Um app Android de uso pessoal para treinar inglês do B1 ao C1, no estilo do Be Confident, mas com **repetição espaçada**, **listening gerado por IA**, **conversa ilimitada com IA** e um **registro diário de consumo em inglês**. O projeto também serve de portfólio para a vaga de GenAI do iFood, então o uso de IA precisa ser claro, organizado e fácil de explicar.

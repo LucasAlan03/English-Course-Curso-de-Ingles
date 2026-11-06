@@ -1,19 +1,23 @@
 # English — app de inglês B1 → C1 com IA
 
-App Android (e versão web em localhost) para treinar inglês do B1 ao C1, no estilo do Be Confident, mas com **repetição espaçada**, **listening gerado por IA**, **conversa ilimitada com IA** e **registro diário de consumo em inglês**.
+App Android (e versão web em localhost) para treinar inglês do B1 ao C1, no estilo do Be Confident: um **dia de estudo guiado em 7 blocos**, **1.242 exercícios feitos à mão** corrigidos sem IA, **repetição espaçada**, **provas de nível**, **músicas com ditado e shadowing**, **conversa ilimitada com IA** e **registro de minutos** de ligações, séries e leitura.
 
 Projeto de portfólio de GenAI: toda a IA fica em um backend Python, atrás de interfaces de provedor que se trocam por configuração.
 
 - Especificação: [docs/superpowers/specs/2026-11-03-english-app-design.md](docs/superpowers/specs/2026-11-03-english-app-design.md)
 - Plano de implementação: [docs/superpowers/plans/2026-11-03-english-app.md](docs/superpowers/plans/2026-11-03-english-app.md)
+- Plano do dia, exercícios, provas e músicas: [spec](docs/superpowers/specs/2026-11-05-daily-plan-design.md) · [plano](docs/superpowers/plans/2026-11-05-daily-plan.md)
 
 ## O que o app faz
 
-- **26 módulos** (B1: 10, B2: 9, C1: 7) com teoria curta (pode pular), 5 exercícios de listening gerados na hora, conversa com a IA e relatório de correções com nota.
-- **Revisão espaçada adaptativa**: a nota decide quando o tema volta (1 dia, 3 dias, depois cresce conforme o desempenho). Erros em conversa livre ou escrita antecipam a revisão do módulo relacionado.
-- **Conversa livre** e **escrita corrigida**.
-- **Metas do dia** (gramática, falar, escrever, ler, assistir) e sequência de dias completos.
-- **Registro de consumo**: o que você assistiu ou leu, com minutos por dia, semana e mês.
+- **O dia em 7 blocos**, um liberando o próximo: Gramática (10–20 min) → Música → Ligação 1 (10 min) → Assistir (45 min) → Ler (40 min) → Ligação 2 (10 min) → Anki. Dá para pular e voltar. A sequência conta dias com os 7 blocos feitos. No Android, lembretes locais nos horários escolhidos.
+- **46 módulos** (B1: 19, B2: 16, C1: 11), cada um com teoria curta e **27 exercícios** em 3 blocos (reconhecer → praticar → produzir): múltipla escolha, ouvir, lacuna, ditado, corrigir o erro, ordenar, transformar e traduzir. Corrigidos **sem IA**, com tradução pronta do enunciado e glossário.
+- **Revisão espaçada**: a nota do módulo decide quando ele volta; a revisão traz 9 exercícios do próprio banco, primeiro os que você errou.
+- **Provas de nível**: 30 questões sorteadas de um banco de 40 por nível. Precisa de 75% para abrir o nível seguinte.
+- **Músicas**: você cola a letra (fica só no seu banco local); o app divide em trechos e, a cada dia, faz ditado e shadowing de um trecho até o desafio final de cantar a música inteira. A IA aponta, uma vez por música, onde aparece a gramática do curso.
+- **Ligações**: a conversa do cenário do módulo (Ligação 1) e o **Ensine a IA** (Ligação 2, você explica o assunto para uma aluna confusa). O tempo é contado pelo app e você pode lançar ligações de fora (ex.: Be Confident). O relatório pode ser baixado em Markdown.
+- **Tocar para traduzir**: qualquer palavra em inglês na conversa, na teoria e nas letras; palavras salvas viram CSV para o Anki.
+- **Registro em minutos**: séries (episódios × minutos, com **+**), vídeos do YouTube (título automático pelo link) e leitura (páginas e palavras novas).
 
 ## Arquitetura
 
@@ -85,14 +89,14 @@ cd backend && python -m pytest        # backend, com provedores falsos (não gas
 cd app && npx jest && npx tsc --noEmit
 ```
 
-Para o conteúdo: `python scripts/generate_modules.py --only <id> --force` gera de novo a teoria de um módulo com a IA configurada. **Revise os módulos** em `backend/content/modules/` antes de estudar.
+Conteúdo: teoria em `backend/content/modules/`, exercícios em `backend/content/exercises/`, provas em `backend/content/exams/`. Os testes validam todo o conteúdo (distribuição dos 27 exercícios, uma única opção certa, glossário que não entrega a resposta etc.). Depois de mudar exercícios de ouvir ou ditado, grave os áudios uma vez com o Piper: `python scripts/prefill_audio.py` (ou `--only <id>`). Pelo botão "Reportar exercício" você marca um exercício suspeito para corrigir depois.
 
 ## Segurança e privacidade
 
 - Chaves só no `.env` (fora do Git). O app web/Android só conhece o `API_TOKEN`.
-- `backend/data/` (banco, áudios, vozes) fica fora do Git.
+- `backend/data/` (banco, áudios, vozes e as **letras das músicas**) fica fora do Git. Letras nunca vão para arquivos versionados.
 - O token trafega em cabeçalho (`X-API-Token`); nos áudios, na URL (`?token=`), pois players não enviam cabeçalhos. Use só em rede de confiança.
 
 ## Próximos passos (v2)
 
-Módulo de músicas com shadowing (letras coladas pelo usuário e guardadas só localmente) e hospedagem do backend para uso fora de casa.
+Análise de desempenho com sugestões automáticas ("você está fraco em X") e hospedagem do backend para uso fora de casa. Os lembretes funcionam no app Android (na web só existe o cartão do próximo bloco).
