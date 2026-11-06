@@ -9,6 +9,7 @@ import { shortDate } from '@/dates';
 import ExercisePlayer from '@/components/exercises/ExercisePlayer';
 import LessonBar from '@/components/LessonBar';
 import MarkdownText from '@/components/MarkdownText';
+import TranslateSheet from '@/components/TranslateSheet';
 import { Button, Card, ErrorText, Muted, Screen, Text } from '@/components/ui';
 import { useTheme } from '@/theme';
 import { AnswerResult, Exercise, ModuleDetail } from '@/types';
@@ -24,6 +25,7 @@ export default function LessonScreen() {
   const [items, setItems] = useState<Exercise[]>([]);
   const [outcome, setOutcome] = useState<AnswerResult | null>(null);
   const [error, setError] = useState('');
+  const [picked, setPicked] = useState<{ word: string; sentence: string } | null>(null);
 
   async function start() {
     setStep('loading');
@@ -69,8 +71,9 @@ export default function LessonScreen() {
               {module.title}
             </Text>
             <Card style={{ padding: 20 }}>
-              <MarkdownText text={module.theory_md} skipFirstHeading />
+              <MarkdownText text={module.theory_md} skipFirstHeading onWord={(word, sentence) => setPicked({ word, sentence })} />
             </Card>
+            {picked ? <TranslateSheet word={picked.word} sentence={picked.sentence} onClose={() => setPicked(null)} /> : null}
             <Muted>27 exercícios em 3 blocos: reconhecer, praticar e produzir. Seu progresso fica salvo.</Muted>
             <Button label="Começar exercícios" onPress={start} />
             <Button label="Pular teoria" kind="secondary" onPress={start} />

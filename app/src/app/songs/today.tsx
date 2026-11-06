@@ -6,6 +6,7 @@ import { Linking, StyleSheet, TextInput, View } from 'react-native';
 import { api } from '@/api';
 import { Recording, appendAudio } from '@/audio';
 import PushToTalk from '@/components/PushToTalk';
+import TranslatableText from '@/components/TranslatableText';
 import { Button, Card, ErrorText, Muted, Screen, SectionTitle, Text } from '@/components/ui';
 import WordDiff from '@/components/WordDiff';
 import { useTheme } from '@/theme';
@@ -20,7 +21,7 @@ function ChunkText({ chunk }: { chunk: SongChunk }) {
     <View style={{ gap: 4 }}>
       {chunk.text.split('\n').map((line, i) => {
         const hit = phrases.find((p) => line.toLowerCase().includes(p));
-        if (!hit) return <Text key={i} style={{ color: theme.text, fontSize: 19, lineHeight: 27 }}>{line}</Text>;
+        if (!hit) return <TranslatableText key={i} text={line} style={{ color: theme.text, fontSize: 19, lineHeight: 27 }} />;
         const at = line.toLowerCase().indexOf(hit);
         return (
           <Text key={i} style={{ color: theme.text, fontSize: 19, lineHeight: 27 }}>

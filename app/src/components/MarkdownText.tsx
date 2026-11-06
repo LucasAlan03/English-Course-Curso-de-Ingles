@@ -3,6 +3,9 @@ import { StyleSheet, View } from 'react-native';
 
 import { useTheme } from '@/theme';
 
+import { sentenceAround } from '@/sentence';
+
+import { splitWords } from './TappableText';
 import { Text } from './ui';
 
 /** Index of the closing marker, skipping "**" pairs when looking for a single "*". */
@@ -25,7 +28,9 @@ function findClose(s: string, from: number, marker: '*' | '**'): number {
  * Inline markdown: **bold** and *example* (English examples get their own colour), nested either way.
  * Unmatched asterisks are dropped so raw markers never reach the screen.
  */
-function renderInline(s: string, colors: { example: string }, bold = false, example = false, key = 'k'): ReactNode[] {
+type InlineColors = { example: string; onWord?: (word: string, sentence: string) => void };
+
+function renderInline(s: string, colors: InlineColors, bold = false, example = false, key = 'k'): ReactNode[] {
   const out: ReactNode[] = [];
   let buffer = '';
   const flush = () => {
@@ -38,7 +43,15 @@ function renderInline(s: string, colors: { example: string }, bold = false, exam
             example && { color: colors.example, fontWeight: bold ? '800' : '600' },
           ]}
         >
-          {buffer}
+          {example && colors.onWord
+            ? splitWords(buffer).map((p) =>
+                p.isWord ? (
+                  <Text key={p.index} onPress={() => colors.onWord!(p.text, sentenceAround(buffer, p.index))}>{p.text}</Text>
+                ) : (
+                  p.text
+                ),
+              )
+            : buffer}
         </Text>,
       );
       buffer = '';
@@ -71,9 +84,14 @@ function renderInline(s: string, colors: { example: string }, bold = false, exam
 }
 
 /** Tiny markdown renderer for lesson theory: #/##/### headings, "- " bullets, **bold** and *examples*. */
-export default function MarkdownText({ text, skipFirstHeading }: { text: string; skipFirstHeading?: boolean }) {
+export default function MarkdownText({ text, skipFirstHeading, onWord }: {
+  text: string;
+  skipFirstHeading?: boolean;
+  /** When set, the words of the English *examples* can be tapped to translate. */
+  onWord?: (word: string, sentence: string) => void;
+}) {
   const theme = useTheme();
-  const colors = { example: theme.lake };
+  const colors: InlineColors = { example: theme.lake, onWord };
   let skipped = !skipFirstHeading;
 
   return (

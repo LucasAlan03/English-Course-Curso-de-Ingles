@@ -2,6 +2,7 @@ import { StyleSheet, View } from 'react-native';
 
 import { useTheme } from '@/theme';
 
+import TranslatableText from './TranslatableText';
 import { Text } from './ui';
 
 export default function ChatBubble({ role, text }: { role: 'user' | 'assistant'; text: string }) {
@@ -15,7 +16,11 @@ export default function ChatBubble({ role, text }: { role: 'user' | 'assistant';
         { backgroundColor: mine ? theme.primary : theme.card, borderColor: mine ? theme.primary : theme.border },
       ]}
     >
-      <Text style={{ color: mine ? theme.onPrimary : theme.text, fontSize: 16, lineHeight: 22 }}>{text}</Text>
+      {mine ? (
+        <Text style={{ color: theme.onPrimary, fontSize: 16, lineHeight: 22 }}>{text}</Text>
+      ) : (
+        <TranslatableText text={text} style={{ color: theme.text, fontSize: 16, lineHeight: 22 }} />
+      )}
     </View>
   );
 }

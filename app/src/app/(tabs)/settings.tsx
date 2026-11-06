@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet } from 'react-native';
 import { Text } from '@/components/ui';
 
 import { Button, Card, Muted, SectionTitle } from '@/components/ui';
+import WordsSection from '@/components/WordsSection';
 import ErrorNotice from '@/components/ErrorNotice';
 import { brl } from '@/components/UsageBanner';
 import { BASE_URL } from '@/config';
@@ -51,6 +52,11 @@ export default function SettingsScreen() {
           </Card>
         </>
       ) : null}
+
+      <WordsSection />
+
+      <SectionTitle>Músicas</SectionTitle>
+      <Button label="Minhas músicas" kind="secondary" onPress={() => router.push('/songs')} />
 
       <SectionTitle>Servidor</SectionTitle>
       <Muted>{BASE_URL}</Muted>
