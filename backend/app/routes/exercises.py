@@ -12,6 +12,7 @@ from app.content import EXERCISE_COUNT, Exercise
 from app.deps import AppDeps, get_deps
 from app.errors import AppError
 from app.exams import ensure_module_unlocked
+from app.routes.modules import completed_module_ids
 from app.exercises import is_correct, pick_review
 from app.reviews import exercise_audio_name, schedule_review
 
@@ -81,9 +82,9 @@ def list_exercises(module_id: str, deps: AppDeps = Depends(get_deps)):
 
 
 def save_attempt(deps: AppDeps, module_id: str, e: Exercise, answer: str, seconds: int,
-                 kind: str = "lesson", run_id: int | None = None) -> bool:
-    """Store the first answer only; return the stored correctness."""
-    deps.conn.execute(
+                 kind: str = "lesson", run_id: int | None = None) -> tuple[bool, bool]:
+    """Store the first answer only; return (stored correctness, whether this call inserted it)."""
+    cur = deps.conn.execute(
         "INSERT OR IGNORE INTO exercise_attempts (module_id, exercise_id, kind, run_id, answer, correct, seconds, "
         "day, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
         (module_id, e.id, kind, run_id, answer, int(is_correct(e, answer)), min(seconds, MAX_GAP_SECONDS),
@@ -96,7 +97,7 @@ def save_attempt(deps: AppDeps, module_id: str, e: Exercise, answer: str, second
     else:
         row = deps.conn.execute("SELECT correct FROM exercise_attempts WHERE kind = 'review' AND run_id = ? "
                                 "AND exercise_id = ?", (run_id, e.id)).fetchone()
-    return bool(row["correct"])
+    return bool(row["correct"]), cur.rowcount == 1
 
 
 @router.post("/exercises/{module_id}/{exercise_id}/answer")
@@ -110,9 +111,10 @@ def answer_exercise(module_id: str, exercise_id: str, body: AnswerBody, deps: Ap
     if body.run_id is not None:
         return answer_review(deps, module_id, e, body, response)
     was_complete = len(lesson_attempts(deps, module_id)) >= EXERCISE_COUNT
-    response["correct"] = save_attempt(deps, module_id, e, body.answer, body.seconds)
+    response["correct"], inserted = save_attempt(deps, module_id, e, body.answer, body.seconds)
     attempts = lesson_attempts(deps, module_id)
-    if not was_complete and len(attempts) >= EXERCISE_COUNT:
+    # Only the request that saved the last answer completes the module (a double tap must not schedule twice).
+    if inserted and not was_complete and len(attempts) >= EXERCISE_COUNT:
         score = round(100 * sum(r["correct"] for r in attempts.values()) / len(attempts))
         response.update(module_completed=True, score=score, next_due=schedule_review(deps, module_id, score))
     return response
@@ -126,7 +128,7 @@ def answer_review(deps: AppDeps, module_id: str, e: Exercise, body: AnswerBody, 
     ids = json.loads(run["exercise_ids"])
     if e.id not in ids:
         raise AppError("exercise_not_found", 404, "Exercício não está nesta revisão.")
-    response["correct"] = save_attempt(deps, module_id, e, body.answer, body.seconds, "review", run["id"])
+    response["correct"], _ = save_attempt(deps, module_id, e, body.answer, body.seconds, "review", run["id"])
     rows = deps.conn.execute("SELECT correct FROM exercise_attempts WHERE kind = 'review' AND run_id = ?",
                              (run["id"],)).fetchall()
     if run["finished_at"] is None and len(rows) >= len(ids):
@@ -143,6 +145,10 @@ def answer_review(deps: AppDeps, module_id: str, e: Exercise, body: AnswerBody, 
 @router.post("/reviews/{module_id}/start")
 def start_review(module_id: str, deps: AppDeps = Depends(get_deps)):
     exercises = module_exercises(deps, module_id)
+    # Reviews of modules already studied are never locked; anything else follows the level lock.
+    studied = deps.conn.execute("SELECT 1 FROM reviews WHERE module_id = ?", (module_id,)).fetchone()
+    if not studied and module_id not in completed_module_ids(deps):
+        ensure_module_unlocked(deps, module_id)
     if not exercises:
         raise AppError("no_exercises", 404, "Este módulo ainda não tem exercícios.")
     picked = pick_review(deps.conn, module_id, exercises)

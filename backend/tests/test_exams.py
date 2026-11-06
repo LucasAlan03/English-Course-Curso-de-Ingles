@@ -172,3 +172,16 @@ def test_home_suggests_modules_of_unlocked_levels_only(app_client, deps):
     complete_module(deps, B1[0])
     body = app_client.get("/home").json()
     assert body["next_module"]["id"] == B1[1] and body["exam_ready"] is None
+
+
+def test_review_of_a_locked_module_never_done_is_locked(app_client):
+    r = app_client.post("/reviews/b2_passive_voice/start")
+    assert r.status_code == 403 and r.json()["error"] == "level_locked"
+
+
+def test_review_of_a_done_module_is_never_locked(app_client, deps):
+    from app.db import insert
+    insert(deps.conn, "reviews", module_id="b2_passive_voice", next_due="2026-11-03", interval_days=1, ease=2.5,
+           repetitions=0)
+    assert app_client.post("/reviews/b2_passive_voice/start").status_code in (200, 404)  # 404 = no exercises in fixture
+    assert app_client.post("/reviews/b2_passive_voice/start").json().get("error") != "level_locked"

@@ -101,3 +101,22 @@ def test_finish_session_no_longer_schedules(app_client, deps, providers):
     body = app_client.post(f"/sessions/{sid}/finish").json()
     assert body["next_due"] is None and "listening_score" not in body and body["final_score"] == 90
     assert deps.conn.execute("SELECT COUNT(*) FROM reviews").fetchone()[0] == 0
+
+
+def test_completion_is_claimed_only_by_the_request_that_saved_the_last_answer(app_client, deps, monkeypatch):
+    from app.routes import exercises as routes
+    answer_all(app_client, wrong=set())  # 27 answered, review scheduled once
+    deps.conn.execute("DELETE FROM reviews")
+    deps.conn.commit()
+    # Two overlapping taps: the second read its "before" count while the first had not inserted yet.
+    real, calls = routes.lesson_attempts, []
+
+    def stale_first_read(d, module_id):
+        rows = real(d, module_id)
+        calls.append(1)
+        return {k: v for k, v in rows.items() if k != "e27"} if len(calls) == 1 else rows
+
+    monkeypatch.setattr(routes, "lesson_attempts", stale_first_read)
+    again = app_client.post(url("e27"), json={"answer": CORRECT["e27"], "seconds": 1}).json()
+    assert again["module_completed"] is False
+    assert deps.conn.execute("SELECT COUNT(*) FROM reviews").fetchone()[0] == 0

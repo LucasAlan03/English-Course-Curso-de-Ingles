@@ -25,7 +25,9 @@ def _stanzas(lyrics: str) -> list[list[str]]:
     stanzas: list[list[str]] = [[]]
     for raw in lyrics.replace("\r\n", "\n").replace("\r", "\n").split("\n"):
         line = raw.strip()
-        if _LABEL.match(line):
+        if _LABEL.match(line):  # a section label always starts a new stanza
+            if stanzas[-1]:
+                stanzas.append([])
             continue
         if line:
             stanzas[-1].append(line)

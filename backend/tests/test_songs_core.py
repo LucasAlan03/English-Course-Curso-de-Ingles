@@ -46,3 +46,10 @@ def test_word_diff_marks_extra_words_and_ignores_case():
 def test_word_diff_with_empty_answer_scores_zero():
     assert word_diff("one two", "")["score"] == 0
     assert word_diff("", "")["score"] == 0
+
+
+def test_label_right_under_a_lyric_line_starts_a_new_stanza():
+    chunks = split_chunks("Line a\r\nLine b\r\n[Chorus]\r\nHey hey\r\nOh oh\r\n\r\nVerse two\r\n[Chorus]\r\nHey hey\r\nOh oh")
+    assert [c.text.splitlines() for c in chunks] == [["Line a", "Line b"], ["Hey hey", "Oh oh"], ["Verse two"],
+                                                       ["Hey hey", "Oh oh"]]
+    assert chunks[3].repeat_of == 1
