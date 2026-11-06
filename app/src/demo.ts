@@ -5,7 +5,7 @@
 import { ApiError } from './api';
 
 export const DEMO = process.env.EXPO_PUBLIC_DEMO === '1';
-// Where demo-data.json and audio/ are served from (e.g. "/English-Course-Curso-de-Ingl-s").
+// Where demo-data.json and audio/ are served from (e.g. "/English-Course-Curso-de-Ingles").
 export const DEMO_BASE = (process.env.EXPO_PUBLIC_DEMO_BASE ?? '').replace(/\/$/, '');
 
 export const DEMO_NOTICE = 'Isto é uma demonstração: nada é salvo e a IA fica desligada. Rode o projeto localmente para usar de verdade.';

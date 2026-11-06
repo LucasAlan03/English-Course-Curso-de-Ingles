@@ -58,7 +58,7 @@ function DemoBanner() {
   return (
     <Text
       accessibilityRole="link"
-      onPress={() => Linking.openURL('https://github.com/LucasAlan03/English-Course-Curso-de-Ingl-s')}
+      onPress={() => Linking.openURL('https://github.com/LucasAlan03/English-Course-Curso-de-Ingles')}
       style={{ backgroundColor: '#1f5f4a', color: '#fff', textAlign: 'center', paddingVertical: 8, paddingHorizontal: 12, fontSize: 13 }}
     >
       Demonstração com dados fictícios: nada é salvo e a IA fica desligada. Ver o código no GitHub ↗

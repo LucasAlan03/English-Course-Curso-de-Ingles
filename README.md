@@ -12,7 +12,7 @@ An Android app, with a web version on localhost, for training English from B1 to
 
 This is a GenAI portfolio project. All the AI lives in a Python backend, behind provider interfaces that can be swapped through configuration.
 
-**▶ [Live demo](https://lucasalan03.github.io/English-Course-Curso-de-Ingl-s/)**: a web showcase with sample data (the interface is in Portuguese; best viewed at phone width). You can browse every screen and answer the lesson exercises, which are graded in the browser. Nothing is saved and the AI is off.
+**▶ [Live demo](https://lucasalan03.github.io/English-Course-Curso-de-Ingles/)**: a web showcase with sample data (the interface is in Portuguese; best viewed at phone width). You can browse every screen and answer the lesson exercises, which are graded in the browser. Nothing is saved and the AI is off.
 
 | Tour | Doing exercises |
 |---|---|
@@ -139,7 +139,7 @@ The demo is the web app built with `EXPO_PUBLIC_DEMO=1`. In this mode the app ne
 
 ```bash
 cd backend && python scripts/build_demo_data.py ../demo/demo-data.json --audio-from data/audio --audio-out ../demo/audio
-cd app && set EXPO_PUBLIC_DEMO=1&& set EXPO_PUBLIC_DEMO_BASE=/English-Course-Curso-de-Ingl-s&& npx expo export -p web --output-dir ../demo
+cd app && set EXPO_PUBLIC_DEMO=1&& set EXPO_PUBLIC_DEMO_BASE=/English-Course-Curso-de-Ingles&& npx expo export -p web --output-dir ../demo
 ```
 
 Then copy `index.html` to `404.html` (for GitHub Pages) and publish the folder. Only synthetic exercise audio is published, never conversations or song lyrics.

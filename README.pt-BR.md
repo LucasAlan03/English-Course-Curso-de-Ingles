@@ -6,7 +6,7 @@ App Android (e versão web em localhost) para treinar inglês do B1 ao C1, no es
 
 Projeto de portfólio de GenAI: toda a IA fica em um backend Python, atrás de interfaces de provedor que se trocam por configuração.
 
-**▶ [Ver a demonstração](https://lucasalan03.github.io/English-Course-Curso-de-Ingl-s/)**: uma vitrine web com dados fictícios (melhor na largura de celular). Dá para navegar por todas as telas e responder os exercícios das aulas, corrigidos no próprio navegador. Nada é salvo e a IA fica desligada.
+**▶ [Ver a demonstração](https://lucasalan03.github.io/English-Course-Curso-de-Ingles/)**: uma vitrine web com dados fictícios (melhor na largura de celular). Dá para navegar por todas as telas e responder os exercícios das aulas, corrigidos no próprio navegador. Nada é salvo e a IA fica desligada.
 
 | Tour | Fazendo exercícios |
 |---|---|
@@ -112,7 +112,7 @@ A demonstração é o app web gerado com `EXPO_PUBLIC_DEMO=1`. Nesse modo, o app
 
 ```bash
 cd backend && python scripts/build_demo_data.py ../demo/demo-data.json --audio-from data/audio --audio-out ../demo/audio
-cd app && set EXPO_PUBLIC_DEMO=1&& set EXPO_PUBLIC_DEMO_BASE=/English-Course-Curso-de-Ingl-s&& npx expo export -p web --output-dir ../demo
+cd app && set EXPO_PUBLIC_DEMO=1&& set EXPO_PUBLIC_DEMO_BASE=/English-Course-Curso-de-Ingles&& npx expo export -p web --output-dir ../demo
 ```
 
 Depois, copie `index.html` para `404.html` (para o GitHub Pages) e publique a pasta. Só vão os áudios sintéticos dos exercícios, nunca conversas nem letras de músicas.
