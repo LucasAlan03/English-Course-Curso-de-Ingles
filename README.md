@@ -12,6 +12,16 @@ An Android app, with a web version on localhost, for training English from B1 to
 
 This is a GenAI portfolio project. All the AI lives in a Python backend, behind provider interfaces that can be swapped through configuration.
 
+**▶ [Live demo](https://lucasalan03.github.io/English-Course-Curso-de-Ingl-s/)**: a web showcase with sample data (the interface is in Portuguese; best viewed at phone width). You can browse every screen and answer the lesson exercises, which are graded in the browser. Nothing is saved and the AI is off.
+
+| Tour | Doing exercises |
+|---|---|
+| ![Tour of the app](docs/img/tour.gif) | ![Answering exercises](docs/img/exercicio.gif) |
+
+| Your day | Track | Song of the day | Media log |
+|---|---|---|---|
+| ![Home](docs/img/home.png) | ![Track](docs/img/tracks.png) | ![Song](docs/img/song.png) | ![Media](docs/img/media.png) |
+
 - Design spec: [docs/superpowers/specs/2026-11-03-english-app-design.md](docs/superpowers/specs/2026-11-03-english-app-design.md)
 - Implementation plan: [docs/superpowers/plans/2026-11-03-english-app.md](docs/superpowers/plans/2026-11-03-english-app.md)
 - Daily plan, exercises, exams and songs: [spec](docs/superpowers/specs/2026-11-05-daily-plan-design.md) · [plan](docs/superpowers/plans/2026-11-05-daily-plan.md)
@@ -119,6 +129,20 @@ Course content lives in three folders:
 The tests validate all of it: the split of the 27 exercises, exactly one correct option, a glossary that doesn't give away the answer, and more.
 
 After changing listening or dictation exercises, record their audio once with Piper: `python scripts/prefill_audio.py` (or `--only <id>`). The "Report exercise" button flags a suspicious exercise to fix later.
+
+### Live demo build
+
+The demo is the web app built with `EXPO_PUBLIC_DEMO=1`. In this mode the app never calls the backend:
+- it reads responses recorded by `backend/scripts/build_demo_data.py`, which simulates about 12 days of study with fake providers (no AI, no cost);
+- it grades lesson exercises in the browser with the same rules as the backend (`app/src/demo.ts`);
+- it refuses every other write with a "this is a demo" notice.
+
+```bash
+cd backend && python scripts/build_demo_data.py ../demo/demo-data.json --audio-from data/audio --audio-out ../demo/audio
+cd app && set EXPO_PUBLIC_DEMO=1&& set EXPO_PUBLIC_DEMO_BASE=/English-Course-Curso-de-Ingl-s&& npx expo export -p web --output-dir ../demo
+```
+
+Then copy `index.html` to `404.html` (for GitHub Pages) and publish the folder. Only synthetic exercise audio is published, never conversations or song lyrics.
 
 ## Security and privacy
 

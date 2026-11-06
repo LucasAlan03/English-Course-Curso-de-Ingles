@@ -7,8 +7,9 @@ import {
   useFonts,
 } from '@expo-google-fonts/bricolage-grotesque';
 import { Stack } from 'expo-router';
-import { View } from 'react-native';
+import { Linking, Text, View } from 'react-native';
 
+import { DEMO } from '@/demo';
 import { fonts, useTheme } from '@/theme';
 
 export default function RootLayout() {
@@ -23,6 +24,8 @@ export default function RootLayout() {
   if (!loaded && !failed) return <View style={{ flex: 1, backgroundColor: theme.background }} />;
 
   return (
+    <View style={{ flex: 1 }}>
+    {DEMO ? <DemoBanner /> : null}
     <Stack
       screenOptions={{
         headerStyle: { backgroundColor: theme.background },
@@ -47,5 +50,18 @@ export default function RootLayout() {
       <Stack.Screen name="songs/new" options={{ title: 'Nova música' }} />
       <Stack.Screen name="songs/today" options={{ title: 'Música do dia' }} />
     </Stack>
+    </View>
+  );
+}
+
+function DemoBanner() {
+  return (
+    <Text
+      accessibilityRole="link"
+      onPress={() => Linking.openURL('https://github.com/LucasAlan03/English-Course-Curso-de-Ingl-s')}
+      style={{ backgroundColor: '#1f5f4a', color: '#fff', textAlign: 'center', paddingVertical: 8, paddingHorizontal: 12, fontSize: 13 }}
+    >
+      Demonstração com dados fictícios: nada é salvo e a IA fica desligada. Ver o código no GitHub ↗
+    </Text>
   );
 }

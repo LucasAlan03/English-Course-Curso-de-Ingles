@@ -1,4 +1,5 @@
 import { API_TOKEN, BASE_URL } from './config';
+import { DEMO, DEMO_NOTICE, demoAudioUrl, demoRequest } from './demo';
 
 export class ApiError extends Error {
   code: string;
@@ -20,6 +21,7 @@ type ApiInit = Omit<RequestInit, 'body'> & { json?: unknown; body?: BodyInit | n
 
 export async function api<T>(path: string, init: ApiInit = {}): Promise<T> {
   const { json, headers, body, ...rest } = init;
+  if (DEMO) return demoRequest<T>(path, (rest.method ?? 'GET').toUpperCase(), json);
   const finalHeaders: Record<string, string> = { 'X-API-Token': API_TOKEN, ...(headers as Record<string, string>) };
   let finalBody = body;
   if (json !== undefined) {
@@ -48,6 +50,7 @@ export async function api<T>(path: string, init: ApiInit = {}): Promise<T> {
 
 /** Same as api() but returns the body as text (for downloads such as the Markdown report or CSV). */
 export async function apiText(path: string): Promise<string> {
+  if (DEMO) throw new ApiError('demo_mode', DEMO_NOTICE);
   let response: Response;
   try {
     response = await fetch(`${BASE_URL}${path}`, { headers: { 'X-API-Token': API_TOKEN } });
@@ -68,5 +71,6 @@ export async function apiText(path: string): Promise<string> {
 
 /** Audio elements and players cannot send headers, so the token travels in the query string. */
 export function audioUrl(path: string): string {
+  if (DEMO) return demoAudioUrl(path);
   return `${BASE_URL}${path}?token=${encodeURIComponent(API_TOKEN)}`;
 }

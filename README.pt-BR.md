@@ -6,6 +6,16 @@ App Android (e versão web em localhost) para treinar inglês do B1 ao C1, no es
 
 Projeto de portfólio de GenAI: toda a IA fica em um backend Python, atrás de interfaces de provedor que se trocam por configuração.
 
+**▶ [Ver a demonstração](https://lucasalan03.github.io/English-Course-Curso-de-Ingl-s/)**: uma vitrine web com dados fictícios (melhor na largura de celular). Dá para navegar por todas as telas e responder os exercícios das aulas, corrigidos no próprio navegador. Nada é salvo e a IA fica desligada.
+
+| Tour | Fazendo exercícios |
+|---|---|
+| ![Tour pelo app](docs/img/tour.gif) | ![Respondendo exercícios](docs/img/exercicio.gif) |
+
+| Seu dia | Trilha | Música do dia | Consumo |
+|---|---|---|---|
+| ![Início](docs/img/home.png) | ![Trilha](docs/img/tracks.png) | ![Música](docs/img/song.png) | ![Consumo](docs/img/media.png) |
+
 - Especificação: [docs/superpowers/specs/2026-11-03-english-app-design.md](docs/superpowers/specs/2026-11-03-english-app-design.md)
 - Plano de implementação: [docs/superpowers/plans/2026-11-03-english-app.md](docs/superpowers/plans/2026-11-03-english-app.md)
 - Plano do dia, exercícios, provas e músicas: [spec](docs/superpowers/specs/2026-11-05-daily-plan-design.md) · [plano](docs/superpowers/plans/2026-11-05-daily-plan.md)
@@ -92,6 +102,20 @@ cd app && npx jest && npx tsc --noEmit
 ```
 
 Conteúdo: teoria em `backend/content/modules/`, exercícios em `backend/content/exercises/`, provas em `backend/content/exams/`. Os testes validam todo o conteúdo (distribuição dos 27 exercícios, uma única opção certa, glossário que não entrega a resposta etc.). Depois de mudar exercícios de ouvir ou ditado, grave os áudios uma vez com o Piper: `python scripts/prefill_audio.py` (ou `--only <id>`). Pelo botão "Reportar exercício" você marca um exercício suspeito para corrigir depois.
+
+### Como a demonstração é gerada
+
+A demonstração é o app web gerado com `EXPO_PUBLIC_DEMO=1`. Nesse modo, o app nunca chama o backend:
+- lê respostas gravadas por `backend/scripts/build_demo_data.py`, que simula cerca de 12 dias de estudo com provedores falsos (sem IA, sem custo);
+- corrige os exercícios das aulas no navegador, com as mesmas regras do backend (`app/src/demo.ts`);
+- recusa qualquer outra gravação com um aviso de "demonstração".
+
+```bash
+cd backend && python scripts/build_demo_data.py ../demo/demo-data.json --audio-from data/audio --audio-out ../demo/audio
+cd app && set EXPO_PUBLIC_DEMO=1&& set EXPO_PUBLIC_DEMO_BASE=/English-Course-Curso-de-Ingl-s&& npx expo export -p web --output-dir ../demo
+```
+
+Depois, copie `index.html` para `404.html` (para o GitHub Pages) e publique a pasta. Só vão os áudios sintéticos dos exercícios, nunca conversas nem letras de músicas.
 
 ## Segurança e privacidade
 
