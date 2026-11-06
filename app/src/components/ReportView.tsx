@@ -19,11 +19,6 @@ export default function ReportView({ result }: { result: FinishResult }) {
       <Card style={styles.scoreCard}>
         <Muted>Nota final</Muted>
         <Text style={{ color: theme.primary, fontSize: 48, fontWeight: '800' }}>{String(result.final_score)}</Text>
-        <Muted>
-          {result.listening_score !== null
-            ? `Listening ${result.listening_score} · Conversa ${result.conversation_score}`
-            : `Conversa ${result.conversation_score}`}
-        </Muted>
         {result.next_due ? <Muted>{`Próxima revisão: ${shortDate(result.next_due)}`}</Muted> : null}
       </Card>
 

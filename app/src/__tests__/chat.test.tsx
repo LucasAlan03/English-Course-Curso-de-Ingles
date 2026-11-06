@@ -99,7 +99,8 @@ test('tap once to record and tap again to send; empty_transcript shows a retry m
   await screen.findByText('Hello!');
   await userEvent.press(screen.getByText('Toque para falar'));
   expect(await screen.findByText('Gravando… toque para enviar')).toBeTruthy();
-  expect(apiMock).toHaveBeenCalledTimes(1); // nothing is sent while recording
+  const turns = () => apiMock.mock.calls.filter(([path]) => String(path).endsWith('/turn'));
+  expect(turns()).toHaveLength(1); // nothing is sent while recording (the call timer polls /elapsed separately)
   await userEvent.press(screen.getByText('Gravando… toque para enviar'));
   expect(await screen.findByText('Não consegui ouvir nada. Repita, por favor.')).toBeTruthy();
   expect(await screen.findByText('Toque para falar')).toBeTruthy();

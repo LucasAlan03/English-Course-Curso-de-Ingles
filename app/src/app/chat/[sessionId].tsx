@@ -5,6 +5,7 @@ import { ScrollView, StyleSheet, Switch, TextInput, View } from 'react-native';
 
 import { api, audioUrl } from '@/api';
 import { Recording, appendAudio, playUrl } from '@/audio';
+import CallTimer from '@/components/CallTimer';
 import ChatBubble from '@/components/ChatBubble';
 import PushToTalk from '@/components/PushToTalk';
 import { Button, ErrorText, Muted, Text } from '@/components/ui';
@@ -63,6 +64,9 @@ export default function ChatScreen() {
   return (
     <View style={styles.screen}>
       <View style={styles.topRow}>
+        <View style={{ flex: 1 }}>
+          <CallTimer sessionId={String(sessionId)} />
+        </View>
         <Muted>Ouvir respostas</Muted>
         <Switch value={listen} onValueChange={setListen} />
       </View>

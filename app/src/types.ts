@@ -69,7 +69,6 @@ export type Mistake = { said: string; corrected: string; explanation: string; mo
 export type Report = { mistakes: Mistake[]; natural_expressions: string[]; strengths: string[]; score: number };
 export type FinishResult = {
   report: Report;
-  listening_score: number | null;
   conversation_score: number;
   final_score: number;
   next_due: string | null;

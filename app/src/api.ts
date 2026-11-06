@@ -46,6 +46,26 @@ export async function api<T>(path: string, init: ApiInit = {}): Promise<T> {
   return (await response.json()) as T;
 }
 
+/** Same as api() but returns the body as text (for downloads such as the Markdown report or CSV). */
+export async function apiText(path: string): Promise<string> {
+  let response: Response;
+  try {
+    response = await fetch(`${BASE_URL}${path}`, { headers: { 'X-API-Token': API_TOKEN } });
+  } catch {
+    throw new ApiError('network_error', 'Não consegui falar com o servidor. Ele está rodando e na mesma rede?');
+  }
+  if (!response.ok) {
+    let data: { error?: string; detail?: string } = {};
+    try {
+      data = await response.json();
+    } catch {
+      // not json
+    }
+    throw new ApiError(data.error ?? 'http_error', data.detail ?? response.statusText, response.status);
+  }
+  return response.text();
+}
+
 /** Audio elements and players cannot send headers, so the token travels in the query string. */
 export function audioUrl(path: string): string {
   return `${BASE_URL}${path}?token=${encodeURIComponent(API_TOKEN)}`;

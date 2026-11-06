@@ -3,7 +3,8 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 
-import { api } from '@/api';
+import { api, apiText } from '@/api';
+import { saveText } from '@/download';
 import ReportView from '@/components/ReportView';
 import { Button, ErrorText, Muted } from '@/components/ui';
 import { FinishResult } from '@/types';
@@ -28,6 +29,15 @@ export default function ReportScreen() {
     }
   }, [sessionId]);
 
+  async function download() {
+    try {
+      const text = await apiText(`/sessions/${sessionId}/report.md`);
+      await saveText(`relatorio-${sessionId}.md`, text, 'text/markdown');
+    } catch (e) {
+      setError(describeError(e));
+    }
+  }
+
   useEffect(() => {
     if (started.current) return; // React may run effects twice in development
     started.current = true;
@@ -40,6 +50,7 @@ export default function ReportScreen() {
       {error ? <ErrorText>{error}</ErrorText> : null}
       {error && !loading ? <Button label="Tentar de novo" onPress={load} /> : null}
       {result ? <ReportView result={result} /> : null}
+      {result ? <Button label="Baixar relatório" kind="secondary" onPress={download} /> : null}
       <Button label="Voltar ao início" kind={result ? 'primary' : 'secondary'} onPress={() => router.replace('/')} />
     </ScrollView>
   );
